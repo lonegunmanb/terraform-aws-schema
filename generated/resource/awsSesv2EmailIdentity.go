@@ -70,6 +70,7 @@ const awsSesv2EmailIdentity = `{
             "domain_signing_private_key": {
               "description_kind": "plain",
               "optional": true,
+              "sensitive": true,
               "type": "string"
             },
             "domain_signing_selector": {
