@@ -9,9 +9,19 @@ import (
 const awsOpensearchOutboundConnection = `{
   "block": {
     "attributes": {
+      "accept_connection": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "connection_alias": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "connection_mode": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "connection_status": {
@@ -27,6 +37,36 @@ const awsOpensearchOutboundConnection = `{
       }
     },
     "block_types": {
+      "connection_properties": {
+        "block": {
+          "attributes": {
+            "endpoint": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "cross_cluster_search": {
+              "block": {
+                "attributes": {
+                  "skip_unavailable": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "local_domain_info": {
         "block": {
           "attributes": {

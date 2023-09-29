@@ -29,6 +29,11 @@ const awsLightsailBucket = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "force_delete": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

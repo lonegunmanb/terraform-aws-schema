@@ -24,6 +24,14 @@ const awsFsxOpenzfsVolume = `{
         "optional": true,
         "type": "string"
       },
+      "delete_volume_options": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

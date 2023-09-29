@@ -14,6 +14,16 @@ const awsFsxOntapVolume = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "bypass_snaplock_enterprise_retention": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "copy_tags_to_backups": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "file_system_id": {
         "computed": true,
         "description_kind": "plain",
@@ -62,6 +72,12 @@ const awsFsxOntapVolume = `{
         "optional": true,
         "type": "bool"
       },
+      "snapshot_policy": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "storage_efficiency_enabled": {
         "description_kind": "plain",
         "optional": true,
@@ -101,6 +117,126 @@ const awsFsxOntapVolume = `{
       }
     },
     "block_types": {
+      "snaplock_configuration": {
+        "block": {
+          "attributes": {
+            "audit_log_volume": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "privileged_delete": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "snaplock_type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "volume_append_mode_enabled": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "block_types": {
+            "autocommit_period": {
+              "block": {
+                "attributes": {
+                  "type": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "retention_period": {
+              "block": {
+                "block_types": {
+                  "default_retention": {
+                    "block": {
+                      "attributes": {
+                        "type": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "value": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "maximum_retention": {
+                    "block": {
+                      "attributes": {
+                        "type": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "value": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "minimum_retention": {
+                    "block": {
+                      "attributes": {
+                        "type": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "value": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "tiering_policy": {
         "block": {
           "attributes": {

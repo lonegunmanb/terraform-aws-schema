@@ -33,6 +33,7 @@ const awsCloudfrontDistribution = `{
         "type": "string"
       },
       "continuous_deployment_policy_id": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -764,7 +765,7 @@ const awsCloudfrontDistribution = `{
                   },
                   "origin_shield_region": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": "string"
                   }
                 },
