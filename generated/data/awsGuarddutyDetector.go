@@ -9,6 +9,30 @@ import (
 const awsGuarddutyDetector = `{
   "block": {
     "attributes": {
+      "features": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "additional_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "name": "string",
+                    "status": "string"
+                  }
+                ]
+              ],
+              "name": "string",
+              "status": "string"
+            }
+          ]
+        ]
+      },
       "finding_publishing_frequency": {
         "computed": true,
         "description_kind": "plain",

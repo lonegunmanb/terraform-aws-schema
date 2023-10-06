@@ -4564,7 +4564,15 @@ const awsMedialiveChannel = `{
               "computed": true,
               "description_kind": "plain",
               "type": [
-                "list",
+                "set",
+                "string"
+              ]
+            },
+            "network_interface_ids": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": [
+                "set",
                 "string"
               ]
             },
@@ -4581,7 +4589,7 @@ const awsMedialiveChannel = `{
               "description_kind": "plain",
               "optional": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             },
@@ -4589,7 +4597,7 @@ const awsMedialiveChannel = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

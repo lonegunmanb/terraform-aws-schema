@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,59 +6,53 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEcsTaskDefinition = `{
+const awsServicequotasTemplate = `{
   "block": {
     "attributes": {
-      "arn": {
+      "global_quota": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "arn_without_revision": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "execution_role_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "family": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
+        "type": "bool"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "network_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "revision": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "task_definition": {
+      "quota_code": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "task_role_arn": {
+      "quota_name": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "region": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "service_code": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "service_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "unit": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "value": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "number"
       }
     },
     "description_kind": "plain"
@@ -66,8 +60,8 @@ const awsEcsTaskDefinition = `{
   "version": 0
 }`
 
-func AwsEcsTaskDefinitionSchema() *tfjson.Schema {
+func AwsServicequotasTemplateSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEcsTaskDefinition), &result)
+	_ = json.Unmarshal([]byte(awsServicequotasTemplate), &result)
 	return &result
 }

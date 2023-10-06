@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,21 +6,21 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsKinesisFirehoseDeliveryStream = `{
+const awsVerifiedaccessInstanceTrustProviderAttachment = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "name": {
+      "verifiedaccess_instance_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "verifiedaccess_trust_provider_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -31,8 +31,8 @@ const awsKinesisFirehoseDeliveryStream = `{
   "version": 0
 }`
 
-func AwsKinesisFirehoseDeliveryStreamSchema() *tfjson.Schema {
+func AwsVerifiedaccessInstanceTrustProviderAttachmentSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsKinesisFirehoseDeliveryStream), &result)
+	_ = json.Unmarshal([]byte(awsVerifiedaccessInstanceTrustProviderAttachment), &result)
 	return &result
 }

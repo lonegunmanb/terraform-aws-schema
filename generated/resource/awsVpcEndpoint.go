@@ -157,6 +157,7 @@ const awsVpcEndpoint = `{
         "block": {
           "attributes": {
             "dns_record_ip_type": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

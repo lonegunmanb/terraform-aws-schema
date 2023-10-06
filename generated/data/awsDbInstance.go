@@ -255,7 +255,7 @@ const awsDbInstance = `{
     },
     "description_kind": "plain"
   },
-  "version": 2
+  "version": 0
 }`
 
 func AwsDbInstanceSchema() *tfjson.Schema {
