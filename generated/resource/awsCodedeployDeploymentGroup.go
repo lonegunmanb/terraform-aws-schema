@@ -53,6 +53,11 @@ const awsCodedeployDeploymentGroup = `{
         "optional": true,
         "type": "string"
       },
+      "outdated_instances_strategy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "service_role_arn": {
         "description_kind": "plain",
         "required": true,

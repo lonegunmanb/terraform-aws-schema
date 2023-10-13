@@ -69,6 +69,11 @@ const awsMskCluster = `{
         "required": true,
         "type": "string"
       },
+      "cluster_uuid": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "current_version": {
         "computed": true,
         "description_kind": "plain",

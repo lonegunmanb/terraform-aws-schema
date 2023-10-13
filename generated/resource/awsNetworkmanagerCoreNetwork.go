@@ -14,6 +14,11 @@ const awsNetworkmanagerCoreNetwork = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "base_policy_document": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "base_policy_region": {
         "deprecated": true,
         "description_kind": "plain",

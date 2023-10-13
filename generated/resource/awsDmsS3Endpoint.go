@@ -180,6 +180,11 @@ const awsDmsS3Endpoint = `{
         "optional": true,
         "type": "string"
       },
+      "glue_catalog_generation": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

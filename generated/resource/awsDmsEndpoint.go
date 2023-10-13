@@ -544,6 +544,11 @@ const awsDmsEndpoint = `{
               "optional": true,
               "type": "string"
             },
+            "glue_catalog_generation": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "ignore_header_rows": {
               "description_kind": "plain",
               "optional": true,

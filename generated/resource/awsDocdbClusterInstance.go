@@ -10,7 +10,6 @@ const awsDocdbClusterInstance = `{
   "block": {
     "attributes": {
       "apply_immediately": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -42,6 +41,11 @@ const awsDocdbClusterInstance = `{
         "required": true,
         "type": "string"
       },
+      "copy_tags_to_snapshot": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "db_subnet_group_name": {
         "computed": true,
         "description_kind": "plain",
@@ -53,7 +57,6 @@ const awsDocdbClusterInstance = `{
         "type": "string"
       },
       "enable_performance_insights": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

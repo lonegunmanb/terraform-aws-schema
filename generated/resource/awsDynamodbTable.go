@@ -182,6 +182,83 @@ const awsDynamodbTable = `{
         },
         "nesting_mode": "set"
       },
+      "import_table": {
+        "block": {
+          "attributes": {
+            "input_compression_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "input_format": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "input_format_options": {
+              "block": {
+                "block_types": {
+                  "csv": {
+                    "block": {
+                      "attributes": {
+                        "delimiter": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "header_list": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "s3_bucket_source": {
+              "block": {
+                "attributes": {
+                  "bucket": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "bucket_owner": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "key_prefix": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "local_secondary_index": {
         "block": {
           "attributes": {

@@ -19,6 +19,11 @@ const awsVerifiedaccessInstance = `{
         "optional": true,
         "type": "string"
       },
+      "fips_enabled": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

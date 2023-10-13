@@ -9,8 +9,12 @@ import (
 const awsDocdbCluster = `{
   "block": {
     "attributes": {
+      "allow_major_version_upgrade": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "apply_immediately": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

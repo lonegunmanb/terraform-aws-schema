@@ -63,24 +63,33 @@ const awsVpclatticeTargetGroup = `{
               "optional": true,
               "type": "string"
             },
-            "port": {
+            "lambda_event_structure_version": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
+              "type": "string"
+            },
+            "port": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
               "type": "number"
             },
             "protocol": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             },
             "protocol_version": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "vpc_identifier": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },

@@ -218,6 +218,7 @@ const awsDmsEndpoint = `{
               "encoding_type": "string",
               "encryption_mode": "string",
               "external_table_definition": "string",
+              "glue_catalog_generation": "bool",
               "ignore_header_rows": "number",
               "ignore_headers_row": "number",
               "include_op_for_full_load": "bool",
