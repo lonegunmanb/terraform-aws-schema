@@ -43,6 +43,7 @@ const awsSignerSigningProfilePermission = `{
         "type": "string"
       },
       "statement_id_prefix": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

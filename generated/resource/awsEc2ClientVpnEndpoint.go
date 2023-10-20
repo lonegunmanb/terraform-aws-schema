@@ -57,6 +57,11 @@ const awsEc2ClientVpnEndpoint = `{
         "optional": true,
         "type": "string"
       },
+      "self_service_portal_url": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "server_certificate_arn": {
         "description_kind": "plain",
         "required": true,
