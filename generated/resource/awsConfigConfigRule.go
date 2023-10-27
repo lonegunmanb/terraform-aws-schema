@@ -64,6 +64,20 @@ const awsConfigConfigRule = `{
       }
     },
     "block_types": {
+      "evaluation_mode": {
+        "block": {
+          "attributes": {
+            "mode": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "scope": {
         "block": {
           "attributes": {

@@ -361,6 +361,11 @@ const awsLambdaFunction = `{
       "vpc_config": {
         "block": {
           "attributes": {
+            "ipv6_allowed_for_dual_stack": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "security_group_ids": {
               "description_kind": "plain",
               "required": true,

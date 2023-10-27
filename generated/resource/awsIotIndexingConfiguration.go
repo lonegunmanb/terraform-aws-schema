@@ -112,6 +112,23 @@ const awsIotIndexingConfiguration = `{
               },
               "nesting_mode": "set"
             },
+            "filter": {
+              "block": {
+                "attributes": {
+                  "named_shadow_names": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "managed_field": {
               "block": {
                 "attributes": {

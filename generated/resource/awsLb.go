@@ -34,6 +34,11 @@ const awsLb = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "dns_record_client_routing_policy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "drop_invalid_header_fields": {
         "description_kind": "plain",
         "optional": true,

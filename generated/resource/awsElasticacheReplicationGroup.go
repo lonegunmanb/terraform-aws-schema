@@ -98,6 +98,12 @@ const awsElasticacheReplicationGroup = `{
         "optional": true,
         "type": "string"
       },
+      "ip_discovery": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "kms_key_id": {
         "description_kind": "plain",
         "optional": true,
@@ -121,6 +127,12 @@ const awsElasticacheReplicationGroup = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
+      },
+      "network_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "node_type": {
         "computed": true,

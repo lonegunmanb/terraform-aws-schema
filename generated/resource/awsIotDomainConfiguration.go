@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsKmsKey = `{
+const awsIotDomainConfiguration = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,36 +14,15 @@ const awsKmsKey = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "bypass_policy_lockout_safety_check": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "custom_key_store_id": {
+      "domain_name": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "customer_master_key_spec": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "deletion_window_in_days": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "description": {
+      "domain_type": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
-      },
-      "enable_key_rotation": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "id": {
         "computed": true,
@@ -51,29 +30,25 @@ const awsKmsKey = `{
         "optional": true,
         "type": "string"
       },
-      "is_enabled": {
+      "name": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "key_id": {
-        "computed": true,
-        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "key_usage": {
+      "server_certificate_arns": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "service_type": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "multi_region": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "policy": {
-        "computed": true,
+      "status": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -94,13 +69,23 @@ const awsKmsKey = `{
           "map",
           "string"
         ]
+      },
+      "validation_certificate_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "timeouts": {
+      "authorizer_config": {
         "block": {
           "attributes": {
-            "create": {
+            "allow_authorizer_override": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "default_authorizer_name": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -108,7 +93,23 @@ const awsKmsKey = `{
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "single"
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "tls_config": {
+        "block": {
+          "attributes": {
+            "security_policy": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -116,8 +117,8 @@ const awsKmsKey = `{
   "version": 0
 }`
 
-func AwsKmsKeySchema() *tfjson.Schema {
+func AwsIotDomainConfigurationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsKmsKey), &result)
+	_ = json.Unmarshal([]byte(awsIotDomainConfiguration), &result)
 	return &result
 }

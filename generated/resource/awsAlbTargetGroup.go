@@ -20,6 +20,7 @@ const awsAlbTargetGroup = `{
         "type": "string"
       },
       "connection_termination": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -229,6 +230,19 @@ const awsAlbTargetGroup = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "target_health_state": {
+        "block": {
+          "attributes": {
+            "enable_unhealthy_connection_termination": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "bool"
             }
           },
           "description_kind": "plain"

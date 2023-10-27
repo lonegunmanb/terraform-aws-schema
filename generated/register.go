@@ -630,6 +630,7 @@ func init() {
 	resources["aws_internetmonitor_monitor"] = resource.AwsInternetmonitorMonitorSchema()  
 	resources["aws_iot_authorizer"] = resource.AwsIotAuthorizerSchema()  
 	resources["aws_iot_certificate"] = resource.AwsIotCertificateSchema()  
+	resources["aws_iot_domain_configuration"] = resource.AwsIotDomainConfigurationSchema()  
 	resources["aws_iot_indexing_configuration"] = resource.AwsIotIndexingConfigurationSchema()  
 	resources["aws_iot_logging_options"] = resource.AwsIotLoggingOptionsSchema()  
 	resources["aws_iot_policy"] = resource.AwsIotPolicySchema()  
