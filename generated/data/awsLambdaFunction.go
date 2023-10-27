@@ -227,6 +227,7 @@ const awsLambdaFunction = `{
           [
             "object",
             {
+              "ipv6_allowed_for_dual_stack": "bool",
               "security_group_ids": [
                 "set",
                 "string"
