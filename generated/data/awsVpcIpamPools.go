@@ -36,7 +36,6 @@ const awsVpcIpamPools = `{
               "aws_service": "string",
               "description": "string",
               "id": "string",
-              "ipam_pool_id": "string",
               "ipam_scope_id": "string",
               "ipam_scope_type": "string",
               "locale": "string",

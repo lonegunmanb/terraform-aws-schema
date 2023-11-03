@@ -83,7 +83,7 @@ const awsNetworkmanagerConnectPeer = `{
       },
       "inside_cidr_blocks": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": [
           "list",
           "string"
@@ -97,6 +97,11 @@ const awsNetworkmanagerConnectPeer = `{
       "state": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "subnet_arn": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "tags": {

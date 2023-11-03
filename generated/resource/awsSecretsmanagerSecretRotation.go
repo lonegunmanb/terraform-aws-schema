@@ -22,7 +22,7 @@ const awsSecretsmanagerSecretRotation = `{
       },
       "rotation_lambda_arn": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "secret_id": {

@@ -30,6 +30,11 @@ const awsBatchJobDefinition = `{
         "required": true,
         "type": "string"
       },
+      "node_properties": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "parameters": {
         "description_kind": "plain",
         "optional": true,

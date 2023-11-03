@@ -177,6 +177,11 @@ const awsRedshiftCluster = `{
         "optional": true,
         "type": "string"
       },
+      "manage_master_password": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "manual_snapshot_retention_period": {
         "description_kind": "plain",
         "optional": true,
@@ -186,6 +191,17 @@ const awsRedshiftCluster = `{
         "description_kind": "plain",
         "optional": true,
         "sensitive": true,
+        "type": "string"
+      },
+      "master_password_secret_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "master_password_secret_kms_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "master_username": {
@@ -228,6 +244,11 @@ const awsRedshiftCluster = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
+      },
+      "snapshot_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "snapshot_cluster_identifier": {
         "description_kind": "plain",

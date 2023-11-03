@@ -634,6 +634,26 @@ const awsIotTopicRule = `{
                     "type": "string"
                   }
                 },
+                "block_types": {
+                  "header": {
+                    "block": {
+                      "attributes": {
+                        "key": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "value": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,
@@ -1019,6 +1039,26 @@ const awsIotTopicRule = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
+            }
+          },
+          "block_types": {
+            "header": {
+              "block": {
+                "attributes": {
+                  "key": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

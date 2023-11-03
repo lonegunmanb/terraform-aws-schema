@@ -46,6 +46,7 @@ const awsRdsCluster = `{
         "type": "number"
       },
       "backup_retention_period": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"

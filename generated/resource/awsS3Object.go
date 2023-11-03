@@ -188,6 +188,34 @@ const awsS3Object = `{
         "type": "string"
       }
     },
+    "block_types": {
+      "override_provider": {
+        "block": {
+          "block_types": {
+            "default_tags": {
+              "block": {
+                "attributes": {
+                  "tags": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "map",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      }
+    },
     "description_kind": "plain"
   },
   "version": 0
