@@ -196,6 +196,86 @@ const awsDatasyncTask = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "task_report_config": {
+        "block": {
+          "attributes": {
+            "output_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "report_level": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "s3_object_versioning": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "report_overrides": {
+              "block": {
+                "attributes": {
+                  "deleted_override": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "skipped_override": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "transferred_override": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "verified_override": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "s3_destination": {
+              "block": {
+                "attributes": {
+                  "bucket_access_role_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "s3_bucket_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "subdirectory": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

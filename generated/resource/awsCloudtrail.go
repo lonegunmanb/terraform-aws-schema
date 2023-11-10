@@ -247,7 +247,7 @@ const awsCloudtrail = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsCloudtrailSchema() *tfjson.Schema {

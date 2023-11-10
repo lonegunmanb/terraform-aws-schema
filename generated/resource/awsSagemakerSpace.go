@@ -154,7 +154,7 @@ const awsSagemakerSpace = `{
                       },
                       "description_kind": "plain"
                     },
-                    "max_items": 30,
+                    "max_items": 200,
                     "nesting_mode": "list"
                   },
                   "default_resource_spec": {

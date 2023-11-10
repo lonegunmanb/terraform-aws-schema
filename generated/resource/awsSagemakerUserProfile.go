@@ -85,6 +85,58 @@ const awsSagemakerUserProfile = `{
             "canvas_app_settings": {
               "block": {
                 "block_types": {
+                  "direct_deploy_settings": {
+                    "block": {
+                      "attributes": {
+                        "status": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "identity_provider_oauth_settings": {
+                    "block": {
+                      "attributes": {
+                        "data_source_name": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "secret_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "status": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 20,
+                    "nesting_mode": "set"
+                  },
+                  "kendra_settings": {
+                    "block": {
+                      "attributes": {
+                        "status": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "model_register_settings": {
                     "block": {
                       "attributes": {
@@ -244,7 +296,7 @@ const awsSagemakerUserProfile = `{
                       },
                       "description_kind": "plain"
                     },
-                    "max_items": 30,
+                    "max_items": 200,
                     "nesting_mode": "list"
                   },
                   "default_resource_spec": {
@@ -306,7 +358,7 @@ const awsSagemakerUserProfile = `{
                       },
                       "description_kind": "plain"
                     },
-                    "max_items": 30,
+                    "max_items": 200,
                     "nesting_mode": "list"
                   },
                   "default_resource_spec": {

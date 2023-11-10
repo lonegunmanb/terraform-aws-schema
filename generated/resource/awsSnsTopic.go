@@ -24,7 +24,17 @@ const awsSnsTopic = `{
         "optional": true,
         "type": "number"
       },
+      "archive_policy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "beginning_archive_time": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

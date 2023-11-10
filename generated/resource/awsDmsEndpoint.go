@@ -64,6 +64,11 @@ const awsDmsEndpoint = `{
         "sensitive": true,
         "type": "string"
       },
+      "pause_replication_tasks": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "port": {
         "description_kind": "plain",
         "optional": true,

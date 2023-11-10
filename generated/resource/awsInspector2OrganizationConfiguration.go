@@ -39,6 +39,11 @@ const awsInspector2OrganizationConfiguration = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
+            },
+            "lambda_code": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
             }
           },
           "description_kind": "plain"

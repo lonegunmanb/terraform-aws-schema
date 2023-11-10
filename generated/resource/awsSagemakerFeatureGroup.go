@@ -134,6 +134,12 @@ const awsSagemakerFeatureGroup = `{
                     "optional": true,
                     "type": "string"
                   },
+                  "resolved_output_s3_uri": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "s3_uri": {
                     "description_kind": "plain",
                     "required": true,
@@ -159,6 +165,11 @@ const awsSagemakerFeatureGroup = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
+            },
+            "storage_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "block_types": {
@@ -169,6 +180,25 @@ const awsSagemakerFeatureGroup = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "ttl_duration": {
+              "block": {
+                "attributes": {
+                  "unit": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
                   }
                 },
                 "description_kind": "plain"

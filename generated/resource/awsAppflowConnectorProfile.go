@@ -446,6 +446,16 @@ const awsAppflowConnectorProfile = `{
                           "optional": true,
                           "type": "string"
                         },
+                        "jwt_token": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "oauth2_grant_type": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
                         "refresh_token": {
                           "description_kind": "plain",
                           "optional": true,

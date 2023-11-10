@@ -81,6 +81,11 @@ const awsSnsTopicSubscription = `{
         "optional": true,
         "type": "string"
       },
+      "replay_policy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "subscription_role_arn": {
         "description_kind": "plain",
         "optional": true,

@@ -122,6 +122,39 @@ const awsSagemakerModel = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            },
+            "model_data_source": {
+              "block": {
+                "block_types": {
+                  "s3_data_source": {
+                    "block": {
+                      "attributes": {
+                        "compression_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "s3_data_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "s3_uri": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "min_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -202,6 +235,39 @@ const awsSagemakerModel = `{
                       "description_kind": "plain"
                     },
                     "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "model_data_source": {
+              "block": {
+                "block_types": {
+                  "s3_data_source": {
+                    "block": {
+                      "attributes": {
+                        "compression_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "s3_data_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "s3_uri": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "min_items": 1,
                     "nesting_mode": "list"
                   }
                 },
