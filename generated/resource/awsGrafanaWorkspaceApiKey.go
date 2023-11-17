@@ -18,6 +18,7 @@ const awsGrafanaWorkspaceApiKey = `{
       "key": {
         "computed": true,
         "description_kind": "plain",
+        "sensitive": true,
         "type": "string"
       },
       "key_name": {

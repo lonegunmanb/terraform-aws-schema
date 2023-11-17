@@ -116,6 +116,11 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "string"
       },
+      "delete_automated_backups": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "deletion_protection": {
         "description_kind": "plain",
         "optional": true,
@@ -480,7 +485,7 @@ const awsRdsCluster = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsRdsClusterSchema() *tfjson.Schema {

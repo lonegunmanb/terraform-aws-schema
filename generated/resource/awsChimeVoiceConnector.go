@@ -15,6 +15,7 @@ const awsChimeVoiceConnector = `{
         "type": "string"
       },
       "aws_region": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

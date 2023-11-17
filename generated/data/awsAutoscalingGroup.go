@@ -61,6 +61,20 @@ const awsAutoscalingGroup = `{
         "optional": true,
         "type": "string"
       },
+      "instance_maintenance_policy": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "max_healthy_percentage": "number",
+              "min_healthy_percentage": "number"
+            }
+          ]
+        ]
+      },
       "launch_configuration": {
         "computed": true,
         "description_kind": "plain",

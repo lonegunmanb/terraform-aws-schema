@@ -121,7 +121,7 @@ const awsSagemakerUserProfile = `{
                       "description_kind": "plain"
                     },
                     "max_items": 20,
-                    "nesting_mode": "set"
+                    "nesting_mode": "list"
                   },
                   "kendra_settings": {
                     "block": {
