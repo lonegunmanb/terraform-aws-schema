@@ -86,6 +86,36 @@ const awsS3BucketLogging = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
+      },
+      "target_object_key_format": {
+        "block": {
+          "block_types": {
+            "partitioned_prefix": {
+              "block": {
+                "attributes": {
+                  "partition_date_source": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "simple_prefix": {
+              "block": {
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

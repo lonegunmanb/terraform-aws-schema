@@ -36,6 +36,7 @@ const awsCloudwatchEventRule = `{
         "type": "string"
       },
       "is_enabled": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -62,6 +63,11 @@ const awsCloudwatchEventRule = `{
         "optional": true,
         "type": "string"
       },
+      "state": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -82,7 +88,7 @@ const awsCloudwatchEventRule = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsCloudwatchEventRuleSchema() *tfjson.Schema {

@@ -32,6 +32,11 @@ const awsElasticacheReplicationGroup = `{
         "sensitive": true,
         "type": "string"
       },
+      "auth_token_update_strategy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "auto_minor_version_upgrade": {
         "computed": true,
         "description_kind": "plain",

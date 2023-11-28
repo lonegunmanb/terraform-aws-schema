@@ -144,6 +144,13 @@ const awsApprunnerService = `{
       },
       "network_configuration": {
         "block": {
+          "attributes": {
+            "ip_address_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
           "block_types": {
             "egress_configuration": {
               "block": {
@@ -239,6 +246,12 @@ const awsApprunnerService = `{
                   "repository_url": {
                     "description_kind": "plain",
                     "required": true,
+                    "type": "string"
+                  },
+                  "source_directory": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
                     "type": "string"
                   }
                 },

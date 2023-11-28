@@ -24,11 +24,21 @@ const awsApprunnerAutoScalingConfigurationVersion = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "has_associated_service": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "is_default": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
       },
       "latest": {
         "computed": true,
