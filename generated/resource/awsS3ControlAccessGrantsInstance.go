@@ -30,6 +30,16 @@ const awsS3ControlAccessGrantsInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "identity_center_application_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "identity_center_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

@@ -175,6 +175,7 @@ const awsRdsClusterInstance = `{
         "type": "number"
       },
       "publicly_accessible": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
