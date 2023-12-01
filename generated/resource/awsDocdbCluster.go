@@ -181,6 +181,11 @@ const awsDocdbCluster = `{
         "optional": true,
         "type": "bool"
       },
+      "storage_type": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
