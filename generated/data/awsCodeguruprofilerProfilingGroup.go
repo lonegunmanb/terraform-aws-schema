@@ -6,25 +6,33 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsAppconfigConfigurationProfile = `{
+const awsCodeguruprofilerProfilingGroup = `{
   "block": {
     "attributes": {
-      "application_id": {
+      "agent_orchestration_config": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
-        "type": "string"
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "profiling_enabled": "bool"
+            }
+          ]
+        ]
       },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "configuration_profile_id": {
+      "compute_platform": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
-      "description": {
+      "created_at": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -32,56 +40,49 @@ const awsAppconfigConfigurationProfile = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "kms_key_identifier": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "location_uri": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "name": {
-        "computed": true,
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "retrieval_role_arn": {
+      "profiling_status": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "latest_agent_orchestrated_at": "string",
+              "latest_agent_profile_reported_at": "string",
+              "latest_aggregated_profile": [
+                "list",
+                [
+                  "object",
+                  {
+                    "period": "string",
+                    "start": "string"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
       },
       "tags": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
       },
-      "type": {
+      "updated_at": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "validator": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "content": "string",
-              "type": "string"
-            }
-          ]
-        ]
       }
     },
     "description_kind": "plain"
@@ -89,8 +90,8 @@ const awsAppconfigConfigurationProfile = `{
   "version": 0
 }`
 
-func AwsAppconfigConfigurationProfileSchema() *tfjson.Schema {
+func AwsCodeguruprofilerProfilingGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsAppconfigConfigurationProfile), &result)
+	_ = json.Unmarshal([]byte(awsCodeguruprofilerProfilingGroup), &result)
 	return &result
 }

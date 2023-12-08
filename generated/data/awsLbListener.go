@@ -146,6 +146,21 @@ const awsLbListener = `{
         "optional": true,
         "type": "string"
       },
+      "mutual_authentication": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "ignore_client_certificate_expiry": "bool",
+              "mode": "string",
+              "trust_store_arn": "string"
+            }
+          ]
+        ]
+      },
       "port": {
         "computed": true,
         "description_kind": "plain",

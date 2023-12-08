@@ -44,6 +44,48 @@ const awsSagemakerAppImageConfig = `{
       }
     },
     "block_types": {
+      "jupyter_lab_image_config": {
+        "block": {
+          "block_types": {
+            "container_config": {
+              "block": {
+                "attributes": {
+                  "container_arguments": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "container_entrypoint": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "container_environment_variables": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "map",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "kernel_gateway_image_config": {
         "block": {
           "block_types": {

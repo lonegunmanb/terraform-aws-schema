@@ -338,10 +338,39 @@ const awsLbListener = `{
         "min_items": 1,
         "nesting_mode": "list"
       },
+      "mutual_authentication": {
+        "block": {
+          "attributes": {
+            "ignore_client_certificate_expiry": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "mode": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "trust_store_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
-            "read": {
+            "create": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

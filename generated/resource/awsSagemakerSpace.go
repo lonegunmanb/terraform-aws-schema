@@ -30,6 +30,11 @@ const awsSagemakerSpace = `{
         "optional": true,
         "type": "string"
       },
+      "space_display_name": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "space_name": {
         "description_kind": "plain",
         "required": true,
@@ -51,6 +56,11 @@ const awsSagemakerSpace = `{
           "map",
           "string"
         ]
+      },
+      "url": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "block_types": {
@@ -98,6 +108,11 @@ const awsSagemakerSpace = `{
                           "type": "string"
                         },
                         "sagemaker_image_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "sagemaker_image_version_alias": {
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
@@ -171,6 +186,11 @@ const awsSagemakerSpace = `{
                           "type": "string"
                         },
                         "sagemaker_image_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "sagemaker_image_version_alias": {
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"

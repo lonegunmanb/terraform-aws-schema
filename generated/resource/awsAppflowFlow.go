@@ -344,6 +344,7 @@ const awsAppflowFlow = `{
                           "type": "string"
                         },
                         "bucket_prefix": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
@@ -359,6 +360,7 @@ const awsAppflowFlow = `{
                                 "type": "string"
                               },
                               "preserve_source_data_typing": {
+                                "computed": true,
                                 "description_kind": "plain",
                                 "optional": true,
                                 "type": "bool"
@@ -369,6 +371,7 @@ const awsAppflowFlow = `{
                                 "block": {
                                   "attributes": {
                                     "aggregation_type": {
+                                      "computed": true,
                                       "description_kind": "plain",
                                       "optional": true,
                                       "type": "string"
@@ -721,7 +724,7 @@ const awsAppflowFlow = `{
           "description_kind": "plain"
         },
         "min_items": 1,
-        "nesting_mode": "set"
+        "nesting_mode": "list"
       },
       "source_flow_config": {
         "block": {
@@ -876,7 +879,7 @@ const awsAppflowFlow = `{
                         },
                         "bucket_prefix": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
                         }
                       },

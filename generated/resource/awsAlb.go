@@ -74,6 +74,12 @@ const awsAlb = `{
         "optional": true,
         "type": "bool"
       },
+      "enforce_security_group_inbound_rules_on_private_link_traffic": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

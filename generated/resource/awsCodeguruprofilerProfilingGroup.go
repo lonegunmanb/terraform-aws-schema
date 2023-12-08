@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsCloudwatchLogGroup = `{
+const awsCodeguruprofilerProfilingGroup = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,43 +14,21 @@ const awsCloudwatchLogGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "compute_platform": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "kms_key_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "log_group_class": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "name": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
-      },
-      "name_prefix": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "retention_in_days": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "tags": {
         "description_kind": "plain",
@@ -63,11 +41,25 @@ const awsCloudwatchLogGroup = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
+      }
+    },
+    "block_types": {
+      "agent_orchestration_config": {
+        "block": {
+          "attributes": {
+            "profiling_enabled": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -75,8 +67,8 @@ const awsCloudwatchLogGroup = `{
   "version": 0
 }`
 
-func AwsCloudwatchLogGroupSchema() *tfjson.Schema {
+func AwsCodeguruprofilerProfilingGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsCloudwatchLogGroup), &result)
+	_ = json.Unmarshal([]byte(awsCodeguruprofilerProfilingGroup), &result)
 	return &result
 }

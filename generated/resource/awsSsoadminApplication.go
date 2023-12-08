@@ -6,22 +6,27 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsAppconfigConfigurationProfile = `{
+const awsSsoadminApplication = `{
   "block": {
     "attributes": {
-      "application_id": {
+      "application_account": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "application_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "application_provider_arn": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "arn": {
-        "computed": true,
+      "client_token": {
         "description_kind": "plain",
-        "type": "string"
-      },
-      "configuration_profile_id": {
-        "computed": true,
-        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "description": {
@@ -32,15 +37,9 @@ const awsAppconfigConfigurationProfile = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "kms_key_identifier": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "location_uri": {
+      "instance_arn": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -50,7 +49,8 @@ const awsAppconfigConfigurationProfile = `{
         "required": true,
         "type": "string"
       },
-      "retrieval_role_arn": {
+      "status": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -66,38 +66,46 @@ const awsAppconfigConfigurationProfile = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
-      },
-      "type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {
-      "validator": {
+      "portal_options": {
         "block": {
           "attributes": {
-            "content": {
+            "visibility": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
-              "sensitive": true,
               "type": "string"
-            },
-            "type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
+            }
+          },
+          "block_types": {
+            "sign_in_options": {
+              "block": {
+                "attributes": {
+                  "application_url": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "origin": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 2,
-        "nesting_mode": "set"
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -105,8 +113,8 @@ const awsAppconfigConfigurationProfile = `{
   "version": 0
 }`
 
-func AwsAppconfigConfigurationProfileSchema() *tfjson.Schema {
+func AwsSsoadminApplicationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsAppconfigConfigurationProfile), &result)
+	_ = json.Unmarshal([]byte(awsSsoadminApplication), &result)
 	return &result
 }

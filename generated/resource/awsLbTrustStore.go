@@ -6,27 +6,32 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSagemakerApp = `{
+const awsLbTrustStore = `{
   "block": {
     "attributes": {
-      "app_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "app_type": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "domain_id": {
+      "arn_suffix": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "ca_certificates_bundle_s3_bucket": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "ca_certificates_bundle_s3_key": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "ca_certificates_bundle_s3_object_version": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
@@ -35,7 +40,14 @@ const awsSagemakerApp = `{
         "optional": true,
         "type": "string"
       },
-      "space_name": {
+      "name": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "name_prefix": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -56,39 +68,18 @@ const awsSagemakerApp = `{
           "map",
           "string"
         ]
-      },
-      "user_profile_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {
-      "resource_spec": {
+      "timeouts": {
         "block": {
           "attributes": {
-            "instance_type": {
+            "create": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
-            "lifecycle_config_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "sagemaker_image_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "sagemaker_image_version_alias": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "sagemaker_image_version_arn": {
+            "delete": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -96,8 +87,7 @@ const awsSagemakerApp = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -105,8 +95,8 @@ const awsSagemakerApp = `{
   "version": 0
 }`
 
-func AwsSagemakerAppSchema() *tfjson.Schema {
+func AwsLbTrustStoreSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSagemakerApp), &result)
+	_ = json.Unmarshal([]byte(awsLbTrustStore), &result)
 	return &result
 }
