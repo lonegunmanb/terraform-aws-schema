@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsOpensearchserverlessCollection = `{
+const awsFinspaceKxDataview = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,14 +14,34 @@ const awsOpensearchserverlessCollection = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "collection_endpoint": {
+      "auto_update": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "bool"
+      },
+      "availability_zone_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "az_mode": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "changeset_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "created_timestamp": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "dashboard_endpoint": {
-        "computed": true,
+      "database_name": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "description": {
@@ -29,12 +49,18 @@ const awsOpensearchserverlessCollection = `{
         "optional": true,
         "type": "string"
       },
+      "environment_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
-      "kms_key_arn": {
+      "last_modified_timestamp": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -44,10 +70,9 @@ const awsOpensearchserverlessCollection = `{
         "required": true,
         "type": "string"
       },
-      "standby_replicas": {
+      "status": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "tags": {
@@ -61,30 +86,49 @@ const awsOpensearchserverlessCollection = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "map",
           "string"
         ]
-      },
-      "type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {
+      "segment_configurations": {
+        "block": {
+          "attributes": {
+            "db_paths": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
+            "volume_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
-              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
-              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -100,8 +144,8 @@ const awsOpensearchserverlessCollection = `{
   "version": 0
 }`
 
-func AwsOpensearchserverlessCollectionSchema() *tfjson.Schema {
+func AwsFinspaceKxDataviewSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsOpensearchserverlessCollection), &result)
+	_ = json.Unmarshal([]byte(awsFinspaceKxDataview), &result)
 	return &result
 }

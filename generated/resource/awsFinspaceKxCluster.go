@@ -186,7 +186,6 @@ const awsFinspaceKxCluster = `{
           "description_kind": "plain"
         },
         "max_items": 1,
-        "min_items": 1,
         "nesting_mode": "list"
       },
       "code": {
@@ -225,6 +224,11 @@ const awsFinspaceKxCluster = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
+            },
+            "dataview_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "block_types": {
@@ -259,10 +263,49 @@ const awsFinspaceKxCluster = `{
           "attributes": {
             "size": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "number"
             },
             "type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "volume_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "scaling_group_configuration": {
+        "block": {
+          "attributes": {
+            "cpu": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "memory_limit": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "memory_reservation": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "node_count": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "scaling_group_name": {
               "description_kind": "plain",
               "required": true,
               "type": "string"
@@ -271,6 +314,22 @@ const awsFinspaceKxCluster = `{
           "description_kind": "plain"
         },
         "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "tickerplant_log_configuration": {
+        "block": {
+          "attributes": {
+            "tickerplant_log_volumes": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
         "nesting_mode": "list"
       },
       "timeouts": {

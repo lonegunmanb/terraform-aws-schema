@@ -35,6 +35,21 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "connection_logs": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "bucket": "string",
+              "enabled": "bool",
+              "prefix": "string"
+            }
+          ]
+        ]
+      },
       "customer_owned_ipv4_pool": {
         "computed": true,
         "description_kind": "plain",
@@ -46,6 +61,11 @@ const awsAlb = `{
         "type": "string"
       },
       "dns_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "dns_record_client_routing_policy": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

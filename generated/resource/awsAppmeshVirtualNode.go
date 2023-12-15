@@ -263,7 +263,6 @@ const awsAppmeshVirtualNode = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 50,
               "nesting_mode": "set"
             },
             "backend_defaults": {

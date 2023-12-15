@@ -45,7 +45,7 @@ const awsDmsEventSubscription = `{
       },
       "source_ids": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": [
           "set",
           "string"
@@ -53,7 +53,7 @@ const awsDmsEventSubscription = `{
       },
       "source_type": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "tags": {

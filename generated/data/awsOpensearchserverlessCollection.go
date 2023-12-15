@@ -56,6 +56,11 @@ const awsOpensearchserverlessCollection = `{
         "optional": true,
         "type": "string"
       },
+      "standby_replicas": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "tags": {
         "computed": true,
         "description_kind": "plain",

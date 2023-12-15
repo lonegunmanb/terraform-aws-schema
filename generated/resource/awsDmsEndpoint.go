@@ -146,6 +146,11 @@ const awsDmsEndpoint = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
+            },
+            "use_new_mapping_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
             }
           },
           "description_kind": "plain"
@@ -337,6 +342,95 @@ const awsDmsEndpoint = `{
               "type": "string"
             },
             "nesting_level": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "postgres_settings": {
+        "block": {
+          "attributes": {
+            "after_connect_script": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "babelfish_database_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "capture_ddls": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "database_mode": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "ddl_artifacts_schema": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "execute_timeout": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "fail_tasks_on_lob_truncation": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "heartbeat_enable": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "heartbeat_frequency": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "heartbeat_schema": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "map_boolean_as_boolean": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "map_jsonb_as_clob": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "map_long_varchar_as": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "max_file_size": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "plugin_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "slot_name": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

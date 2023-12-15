@@ -30,6 +30,11 @@ const awsCloudwatchLogGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "log_group_class": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,
