@@ -72,6 +72,12 @@ const awsRedshiftserverlessWorkgroup = `{
         "required": true,
         "type": "string"
       },
+      "port": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "publicly_accessible": {
         "description_kind": "plain",
         "optional": true,

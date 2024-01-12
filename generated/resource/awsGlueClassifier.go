@@ -70,6 +70,12 @@ const awsGlueClassifier = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "serde": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

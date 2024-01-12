@@ -132,6 +132,22 @@ const awsLambdaFunction = `{
           "string"
         ]
       },
+      "logging_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "application_log_level": "string",
+              "log_format": "string",
+              "log_group": "string",
+              "system_log_level": "string"
+            }
+          ]
+        ]
+      },
       "memory_size": {
         "computed": true,
         "description_kind": "plain",

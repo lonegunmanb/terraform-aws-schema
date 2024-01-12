@@ -122,6 +122,11 @@ const awsEfsFileSystem = `{
       "lifecycle_policy": {
         "block": {
           "attributes": {
+            "transition_to_archive": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "transition_to_ia": {
               "description_kind": "plain",
               "optional": true,
@@ -136,6 +141,21 @@ const awsEfsFileSystem = `{
           "description_kind": "plain"
         },
         "max_items": 2,
+        "nesting_mode": "list"
+      },
+      "protection": {
+        "block": {
+          "attributes": {
+            "replication_overwrite": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
         "nesting_mode": "list"
       }
     },

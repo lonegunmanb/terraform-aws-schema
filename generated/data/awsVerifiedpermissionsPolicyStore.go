@@ -6,14 +6,9 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsPrometheusWorkspace = `{
+const awsVerifiedpermissionsPolicyStore = `{
   "block": {
     "attributes": {
-      "alias": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -24,40 +19,33 @@ const awsPrometheusWorkspace = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "description": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "kms_key_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "prometheus_endpoint": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "workspace_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
+      },
+      "last_updated_date": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "validation_settings": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "mode": "string"
+            }
+          ]
+        ]
       }
     },
     "description_kind": "plain"
@@ -65,8 +53,8 @@ const awsPrometheusWorkspace = `{
   "version": 0
 }`
 
-func AwsPrometheusWorkspaceSchema() *tfjson.Schema {
+func AwsVerifiedpermissionsPolicyStoreSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsPrometheusWorkspace), &result)
+	_ = json.Unmarshal([]byte(awsVerifiedpermissionsPolicyStore), &result)
 	return &result
 }

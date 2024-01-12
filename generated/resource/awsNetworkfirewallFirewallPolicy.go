@@ -99,6 +99,11 @@ const awsNetworkfirewallFirewallPolicy = `{
                 "set",
                 "string"
               ]
+            },
+            "tls_inspection_configuration_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "block_types": {

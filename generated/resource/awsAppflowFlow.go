@@ -375,6 +375,12 @@ const awsAppflowFlow = `{
                                       "description_kind": "plain",
                                       "optional": true,
                                       "type": "string"
+                                    },
+                                    "target_file_size": {
+                                      "computed": true,
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
                                     }
                                   },
                                   "description_kind": "plain"

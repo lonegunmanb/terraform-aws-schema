@@ -94,6 +94,11 @@ const awsKmsKey = `{
           "map",
           "string"
         ]
+      },
+      "xks_key_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {

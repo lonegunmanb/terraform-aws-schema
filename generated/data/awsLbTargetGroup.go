@@ -28,7 +28,7 @@ const awsLbTargetGroup = `{
       "deregistration_delay": {
         "computed": true,
         "description_kind": "plain",
-        "type": "number"
+        "type": "string"
       },
       "health_check": {
         "computed": true,
@@ -65,6 +65,12 @@ const awsLbTargetGroup = `{
       "load_balancing_algorithm_type": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "load_balancing_anomaly_mitigation": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "load_balancing_cross_zone_enabled": {

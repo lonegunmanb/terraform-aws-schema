@@ -1147,6 +1147,20 @@ const awsKinesisFirehoseDeliveryStream = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "document_id_options": {
+              "block": {
+                "attributes": {
+                  "default_document_id_format": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "processing_configuration": {
               "block": {
                 "attributes": {
@@ -1851,6 +1865,16 @@ const awsKinesisFirehoseDeliveryStream = `{
       "splunk_configuration": {
         "block": {
           "attributes": {
+            "buffering_interval": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "buffering_size": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
             "hec_acknowledgment_timeout": {
               "description_kind": "plain",
               "optional": true,

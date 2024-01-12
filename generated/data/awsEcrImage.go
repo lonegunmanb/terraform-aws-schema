@@ -44,6 +44,11 @@ const awsEcrImage = `{
           "string"
         ]
       },
+      "image_uri": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "most_recent": {
         "description_kind": "plain",
         "optional": true,

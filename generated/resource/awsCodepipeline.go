@@ -25,6 +25,11 @@ const awsCodepipeline = `{
         "required": true,
         "type": "string"
       },
+      "pipeline_type": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "role_arn": {
         "description_kind": "plain",
         "required": true,
@@ -189,6 +194,29 @@ const awsCodepipeline = `{
           "description_kind": "plain"
         },
         "min_items": 2,
+        "nesting_mode": "list"
+      },
+      "variable": {
+        "block": {
+          "attributes": {
+            "default_value": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "description": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
         "nesting_mode": "list"
       }
     },

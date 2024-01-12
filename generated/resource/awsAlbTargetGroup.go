@@ -53,6 +53,12 @@ const awsAlbTargetGroup = `{
         "optional": true,
         "type": "string"
       },
+      "load_balancing_anomaly_mitigation": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "load_balancing_cross_zone_enabled": {
         "computed": true,
         "description_kind": "plain",

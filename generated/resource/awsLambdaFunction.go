@@ -302,6 +302,36 @@ const awsLambdaFunction = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "logging_config": {
+        "block": {
+          "attributes": {
+            "application_log_level": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "log_format": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "log_group": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "system_log_level": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "snap_start": {
         "block": {
           "attributes": {

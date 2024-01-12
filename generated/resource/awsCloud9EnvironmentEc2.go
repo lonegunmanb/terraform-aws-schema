@@ -37,7 +37,7 @@ const awsCloud9EnvironmentEc2 = `{
       },
       "image_id": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "instance_type": {

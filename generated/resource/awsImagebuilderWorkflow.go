@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsBatchComputeEnvironment = `{
+const awsImagebuilderWorkflow = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,14 +14,25 @@ const awsBatchComputeEnvironment = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "compute_environment_name": {
+      "change_description": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
-      "ecs_cluster_arn": {
+      "data": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "date_created": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "description": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
@@ -30,27 +41,30 @@ const awsBatchComputeEnvironment = `{
         "optional": true,
         "type": "string"
       },
-      "service_role": {
-        "computed": true,
+      "kms_key_id": {
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
-      "state": {
-        "computed": true,
+      "name": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "status_reason": {
+      "owner": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
       "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -60,23 +74,19 @@ const awsBatchComputeEnvironment = `{
         ]
       },
       "type": {
-        "computed": true,
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "update_policy": {
-        "computed": true,
+      "uri": {
         "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "job_execution_timeout_minutes": "number",
-              "terminate_jobs_on_update": "bool"
-            }
-          ]
-        ]
+        "optional": true,
+        "type": "string"
+      },
+      "version": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -84,8 +94,8 @@ const awsBatchComputeEnvironment = `{
   "version": 0
 }`
 
-func AwsBatchComputeEnvironmentSchema() *tfjson.Schema {
+func AwsImagebuilderWorkflowSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsBatchComputeEnvironment), &result)
+	_ = json.Unmarshal([]byte(awsImagebuilderWorkflow), &result)
 	return &result
 }

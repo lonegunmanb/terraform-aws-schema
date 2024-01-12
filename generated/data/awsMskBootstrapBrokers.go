@@ -6,22 +6,62 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsBatchComputeEnvironment = `{
+const awsMskBootstrapBrokers = `{
   "block": {
     "attributes": {
-      "arn": {
+      "bootstrap_brokers": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "compute_environment_name": {
+      "bootstrap_brokers_public_sasl_iam": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_public_sasl_scram": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_public_tls": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_sasl_iam": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_sasl_scram": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_tls": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_vpc_connectivity_sasl_iam": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_vpc_connectivity_sasl_scram": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_vpc_connectivity_tls": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "cluster_arn": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "ecs_cluster_arn": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "id": {
@@ -29,54 +69,6 @@ const awsBatchComputeEnvironment = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "service_role": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "state": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "status_reason": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "update_policy": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "job_execution_timeout_minutes": "number",
-              "terminate_jobs_on_update": "bool"
-            }
-          ]
-        ]
       }
     },
     "description_kind": "plain"
@@ -84,8 +76,8 @@ const awsBatchComputeEnvironment = `{
   "version": 0
 }`
 
-func AwsBatchComputeEnvironmentSchema() *tfjson.Schema {
+func AwsMskBootstrapBrokersSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsBatchComputeEnvironment), &result)
+	_ = json.Unmarshal([]byte(awsMskBootstrapBrokers), &result)
 	return &result
 }

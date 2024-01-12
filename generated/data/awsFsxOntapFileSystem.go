@@ -91,6 +91,11 @@ const awsFsxOntapFileSystem = `{
           ]
         ]
       },
+      "ha_pairs": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "id": {
         "description_kind": "plain",
         "required": true,
@@ -155,6 +160,11 @@ const awsFsxOntapFileSystem = `{
         ]
       },
       "throughput_capacity": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "throughput_capacity_per_ha_pair": {
         "computed": true,
         "description_kind": "plain",
         "type": "number"

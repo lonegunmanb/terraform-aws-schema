@@ -111,7 +111,8 @@ const awsNetworkfirewallFirewallPolicy = `{
                     "resource_arn": "string"
                   }
                 ]
-              ]
+              ],
+              "tls_inspection_configuration_arn": "string"
             }
           ]
         ]

@@ -325,6 +325,11 @@ const awsAutoscalingGroup = `{
                     "optional": true,
                     "type": "string"
                   },
+                  "max_healthy_percentage": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
                   "min_healthy_percentage": {
                     "description_kind": "plain",
                     "optional": true,

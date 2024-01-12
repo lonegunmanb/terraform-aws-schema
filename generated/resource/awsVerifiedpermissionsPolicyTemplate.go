@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,55 +6,35 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsPrometheusWorkspace = `{
+const awsVerifiedpermissionsPolicyTemplate = `{
   "block": {
     "attributes": {
-      "alias": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "created_date": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
+      "description": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "kms_key_arn": {
+      "policy_store_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "policy_template_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "prometheus_endpoint": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "workspace_id": {
+      "statement": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -65,8 +45,8 @@ const awsPrometheusWorkspace = `{
   "version": 0
 }`
 
-func AwsPrometheusWorkspaceSchema() *tfjson.Schema {
+func AwsVerifiedpermissionsPolicyTemplateSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsPrometheusWorkspace), &result)
+	_ = json.Unmarshal([]byte(awsVerifiedpermissionsPolicyTemplate), &result)
 	return &result
 }

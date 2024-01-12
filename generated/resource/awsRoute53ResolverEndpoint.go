@@ -35,6 +35,21 @@ const awsRoute53ResolverEndpoint = `{
         "optional": true,
         "type": "string"
       },
+      "protocols": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "resolver_endpoint_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "security_group_ids": {
         "description_kind": "plain",
         "required": true,

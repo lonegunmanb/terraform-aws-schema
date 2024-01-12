@@ -383,6 +383,11 @@ const awsGlueCatalogTable = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
+            },
+            "region": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

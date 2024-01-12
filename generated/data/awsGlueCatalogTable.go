@@ -218,7 +218,8 @@ const awsGlueCatalogTable = `{
             {
               "catalog_id": "string",
               "database_name": "string",
-              "name": "string"
+              "name": "string",
+              "region": "string"
             }
           ]
         ]

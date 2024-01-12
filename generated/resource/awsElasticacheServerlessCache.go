@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsFsxOntapFileSystem = `{
+const awsElasticacheServerlessCache = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,34 +14,24 @@ const awsFsxOntapFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "automatic_backup_retention_days": {
+      "create_time": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "number"
+        "type": "string"
       },
-      "daily_automatic_backup_start_time": {
+      "daily_snapshot_time": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "deployment_type": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "dns_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "endpoint_ip_address_range": {
+      "description": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "endpoints": {
+      "endpoint": {
         "computed": true,
         "description_kind": "plain",
         "type": [
@@ -49,110 +39,91 @@ const awsFsxOntapFileSystem = `{
           [
             "object",
             {
-              "intercluster": [
-                "list",
-                [
-                  "object",
-                  {
-                    "dns_name": "string",
-                    "ip_addresses": [
-                      "set",
-                      "string"
-                    ]
-                  }
-                ]
-              ],
-              "management": [
-                "list",
-                [
-                  "object",
-                  {
-                    "dns_name": "string",
-                    "ip_addresses": [
-                      "set",
-                      "string"
-                    ]
-                  }
-                ]
-              ]
+              "address": "string",
+              "port": "number"
             }
           ]
         ]
       },
-      "fsx_admin_password": {
+      "engine": {
         "description_kind": "plain",
-        "optional": true,
-        "sensitive": true,
+        "required": true,
         "type": "string"
       },
-      "ha_pairs": {
+      "full_engine_version": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "number"
+        "type": "string"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "kms_key_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "major_engine_version": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "network_interface_ids": {
+      "name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "reader_endpoint": {
         "computed": true,
         "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "address": "string",
+              "port": "number"
+            }
+          ]
+        ]
+      },
+      "security_group_ids": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "snapshot_arns_to_restore": {
+        "description_kind": "plain",
+        "optional": true,
         "type": [
           "list",
           "string"
         ]
       },
-      "owner_id": {
+      "snapshot_retention_limit": {
         "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "preferred_subnet_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "route_table_ids": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "security_group_ids": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "storage_capacity": {
         "description_kind": "plain",
         "optional": true,
         "type": "number"
       },
-      "storage_type": {
+      "status": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "subnet_ids": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },
@@ -167,69 +138,74 @@ const awsFsxOntapFileSystem = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
       },
-      "throughput_capacity": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "throughput_capacity_per_ha_pair": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "vpc_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "weekly_maintenance_start_time": {
-        "computed": true,
+      "user_group_id": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       }
     },
     "block_types": {
-      "disk_iops_configuration": {
+      "cache_usage_limits": {
         "block": {
-          "attributes": {
-            "iops": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
+          "block_types": {
+            "data_storage": {
+              "block": {
+                "attributes": {
+                  "maximum": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "unit": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             },
-            "mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
+            "ecpu_per_second": {
+              "block": {
+                "attributes": {
+                  "maximum": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -245,8 +221,8 @@ const awsFsxOntapFileSystem = `{
   "version": 0
 }`
 
-func AwsFsxOntapFileSystemSchema() *tfjson.Schema {
+func AwsElasticacheServerlessCacheSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsFsxOntapFileSystem), &result)
+	_ = json.Unmarshal([]byte(awsElasticacheServerlessCache), &result)
 	return &result
 }

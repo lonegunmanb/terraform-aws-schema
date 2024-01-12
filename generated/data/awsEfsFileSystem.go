@@ -65,6 +65,7 @@ const awsEfsFileSystem = `{
           [
             "object",
             {
+              "transition_to_archive": "string",
               "transition_to_ia": "string",
               "transition_to_primary_storage_class": "string"
             }
@@ -80,6 +81,19 @@ const awsEfsFileSystem = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "protection": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "replication_overwrite": "string"
+            }
+          ]
+        ]
       },
       "provisioned_throughput_in_mibps": {
         "computed": true,

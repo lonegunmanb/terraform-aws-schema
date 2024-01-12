@@ -55,6 +55,11 @@ const awsVerifiedaccessEndpoint = `{
         "optional": true,
         "type": "string"
       },
+      "policy_document": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "security_group_ids": {
         "description_kind": "plain",
         "optional": true,

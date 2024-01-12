@@ -244,6 +244,25 @@ const awsBatchComputeEnvironment = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "update_policy": {
+        "block": {
+          "attributes": {
+            "job_execution_timeout_minutes": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "terminate_jobs_on_update": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

@@ -6,58 +6,35 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsPrometheusWorkspace = `{
+const awsVerifiedpermissionsPolicyStore = `{
   "block": {
     "attributes": {
-      "alias": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
+      "description": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "kms_key_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "prometheus_endpoint": {
+      "policy_store_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "logging_configuration": {
+      "validation_settings": {
         "block": {
           "attributes": {
-            "log_group_arn": {
+            "mode": {
               "description_kind": "plain",
               "required": true,
               "type": "string"
@@ -65,7 +42,6 @@ const awsPrometheusWorkspace = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
         "nesting_mode": "list"
       }
     },
@@ -74,8 +50,8 @@ const awsPrometheusWorkspace = `{
   "version": 0
 }`
 
-func AwsPrometheusWorkspaceSchema() *tfjson.Schema {
+func AwsVerifiedpermissionsPolicyStoreSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsPrometheusWorkspace), &result)
+	_ = json.Unmarshal([]byte(awsVerifiedpermissionsPolicyStore), &result)
 	return &result
 }
