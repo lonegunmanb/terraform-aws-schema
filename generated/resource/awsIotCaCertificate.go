@@ -96,7 +96,7 @@ const awsIotCaCertificate = `{
             "role_arn": {
               "description_kind": "plain",
               "optional": true,
-              "type": "bool"
+              "type": "string"
             },
             "template_body": {
               "description_kind": "plain",
