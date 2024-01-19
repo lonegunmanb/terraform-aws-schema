@@ -30,6 +30,11 @@ const awsLakeformationResource = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "use_service_linked_role": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       }
     },
     "description_kind": "plain"

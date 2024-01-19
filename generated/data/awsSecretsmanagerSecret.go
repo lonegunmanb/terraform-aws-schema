@@ -15,6 +15,11 @@ const awsSecretsmanagerSecret = `{
         "optional": true,
         "type": "string"
       },
+      "created_date": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "description": {
         "computed": true,
         "description_kind": "plain",
@@ -27,6 +32,11 @@ const awsSecretsmanagerSecret = `{
         "type": "string"
       },
       "kms_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "last_changed_date": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -45,6 +55,7 @@ const awsSecretsmanagerSecret = `{
       "tags": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "map",
           "string"

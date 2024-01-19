@@ -53,7 +53,6 @@ const awsSecretsmanagerRandomPassword = `{
       "random_password": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "require_each_included_type": {

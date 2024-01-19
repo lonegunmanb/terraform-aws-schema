@@ -6,15 +6,20 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSecretsmanagerSecretVersion = `{
+const awsEksAccessEntry = `{
   "block": {
     "attributes": {
-      "arn": {
+      "access_entry_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "created_date": {
+      "cluster_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "created_at": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -25,41 +30,50 @@ const awsSecretsmanagerSecretVersion = `{
         "optional": true,
         "type": "string"
       },
-      "secret_binary": {
-        "computed": true,
-        "description_kind": "plain",
-        "sensitive": true,
-        "type": "string"
-      },
-      "secret_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "secret_string": {
-        "computed": true,
-        "description_kind": "plain",
-        "sensitive": true,
-        "type": "string"
-      },
-      "version_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "version_stage": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "version_stages": {
+      "kubernetes_groups": {
         "computed": true,
         "description_kind": "plain",
         "type": [
           "set",
           "string"
         ]
+      },
+      "modified_at": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "principal_arn": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "user_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -67,8 +81,8 @@ const awsSecretsmanagerSecretVersion = `{
   "version": 0
 }`
 
-func AwsSecretsmanagerSecretVersionSchema() *tfjson.Schema {
+func AwsEksAccessEntrySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSecretsmanagerSecretVersion), &result)
+	_ = json.Unmarshal([]byte(awsEksAccessEntry), &result)
 	return &result
 }

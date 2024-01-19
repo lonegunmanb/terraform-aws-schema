@@ -6,53 +6,56 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSecretsmanagerSecretRotation = `{
+const awsEksAccessPolicyAssociation = `{
   "block": {
     "attributes": {
+      "associated_at": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "cluster_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "rotate_immediately": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "rotation_enabled": {
+      "modified_at": {
         "computed": true,
         "description_kind": "plain",
-        "type": "bool"
-      },
-      "rotation_lambda_arn": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "secret_id": {
+      "policy_arn": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "principal_arn": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       }
     },
     "block_types": {
-      "rotation_rules": {
+      "access_scope": {
         "block": {
           "attributes": {
-            "automatically_after_days": {
+            "namespaces": {
               "description_kind": "plain",
               "optional": true,
-              "type": "number"
+              "type": [
+                "set",
+                "string"
+              ]
             },
-            "duration": {
+            "type": {
               "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "schedule_expression": {
-              "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             }
           },
@@ -61,15 +64,33 @@ const awsSecretsmanagerSecretRotation = `{
         "max_items": 1,
         "min_items": 1,
         "nesting_mode": "list"
+      },
+      "timeouts": {
+        "block": {
+          "attributes": {
+            "create": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "delete": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
-func AwsSecretsmanagerSecretRotationSchema() *tfjson.Schema {
+func AwsEksAccessPolicyAssociationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSecretsmanagerSecretRotation), &result)
+	_ = json.Unmarshal([]byte(awsEksAccessPolicyAssociation), &result)
 	return &result
 }

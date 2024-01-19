@@ -122,6 +122,26 @@ const awsEksCluster = `{
       }
     },
     "block_types": {
+      "access_config": {
+        "block": {
+          "attributes": {
+            "authentication_mode": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "bootstrap_cluster_creator_admin_permissions": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "encryption_config": {
         "block": {
           "attributes": {

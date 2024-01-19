@@ -135,6 +135,12 @@ const awsBackupPlan = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "number"
+                        },
+                        "opt_in_to_archive_for_supported_resources": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "bool"
                         }
                       },
                       "description_kind": "plain"
@@ -159,6 +165,12 @@ const awsBackupPlan = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
+                  },
+                  "opt_in_to_archive_for_supported_resources": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
                   }
                 },
                 "description_kind": "plain"

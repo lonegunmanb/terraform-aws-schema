@@ -9,6 +9,19 @@ import (
 const awsEksCluster = `{
   "block": {
     "attributes": {
+      "access_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "authentication_mode": "string"
+            }
+          ]
+        ]
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
