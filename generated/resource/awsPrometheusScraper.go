@@ -24,6 +24,11 @@ const awsPrometheusScraper = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "role_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "scrape_configuration": {
         "description_kind": "plain",
         "required": true,

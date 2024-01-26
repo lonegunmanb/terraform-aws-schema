@@ -40,6 +40,12 @@ const awsCodecommitRepository = `{
         "optional": true,
         "type": "string"
       },
+      "kms_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "repository_id": {
         "computed": true,
         "description_kind": "plain",

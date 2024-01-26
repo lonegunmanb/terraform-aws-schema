@@ -108,6 +108,11 @@ const awsFsxOpenzfsFileSystem = `{
           "string"
         ]
       },
+      "skip_final_backup": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "storage_capacity": {
         "description_kind": "plain",
         "optional": true,

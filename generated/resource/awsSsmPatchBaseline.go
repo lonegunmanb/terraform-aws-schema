@@ -43,6 +43,11 @@ const awsSsmPatchBaseline = `{
         "optional": true,
         "type": "string"
       },
+      "json": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,

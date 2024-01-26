@@ -48,6 +48,31 @@ const awsAccessanalyzerAnalyzer = `{
         "type": "string"
       }
     },
+    "block_types": {
+      "configuration": {
+        "block": {
+          "block_types": {
+            "unused_access": {
+              "block": {
+                "attributes": {
+                  "unused_access_age": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      }
+    },
     "description_kind": "plain"
   },
   "version": 0

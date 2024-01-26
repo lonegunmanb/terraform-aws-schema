@@ -52,6 +52,12 @@ const awsEcsCapacityProvider = `{
               "required": true,
               "type": "string"
             },
+            "managed_draining": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "managed_termination_protection": {
               "computed": true,
               "description_kind": "plain",

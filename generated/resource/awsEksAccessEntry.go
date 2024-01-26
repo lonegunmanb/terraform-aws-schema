@@ -31,6 +31,7 @@ const awsEksAccessEntry = `{
         "type": "string"
       },
       "kubernetes_groups": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -66,13 +67,14 @@ const awsEksAccessEntry = `{
         ]
       },
       "type": {
-        "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "user_name": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       }
     },

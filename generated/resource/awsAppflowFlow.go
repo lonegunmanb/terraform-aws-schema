@@ -19,6 +19,11 @@ const awsAppflowFlow = `{
         "optional": true,
         "type": "string"
       },
+      "flow_status": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
