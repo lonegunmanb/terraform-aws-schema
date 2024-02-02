@@ -45,7 +45,7 @@ const awsDmsEventSubscription = `{
       },
       "source_ids": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": [
           "set",
           "string"

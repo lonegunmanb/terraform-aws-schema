@@ -30,6 +30,11 @@ const awsRedshiftserverlessEndpointAccess = `{
         "optional": true,
         "type": "string"
       },
+      "owner_account": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "port": {
         "computed": true,
         "description_kind": "plain",

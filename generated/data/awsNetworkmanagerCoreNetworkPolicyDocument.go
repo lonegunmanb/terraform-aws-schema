@@ -161,7 +161,6 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 17,
               "min_items": 1,
               "nesting_mode": "list"
             }

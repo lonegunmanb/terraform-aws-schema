@@ -14,6 +14,12 @@ const awsLakeformationResource = `{
         "required": true,
         "type": "string"
       },
+      "hybrid_access_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -32,6 +38,12 @@ const awsLakeformationResource = `{
         "type": "string"
       },
       "use_service_linked_role": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "with_federation": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

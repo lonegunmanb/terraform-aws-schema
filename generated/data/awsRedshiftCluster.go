@@ -181,6 +181,11 @@ const awsRedshiftCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "multi_az": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "node_type": {
         "computed": true,
         "description_kind": "plain",

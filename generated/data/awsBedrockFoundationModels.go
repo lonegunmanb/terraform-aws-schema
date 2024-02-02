@@ -33,73 +33,39 @@ const awsBedrockFoundationModels = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      }
-    },
-    "block_types": {
+      },
       "model_summaries": {
-        "block": {
-          "attributes": {
-            "customizations_supported": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": [
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "customizations_supported": [
                 "set",
                 "string"
-              ]
-            },
-            "inference_types_supported": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": [
+              ],
+              "inference_types_supported": [
                 "set",
                 "string"
-              ]
-            },
-            "input_modalities": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": [
+              ],
+              "input_modalities": [
                 "set",
                 "string"
-              ]
-            },
-            "model_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "model_id": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "model_name": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "output_modalities": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": [
+              ],
+              "model_arn": "string",
+              "model_id": "string",
+              "model_name": "string",
+              "output_modalities": [
                 "set",
                 "string"
-              ]
-            },
-            "provider_name": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "response_streaming_supported": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
+              ],
+              "provider_name": "string",
+              "response_streaming_supported": "bool"
             }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
+          ]
+        ]
       }
     },
     "description_kind": "plain"
