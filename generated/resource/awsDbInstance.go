@@ -118,7 +118,31 @@ const awsDbInstance = `{
         "optional": true,
         "type": "string"
       },
+      "domain_auth_secret_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "domain_dns_ips": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "domain_fqdn": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "domain_iam_role_name": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "domain_ou": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"

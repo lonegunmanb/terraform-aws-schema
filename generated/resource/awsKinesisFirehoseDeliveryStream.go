@@ -177,7 +177,7 @@ const awsKinesisFirehoseDeliveryStream = `{
                             },
                             "description_kind": "plain"
                           },
-                          "nesting_mode": "list"
+                          "nesting_mode": "set"
                         }
                       },
                       "description_kind": "plain"
@@ -679,7 +679,7 @@ const awsKinesisFirehoseDeliveryStream = `{
                             },
                             "description_kind": "plain"
                           },
-                          "nesting_mode": "list"
+                          "nesting_mode": "set"
                         }
                       },
                       "description_kind": "plain"
@@ -879,7 +879,7 @@ const awsKinesisFirehoseDeliveryStream = `{
                             },
                             "description_kind": "plain"
                           },
-                          "nesting_mode": "list"
+                          "nesting_mode": "set"
                         }
                       },
                       "description_kind": "plain"
@@ -1197,7 +1197,7 @@ const awsKinesisFirehoseDeliveryStream = `{
                             },
                             "description_kind": "plain"
                           },
-                          "nesting_mode": "list"
+                          "nesting_mode": "set"
                         }
                       },
                       "description_kind": "plain"
@@ -1427,7 +1427,7 @@ const awsKinesisFirehoseDeliveryStream = `{
                             },
                             "description_kind": "plain"
                           },
-                          "nesting_mode": "list"
+                          "nesting_mode": "set"
                         }
                       },
                       "description_kind": "plain"
@@ -1668,7 +1668,7 @@ const awsKinesisFirehoseDeliveryStream = `{
                             },
                             "description_kind": "plain"
                           },
-                          "nesting_mode": "list"
+                          "nesting_mode": "set"
                         }
                       },
                       "description_kind": "plain"
@@ -1967,7 +1967,7 @@ const awsKinesisFirehoseDeliveryStream = `{
                             },
                             "description_kind": "plain"
                           },
-                          "nesting_mode": "list"
+                          "nesting_mode": "set"
                         }
                       },
                       "description_kind": "plain"

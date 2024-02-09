@@ -30,6 +30,11 @@ const awsS3BucketMetric = `{
       "filter": {
         "block": {
           "attributes": {
+            "access_point": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "prefix": {
               "description_kind": "plain",
               "optional": true,

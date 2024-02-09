@@ -6,24 +6,26 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVerifiedaccessGroup = `{
+const awsControltowerLandingZone = `{
   "block": {
     "attributes": {
-      "creation_time": {
+      "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "deletion_time": {
+      "drift_status": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "status": "string"
+            }
+          ]
+        ]
       },
       "id": {
         "computed": true,
@@ -31,19 +33,14 @@ const awsVerifiedaccessGroup = `{
         "optional": true,
         "type": "string"
       },
-      "last_updated_time": {
+      "latest_available_version": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "owner": {
-        "computed": true,
+      "manifest_json": {
         "description_kind": "plain",
-        "type": "string"
-      },
-      "policy_document": {
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "tags": {
@@ -63,32 +60,27 @@ const awsVerifiedaccessGroup = `{
           "string"
         ]
       },
-      "verifiedaccess_group_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "verifiedaccess_group_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "verifiedaccess_instance_id": {
+      "version": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       }
     },
     "block_types": {
-      "sse_configuration": {
+      "timeouts": {
         "block": {
           "attributes": {
-            "customer_managed_key_enabled": {
+            "create": {
               "description_kind": "plain",
               "optional": true,
-              "type": "bool"
+              "type": "string"
             },
-            "kms_key_arn": {
+            "delete": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -96,8 +88,7 @@ const awsVerifiedaccessGroup = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -105,8 +96,8 @@ const awsVerifiedaccessGroup = `{
   "version": 0
 }`
 
-func AwsVerifiedaccessGroupSchema() *tfjson.Schema {
+func AwsControltowerLandingZoneSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVerifiedaccessGroup), &result)
+	_ = json.Unmarshal([]byte(awsControltowerLandingZone), &result)
 	return &result
 }
