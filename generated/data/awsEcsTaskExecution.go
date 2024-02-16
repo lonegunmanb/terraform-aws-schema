@@ -9,6 +9,11 @@ import (
 const awsEcsTaskExecution = `{
   "block": {
     "attributes": {
+      "client_token": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "cluster": {
         "description_kind": "plain",
         "required": true,

@@ -81,6 +81,11 @@ const awsRoute53ResolverRule = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
+            },
+            "protocol": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

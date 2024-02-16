@@ -6,15 +6,30 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEcrPullThroughCacheRule = `{
+const awsRedshiftDataShareConsumerAssociation = `{
   "block": {
     "attributes": {
-      "credential_arn": {
+      "allow_writes": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "associate_entire_account": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "consumer_arn": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "ecr_repository_prefix": {
+      "consumer_region": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "data_share_arn": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -22,17 +37,16 @@ const awsEcrPullThroughCacheRule = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "registry_id": {
+      "managed_by": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "upstream_registry_url": {
+      "producer_arn": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       }
     },
@@ -41,8 +55,8 @@ const awsEcrPullThroughCacheRule = `{
   "version": 0
 }`
 
-func AwsEcrPullThroughCacheRuleSchema() *tfjson.Schema {
+func AwsRedshiftDataShareConsumerAssociationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEcrPullThroughCacheRule), &result)
+	_ = json.Unmarshal([]byte(awsRedshiftDataShareConsumerAssociation), &result)
 	return &result
 }

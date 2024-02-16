@@ -378,6 +378,7 @@ const awsAutoscalingGroup = `{
               "type": "string"
             },
             "version": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -454,6 +455,7 @@ const awsAutoscalingGroup = `{
                           "type": "string"
                         },
                         "version": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
@@ -772,6 +774,7 @@ const awsAutoscalingGroup = `{
                                 "type": "string"
                               },
                               "version": {
+                                "computed": true,
                                 "description_kind": "plain",
                                 "optional": true,
                                 "type": "string"

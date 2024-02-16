@@ -28,6 +28,11 @@ const awsRdsOrderableDbInstance = `{
         "required": true,
         "type": "string"
       },
+      "engine_latest_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "engine_version": {
         "computed": true,
         "description_kind": "plain",
@@ -111,6 +116,7 @@ const awsRdsOrderableDbInstance = `{
       "read_replica_capable": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "bool"
       },
       "storage_type": {
@@ -122,6 +128,7 @@ const awsRdsOrderableDbInstance = `{
       "supported_engine_modes": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "list",
           "string"
@@ -130,10 +137,17 @@ const awsRdsOrderableDbInstance = `{
       "supported_network_types": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "list",
           "string"
         ]
+      },
+      "supports_clusters": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       },
       "supports_enhanced_monitoring": {
         "computed": true,
@@ -160,6 +174,12 @@ const awsRdsOrderableDbInstance = `{
         "type": "bool"
       },
       "supports_kerberos_authentication": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "supports_multi_az": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,

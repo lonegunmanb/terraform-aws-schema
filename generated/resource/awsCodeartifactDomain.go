@@ -51,6 +51,11 @@ const awsCodeartifactDomain = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "s3_bucket_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

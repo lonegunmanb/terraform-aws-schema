@@ -402,6 +402,61 @@ const awsEcsService = `{
                     },
                     "max_items": 1,
                     "nesting_mode": "list"
+                  },
+                  "timeout": {
+                    "block": {
+                      "attributes": {
+                        "idle_timeout_seconds": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "per_request_timeout_seconds": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "tls": {
+                    "block": {
+                      "attributes": {
+                        "kms_key": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "role_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "issuer_cert_authority": {
+                          "block": {
+                            "attributes": {
+                              "aws_pca_authority_arn": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "min_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

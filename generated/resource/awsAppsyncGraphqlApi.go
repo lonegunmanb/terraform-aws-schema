@@ -25,10 +25,25 @@ const awsAppsyncGraphqlApi = `{
         "optional": true,
         "type": "string"
       },
+      "introspection_config": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
+      },
+      "query_depth_limit": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "resolver_count_limit": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       },
       "schema": {
         "description_kind": "plain",

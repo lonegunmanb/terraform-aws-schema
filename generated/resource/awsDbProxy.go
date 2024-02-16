@@ -130,7 +130,7 @@ const awsDbProxy = `{
           "description_kind": "plain"
         },
         "min_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "timeouts": {
         "block": {

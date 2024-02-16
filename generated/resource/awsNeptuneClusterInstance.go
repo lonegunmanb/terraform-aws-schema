@@ -128,6 +128,11 @@ const awsNeptuneClusterInstance = `{
         "optional": true,
         "type": "bool"
       },
+      "skip_final_snapshot": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "storage_encrypted": {
         "computed": true,
         "description_kind": "plain",

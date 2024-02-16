@@ -6,17 +6,22 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEcrPullThroughCacheRule = `{
+const awsDbParameterGroup = `{
   "block": {
     "attributes": {
-      "credential_arn": {
+      "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "ecr_repository_prefix": {
+      "description": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "type": "string"
+      },
+      "family": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "id": {
@@ -25,14 +30,9 @@ const awsEcrPullThroughCacheRule = `{
         "optional": true,
         "type": "string"
       },
-      "registry_id": {
-        "computed": true,
+      "name": {
         "description_kind": "plain",
-        "type": "string"
-      },
-      "upstream_registry_url": {
-        "computed": true,
-        "description_kind": "plain",
+        "required": true,
         "type": "string"
       }
     },
@@ -41,8 +41,8 @@ const awsEcrPullThroughCacheRule = `{
   "version": 0
 }`
 
-func AwsEcrPullThroughCacheRuleSchema() *tfjson.Schema {
+func AwsDbParameterGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEcrPullThroughCacheRule), &result)
+	_ = json.Unmarshal([]byte(awsDbParameterGroup), &result)
 	return &result
 }

@@ -152,6 +152,50 @@ const awsRoute53Record = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "geoproximity_routing_policy": {
+        "block": {
+          "attributes": {
+            "aws_region": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "bias": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "local_zone_group": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "coordinates": {
+              "block": {
+                "attributes": {
+                  "latitude": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "longitude": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "latency_routing_policy": {
         "block": {
           "attributes": {

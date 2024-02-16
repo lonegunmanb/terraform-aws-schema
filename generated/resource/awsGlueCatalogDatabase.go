@@ -101,6 +101,25 @@ const awsGlueCatalogDatabase = `{
         },
         "nesting_mode": "list"
       },
+      "federated_database": {
+        "block": {
+          "attributes": {
+            "connection_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "identifier": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "target_database": {
         "block": {
           "attributes": {

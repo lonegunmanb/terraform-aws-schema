@@ -105,6 +105,11 @@ const awsEcsTaskDefinition = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "track_latest": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       }
     },
     "block_types": {

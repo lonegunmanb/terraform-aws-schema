@@ -126,6 +126,16 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "bool"
       },
+      "domain": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "domain_iam_role_name": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "enable_global_write_forwarding": {
         "description_kind": "plain",
         "optional": true,

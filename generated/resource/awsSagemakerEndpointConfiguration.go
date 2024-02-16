@@ -280,6 +280,19 @@ const awsSagemakerEndpointConfiguration = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "routing_config": {
+              "block": {
+                "attributes": {
+                  "routing_strategy": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "serverless_config": {
               "block": {
                 "attributes": {
@@ -384,6 +397,19 @@ const awsSagemakerEndpointConfiguration = `{
                 "description_kind": "plain"
               },
               "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "routing_config": {
+              "block": {
+                "attributes": {
+                  "routing_strategy": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
               "nesting_mode": "list"
             },
             "serverless_config": {
