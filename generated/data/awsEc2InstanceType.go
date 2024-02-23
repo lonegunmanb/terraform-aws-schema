@@ -217,6 +217,11 @@ const awsEc2InstanceType = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "maximum_network_cards": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "maximum_network_interfaces": {
         "computed": true,
         "description_kind": "plain",

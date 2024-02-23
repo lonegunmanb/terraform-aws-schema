@@ -54,6 +54,11 @@ const awsElasticacheSubnetGroup = `{
           "map",
           "string"
         ]
+      },
+      "vpc_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "description_kind": "plain"

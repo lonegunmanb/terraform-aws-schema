@@ -11,9 +11,7 @@ const awsShieldDrtAccessLogBucketAssociation = `{
     "attributes": {
       "id": {
         "computed": true,
-        "deprecated": true,
-        "description": "The ID of the directory.",
-        "description_kind": "markdown",
+        "description_kind": "plain",
         "type": "string"
       },
       "log_bucket": {

@@ -62,6 +62,14 @@ const awsAlbTargetGroup = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "load_balancer_arns": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "load_balancing_algorithm_type": {
         "computed": true,
         "description_kind": "plain",

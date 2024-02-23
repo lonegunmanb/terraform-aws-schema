@@ -6,14 +6,9 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsElasticacheSubnetGroup = `{
+const awsCognitoUserGroup = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "description": {
         "computed": true,
         "description_kind": "plain",
@@ -22,7 +17,6 @@ const awsElasticacheSubnetGroup = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "name": {
@@ -30,25 +24,19 @@ const awsElasticacheSubnetGroup = `{
         "required": true,
         "type": "string"
       },
-      "subnet_ids": {
+      "precedence": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
+        "type": "number"
       },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "vpc_id": {
+      "role_arn": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "user_pool_id": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       }
     },
@@ -57,8 +45,8 @@ const awsElasticacheSubnetGroup = `{
   "version": 0
 }`
 
-func AwsElasticacheSubnetGroupSchema() *tfjson.Schema {
+func AwsCognitoUserGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsElasticacheSubnetGroup), &result)
+	_ = json.Unmarshal([]byte(awsCognitoUserGroup), &result)
 	return &result
 }

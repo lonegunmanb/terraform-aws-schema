@@ -14,6 +14,11 @@ const awsCodepipeline = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "execution_mode": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -63,7 +68,6 @@ const awsCodepipeline = `{
               "type": "string"
             },
             "region": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
