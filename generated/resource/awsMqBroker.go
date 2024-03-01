@@ -35,6 +35,17 @@ const awsMqBroker = `{
         "required": true,
         "type": "string"
       },
+      "data_replication_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "data_replication_primary_broker_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "deployment_mode": {
         "description_kind": "plain",
         "optional": true,
@@ -78,6 +89,11 @@ const awsMqBroker = `{
             }
           ]
         ]
+      },
+      "pending_data_replication_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       },
       "publicly_accessible": {
         "description_kind": "plain",

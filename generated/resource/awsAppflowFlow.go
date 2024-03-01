@@ -1080,8 +1080,9 @@ const awsAppflowFlow = `{
               "type": "string"
             },
             "source_fields": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": [
                 "list",
                 "string"

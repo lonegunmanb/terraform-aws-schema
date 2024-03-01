@@ -409,6 +409,15 @@ const awsInstance = `{
                 "string"
               ]
             },
+            "tags_all": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "map",
+                "string"
+              ]
+            },
             "throughput": {
               "computed": true,
               "description_kind": "plain",
@@ -697,6 +706,15 @@ const awsInstance = `{
                 "string"
               ]
             },
+            "tags_all": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "map",
+                "string"
+              ]
+            },
             "throughput": {
               "computed": true,
               "description_kind": "plain",
@@ -735,6 +753,11 @@ const awsInstance = `{
               "type": "string"
             },
             "delete": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "read": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

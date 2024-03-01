@@ -39,6 +39,12 @@ const awsMwaaEnvironment = `{
         "required": true,
         "type": "string"
       },
+      "endpoint_management": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "environment_class": {
         "computed": true,
         "description_kind": "plain",

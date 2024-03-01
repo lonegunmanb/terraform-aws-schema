@@ -9,6 +9,17 @@ import (
 const awsRedshiftserverlessNamespace = `{
   "block": {
     "attributes": {
+      "admin_password_secret_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "admin_password_secret_kms_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "admin_user_password": {
         "description_kind": "plain",
         "optional": true,
@@ -66,6 +77,11 @@ const awsRedshiftserverlessNamespace = `{
           "set",
           "string"
         ]
+      },
+      "manage_admin_password": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       },
       "namespace_id": {
         "computed": true,

@@ -68,7 +68,6 @@ const awsRedshiftserverlessWorkgroup = `{
         "type": "string"
       },
       "max_capacity": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"

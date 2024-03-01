@@ -330,7 +330,17 @@ const awsKinesisFirehoseDeliveryStream = `{
               "optional": true,
               "type": "string"
             },
+            "custom_time_zone": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "error_output_prefix": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "file_extension": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
