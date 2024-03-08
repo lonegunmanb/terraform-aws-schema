@@ -14,6 +14,11 @@ const awsS3BucketObject = `{
         "optional": true,
         "type": "string"
       },
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "bucket": {
         "deprecated": true,
         "description_kind": "plain",

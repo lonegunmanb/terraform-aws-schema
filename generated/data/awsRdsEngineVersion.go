@@ -37,6 +37,16 @@ const awsRdsEngineVersion = `{
           "string"
         ]
       },
+      "has_major_target": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "has_minor_target": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -139,6 +149,22 @@ const awsRdsEngineVersion = `{
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
+      },
+      "valid_major_targets": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "valid_minor_targets": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "valid_upgrade_targets": {
         "computed": true,

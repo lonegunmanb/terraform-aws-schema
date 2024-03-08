@@ -151,6 +151,11 @@ const awsOpensearchDomain = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "use_off_peak_window": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
             }
           },
           "block_types": {

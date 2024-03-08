@@ -100,7 +100,6 @@ const awsVpclatticeListenerRule = `{
                       },
                       "description_kind": "plain"
                     },
-                    "max_items": 2,
                     "min_items": 1,
                     "nesting_mode": "list"
                   }

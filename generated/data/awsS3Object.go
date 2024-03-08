@@ -9,6 +9,11 @@ import (
 const awsS3Object = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "body": {
         "computed": true,
         "description_kind": "plain",

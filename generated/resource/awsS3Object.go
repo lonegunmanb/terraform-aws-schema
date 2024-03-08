@@ -15,6 +15,11 @@ const awsS3Object = `{
         "optional": true,
         "type": "string"
       },
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "bucket": {
         "description_kind": "plain",
         "required": true,

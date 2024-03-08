@@ -15,8 +15,9 @@ const awsBatchJobQueue = `{
         "type": "string"
       },
       "compute_environments": {
+        "deprecated": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": [
           "list",
           "string"
@@ -65,6 +66,24 @@ const awsBatchJobQueue = `{
       }
     },
     "block_types": {
+      "compute_environment_order": {
+        "block": {
+          "attributes": {
+            "compute_environment": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "order": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
