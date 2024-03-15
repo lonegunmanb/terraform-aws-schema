@@ -296,6 +296,7 @@ const awsCognitoUserPool = `{
               "type": "string"
             },
             "pre_token_generation": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -332,6 +333,25 @@ const awsCognitoUserPool = `{
               "nesting_mode": "list"
             },
             "custom_sms_sender": {
+              "block": {
+                "attributes": {
+                  "lambda_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "lambda_version": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "pre_token_generation_config": {
               "block": {
                 "attributes": {
                   "lambda_arn": {

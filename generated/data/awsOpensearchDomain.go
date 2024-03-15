@@ -71,7 +71,8 @@ const awsOpensearchDomain = `{
                   }
                 ]
               ],
-              "rollback_on_disable": "string"
+              "rollback_on_disable": "string",
+              "use_off_peak_window": "bool"
             }
           ]
         ]

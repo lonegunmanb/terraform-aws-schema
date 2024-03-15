@@ -20,6 +20,12 @@ const awsIamPolicyDocument = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "override_json": {
+        "deprecated": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "override_policy_documents": {
         "description_kind": "plain",
         "optional": true,
@@ -29,6 +35,12 @@ const awsIamPolicyDocument = `{
         ]
       },
       "policy_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "source_json": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

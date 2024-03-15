@@ -49,6 +49,35 @@ const awsLakeformationPermissions = `{
       }
     },
     "block_types": {
+      "data_cells_filter": {
+        "block": {
+          "attributes": {
+            "database_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "table_catalog_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "table_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "data_location": {
         "block": {
           "attributes": {

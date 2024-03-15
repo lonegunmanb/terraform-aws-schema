@@ -21,8 +21,9 @@ const awsRamResourceShare = `{
         "type": "string"
       },
       "name": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "owning_account_id": {

@@ -442,7 +442,7 @@ const awsEcsService = `{
                             "attributes": {
                               "aws_pca_authority_arn": {
                                 "description_kind": "plain",
-                                "optional": true,
+                                "required": true,
                                 "type": "string"
                               }
                             },

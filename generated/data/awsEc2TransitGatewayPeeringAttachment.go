@@ -30,6 +30,11 @@ const awsEc2TransitGatewayPeeringAttachment = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "state": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "tags": {
         "computed": true,
         "description_kind": "plain",
