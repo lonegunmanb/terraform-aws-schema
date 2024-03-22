@@ -146,6 +146,11 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "bool"
       },
+      "enable_local_write_forwarding": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "enabled_cloudwatch_logs_exports": {
         "description_kind": "plain",
         "optional": true,

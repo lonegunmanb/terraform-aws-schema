@@ -43,7 +43,17 @@ const awsDatasyncLocationHdfs = `{
         "optional": true,
         "type": "string"
       },
+      "kerberos_keytab_base64": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "kerberos_krb5_conf": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "kerberos_krb5_conf_base64": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -120,11 +130,13 @@ const awsDatasyncLocationHdfs = `{
         "block": {
           "attributes": {
             "data_transfer_protection": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "rpc_protection": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

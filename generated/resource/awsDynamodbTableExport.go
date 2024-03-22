@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsFinspaceKxDataview = `{
+const awsDynamodbTableExport = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,44 +14,30 @@ const awsFinspaceKxDataview = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "auto_update": {
+      "billed_size_in_bytes": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
-        "type": "bool"
+        "type": "number"
       },
-      "availability_zone_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "az_mode": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "changeset_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "created_timestamp": {
+      "end_time": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "database_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "description": {
+      "export_format": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "environment_id": {
+      "export_status": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "type": "string"
+      },
+      "export_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
@@ -60,71 +46,56 @@ const awsFinspaceKxDataview = `{
         "optional": true,
         "type": "string"
       },
-      "last_modified_timestamp": {
+      "item_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "manifest_files_s3_key": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "name": {
+      "s3_bucket": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "read_write": {
+      "s3_bucket_owner": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": "string"
       },
-      "status": {
+      "s3_prefix": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "s3_sse_algorithm": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "s3_sse_kms_key_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "start_time": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "tags": {
+      "table_arn": {
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "segment_configurations": {
-        "block": {
-          "attributes": {
-            "db_paths": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "list",
-                "string"
-              ]
-            },
-            "on_demand": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "volume_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {
@@ -134,11 +105,6 @@ const awsFinspaceKxDataview = `{
               "type": "string"
             },
             "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -154,8 +120,8 @@ const awsFinspaceKxDataview = `{
   "version": 0
 }`
 
-func AwsFinspaceKxDataviewSchema() *tfjson.Schema {
+func AwsDynamodbTableExportSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsFinspaceKxDataview), &result)
+	_ = json.Unmarshal([]byte(awsDynamodbTableExport), &result)
 	return &result
 }

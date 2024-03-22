@@ -42,6 +42,19 @@ const awsVpcPeeringConnection = `{
         "optional": true,
         "type": "string"
       },
+      "ipv6_cidr_block_set": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "ipv6_cidr_block": "string"
+            }
+          ]
+        ]
+      },
       "owner_id": {
         "computed": true,
         "description_kind": "plain",
@@ -63,6 +76,19 @@ const awsVpcPeeringConnection = `{
             "object",
             {
               "cidr_block": "string"
+            }
+          ]
+        ]
+      },
+      "peer_ipv6_cidr_block_set": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "ipv6_cidr_block": "string"
             }
           ]
         ]

@@ -165,7 +165,7 @@ const awsLexv2ModelsSlot = `{
                         "message": {
                           "block": {
                             "block_types": {
-                              "custom_playload": {
+                              "custom_payload": {
                                 "block": {
                                   "attributes": {
                                     "value": {
@@ -255,7 +255,7 @@ const awsLexv2ModelsSlot = `{
                         "variation": {
                           "block": {
                             "block_types": {
-                              "custom_playload": {
+                              "custom_payload": {
                                 "block": {
                                   "attributes": {
                                     "value": {
@@ -516,7 +516,7 @@ const awsLexv2ModelsSlot = `{
                               "message": {
                                 "block": {
                                   "block_types": {
-                                    "custom_playload": {
+                                    "custom_payload": {
                                       "block": {
                                         "attributes": {
                                           "value": {
@@ -606,7 +606,7 @@ const awsLexv2ModelsSlot = `{
                               "variation": {
                                 "block": {
                                   "block_types": {
-                                    "custom_playload": {
+                                    "custom_payload": {
                                       "block": {
                                         "attributes": {
                                           "value": {
@@ -729,7 +729,7 @@ const awsLexv2ModelsSlot = `{
                               "message": {
                                 "block": {
                                   "block_types": {
-                                    "custom_playload": {
+                                    "custom_payload": {
                                       "block": {
                                         "attributes": {
                                           "value": {
@@ -819,7 +819,7 @@ const awsLexv2ModelsSlot = `{
                               "variation": {
                                 "block": {
                                   "block_types": {
-                                    "custom_playload": {
+                                    "custom_payload": {
                                       "block": {
                                         "attributes": {
                                           "value": {
@@ -932,7 +932,7 @@ const awsLexv2ModelsSlot = `{
                               "message": {
                                 "block": {
                                   "block_types": {
-                                    "custom_playload": {
+                                    "custom_payload": {
                                       "block": {
                                         "attributes": {
                                           "value": {
@@ -1022,7 +1022,7 @@ const awsLexv2ModelsSlot = `{
                               "variation": {
                                 "block": {
                                   "block_types": {
-                                    "custom_playload": {
+                                    "custom_payload": {
                                       "block": {
                                         "attributes": {
                                           "value": {
