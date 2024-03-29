@@ -6,77 +6,43 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEc2Host = `{
+const awsM2Deployment = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "asset_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "auto_placement": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "availability_zone": {
+      "application_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "host_recovery": {
+      "application_version": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "number"
+      },
+      "deployment_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "environment_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "force_stop": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "bool"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "instance_family": {
+      "start": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "instance_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "outpost_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "owner_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "required": true,
+        "type": "bool"
       }
     },
     "block_types": {
@@ -84,16 +50,19 @@ const awsEc2Host = `{
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -109,8 +78,8 @@ const awsEc2Host = `{
   "version": 0
 }`
 
-func AwsEc2HostSchema() *tfjson.Schema {
+func AwsM2DeploymentSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEc2Host), &result)
+	_ = json.Unmarshal([]byte(awsM2Deployment), &result)
 	return &result
 }

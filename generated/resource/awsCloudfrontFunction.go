@@ -35,6 +35,14 @@ const awsCloudfrontFunction = `{
         "optional": true,
         "type": "string"
       },
+      "key_value_store_associations": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "live_stage_etag": {
         "computed": true,
         "description_kind": "plain",

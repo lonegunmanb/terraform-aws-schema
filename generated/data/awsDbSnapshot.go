@@ -90,6 +90,11 @@ const awsDbSnapshot = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "original_snapshot_create_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "port": {
         "computed": true,
         "description_kind": "plain",

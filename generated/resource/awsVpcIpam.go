@@ -71,6 +71,11 @@ const awsVpcIpam = `{
           "map",
           "string"
         ]
+      },
+      "tier": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {

@@ -35,6 +35,14 @@ const awsCloudfrontFunction = `{
         "optional": true,
         "type": "string"
       },
+      "key_value_store_associations": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "last_modified_time": {
         "computed": true,
         "description_kind": "plain",

@@ -6,59 +6,52 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEc2Host = `{
+const awsM2Application = `{
   "block": {
     "attributes": {
+      "application_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "asset_id": {
+      "current_version": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
+        "type": "number"
       },
-      "auto_placement": {
+      "description": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "availability_zone": {
+      "engine_type": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "host_recovery": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "instance_family": {
+      "kms_key_id": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "instance_type": {
+      "name": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
-      "outpost_arn": {
+      "role_arn": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "owner_id": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "tags": {
@@ -72,7 +65,6 @@ const awsEc2Host = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
@@ -80,20 +72,41 @@ const awsEc2Host = `{
       }
     },
     "block_types": {
+      "definition": {
+        "block": {
+          "attributes": {
+            "content": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "s3_location": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -109,8 +122,8 @@ const awsEc2Host = `{
   "version": 0
 }`
 
-func AwsEc2HostSchema() *tfjson.Schema {
+func AwsM2ApplicationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEc2Host), &result)
+	_ = json.Unmarshal([]byte(awsM2Application), &result)
 	return &result
 }
