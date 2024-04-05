@@ -221,6 +221,21 @@ const awsTransferServer = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "s3_storage_options": {
+        "block": {
+          "attributes": {
+            "directory_listing_optimization": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "workflow_details": {
         "block": {
           "block_types": {

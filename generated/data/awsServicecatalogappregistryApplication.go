@@ -9,6 +9,14 @@ import (
 const awsServicecatalogappregistryApplication = `{
   "block": {
     "attributes": {
+      "application_tag": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",

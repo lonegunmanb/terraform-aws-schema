@@ -90,6 +90,7 @@ const awsAutoscalingplansScalingPlan = `{
               "type": "string"
             },
             "predictive_scaling_max_capacity_buffer": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"

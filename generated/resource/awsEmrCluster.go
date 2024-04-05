@@ -193,6 +193,11 @@ const awsEmrCluster = `{
         "optional": true,
         "type": "bool"
       },
+      "unhealthy_node_replacement": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "visible_to_all_users": {
         "description_kind": "plain",
         "optional": true,

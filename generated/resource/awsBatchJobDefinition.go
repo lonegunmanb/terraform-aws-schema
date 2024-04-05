@@ -24,6 +24,11 @@ const awsBatchJobDefinition = `{
         "optional": true,
         "type": "string"
       },
+      "deregister_on_new_revision": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

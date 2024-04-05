@@ -38,6 +38,7 @@ const awsGlueDataCatalogEncryptionSettings = `{
                   "object",
                   {
                     "catalog_encryption_mode": "string",
+                    "catalog_encryption_service_role": "string",
                     "sse_aws_kms_key_id": "string"
                   }
                 ]

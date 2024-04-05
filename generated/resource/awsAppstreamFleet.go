@@ -83,6 +83,11 @@ const awsAppstreamFleet = `{
         "required": true,
         "type": "string"
       },
+      "max_sessions_per_instance": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "max_user_duration_in_seconds": {
         "computed": true,
         "description_kind": "plain",
@@ -134,7 +139,12 @@ const awsAppstreamFleet = `{
             },
             "desired_instances": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
+              "type": "number"
+            },
+            "desired_sessions": {
+              "description_kind": "plain",
+              "optional": true,
               "type": "number"
             },
             "in_use": {
