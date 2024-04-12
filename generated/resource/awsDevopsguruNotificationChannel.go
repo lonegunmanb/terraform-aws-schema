@@ -23,7 +23,7 @@ const awsDevopsguruNotificationChannel = `{
               "description_kind": "plain",
               "optional": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             },
@@ -31,7 +31,7 @@ const awsDevopsguruNotificationChannel = `{
               "description_kind": "plain",
               "optional": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

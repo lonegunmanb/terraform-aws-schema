@@ -9,6 +9,11 @@ import (
 const awsApiGatewayDocumentationPart = `{
   "block": {
     "attributes": {
+      "documentation_part_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,53 +6,39 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsApigatewayv2VpcLink = `{
+const awsRedshiftSnapshotCopy = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
+      "cluster_identifier": {
         "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "destination_region": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "security_group_ids": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "subnet_ids": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "tags": {
+      "manual_snapshot_retention_period": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "number"
       },
-      "vpc_link_id": {
+      "retention_period": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "number"
+      },
+      "snapshot_copy_grant_name": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       }
     },
@@ -61,8 +47,8 @@ const awsApigatewayv2VpcLink = `{
   "version": 0
 }`
 
-func AwsApigatewayv2VpcLinkSchema() *tfjson.Schema {
+func AwsRedshiftSnapshotCopySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsApigatewayv2VpcLink), &result)
+	_ = json.Unmarshal([]byte(awsRedshiftSnapshotCopy), &result)
 	return &result
 }

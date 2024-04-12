@@ -37,7 +37,7 @@ const awsSecurityhubConfigurationPolicy = `{
           "attributes": {
             "enabled_standard_arns": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": [
                 "set",
                 "string"

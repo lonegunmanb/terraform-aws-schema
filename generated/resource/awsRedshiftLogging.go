@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,53 +6,40 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsApigatewayv2VpcLink = `{
+const awsRedshiftLogging = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
+      "bucket_name": {
         "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "cluster_identifier": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "log_destination_type": {
+        "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "name": {
-        "computed": true,
+      "log_exports": {
         "description_kind": "plain",
-        "type": "string"
-      },
-      "security_group_ids": {
-        "computed": true,
-        "description_kind": "plain",
+        "optional": true,
         "type": [
           "set",
           "string"
         ]
       },
-      "subnet_ids": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "tags": {
-        "computed": true,
+      "s3_key_prefix": {
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "vpc_link_id": {
-        "description_kind": "plain",
-        "required": true,
         "type": "string"
       }
     },
@@ -61,8 +48,8 @@ const awsApigatewayv2VpcLink = `{
   "version": 0
 }`
 
-func AwsApigatewayv2VpcLinkSchema() *tfjson.Schema {
+func AwsRedshiftLoggingSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsApigatewayv2VpcLink), &result)
+	_ = json.Unmarshal([]byte(awsRedshiftLogging), &result)
 	return &result
 }
