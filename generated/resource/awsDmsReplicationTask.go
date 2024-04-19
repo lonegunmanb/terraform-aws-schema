@@ -47,6 +47,12 @@ const awsDmsReplicationTask = `{
         "type": "string"
       },
       "replication_task_settings": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "resource_identifier": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"

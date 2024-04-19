@@ -19,6 +19,11 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "client_keep_alive": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "customer_owned_ipv4_pool": {
         "description_kind": "plain",
         "optional": true,

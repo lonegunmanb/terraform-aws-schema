@@ -14,6 +14,11 @@ const awsIamPolicy = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "attachment_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "description": {
         "description_kind": "plain",
         "optional": true,

@@ -52,6 +52,11 @@ const awsVpcIpamPool = `{
         "optional": true,
         "type": "string"
       },
+      "cascade": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "description": {
         "description_kind": "plain",
         "optional": true,

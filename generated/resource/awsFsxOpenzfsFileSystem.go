@@ -50,6 +50,11 @@ const awsFsxOpenzfsFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "endpoint_ip_address": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "endpoint_ip_address_range": {
         "computed": true,
         "description_kind": "plain",

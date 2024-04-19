@@ -497,6 +497,7 @@ func init() {
 	resources["aws_egress_only_internet_gateway"] = resource.AwsEgressOnlyInternetGatewaySchema()  
 	resources["aws_eip"] = resource.AwsEipSchema()  
 	resources["aws_eip_association"] = resource.AwsEipAssociationSchema()  
+	resources["aws_eip_domain_name"] = resource.AwsEipDomainNameSchema()  
 	resources["aws_eks_access_entry"] = resource.AwsEksAccessEntrySchema()  
 	resources["aws_eks_access_policy_association"] = resource.AwsEksAccessPolicyAssociationSchema()  
 	resources["aws_eks_addon"] = resource.AwsEksAddonSchema()  

@@ -351,6 +351,25 @@ const awsAutoscalingGroup = `{
                     "type": "string"
                   }
                 },
+                "block_types": {
+                  "alarm_specification": {
+                    "block": {
+                      "attributes": {
+                        "alarms": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "list",
+                            "string"
+                          ]
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,

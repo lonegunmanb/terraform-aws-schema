@@ -77,6 +77,7 @@ const awsGlueJob = `{
         ]
       },
       "number_of_workers": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
@@ -115,6 +116,7 @@ const awsGlueJob = `{
         "type": "number"
       },
       "worker_type": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

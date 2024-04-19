@@ -35,6 +35,11 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "client_keep_alive": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "connection_logs": {
         "computed": true,
         "description_kind": "plain",

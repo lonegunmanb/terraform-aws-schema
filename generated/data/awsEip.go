@@ -65,6 +65,11 @@ const awsEip = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "ptr_record": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "public_dns": {
         "computed": true,
         "description_kind": "plain",

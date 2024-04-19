@@ -39,6 +39,11 @@ const awsVpcDhcpOptions = `{
         "optional": true,
         "type": "string"
       },
+      "ipv6_address_preferred_lease_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "netbios_name_servers": {
         "computed": true,
         "description_kind": "plain",

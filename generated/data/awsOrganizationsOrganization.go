@@ -73,6 +73,11 @@ const awsOrganizationsOrganization = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "master_account_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "non_master_accounts": {
         "computed": true,
         "description_kind": "plain",

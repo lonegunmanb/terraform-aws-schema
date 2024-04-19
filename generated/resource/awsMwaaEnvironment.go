@@ -39,6 +39,11 @@ const awsMwaaEnvironment = `{
         "required": true,
         "type": "string"
       },
+      "database_vpc_endpoint_service": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "endpoint_management": {
         "computed": true,
         "description_kind": "plain",
@@ -186,6 +191,11 @@ const awsMwaaEnvironment = `{
         "type": "string"
       },
       "webserver_url": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "webserver_vpc_endpoint_service": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
