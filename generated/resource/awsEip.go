@@ -19,6 +19,11 @@ const awsEip = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "associate_with_private_ip": {
         "description_kind": "plain",
         "optional": true,

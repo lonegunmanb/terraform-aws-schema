@@ -6,71 +6,90 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsAppmeshMesh = `{
+const awsBedrockagentAgentActionGroup = `{
   "block": {
     "attributes": {
-      "arn": {
+      "action_group_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "created_date": {
+      "action_group_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "action_group_state": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "agent_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "agent_version": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "description": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "parent_action_group_signature": {
+        "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "last_updated_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "mesh_owner": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "resource_owner": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
+      "skip_resource_in_use_check": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "bool"
       }
     },
     "block_types": {
-      "spec": {
+      "action_group_executor": {
         "block": {
+          "attributes": {
+            "lambda": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "api_schema": {
+        "block": {
+          "attributes": {
+            "payload": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
           "block_types": {
-            "egress_filter": {
+            "s3": {
               "block": {
                 "attributes": {
-                  "type": {
+                  "s3_bucket_name": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "s3_object_key": {
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
@@ -78,27 +97,11 @@ const awsAppmeshMesh = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "service_discovery": {
-              "block": {
-                "attributes": {
-                  "ip_preference": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
               "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
         "nesting_mode": "list"
       }
     },
@@ -107,8 +110,8 @@ const awsAppmeshMesh = `{
   "version": 0
 }`
 
-func AwsAppmeshMeshSchema() *tfjson.Schema {
+func AwsBedrockagentAgentActionGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsAppmeshMesh), &result)
+	_ = json.Unmarshal([]byte(awsBedrockagentAgentActionGroup), &result)
 	return &result
 }

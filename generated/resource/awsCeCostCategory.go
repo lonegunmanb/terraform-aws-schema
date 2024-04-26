@@ -105,6 +105,104 @@ const awsCeCostCategory = `{
                   "and": {
                     "block": {
                       "block_types": {
+                        "and": {
+                          "block": {
+                            "block_types": {
+                              "cost_category": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dimension": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "tags": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
+                        },
                         "cost_category": {
                           "block": {
                             "attributes": {
@@ -164,6 +262,203 @@ const awsCeCostCategory = `{
                           },
                           "max_items": 1,
                           "nesting_mode": "list"
+                        },
+                        "not": {
+                          "block": {
+                            "block_types": {
+                              "cost_category": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dimension": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "tags": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "or": {
+                          "block": {
+                            "block_types": {
+                              "cost_category": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dimension": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "tags": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
                         },
                         "tags": {
                           "block": {
@@ -263,6 +558,104 @@ const awsCeCostCategory = `{
                   "not": {
                     "block": {
                       "block_types": {
+                        "and": {
+                          "block": {
+                            "block_types": {
+                              "cost_category": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dimension": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "tags": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
+                        },
                         "cost_category": {
                           "block": {
                             "attributes": {
@@ -322,6 +715,203 @@ const awsCeCostCategory = `{
                           },
                           "max_items": 1,
                           "nesting_mode": "list"
+                        },
+                        "not": {
+                          "block": {
+                            "block_types": {
+                              "cost_category": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dimension": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "tags": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "or": {
+                          "block": {
+                            "block_types": {
+                              "cost_category": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dimension": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "tags": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
                         },
                         "tags": {
                           "block": {
@@ -362,6 +952,104 @@ const awsCeCostCategory = `{
                   "or": {
                     "block": {
                       "block_types": {
+                        "and": {
+                          "block": {
+                            "block_types": {
+                              "cost_category": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dimension": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "tags": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
+                        },
                         "cost_category": {
                           "block": {
                             "attributes": {
@@ -421,6 +1109,203 @@ const awsCeCostCategory = `{
                           },
                           "max_items": 1,
                           "nesting_mode": "list"
+                        },
+                        "not": {
+                          "block": {
+                            "block_types": {
+                              "cost_category": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dimension": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "tags": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "or": {
+                          "block": {
+                            "block_types": {
+                              "cost_category": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dimension": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "tags": {
+                                "block": {
+                                  "attributes": {
+                                    "key": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_options": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "values": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
                         },
                         "tags": {
                           "block": {

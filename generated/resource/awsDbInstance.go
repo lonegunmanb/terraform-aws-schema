@@ -103,6 +103,11 @@ const awsDbInstance = `{
         "optional": true,
         "type": "string"
       },
+      "dedicated_log_volume": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "delete_automated_backups": {
         "description_kind": "plain",
         "optional": true,

@@ -68,6 +68,65 @@ const awsCeCostCategory = `{
                       [
                         "object",
                         {
+                          "and": [
+                            "set",
+                            [
+                              "object",
+                              {
+                                "cost_category": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "dimension": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "tags": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
                           "cost_category": [
                             "list",
                             [
@@ -98,6 +157,124 @@ const awsCeCostCategory = `{
                                 "values": [
                                   "set",
                                   "string"
+                                ]
+                              }
+                            ]
+                          ],
+                          "not": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "cost_category": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "dimension": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "tags": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "or": [
+                            "set",
+                            [
+                              "object",
+                              {
+                                "cost_category": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "dimension": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "tags": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
                                 ]
                               }
                             ]
@@ -161,6 +338,65 @@ const awsCeCostCategory = `{
                       [
                         "object",
                         {
+                          "and": [
+                            "set",
+                            [
+                              "object",
+                              {
+                                "cost_category": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "dimension": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "tags": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
                           "cost_category": [
                             "list",
                             [
@@ -191,6 +427,124 @@ const awsCeCostCategory = `{
                                 "values": [
                                   "set",
                                   "string"
+                                ]
+                              }
+                            ]
+                          ],
+                          "not": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "cost_category": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "dimension": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "tags": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "or": [
+                            "set",
+                            [
+                              "object",
+                              {
+                                "cost_category": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "dimension": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "tags": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
                                 ]
                               }
                             ]
@@ -220,6 +574,65 @@ const awsCeCostCategory = `{
                       [
                         "object",
                         {
+                          "and": [
+                            "set",
+                            [
+                              "object",
+                              {
+                                "cost_category": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "dimension": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "tags": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
                           "cost_category": [
                             "list",
                             [
@@ -250,6 +663,124 @@ const awsCeCostCategory = `{
                                 "values": [
                                   "set",
                                   "string"
+                                ]
+                              }
+                            ]
+                          ],
+                          "not": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "cost_category": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "dimension": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "tags": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "or": [
+                            "set",
+                            [
+                              "object",
+                              {
+                                "cost_category": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "dimension": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "tags": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "key": "string",
+                                      "match_options": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "values": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  ]
                                 ]
                               }
                             ]

@@ -9,6 +9,11 @@ import (
 const awsEip = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "association_id": {
         "computed": true,
         "description_kind": "plain",

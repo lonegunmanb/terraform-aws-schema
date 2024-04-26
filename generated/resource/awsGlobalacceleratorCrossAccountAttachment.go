@@ -6,15 +6,15 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsMemorydbUser = `{
+const awsGlobalacceleratorCrossAccountAttachment = `{
   "block": {
     "attributes": {
-      "access_string": {
+      "arn": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
-      "arn": {
+      "created_time": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -22,13 +22,25 @@ const awsMemorydbUser = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "minimum_engine_version": {
+      "last_modified_time": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "principals": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "tags": {
         "description_kind": "plain",
@@ -41,47 +53,30 @@ const awsMemorydbUser = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
-      },
-      "user_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
       }
     },
     "block_types": {
-      "authentication_mode": {
+      "resource": {
         "block": {
           "attributes": {
-            "password_count": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            },
-            "passwords": {
+            "endpoint_id": {
               "description_kind": "plain",
               "optional": true,
-              "sensitive": true,
-              "type": [
-                "set",
-                "string"
-              ]
+              "type": "string"
             },
-            "type": {
+            "region": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "min_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"
@@ -89,8 +84,8 @@ const awsMemorydbUser = `{
   "version": 0
 }`
 
-func AwsMemorydbUserSchema() *tfjson.Schema {
+func AwsGlobalacceleratorCrossAccountAttachmentSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsMemorydbUser), &result)
+	_ = json.Unmarshal([]byte(awsGlobalacceleratorCrossAccountAttachment), &result)
 	return &result
 }

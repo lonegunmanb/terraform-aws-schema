@@ -62,6 +62,15 @@ const awsAppmeshMesh = `{
                     "type": "string"
                   }
                 ]
+              ],
+              "service_discovery": [
+                "list",
+                [
+                  "object",
+                  {
+                    "ip_preference": "string"
+                  }
+                ]
               ]
             }
           ]

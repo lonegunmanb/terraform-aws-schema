@@ -273,6 +273,12 @@ const awsElasticacheReplicationGroup = `{
         "optional": true,
         "type": "bool"
       },
+      "transit_encryption_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "user_group_ids": {
         "description_kind": "plain",
         "optional": true,
