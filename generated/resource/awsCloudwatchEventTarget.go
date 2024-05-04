@@ -19,6 +19,11 @@ const awsCloudwatchEventTarget = `{
         "optional": true,
         "type": "string"
       },
+      "force_destroy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

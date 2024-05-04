@@ -167,6 +167,7 @@ func init() {
 	resources["aws_bedrockagent_agent"] = resource.AwsBedrockagentAgentSchema()  
 	resources["aws_bedrockagent_agent_action_group"] = resource.AwsBedrockagentAgentActionGroupSchema()  
 	resources["aws_bedrockagent_agent_alias"] = resource.AwsBedrockagentAgentAliasSchema()  
+	resources["aws_bedrockagent_agent_knowledge_base_association"] = resource.AwsBedrockagentAgentKnowledgeBaseAssociationSchema()  
 	resources["aws_bedrockagent_knowledge_base"] = resource.AwsBedrockagentKnowledgeBaseSchema()  
 	resources["aws_budgets_budget"] = resource.AwsBudgetsBudgetSchema()  
 	resources["aws_budgets_budget_action"] = resource.AwsBudgetsBudgetActionSchema()  

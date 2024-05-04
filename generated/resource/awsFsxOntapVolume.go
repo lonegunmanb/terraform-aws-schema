@@ -62,9 +62,16 @@ const awsFsxOntapVolume = `{
         "optional": true,
         "type": "string"
       },
-      "size_in_megabytes": {
+      "size_in_bytes": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "string"
+      },
+      "size_in_megabytes": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "number"
       },
       "skip_final_backup": {
@@ -110,6 +117,12 @@ const awsFsxOntapVolume = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "volume_style": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "volume_type": {
         "description_kind": "plain",
         "optional": true,
@@ -117,6 +130,35 @@ const awsFsxOntapVolume = `{
       }
     },
     "block_types": {
+      "aggregate_configuration": {
+        "block": {
+          "attributes": {
+            "aggregates": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
+            "constituents_per_aggregate": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "total_constituents": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "snaplock_configuration": {
         "block": {
           "attributes": {
@@ -241,6 +283,7 @@ const awsFsxOntapVolume = `{
         "block": {
           "attributes": {
             "cooling_period": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"

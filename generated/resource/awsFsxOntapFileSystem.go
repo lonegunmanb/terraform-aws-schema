@@ -140,7 +140,7 @@ const awsFsxOntapFileSystem = `{
       },
       "storage_capacity": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "number"
       },
       "storage_type": {
@@ -174,11 +174,13 @@ const awsFsxOntapFileSystem = `{
         ]
       },
       "throughput_capacity": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
       },
       "throughput_capacity_per_ha_pair": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
