@@ -11,10 +11,16 @@ const awsSecuritylakeSubscriberNotification = `{
     "attributes": {
       "endpoint_id": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
       "id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "subscriber_endpoint": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -40,11 +46,12 @@ const awsSecuritylakeSubscriberNotification = `{
                   "authorization_api_key_value": {
                     "description_kind": "plain",
                     "optional": true,
+                    "sensitive": true,
                     "type": "string"
                   },
                   "endpoint": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   },
                   "http_method": {
@@ -54,7 +61,7 @@ const awsSecuritylakeSubscriberNotification = `{
                   },
                   "target_role_arn": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   }
                 },

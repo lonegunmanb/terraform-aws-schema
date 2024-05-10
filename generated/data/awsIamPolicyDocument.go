@@ -20,6 +20,11 @@ const awsIamPolicyDocument = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "minified_json": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "override_json": {
         "deprecated": true,
         "description_kind": "plain",

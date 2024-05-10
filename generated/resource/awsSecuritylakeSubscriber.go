@@ -91,10 +91,11 @@ const awsSecuritylakeSubscriber = `{
                 "attributes": {
                   "source_name": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   },
                   "source_version": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
@@ -138,10 +139,11 @@ const awsSecuritylakeSubscriber = `{
                   },
                   "source_name": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   },
                   "source_version": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
@@ -154,7 +156,7 @@ const awsSecuritylakeSubscriber = `{
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "subscriber_identity": {
         "block": {

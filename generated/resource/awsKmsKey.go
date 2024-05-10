@@ -78,6 +78,12 @@ const awsKmsKey = `{
         "optional": true,
         "type": "string"
       },
+      "rotation_period_in_days": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

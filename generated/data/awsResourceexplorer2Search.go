@@ -19,93 +19,54 @@ const awsResourceexplorer2Search = `{
         "required": true,
         "type": "string"
       },
+      "resource_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "complete": "bool",
+              "total_resources": "number"
+            }
+          ]
+        ]
+      },
+      "resources": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "arn": "string",
+              "last_reported_at": "string",
+              "owning_account_id": "string",
+              "properties": [
+                "list",
+                [
+                  "object",
+                  {
+                    "data": "string",
+                    "last_reported_at": "string",
+                    "name": "string"
+                  }
+                ]
+              ],
+              "region": "string",
+              "resource_type": "string",
+              "service": "string"
+            }
+          ]
+        ]
+      },
       "view_arn": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "resource_count": {
-        "block": {
-          "attributes": {
-            "complete": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
-            },
-            "total_resources": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "resources": {
-        "block": {
-          "attributes": {
-            "arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "last_reported_at": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "owning_account_id": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "region": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "resource_type": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "service": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "resource_property": {
-              "block": {
-                "attributes": {
-                  "data": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "type": "string"
-                  },
-                  "last_reported_at": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "type": "string"
-                  },
-                  "name": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
