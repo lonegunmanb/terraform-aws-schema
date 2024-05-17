@@ -185,6 +185,15 @@ const awsBudgetsBudget = `{
           ]
         ]
       },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "time_period_end": {
         "computed": true,
         "description_kind": "plain",

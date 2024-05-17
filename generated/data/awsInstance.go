@@ -179,6 +179,11 @@ const awsInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "launch_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "maintenance_options": {
         "computed": true,
         "description_kind": "plain",

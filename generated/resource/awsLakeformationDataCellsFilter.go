@@ -76,6 +76,7 @@ const awsLakeformationDataCellsFilter = `{
               "block": {
                 "attributes": {
                   "filter_expression": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
