@@ -23,6 +23,11 @@ const awsLambdaFunction = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "code_sha256": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "code_signing_config_arn": {
         "description_kind": "plain",
         "optional": true,
@@ -108,13 +113,11 @@ const awsLambdaFunction = `{
         "type": "string"
       },
       "replace_security_groups_on_destroy": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "replacement_security_group_ids": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

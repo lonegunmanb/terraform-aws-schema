@@ -14,6 +14,11 @@ const awsLambdaLayerVersion = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "code_sha256": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "compatible_architectures": {
         "description_kind": "plain",
         "optional": true,

@@ -25,6 +25,7 @@ const awsKmsGrant = `{
       "grant_token": {
         "computed": true,
         "description_kind": "plain",
+        "sensitive": true,
         "type": "string"
       },
       "grantee_principal": {

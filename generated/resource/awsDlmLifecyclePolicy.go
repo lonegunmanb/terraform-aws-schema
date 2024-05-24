@@ -306,6 +306,7 @@ const awsDlmLifecyclePolicy = `{
                           "type": "string"
                         },
                         "copy_tags": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "bool"

@@ -78,6 +78,7 @@ const awsVpcEndpoint = `{
         "type": "string"
       },
       "private_dns_enabled": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

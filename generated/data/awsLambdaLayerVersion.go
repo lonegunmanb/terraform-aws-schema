@@ -14,6 +14,11 @@ const awsLambdaLayerVersion = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "code_sha256": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "compatible_architecture": {
         "description_kind": "plain",
         "optional": true,
@@ -83,6 +88,7 @@ const awsLambdaLayerVersion = `{
       },
       "source_code_hash": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },

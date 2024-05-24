@@ -67,7 +67,6 @@ const awsRoute53Zone = `{
       "resource_record_set_count": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "number"
       },
       "tags": {

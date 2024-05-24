@@ -22,6 +22,11 @@ const awsLambdaFunction = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "code_sha256": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "code_signing_config_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -195,6 +200,7 @@ const awsLambdaFunction = `{
       },
       "source_code_hash": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
