@@ -213,6 +213,12 @@ const awsEcsTaskDefinition = `{
       "volume": {
         "block": {
           "attributes": {
+            "configure_at_launch": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "host_path": {
               "description_kind": "plain",
               "optional": true,
