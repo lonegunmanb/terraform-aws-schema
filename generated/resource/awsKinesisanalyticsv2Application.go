@@ -9,6 +9,12 @@ import (
 const awsKinesisanalyticsv2Application = `{
   "block": {
     "attributes": {
+      "application_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
