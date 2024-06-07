@@ -6,10 +6,10 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsTransferSshKey = `{
+const awsPaymentcryptographyKeyAlias = `{
   "block": {
     "attributes": {
-      "body": {
+      "alias_name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -17,22 +17,11 @@ const awsTransferSshKey = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "key_arn": {
+        "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "server_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "ssh_key_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "user_name": {
-        "description_kind": "plain",
-        "required": true,
         "type": "string"
       }
     },
@@ -41,8 +30,8 @@ const awsTransferSshKey = `{
   "version": 0
 }`
 
-func AwsTransferSshKeySchema() *tfjson.Schema {
+func AwsPaymentcryptographyKeyAliasSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsTransferSshKey), &result)
+	_ = json.Unmarshal([]byte(awsPaymentcryptographyKeyAlias), &result)
 	return &result
 }

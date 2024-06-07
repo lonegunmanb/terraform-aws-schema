@@ -130,6 +130,79 @@ const awsPipesPipe = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "log_configuration": {
+        "block": {
+          "attributes": {
+            "level": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "cloudwatch_logs_log_destination": {
+              "block": {
+                "attributes": {
+                  "log_group_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "firehose_log_destination": {
+              "block": {
+                "attributes": {
+                  "delivery_stream_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "s3_log_destination": {
+              "block": {
+                "attributes": {
+                  "bucket_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "bucket_owner": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "output_format": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "prefix": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "source_parameters": {
         "block": {
           "block_types": {
@@ -487,7 +560,7 @@ const awsPipesPipe = `{
                       "attributes": {
                         "basic_auth": {
                           "description_kind": "plain",
-                          "required": true,
+                          "optional": true,
                           "type": "string"
                         },
                         "client_certificate_tls_auth": {

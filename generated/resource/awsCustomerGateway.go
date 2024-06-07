@@ -16,7 +16,12 @@ const awsCustomerGateway = `{
       },
       "bgp_asn": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "string"
+      },
+      "bgp_asn_extended": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "certificate_arn": {

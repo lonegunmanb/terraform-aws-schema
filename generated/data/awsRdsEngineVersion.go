@@ -135,6 +135,11 @@ const awsRdsEngineVersion = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "supports_limitless_database": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "supports_log_exports_to_cloudwatch": {
         "computed": true,
         "description_kind": "plain",

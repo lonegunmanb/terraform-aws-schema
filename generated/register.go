@@ -920,6 +920,8 @@ func init() {
 	resources["aws_organizations_policy_attachment"] = resource.AwsOrganizationsPolicyAttachmentSchema()  
 	resources["aws_organizations_resource_policy"] = resource.AwsOrganizationsResourcePolicySchema()  
 	resources["aws_osis_pipeline"] = resource.AwsOsisPipelineSchema()  
+	resources["aws_paymentcryptography_key"] = resource.AwsPaymentcryptographyKeySchema()  
+	resources["aws_paymentcryptography_key_alias"] = resource.AwsPaymentcryptographyKeyAliasSchema()  
 	resources["aws_pinpoint_adm_channel"] = resource.AwsPinpointAdmChannelSchema()  
 	resources["aws_pinpoint_apns_channel"] = resource.AwsPinpointApnsChannelSchema()  
 	resources["aws_pinpoint_apns_sandbox_channel"] = resource.AwsPinpointApnsSandboxChannelSchema()  

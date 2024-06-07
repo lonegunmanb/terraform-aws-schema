@@ -96,7 +96,19 @@ const awsMwaaEnvironment = `{
           ]
         ]
       },
+      "max_webservers": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "max_workers": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "min_webservers": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,

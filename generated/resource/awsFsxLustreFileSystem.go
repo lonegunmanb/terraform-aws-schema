@@ -196,6 +196,27 @@ const awsFsxLustreFileSystem = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "metadata_configuration": {
+        "block": {
+          "attributes": {
+            "iops": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "mode": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "root_squash_configuration": {
         "block": {
           "attributes": {

@@ -95,6 +95,7 @@ const awsAppmeshRoute = `{
                           "block": {
                             "attributes": {
                               "port": {
+                                "computed": true,
                                 "description_kind": "plain",
                                 "optional": true,
                                 "type": "number"
@@ -348,6 +349,7 @@ const awsAppmeshRoute = `{
                           "block": {
                             "attributes": {
                               "port": {
+                                "computed": true,
                                 "description_kind": "plain",
                                 "optional": true,
                                 "type": "number"
@@ -643,6 +645,7 @@ const awsAppmeshRoute = `{
                           "block": {
                             "attributes": {
                               "port": {
+                                "computed": true,
                                 "description_kind": "plain",
                                 "optional": true,
                                 "type": "number"
@@ -938,6 +941,7 @@ const awsAppmeshRoute = `{
                           "block": {
                             "attributes": {
                               "port": {
+                                "computed": true,
                                 "description_kind": "plain",
                                 "optional": true,
                                 "type": "number"
