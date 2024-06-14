@@ -514,6 +514,22 @@ const awsEc2Fleet = `{
               "type": "bool"
             }
           },
+          "block_types": {
+            "capacity_reservation_options": {
+              "block": {
+                "attributes": {
+                  "usage_strategy": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "max_items": 1,

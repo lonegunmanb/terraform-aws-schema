@@ -174,6 +174,29 @@ const awsVpcEndpoint = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "subnet_configuration": {
+        "block": {
+          "attributes": {
+            "ipv4": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "ipv6": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "subnet_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "timeouts": {
         "block": {
           "attributes": {

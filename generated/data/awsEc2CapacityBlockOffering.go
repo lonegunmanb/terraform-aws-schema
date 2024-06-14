@@ -1,4 +1,4 @@
-package resource
+package data
 
 import (
 	"encoding/json"
@@ -6,78 +6,60 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEc2TrafficMirrorSession = `{
+const awsEc2CapacityBlockOffering = `{
   "block": {
     "attributes": {
-      "arn": {
+      "availability_zone": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "network_interface_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "owner_id": {
+      "capacity_block_offering_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "packet_length": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "session_number": {
+      "capacity_duration_hours": {
         "description_kind": "plain",
         "required": true,
         "type": "number"
       },
-      "tags": {
+      "currency_code": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "string"
       },
-      "tags_all": {
+      "end_date_range": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "traffic_mirror_filter_id": {
-        "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
-      "traffic_mirror_target_id": {
+      "instance_count": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "virtual_network_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
         "type": "number"
+      },
+      "instance_type": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "start_date_range": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "tenancy": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "upfront_fee": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -85,8 +67,8 @@ const awsEc2TrafficMirrorSession = `{
   "version": 0
 }`
 
-func AwsEc2TrafficMirrorSessionSchema() *tfjson.Schema {
+func AwsEc2CapacityBlockOfferingSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEc2TrafficMirrorSession), &result)
+	_ = json.Unmarshal([]byte(awsEc2CapacityBlockOffering), &result)
 	return &result
 }

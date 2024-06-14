@@ -61,6 +61,12 @@ const awsOpensearchDomain = `{
         "optional": true,
         "type": "string"
       },
+      "ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "kibana_endpoint": {
         "computed": true,
         "deprecated": true,
