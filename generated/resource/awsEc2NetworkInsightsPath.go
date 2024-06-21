@@ -16,7 +16,7 @@ const awsEc2NetworkInsightsPath = `{
       },
       "destination": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "destination_arn": {

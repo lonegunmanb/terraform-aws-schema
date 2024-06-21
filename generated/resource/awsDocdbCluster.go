@@ -214,6 +214,35 @@ const awsDocdbCluster = `{
       }
     },
     "block_types": {
+      "restore_to_point_in_time": {
+        "block": {
+          "attributes": {
+            "restore_to_time": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "restore_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "source_cluster_identifier": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "use_latest_restorable_time": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

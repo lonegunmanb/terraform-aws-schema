@@ -50,9 +50,14 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
             "action": {
               "block": {
                 "attributes": {
+                  "add_to_network_function_group": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "association_method": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": "string"
                   },
                   "require_acceptance": {
@@ -170,6 +175,29 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
         "min_items": 1,
         "nesting_mode": "list"
       },
+      "network_function_groups": {
+        "block": {
+          "attributes": {
+            "description": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "require_attachment_acceptance": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "segment_actions": {
         "block": {
           "attributes": {
@@ -224,6 +252,65 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
                 "set",
                 "string"
               ]
+            }
+          },
+          "block_types": {
+            "via": {
+              "block": {
+                "attributes": {
+                  "network_function_groups": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "block_types": {
+                  "with_edge_override": {
+                    "block": {
+                      "attributes": {
+                        "edge_sets": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        },
+                        "use_edge": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "when_sent_to": {
+              "block": {
+                "attributes": {
+                  "segments": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

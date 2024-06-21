@@ -14,6 +14,11 @@ const awsAppsyncApiKey = `{
         "required": true,
         "type": "string"
       },
+      "api_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "description": {
         "description_kind": "plain",
         "optional": true,

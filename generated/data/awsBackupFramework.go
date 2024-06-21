@@ -18,12 +18,12 @@ const awsBackupFramework = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "set",
+          "list",
           [
             "object",
             {
               "input_parameter": [
-                "set",
+                "list",
                 [
                   "object",
                   {
@@ -39,11 +39,11 @@ const awsBackupFramework = `{
                   "object",
                   {
                     "compliance_resource_ids": [
-                      "set",
+                      "list",
                       "string"
                     ],
                     "compliance_resource_types": [
-                      "set",
+                      "list",
                       "string"
                     ],
                     "tags": [

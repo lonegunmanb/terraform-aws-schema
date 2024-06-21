@@ -496,6 +496,11 @@ const awsLaunchTemplate = `{
                 "string"
               ]
             },
+            "max_spot_price_as_percentage_of_optimal_on_demand_price": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
             "on_demand_max_price_percentage_over_lowest_price": {
               "description_kind": "plain",
               "optional": true,

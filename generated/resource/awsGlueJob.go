@@ -52,6 +52,11 @@ const awsGlueJob = `{
         "optional": true,
         "type": "string"
       },
+      "maintenance_window": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "max_capacity": {
         "computed": true,
         "description_kind": "plain",

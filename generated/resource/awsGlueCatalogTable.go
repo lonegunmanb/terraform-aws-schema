@@ -158,6 +158,14 @@ const awsGlueCatalogTable = `{
       "storage_descriptor": {
         "block": {
           "attributes": {
+            "additional_locations": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
             "bucket_columns": {
               "description_kind": "plain",
               "optional": true,

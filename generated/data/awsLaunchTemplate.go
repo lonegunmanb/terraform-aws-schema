@@ -302,6 +302,7 @@ const awsLaunchTemplate = `{
                 "set",
                 "string"
               ],
+              "max_spot_price_as_percentage_of_optimal_on_demand_price": "number",
               "memory_gib_per_vcpu": [
                 "list",
                 [

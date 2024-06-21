@@ -403,6 +403,7 @@ func init() {
 	resources["aws_docdb_global_cluster"] = resource.AwsDocdbGlobalClusterSchema()  
 	resources["aws_docdb_subnet_group"] = resource.AwsDocdbSubnetGroupSchema()  
 	resources["aws_docdbelastic_cluster"] = resource.AwsDocdbelasticClusterSchema()  
+	resources["aws_drs_replication_configuration_template"] = resource.AwsDrsReplicationConfigurationTemplateSchema()  
 	resources["aws_dx_bgp_peer"] = resource.AwsDxBgpPeerSchema()  
 	resources["aws_dx_connection"] = resource.AwsDxConnectionSchema()  
 	resources["aws_dx_connection_association"] = resource.AwsDxConnectionAssociationSchema()  

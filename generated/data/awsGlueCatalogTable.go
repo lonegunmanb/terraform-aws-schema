@@ -105,6 +105,10 @@ const awsGlueCatalogTable = `{
           [
             "object",
             {
+              "additional_locations": [
+                "list",
+                "string"
+              ],
               "bucket_columns": [
                 "list",
                 "string"

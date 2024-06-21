@@ -96,6 +96,7 @@ const awsBackupFramework = `{
               "block": {
                 "attributes": {
                   "compliance_resource_ids": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": [
@@ -104,6 +105,7 @@ const awsBackupFramework = `{
                     ]
                   },
                   "compliance_resource_types": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": [

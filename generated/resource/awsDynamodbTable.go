@@ -396,7 +396,7 @@ const awsDynamodbTable = `{
           "attributes": {
             "attribute_name": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             },
             "enabled": {
