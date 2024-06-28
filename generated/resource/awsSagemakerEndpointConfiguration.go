@@ -222,6 +222,11 @@ const awsSagemakerEndpointConfiguration = `{
               "optional": true,
               "type": "bool"
             },
+            "inference_ami_version": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "initial_instance_count": {
               "description_kind": "plain",
               "optional": true,
@@ -341,6 +346,11 @@ const awsSagemakerEndpointConfiguration = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
+            },
+            "inference_ami_version": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             },
             "initial_instance_count": {
               "description_kind": "plain",

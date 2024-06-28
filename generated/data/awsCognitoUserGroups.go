@@ -9,6 +9,22 @@ import (
 const awsCognitoUserGroups = `{
   "block": {
     "attributes": {
+      "groups": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "description": "string",
+              "group_name": "string",
+              "precedence": "number",
+              "role_arn": "string"
+            }
+          ]
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -18,36 +34,6 @@ const awsCognitoUserGroups = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "groups": {
-        "block": {
-          "attributes": {
-            "description": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "group_name": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "precedence": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            },
-            "role_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

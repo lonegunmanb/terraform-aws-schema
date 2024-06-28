@@ -123,6 +123,45 @@ const awsSagemakerWorkteam = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "worker_access_configuration": {
+        "block": {
+          "block_types": {
+            "s3_presign": {
+              "block": {
+                "block_types": {
+                  "iam_policy_constraints": {
+                    "block": {
+                      "attributes": {
+                        "source_ip": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "vpc_source_ip": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

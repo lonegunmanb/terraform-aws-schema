@@ -76,6 +76,11 @@ const awsQuicksightAccountSubscription = `{
         "optional": true,
         "type": "string"
       },
+      "iam_identity_center_instance_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

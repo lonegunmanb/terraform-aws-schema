@@ -9,6 +9,11 @@ import (
 const awsControltowerControl = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "control_identifier": {
         "description_kind": "plain",
         "required": true,
@@ -27,6 +32,24 @@ const awsControltowerControl = `{
       }
     },
     "block_types": {
+      "parameters": {
+        "block": {
+          "attributes": {
+            "key": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "value": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "timeouts": {
         "block": {
           "attributes": {
@@ -36,6 +59,11 @@ const awsControltowerControl = `{
               "type": "string"
             },
             "delete": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

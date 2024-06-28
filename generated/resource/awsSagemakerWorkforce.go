@@ -54,6 +54,14 @@ const awsSagemakerWorkforce = `{
       "oidc_config": {
         "block": {
           "attributes": {
+            "authentication_request_extra_params": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "map",
+                "string"
+              ]
+            },
             "authorization_endpoint": {
               "description_kind": "plain",
               "required": true,
@@ -83,6 +91,11 @@ const awsSagemakerWorkforce = `{
             "logout_endpoint": {
               "description_kind": "plain",
               "required": true,
+              "type": "string"
+            },
+            "scope": {
+              "description_kind": "plain",
+              "optional": true,
               "type": "string"
             },
             "token_endpoint": {

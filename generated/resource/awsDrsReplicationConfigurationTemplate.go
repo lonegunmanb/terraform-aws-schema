@@ -20,6 +20,7 @@ const awsDrsReplicationConfigurationTemplate = `{
         "type": "bool"
       },
       "auto_replicate_new_disks": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

@@ -317,6 +317,20 @@ const awsSagemakerDomain = `{
                     "max_items": 1,
                     "nesting_mode": "list"
                   },
+                  "generative_ai_settings": {
+                    "block": {
+                      "attributes": {
+                        "amazon_bedrock_role_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "identity_provider_oauth_settings": {
                     "block": {
                       "attributes": {
@@ -431,6 +445,30 @@ const awsSagemakerDomain = `{
                   }
                 },
                 "block_types": {
+                  "custom_image": {
+                    "block": {
+                      "attributes": {
+                        "app_image_config_name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "image_name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "image_version_number": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 200,
+                    "nesting_mode": "list"
+                  },
                   "default_resource_spec": {
                     "block": {
                       "attributes": {
