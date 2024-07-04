@@ -30,6 +30,59 @@ const awsBackupPlan = `{
         "required": true,
         "type": "string"
       },
+      "rule": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "completion_window": "number",
+              "copy_action": [
+                "set",
+                [
+                  "object",
+                  {
+                    "destination_vault_arn": "string",
+                    "lifecycle": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "cold_storage_after": "number",
+                          "delete_after": "number",
+                          "opt_in_to_archive_for_supported_resources": "bool"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "enable_continuous_backup": "bool",
+              "lifecycle": [
+                "list",
+                [
+                  "object",
+                  {
+                    "cold_storage_after": "number",
+                    "delete_after": "number",
+                    "opt_in_to_archive_for_supported_resources": "bool"
+                  }
+                ]
+              ],
+              "recovery_point_tags": [
+                "map",
+                "string"
+              ],
+              "rule_name": "string",
+              "schedule": "string",
+              "start_window": "number",
+              "target_vault_name": "string"
+            }
+          ]
+        ]
+      },
       "tags": {
         "computed": true,
         "description_kind": "plain",

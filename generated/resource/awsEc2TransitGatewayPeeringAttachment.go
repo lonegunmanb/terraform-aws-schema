@@ -59,6 +59,22 @@ const awsEc2TransitGatewayPeeringAttachment = `{
         "type": "string"
       }
     },
+    "block_types": {
+      "options": {
+        "block": {
+          "attributes": {
+            "dynamic_routing": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      }
+    },
     "description_kind": "plain"
   },
   "version": 0

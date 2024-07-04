@@ -47,6 +47,30 @@ const awsAmplifyDomainAssociation = `{
       }
     },
     "block_types": {
+      "certificate_settings": {
+        "block": {
+          "attributes": {
+            "certificate_verification_dns_record": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "custom_certificate_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "sub_domain": {
         "block": {
           "attributes": {

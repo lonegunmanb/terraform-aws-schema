@@ -95,6 +95,11 @@ const awsIotTopicRule = `{
       "cloudwatch_logs": {
         "block": {
           "attributes": {
+            "batch_mode": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "log_group_name": {
               "description_kind": "plain",
               "required": true,
@@ -303,6 +308,11 @@ const awsIotTopicRule = `{
             "cloudwatch_logs": {
               "block": {
                 "attributes": {
+                  "batch_mode": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
                   "log_group_name": {
                     "description_kind": "plain",
                     "required": true,
