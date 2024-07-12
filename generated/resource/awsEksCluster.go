@@ -14,6 +14,11 @@ const awsEksCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "bootstrap_self_managed_addons": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "certificate_authority": {
         "computed": true,
         "description_kind": "plain",
@@ -321,7 +326,7 @@ const awsEksCluster = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsEksClusterSchema() *tfjson.Schema {

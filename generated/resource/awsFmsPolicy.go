@@ -55,6 +55,15 @@ const awsFmsPolicy = `{
         "optional": true,
         "type": "bool"
       },
+      "resource_set_ids": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "resource_tags": {
         "description_kind": "plain",
         "optional": true,

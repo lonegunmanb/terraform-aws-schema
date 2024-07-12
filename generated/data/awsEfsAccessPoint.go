@@ -83,6 +83,7 @@ const awsEfsAccessPoint = `{
         ]
       },
       "tags": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

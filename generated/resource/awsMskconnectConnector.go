@@ -48,6 +48,23 @@ const awsMskconnectConnector = `{
         "required": true,
         "type": "string"
       },
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "version": {
         "computed": true,
         "description_kind": "plain",

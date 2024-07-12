@@ -872,6 +872,11 @@ const awsLaunchTemplate = `{
               "optional": true,
               "type": "string"
             },
+            "primary_ipv6": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "private_ip_address": {
               "description_kind": "plain",
               "optional": true,

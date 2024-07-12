@@ -81,6 +81,24 @@ const awsCloudformationStackSetInstance = `{
       "deployment_targets": {
         "block": {
           "attributes": {
+            "account_filter_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "accounts": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "accounts_url": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "organizational_unit_ids": {
               "description_kind": "plain",
               "optional": true,

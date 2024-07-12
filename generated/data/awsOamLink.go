@@ -30,6 +30,36 @@ const awsOamLink = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "link_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "log_group_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "filter": "string"
+                  }
+                ]
+              ],
+              "metric_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "filter": "string"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
       "link_id": {
         "computed": true,
         "description_kind": "plain",

@@ -24,7 +24,6 @@ const awsEc2CoipPools = `{
         ]
       },
       "tags": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

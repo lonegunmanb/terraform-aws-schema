@@ -488,6 +488,7 @@ const awsLaunchTemplate = `{
               ],
               "network_card_index": "number",
               "network_interface_id": "string",
+              "primary_ipv6": "string",
               "private_ip_address": "string",
               "security_groups": [
                 "set",

@@ -63,6 +63,11 @@ const awsGlobalacceleratorCrossAccountAttachment = `{
       "resource": {
         "block": {
           "attributes": {
+            "cidr_block": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "endpoint_id": {
               "description_kind": "plain",
               "optional": true,

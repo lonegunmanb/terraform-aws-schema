@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,42 +6,38 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsMskconnectConnector = `{
+const awsCloudwatchLogAccountPolicy = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "name": {
+      "policy_document": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "tags": {
-        "computed": true,
+      "policy_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "policy_type": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "scope": {
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "string"
       },
-      "version": {
-        "computed": true,
+      "selection_criteria": {
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       }
     },
@@ -50,8 +46,8 @@ const awsMskconnectConnector = `{
   "version": 0
 }`
 
-func AwsMskconnectConnectorSchema() *tfjson.Schema {
+func AwsCloudwatchLogAccountPolicySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsMskconnectConnector), &result)
+	_ = json.Unmarshal([]byte(awsCloudwatchLogAccountPolicy), &result)
 	return &result
 }

@@ -51,6 +51,16 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "number"
       },
+      "ca_certificate_identifier": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "ca_certificate_valid_till": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "cluster_identifier": {
         "computed": true,
         "description_kind": "plain",

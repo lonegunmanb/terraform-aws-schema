@@ -17,7 +17,8 @@ const awsEksCluster = `{
           [
             "object",
             {
-              "authentication_mode": "string"
+              "authentication_mode": "string",
+              "bootstrap_cluster_creator_admin_permissions": "bool"
             }
           ]
         ]

@@ -32,7 +32,6 @@ const awsEc2LocalGatewayVirtualInterfaceGroups = `{
         ]
       },
       "tags": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

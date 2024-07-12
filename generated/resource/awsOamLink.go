@@ -72,6 +72,43 @@ const awsOamLink = `{
       }
     },
     "block_types": {
+      "link_configuration": {
+        "block": {
+          "block_types": {
+            "log_group_configuration": {
+              "block": {
+                "attributes": {
+                  "filter": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "metric_configuration": {
+              "block": {
+                "attributes": {
+                  "filter": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
