@@ -48,7 +48,8 @@ const awsBedrockagentAgentAlias = `{
           [
             "object",
             {
-              "agent_version": "string"
+              "agent_version": "string",
+              "provisioned_throughput": "string"
             }
           ]
         ]

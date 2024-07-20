@@ -572,7 +572,7 @@ const awsEcsService = `{
                   "throughput": {
                     "description_kind": "plain",
                     "optional": true,
-                    "type": "string"
+                    "type": "number"
                   },
                   "volume_type": {
                     "description_kind": "plain",

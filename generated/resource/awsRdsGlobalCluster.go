@@ -30,6 +30,12 @@ const awsRdsGlobalCluster = `{
         "optional": true,
         "type": "string"
       },
+      "engine_lifecycle_support": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "engine_version": {
         "computed": true,
         "description_kind": "plain",

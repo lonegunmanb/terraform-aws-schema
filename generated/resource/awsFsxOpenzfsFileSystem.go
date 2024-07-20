@@ -40,6 +40,14 @@ const awsFsxOpenzfsFileSystem = `{
         "optional": true,
         "type": "string"
       },
+      "delete_options": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "deployment_type": {
         "description_kind": "plain",
         "required": true,
@@ -60,6 +68,14 @@ const awsFsxOpenzfsFileSystem = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "final_backup_tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       },
       "id": {
         "computed": true,

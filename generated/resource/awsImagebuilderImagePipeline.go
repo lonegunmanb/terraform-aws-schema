@@ -54,6 +54,11 @@ const awsImagebuilderImagePipeline = `{
         "optional": true,
         "type": "bool"
       },
+      "execution_role": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -184,6 +189,49 @@ const awsImagebuilderImagePipeline = `{
           "description_kind": "plain"
         },
         "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "workflow": {
+        "block": {
+          "attributes": {
+            "on_failure": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "parallel_group": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "workflow_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "parameter": {
+              "block": {
+                "attributes": {
+                  "name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            }
+          },
+          "description_kind": "plain"
+        },
         "nesting_mode": "list"
       }
     },

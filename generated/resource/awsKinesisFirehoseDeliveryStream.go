@@ -1011,6 +1011,31 @@ const awsKinesisFirehoseDeliveryStream = `{
               "max_items": 1,
               "min_items": 1,
               "nesting_mode": "list"
+            },
+            "secrets_manager_configuration": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "role_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "secret_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -1592,7 +1617,7 @@ const awsKinesisFirehoseDeliveryStream = `{
             },
             "password": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "sensitive": true,
               "type": "string"
             },
@@ -1613,7 +1638,7 @@ const awsKinesisFirehoseDeliveryStream = `{
             },
             "username": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },
@@ -1841,6 +1866,31 @@ const awsKinesisFirehoseDeliveryStream = `{
               "max_items": 1,
               "min_items": 1,
               "nesting_mode": "list"
+            },
+            "secrets_manager_configuration": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "role_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "secret_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -1908,7 +1958,7 @@ const awsKinesisFirehoseDeliveryStream = `{
             },
             "private_key": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "sensitive": true,
               "type": "string"
             },
@@ -1939,7 +1989,7 @@ const awsKinesisFirehoseDeliveryStream = `{
             },
             "user": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },
@@ -2091,6 +2141,31 @@ const awsKinesisFirehoseDeliveryStream = `{
               },
               "max_items": 1,
               "min_items": 1,
+              "nesting_mode": "list"
+            },
+            "secrets_manager_configuration": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "role_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "secret_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
               "nesting_mode": "list"
             },
             "snowflake_role_configuration": {
@@ -2162,7 +2237,7 @@ const awsKinesisFirehoseDeliveryStream = `{
             },
             "hec_token": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             },
             "retry_duration": {
@@ -2324,6 +2399,31 @@ const awsKinesisFirehoseDeliveryStream = `{
               },
               "max_items": 1,
               "min_items": 1,
+              "nesting_mode": "list"
+            },
+            "secrets_manager_configuration": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "role_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "secret_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
               "nesting_mode": "list"
             }
           },

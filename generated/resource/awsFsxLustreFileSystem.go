@@ -74,6 +74,14 @@ const awsFsxLustreFileSystem = `{
         "optional": true,
         "type": "string"
       },
+      "final_backup_tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -127,6 +135,11 @@ const awsFsxLustreFileSystem = `{
           "set",
           "string"
         ]
+      },
+      "skip_final_backup": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       },
       "storage_capacity": {
         "description_kind": "plain",

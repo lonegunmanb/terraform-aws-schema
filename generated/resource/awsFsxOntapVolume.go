@@ -29,6 +29,14 @@ const awsFsxOntapVolume = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "final_backup_tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "flexcache_endpoint_type": {
         "computed": true,
         "description_kind": "plain",

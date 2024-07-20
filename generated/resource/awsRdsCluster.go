@@ -179,6 +179,12 @@ const awsRdsCluster = `{
         "required": true,
         "type": "string"
       },
+      "engine_lifecycle_support": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "engine_mode": {
         "description_kind": "plain",
         "optional": true,

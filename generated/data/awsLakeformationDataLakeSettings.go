@@ -22,6 +22,11 @@ const awsLakeformationDataLakeSettings = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "allow_full_table_external_data_access": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "authorized_session_tag_value_list": {
         "computed": true,
         "description_kind": "plain",

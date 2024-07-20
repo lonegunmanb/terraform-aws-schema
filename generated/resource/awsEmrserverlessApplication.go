@@ -162,6 +162,27 @@ const awsEmrserverlessApplication = `{
         },
         "nesting_mode": "set"
       },
+      "interactive_configuration": {
+        "block": {
+          "attributes": {
+            "livy_endpoint_enabled": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "studio_enabled": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "maximum_capacity": {
         "block": {
           "attributes": {

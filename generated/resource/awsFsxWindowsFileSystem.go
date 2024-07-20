@@ -58,6 +58,14 @@ const awsFsxWindowsFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "final_backup_tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

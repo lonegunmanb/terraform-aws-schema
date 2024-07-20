@@ -24,6 +24,11 @@ const awsElasticacheReplicationGroup = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "cluster_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "configuration_endpoint_address": {
         "computed": true,
         "description_kind": "plain",

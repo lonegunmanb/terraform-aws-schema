@@ -115,6 +115,12 @@ const awsBedrockagentAgent = `{
           ]
         ]
       },
+      "skip_resource_in_use_check": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

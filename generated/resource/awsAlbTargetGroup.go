@@ -250,6 +250,53 @@ const awsAlbTargetGroup = `{
         },
         "nesting_mode": "list"
       },
+      "target_group_health": {
+        "block": {
+          "block_types": {
+            "dns_failover": {
+              "block": {
+                "attributes": {
+                  "minimum_healthy_targets_count": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "minimum_healthy_targets_percentage": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "unhealthy_state_routing": {
+              "block": {
+                "attributes": {
+                  "minimum_healthy_targets_count": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "minimum_healthy_targets_percentage": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "target_health_state": {
         "block": {
           "attributes": {

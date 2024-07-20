@@ -61,6 +61,11 @@ const awsBedrockagentAgentActionGroup = `{
       "action_group_executor": {
         "block": {
           "attributes": {
+            "custom_control": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "lambda": {
               "description_kind": "plain",
               "optional": true,
@@ -93,6 +98,70 @@ const awsBedrockagentAgentActionGroup = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "function_schema": {
+        "block": {
+          "block_types": {
+            "member_functions": {
+              "block": {
+                "block_types": {
+                  "functions": {
+                    "block": {
+                      "attributes": {
+                        "description": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "parameters": {
+                          "block": {
+                            "attributes": {
+                              "description": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "map_block_key": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "required": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              },
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

@@ -183,6 +183,11 @@ const awsCodepipeline = `{
                     "optional": true,
                     "type": "number"
                   },
+                  "timeout_in_minutes": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
                   "version": {
                     "description_kind": "plain",
                     "required": true,

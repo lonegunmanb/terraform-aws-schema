@@ -115,6 +115,25 @@ const awsFisExperimentTemplate = `{
         "min_items": 1,
         "nesting_mode": "set"
       },
+      "experiment_options": {
+        "block": {
+          "attributes": {
+            "account_targeting": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "empty_target_resolution_mode": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "log_configuration": {
         "block": {
           "attributes": {

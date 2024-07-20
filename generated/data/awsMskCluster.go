@@ -49,6 +49,99 @@ const awsMskCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "broker_node_group_info": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "az_distribution": "string",
+              "client_subnets": [
+                "set",
+                "string"
+              ],
+              "connectivity_info": [
+                "list",
+                [
+                  "object",
+                  {
+                    "public_access": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    ],
+                    "vpc_connectivity": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "client_authentication": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "sasl": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "iam": "bool",
+                                      "scram": "bool"
+                                    }
+                                  ]
+                                ],
+                                "tls": "bool"
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "instance_type": "string",
+              "security_groups": [
+                "set",
+                "string"
+              ],
+              "storage_info": [
+                "list",
+                [
+                  "object",
+                  {
+                    "ebs_storage_info": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "provisioned_throughput": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "enabled": "bool",
+                                "volume_throughput": "number"
+                              }
+                            ]
+                          ],
+                          "volume_size": "number"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
       "cluster_name": {
         "description_kind": "plain",
         "required": true,

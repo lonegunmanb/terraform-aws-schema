@@ -210,6 +210,22 @@ const awsMskReplicator = `{
                     ]
                   }
                 },
+                "block_types": {
+                  "starting_position": {
+                    "block": {
+                      "attributes": {
+                        "type": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "min_items": 1,

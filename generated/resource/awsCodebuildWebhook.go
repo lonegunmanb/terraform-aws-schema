@@ -78,6 +78,30 @@ const awsCodebuildWebhook = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
+      },
+      "scope_configuration": {
+        "block": {
+          "attributes": {
+            "domain": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "scope": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
