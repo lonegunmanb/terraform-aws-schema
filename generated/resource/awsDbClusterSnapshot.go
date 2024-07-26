@@ -68,6 +68,14 @@ const awsDbClusterSnapshot = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "shared_accounts": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "snapshot_type": {
         "computed": true,
         "description_kind": "plain",

@@ -266,6 +266,19 @@ const awsBatchJobDefinition = `{
                     "min_items": 1,
                     "nesting_mode": "list"
                   },
+                  "image_pull_secret": {
+                    "block": {
+                      "attributes": {
+                        "name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
                   "metadata": {
                     "block": {
                       "attributes": {

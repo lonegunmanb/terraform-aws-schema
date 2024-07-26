@@ -6,28 +6,33 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsCloudwatchEventBus = `{
+const awsServicePrincipal = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "kms_key_identifier": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
       "name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "region": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "service_name": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "suffix": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       }
     },
@@ -36,8 +41,8 @@ const awsCloudwatchEventBus = `{
   "version": 0
 }`
 
-func AwsCloudwatchEventBusSchema() *tfjson.Schema {
+func AwsServicePrincipalSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsCloudwatchEventBus), &result)
+	_ = json.Unmarshal([]byte(awsServicePrincipal), &result)
 	return &result
 }

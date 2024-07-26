@@ -78,6 +78,20 @@ const awsSesv2ConfigurationSetEventDestination = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "event_bridge_destination": {
+              "block": {
+                "attributes": {
+                  "event_bus_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "kinesis_firehose_destination": {
               "block": {
                 "attributes": {

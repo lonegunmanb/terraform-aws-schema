@@ -71,6 +71,15 @@ const awsCurReportDefinition = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "time_unit": {
         "computed": true,
         "description_kind": "plain",

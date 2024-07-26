@@ -116,6 +116,11 @@ const awsCloudformationStackSetInstance = `{
       "operation_preferences": {
         "block": {
           "attributes": {
+            "concurrency_mode": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "failure_tolerance_count": {
               "description_kind": "plain",
               "optional": true,

@@ -595,7 +595,7 @@ const awsEcsService = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsEcsServiceSchema() *tfjson.Schema {

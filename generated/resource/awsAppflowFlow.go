@@ -401,6 +401,15 @@ const awsAppflowFlow = `{
                                       "optional": true,
                                       "type": "string"
                                     },
+                                    "prefix_hierarchy": {
+                                      "computed": true,
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "list",
+                                        "string"
+                                      ]
+                                    },
                                     "prefix_type": {
                                       "description_kind": "plain",
                                       "optional": true,
@@ -646,6 +655,15 @@ const awsAppflowFlow = `{
                                       "optional": true,
                                       "type": "string"
                                     },
+                                    "prefix_hierarchy": {
+                                      "computed": true,
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "list",
+                                        "string"
+                                      ]
+                                    },
                                     "prefix_type": {
                                       "description_kind": "plain",
                                       "required": true,
@@ -735,6 +753,39 @@ const awsAppflowFlow = `{
           "description_kind": "plain"
         },
         "min_items": 1,
+        "nesting_mode": "list"
+      },
+      "metadata_catalog_config": {
+        "block": {
+          "block_types": {
+            "glue_data_catalog": {
+              "block": {
+                "attributes": {
+                  "database_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "role_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "table_prefix": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
         "nesting_mode": "list"
       },
       "source_flow_config": {
