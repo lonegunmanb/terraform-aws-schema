@@ -133,6 +133,14 @@ const awsPipesPipe = `{
       "log_configuration": {
         "block": {
           "attributes": {
+            "include_execution_data": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
             "level": {
               "description_kind": "plain",
               "required": true,

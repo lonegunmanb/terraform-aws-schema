@@ -292,6 +292,23 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "string"
       },
+      "performance_insights_enabled": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "performance_insights_kms_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "performance_insights_retention_period": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "port": {
         "computed": true,
         "description_kind": "plain",
@@ -390,7 +407,12 @@ const awsRdsCluster = `{
             },
             "source_cluster_identifier": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
+              "type": "string"
+            },
+            "source_cluster_resource_id": {
+              "description_kind": "plain",
+              "optional": true,
               "type": "string"
             },
             "use_latest_restorable_time": {

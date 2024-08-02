@@ -180,6 +180,30 @@ const awsAppsyncGraphqlApi = `{
         },
         "nesting_mode": "list"
       },
+      "enhanced_metrics_config": {
+        "block": {
+          "attributes": {
+            "data_source_level_metrics_behavior": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "operation_level_metrics_config": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "resolver_level_metrics_behavior": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "lambda_authorizer_config": {
         "block": {
           "attributes": {

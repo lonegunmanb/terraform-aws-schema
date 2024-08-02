@@ -161,6 +161,19 @@ const awsEksCluster = `{
           "string"
         ]
       },
+      "upgrade_policy": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "support_type": "string"
+            }
+          ]
+        ]
+      },
       "version": {
         "computed": true,
         "description_kind": "plain",

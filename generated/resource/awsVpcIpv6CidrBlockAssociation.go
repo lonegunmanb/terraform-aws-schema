@@ -9,6 +9,12 @@ import (
 const awsVpcIpv6CidrBlockAssociation = `{
   "block": {
     "attributes": {
+      "assign_generated_ipv6_cidr_block": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -23,13 +29,19 @@ const awsVpcIpv6CidrBlockAssociation = `{
       },
       "ipv6_ipam_pool_id": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "ipv6_netmask_length": {
         "description_kind": "plain",
         "optional": true,
         "type": "number"
+      },
+      "ipv6_pool": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "vpc_id": {
         "description_kind": "plain",

@@ -268,6 +268,21 @@ const awsEksCluster = `{
         },
         "nesting_mode": "single"
       },
+      "upgrade_policy": {
+        "block": {
+          "attributes": {
+            "support_type": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "vpc_config": {
         "block": {
           "attributes": {

@@ -132,7 +132,7 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "set",
+          "list",
           "string"
         ]
       },
@@ -455,6 +455,11 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "upgrade_storage_config": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       },
       "username": {
         "computed": true,

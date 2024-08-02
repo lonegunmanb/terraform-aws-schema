@@ -101,6 +101,30 @@ const awsSfnStateMachine = `{
       }
     },
     "block_types": {
+      "encryption_configuration": {
+        "block": {
+          "attributes": {
+            "kms_data_key_reuse_period_seconds": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "kms_key_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "logging_configuration": {
         "block": {
           "attributes": {
