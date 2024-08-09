@@ -47,6 +47,11 @@ const awsDbOptionGroup = `{
         "optional": true,
         "type": "string"
       },
+      "skip_destroy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

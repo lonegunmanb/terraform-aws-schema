@@ -40,6 +40,11 @@ const awsEcsService = `{
         "optional": true,
         "type": "bool"
       },
+      "force_delete": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "force_new_deployment": {
         "description_kind": "plain",
         "optional": true,

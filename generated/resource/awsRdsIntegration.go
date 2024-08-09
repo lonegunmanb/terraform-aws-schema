@@ -6,46 +6,42 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsDbParameterGroup = `{
+const awsRdsIntegration = `{
   "block": {
     "attributes": {
+      "additional_encryption_context": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "description": {
+      "id": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "family": {
+      "integration_name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "id": {
+      "kms_key_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "name": {
-        "computed": true,
+      "source_arn": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
-      },
-      "name_prefix": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "tags": {
         "description_kind": "plain",
@@ -58,36 +54,37 @@ const awsDbParameterGroup = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
+      },
+      "target_arn": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "parameter": {
+      "timeouts": {
         "block": {
           "attributes": {
-            "apply_method": {
+            "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
-            "name": {
+            "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "value": {
-              "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "set"
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -95,8 +92,8 @@ const awsDbParameterGroup = `{
   "version": 0
 }`
 
-func AwsDbParameterGroupSchema() *tfjson.Schema {
+func AwsRdsIntegrationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsDbParameterGroup), &result)
+	_ = json.Unmarshal([]byte(awsRdsIntegration), &result)
 	return &result
 }

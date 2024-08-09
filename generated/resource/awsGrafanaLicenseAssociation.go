@@ -14,6 +14,11 @@ const awsGrafanaLicenseAssociation = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "grafana_token": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

@@ -304,6 +304,11 @@ const awsAlbTargetGroup = `{
               "description_kind": "plain",
               "required": true,
               "type": "bool"
+            },
+            "unhealthy_draining_interval": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             }
           },
           "description_kind": "plain"
