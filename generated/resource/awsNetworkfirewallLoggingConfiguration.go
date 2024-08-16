@@ -49,7 +49,7 @@ const awsNetworkfirewallLoggingConfiguration = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 2,
+              "max_items": 3,
               "min_items": 1,
               "nesting_mode": "set"
             }

@@ -6,52 +6,93 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsBedrockagentAgentKnowledgeBaseAssociation = `{
+const awsDatazoneFormType = `{
   "block": {
     "attributes": {
-      "agent_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "agent_version": {
+      "created_at": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": "string"
+      },
+      "created_by": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "description": {
         "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "domain_identifier": {
+        "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "id": {
+      "imports": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "name": "string",
+              "revision": "string"
+            }
+          ]
+        ]
+      },
+      "name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "origin_domain_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "knowledge_base_id": {
+      "origin_project_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "owning_project_identifier": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "knowledge_base_state": {
+      "revision": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "type": "string"
+      },
+      "status": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       }
     },
     "block_types": {
+      "model": {
+        "block": {
+          "attributes": {
+            "smithy": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
-              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
               "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
@@ -68,8 +109,8 @@ const awsBedrockagentAgentKnowledgeBaseAssociation = `{
   "version": 0
 }`
 
-func AwsBedrockagentAgentKnowledgeBaseAssociationSchema() *tfjson.Schema {
+func AwsDatazoneFormTypeSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsBedrockagentAgentKnowledgeBaseAssociation), &result)
+	_ = json.Unmarshal([]byte(awsDatazoneFormType), &result)
 	return &result
 }

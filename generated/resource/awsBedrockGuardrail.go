@@ -6,32 +6,43 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsLexv2ModelsSlotType = `{
+const awsBedrockGuardrail = `{
   "block": {
     "attributes": {
-      "bot_id": {
+      "blocked_input_messaging": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "bot_version": {
+      "blocked_outputs_messaging": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "id": {
+      "created_at": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "locale_id": {
+      "description": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "string"
+      },
+      "guardrail_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "guardrail_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "kms_key_arn": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "name": {
@@ -39,30 +50,51 @@ const awsLexv2ModelsSlotType = `{
         "required": true,
         "type": "string"
       },
-      "parent_slot_type_signature": {
+      "status": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "slot_type_id": {
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "version": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       }
     },
     "block_types": {
-      "composite_slot_type_setting": {
+      "content_policy_config": {
         "block": {
           "block_types": {
-            "subslots": {
+            "filters_config": {
               "block": {
                 "attributes": {
-                  "name": {
+                  "input_strength": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
                   },
-                  "slot_type_id": {
+                  "output_strength": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "type": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
@@ -77,34 +109,21 @@ const awsLexv2ModelsSlotType = `{
         },
         "nesting_mode": "list"
       },
-      "external_source_setting": {
+      "contextual_grounding_policy_config": {
         "block": {
           "block_types": {
-            "grammar_slot_type_setting": {
+            "filters_config": {
               "block": {
-                "block_types": {
-                  "source": {
-                    "block": {
-                      "attributes": {
-                        "kms_key_arn": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "s3_bucket_name": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "s3_object_key": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "list"
+                "attributes": {
+                  "threshold": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
                   }
                 },
                 "description_kind": "plain"
@@ -116,13 +135,18 @@ const awsLexv2ModelsSlotType = `{
         },
         "nesting_mode": "list"
       },
-      "slot_type_values": {
+      "sensitive_information_policy_config": {
         "block": {
           "block_types": {
-            "sample_value": {
+            "pii_entities_config": {
               "block": {
                 "attributes": {
-                  "value": {
+                  "action": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "type": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
@@ -132,10 +156,26 @@ const awsLexv2ModelsSlotType = `{
               },
               "nesting_mode": "list"
             },
-            "synonyms": {
+            "regexes_config": {
               "block": {
                 "attributes": {
-                  "value": {
+                  "action": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "description": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "pattern": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
@@ -176,22 +216,55 @@ const awsLexv2ModelsSlotType = `{
         },
         "nesting_mode": "single"
       },
-      "value_selection_setting": {
+      "topic_policy_config": {
         "block": {
-          "attributes": {
-            "resolution_strategy": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
           "block_types": {
-            "advanced_recognition_setting": {
+            "topics_config": {
               "block": {
                 "attributes": {
-                  "audio_recognition_setting": {
+                  "definition": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "examples": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "word_policy_config": {
+        "block": {
+          "block_types": {
+            "managed_word_lists_config": {
+              "block": {
+                "attributes": {
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
                     "type": "string"
                   }
                 },
@@ -199,10 +272,10 @@ const awsLexv2ModelsSlotType = `{
               },
               "nesting_mode": "list"
             },
-            "regex_filter": {
+            "words_config": {
               "block": {
                 "attributes": {
-                  "pattern": {
+                  "text": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
@@ -223,8 +296,8 @@ const awsLexv2ModelsSlotType = `{
   "version": 0
 }`
 
-func AwsLexv2ModelsSlotTypeSchema() *tfjson.Schema {
+func AwsBedrockGuardrailSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsLexv2ModelsSlotType), &result)
+	_ = json.Unmarshal([]byte(awsBedrockGuardrail), &result)
 	return &result
 }
