@@ -29,6 +29,11 @@ const awsBatchJobDefinition = `{
         "optional": true,
         "type": "bool"
       },
+      "ecs_properties": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

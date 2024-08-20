@@ -11,13 +11,18 @@ const awsPinpointGcmChannel = `{
     "attributes": {
       "api_key": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "sensitive": true,
         "type": "string"
       },
       "application_id": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "default_authentication_method": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "enabled": {
@@ -29,6 +34,12 @@ const awsPinpointGcmChannel = `{
         "computed": true,
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "service_json": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
         "type": "string"
       }
     },

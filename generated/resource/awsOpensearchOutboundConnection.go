@@ -20,6 +20,7 @@ const awsOpensearchOutboundConnection = `{
         "type": "string"
       },
       "connection_mode": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

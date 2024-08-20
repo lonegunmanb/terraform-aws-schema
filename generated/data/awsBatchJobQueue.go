@@ -34,6 +34,22 @@ const awsBatchJobQueue = `{
         "optional": true,
         "type": "string"
       },
+      "job_state_time_limit_action": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "action": "string",
+              "max_time_seconds": "number",
+              "reason": "string",
+              "state": "string"
+            }
+          ]
+        ]
+      },
       "name": {
         "description_kind": "plain",
         "required": true,

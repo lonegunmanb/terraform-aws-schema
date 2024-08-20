@@ -84,6 +84,34 @@ const awsBatchJobQueue = `{
         },
         "nesting_mode": "list"
       },
+      "job_state_time_limit_action": {
+        "block": {
+          "attributes": {
+            "action": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "max_time_seconds": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "reason": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "state": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
