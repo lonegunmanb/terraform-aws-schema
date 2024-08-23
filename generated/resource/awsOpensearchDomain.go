@@ -34,6 +34,16 @@ const awsOpensearchDomain = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "dashboard_endpoint_v2": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "domain_endpoint_v2_hosted_zone_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "domain_id": {
         "computed": true,
         "description_kind": "plain",
@@ -45,6 +55,11 @@ const awsOpensearchDomain = `{
         "type": "string"
       },
       "endpoint": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "endpoint_v2": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

@@ -69,6 +69,32 @@ const awsAppautoscalingTarget = `{
         ]
       }
     },
+    "block_types": {
+      "suspended_state": {
+        "block": {
+          "attributes": {
+            "dynamic_scaling_in_suspended": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "dynamic_scaling_out_suspended": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "scheduled_scaling_suspended": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      }
+    },
     "description_kind": "plain"
   },
   "version": 0

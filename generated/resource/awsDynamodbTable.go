@@ -62,6 +62,11 @@ const awsDynamodbTable = `{
         "optional": true,
         "type": "string"
       },
+      "restore_source_table_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "restore_to_latest_time": {
         "description_kind": "plain",
         "optional": true,
