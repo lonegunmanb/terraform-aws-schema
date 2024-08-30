@@ -50,6 +50,11 @@ const awsElasticBeanstalkApplicationVersion = `{
         "required": true,
         "type": "string"
       },
+      "process": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

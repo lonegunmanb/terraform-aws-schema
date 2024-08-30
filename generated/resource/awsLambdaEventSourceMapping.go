@@ -53,6 +53,11 @@ const awsLambdaEventSourceMapping = `{
         "optional": true,
         "type": "string"
       },
+      "kms_key_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "last_modified": {
         "computed": true,
         "description_kind": "plain",

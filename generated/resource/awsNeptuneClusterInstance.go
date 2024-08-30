@@ -91,6 +91,7 @@ const awsNeptuneClusterInstance = `{
         "type": "string"
       },
       "neptune_parameter_group_name": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

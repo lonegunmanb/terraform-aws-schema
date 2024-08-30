@@ -80,7 +80,7 @@ const awsDrsReplicationConfigurationTemplate = `{
       },
       "staging_area_tags": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": [
           "map",
           "string"

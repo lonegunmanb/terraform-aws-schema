@@ -384,6 +384,11 @@ const awsCognitoUserPool = `{
               "optional": true,
               "type": "number"
             },
+            "password_history_size": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
             "require_lowercase": {
               "description_kind": "plain",
               "optional": true,
@@ -405,6 +410,7 @@ const awsCognitoUserPool = `{
               "type": "bool"
             },
             "temporary_password_validity_days": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
