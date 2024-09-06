@@ -276,10 +276,19 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
                           "optional": true,
                           "type": [
                             "set",
-                            "string"
+                            [
+                              "set",
+                              "string"
+                            ]
                           ]
                         },
                         "use_edge": {
+                          "deprecated": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "use_edge_location": {
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"

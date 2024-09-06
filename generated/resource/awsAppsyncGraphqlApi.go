@@ -9,6 +9,11 @@ import (
 const awsAppsyncGraphqlApi = `{
   "block": {
     "attributes": {
+      "api_type": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -26,6 +31,11 @@ const awsAppsyncGraphqlApi = `{
         "type": "string"
       },
       "introspection_config": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "merged_api_execution_role_arn": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"

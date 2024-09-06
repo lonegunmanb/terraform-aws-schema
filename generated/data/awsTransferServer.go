@@ -81,6 +81,15 @@ const awsTransferServer = `{
           "string"
         ]
       },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "url": {
         "computed": true,
         "description_kind": "plain",

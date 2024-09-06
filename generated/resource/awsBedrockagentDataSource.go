@@ -146,6 +146,100 @@ const awsBedrockagentDataSource = `{
                       "description_kind": "plain"
                     },
                     "nesting_mode": "list"
+                  },
+                  "hierarchical_chunking_configuration": {
+                    "block": {
+                      "attributes": {
+                        "overlap_tokens": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        }
+                      },
+                      "block_types": {
+                        "level_configuration": {
+                          "block": {
+                            "attributes": {
+                              "max_tokens": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "semantic_chunking_configuration": {
+                    "block": {
+                      "attributes": {
+                        "breakpoint_percentile_threshold": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        },
+                        "buffer_size": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        },
+                        "max_token": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "parsing_configuration": {
+              "block": {
+                "attributes": {
+                  "parsing_strategy": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "bedrock_foundation_model_configuration": {
+                    "block": {
+                      "attributes": {
+                        "model_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "parsing_prompt": {
+                          "block": {
+                            "attributes": {
+                              "parsing_prompt_string": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

@@ -80,7 +80,7 @@ const awsAppconfigExtension = `{
                   },
                   "role_arn": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": "string"
                   },
                   "uri": {

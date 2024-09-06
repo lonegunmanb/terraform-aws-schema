@@ -30,6 +30,12 @@ const awsDocdbelasticCluster = `{
         "required": true,
         "type": "string"
       },
+      "backup_retention_period": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "endpoint": {
         "computed": true,
         "description_kind": "plain",
@@ -49,6 +55,12 @@ const awsDocdbelasticCluster = `{
       "name": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "preferred_backup_window": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "preferred_maintenance_window": {

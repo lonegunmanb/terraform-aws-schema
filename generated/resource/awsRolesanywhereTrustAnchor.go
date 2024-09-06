@@ -50,6 +50,44 @@ const awsRolesanywhereTrustAnchor = `{
       }
     },
     "block_types": {
+      "notification_settings": {
+        "block": {
+          "attributes": {
+            "channel": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "configured_by": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "enabled": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "event": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "threshold": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 50,
+        "nesting_mode": "set"
+      },
       "source": {
         "block": {
           "attributes": {

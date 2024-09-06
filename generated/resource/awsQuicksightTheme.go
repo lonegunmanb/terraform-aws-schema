@@ -325,7 +325,7 @@ const awsQuicksightTheme = `{
           "description_kind": "plain"
         },
         "max_items": 64,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "timeouts": {
         "block": {

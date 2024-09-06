@@ -190,6 +190,30 @@ const awsQuicksightDataSource = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "databricks": {
+              "block": {
+                "attributes": {
+                  "host": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "port": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "sql_endpoint_path": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "jira": {
               "block": {
                 "attributes": {

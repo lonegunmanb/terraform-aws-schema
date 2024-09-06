@@ -44,6 +44,11 @@ const awsDatazoneDomain = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "skip_deletion_check": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

@@ -46,6 +46,26 @@ const awsQuicksightDataSet = `{
           ]
         ]
       },
+      "column_level_permission_rules": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "column_names": [
+                "list",
+                "string"
+              ],
+              "principals": [
+                "list",
+                "string"
+              ]
+            }
+          ]
+        ]
+      },
       "data_set_id": {
         "description_kind": "plain",
         "required": true,
@@ -427,32 +447,6 @@ const awsQuicksightDataSet = `{
           "map",
           "string"
         ]
-      }
-    },
-    "block_types": {
-      "column_level_permission_rules": {
-        "block": {
-          "attributes": {
-            "column_names": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": [
-                "list",
-                "string"
-              ]
-            },
-            "principals": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": [
-                "list",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

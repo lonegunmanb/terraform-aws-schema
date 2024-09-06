@@ -186,6 +186,7 @@ const awsSyntheticsCanary = `{
               "type": "number"
             },
             "timeout_in_seconds": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"

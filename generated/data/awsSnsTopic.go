@@ -24,6 +24,15 @@ const awsSnsTopic = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
+      },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       }
     },
     "description_kind": "plain"
