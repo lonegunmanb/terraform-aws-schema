@@ -39,7 +39,7 @@ const awsSesv2ConfigurationSetEventDestination = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

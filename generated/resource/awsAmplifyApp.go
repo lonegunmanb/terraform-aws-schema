@@ -214,6 +214,20 @@ const awsAmplifyApp = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "cache_config": {
+        "block": {
+          "attributes": {
+            "type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "custom_rule": {
         "block": {
           "attributes": {

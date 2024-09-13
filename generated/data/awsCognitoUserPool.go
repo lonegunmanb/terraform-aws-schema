@@ -250,6 +250,14 @@ const awsCognitoUserPool = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "user_pool_id": {
         "description_kind": "plain",
         "required": true,
@@ -257,6 +265,7 @@ const awsCognitoUserPool = `{
       },
       "user_pool_tags": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": [
           "map",

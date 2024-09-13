@@ -1930,6 +1930,16 @@ const awsKinesisFirehoseDeliveryStream = `{
               "required": true,
               "type": "string"
             },
+            "buffering_interval": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "buffering_size": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
             "content_column_name": {
               "description_kind": "plain",
               "optional": true,

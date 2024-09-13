@@ -25,8 +25,9 @@ const awsAcmCertificate = `{
         "type": "string"
       },
       "domain": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "id": {

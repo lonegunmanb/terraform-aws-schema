@@ -76,6 +76,11 @@ const awsSagemakerModel = `{
               "optional": true,
               "type": "string"
             },
+            "inference_specification_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "mode": {
               "description_kind": "plain",
               "optional": true,
@@ -145,10 +150,40 @@ const awsSagemakerModel = `{
                           "type": "string"
                         }
                       },
+                      "block_types": {
+                        "model_access_config": {
+                          "block": {
+                            "attributes": {
+                              "accept_eula": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "bool"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
                       "description_kind": "plain"
                     },
                     "min_items": 1,
                     "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "multi_model_config": {
+              "block": {
+                "attributes": {
+                  "model_cache_setting": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
                   }
                 },
                 "description_kind": "plain"
@@ -196,6 +231,11 @@ const awsSagemakerModel = `{
               "optional": true,
               "type": "string"
             },
+            "inference_specification_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "mode": {
               "description_kind": "plain",
               "optional": true,
@@ -265,10 +305,40 @@ const awsSagemakerModel = `{
                           "type": "string"
                         }
                       },
+                      "block_types": {
+                        "model_access_config": {
+                          "block": {
+                            "attributes": {
+                              "accept_eula": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "bool"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
                       "description_kind": "plain"
                     },
                     "min_items": 1,
                     "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "multi_model_config": {
+              "block": {
+                "attributes": {
+                  "model_cache_setting": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
                   }
                 },
                 "description_kind": "plain"

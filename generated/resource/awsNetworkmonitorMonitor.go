@@ -10,6 +10,7 @@ const awsNetworkmonitorMonitor = `{
   "block": {
     "attributes": {
       "aggregation_period": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"

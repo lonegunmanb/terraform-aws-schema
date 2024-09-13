@@ -189,7 +189,7 @@ const awsLexv2ModelsSlotType = `{
             "advanced_recognition_setting": {
               "block": {
                 "attributes": {
-                  "audio_recognition_setting": {
+                  "audio_recognition_strategy": {
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"

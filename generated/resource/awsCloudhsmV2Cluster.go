@@ -47,6 +47,12 @@ const awsCloudhsmV2Cluster = `{
         "optional": true,
         "type": "string"
       },
+      "mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "security_group_id": {
         "computed": true,
         "description_kind": "plain",

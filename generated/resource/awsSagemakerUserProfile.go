@@ -720,6 +720,31 @@ const awsSagemakerUserProfile = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "studio_web_portal_settings": {
+              "block": {
+                "attributes": {
+                  "hidden_app_types": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "hidden_ml_tools": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "tensor_board_app_settings": {
               "block": {
                 "block_types": {

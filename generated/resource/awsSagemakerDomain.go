@@ -120,6 +120,143 @@ const awsSagemakerDomain = `{
             }
           },
           "block_types": {
+            "custom_file_system_config": {
+              "block": {
+                "block_types": {
+                  "efs_file_system_config": {
+                    "block": {
+                      "attributes": {
+                        "file_system_id": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "file_system_path": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "custom_posix_user_config": {
+              "block": {
+                "attributes": {
+                  "gid": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "uid": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "jupyter_lab_app_settings": {
+              "block": {
+                "attributes": {
+                  "lifecycle_config_arns": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "block_types": {
+                  "code_repository": {
+                    "block": {
+                      "attributes": {
+                        "repository_url": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 10,
+                    "nesting_mode": "set"
+                  },
+                  "custom_image": {
+                    "block": {
+                      "attributes": {
+                        "app_image_config_name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "image_name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "image_version_number": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 200,
+                    "nesting_mode": "list"
+                  },
+                  "default_resource_spec": {
+                    "block": {
+                      "attributes": {
+                        "instance_type": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "lifecycle_config_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "sagemaker_image_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "sagemaker_image_version_alias": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "sagemaker_image_version_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "jupyter_server_app_settings": {
               "block": {
                 "attributes": {
@@ -251,6 +388,34 @@ const awsSagemakerDomain = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "space_storage_settings": {
+              "block": {
+                "block_types": {
+                  "default_ebs_storage_settings": {
+                    "block": {
+                      "attributes": {
+                        "default_ebs_volume_size_in_gb": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        },
+                        "maximum_ebs_volume_size_in_gb": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
                         }
                       },
                       "description_kind": "plain"
@@ -928,6 +1093,31 @@ const awsSagemakerDomain = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "studio_web_portal_settings": {
+              "block": {
+                "attributes": {
+                  "hidden_app_types": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "hidden_ml_tools": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "tensor_board_app_settings": {
               "block": {
                 "block_types": {
@@ -996,6 +1186,28 @@ const awsSagemakerDomain = `{
             }
           },
           "block_types": {
+            "docker_settings": {
+              "block": {
+                "attributes": {
+                  "enable_docker_access": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "vpc_only_trusted_accounts": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "r_studio_server_pro_domain_settings": {
               "block": {
                 "attributes": {

@@ -285,6 +285,30 @@ const awsSagemakerEndpointConfiguration = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "managed_instance_scaling": {
+              "block": {
+                "attributes": {
+                  "max_instance_count": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "min_instance_count": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "status": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "routing_config": {
               "block": {
                 "attributes": {
@@ -401,6 +425,30 @@ const awsSagemakerEndpointConfiguration = `{
                   "kms_key_id": {
                     "description_kind": "plain",
                     "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "managed_instance_scaling": {
+              "block": {
+                "attributes": {
+                  "max_instance_count": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "min_instance_count": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "status": {
+                    "description_kind": "plain",
+                    "optional": true,
                     "type": "string"
                   }
                 },
