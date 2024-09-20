@@ -54,7 +54,7 @@ const awsLexv2ModelsSlotType = `{
       "composite_slot_type_setting": {
         "block": {
           "block_types": {
-            "subslots": {
+            "sub_slots": {
               "block": {
                 "attributes": {
                   "name": {

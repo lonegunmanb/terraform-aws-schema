@@ -158,6 +158,11 @@ const awsSesReceiptRule = `{
               "required": true,
               "type": "string"
             },
+            "iam_role_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "kms_key_arn": {
               "description_kind": "plain",
               "optional": true,

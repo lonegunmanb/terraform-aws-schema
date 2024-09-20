@@ -114,6 +114,7 @@ const awsIamRole = `{
               "type": "string"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "set"
