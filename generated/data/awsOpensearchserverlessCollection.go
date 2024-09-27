@@ -34,6 +34,16 @@ const awsOpensearchserverlessCollection = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "failure_code": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "failure_message": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

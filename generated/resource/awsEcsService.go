@@ -585,6 +585,34 @@ const awsEcsService = `{
                     "type": "string"
                   }
                 },
+                "block_types": {
+                  "tag_specifications": {
+                    "block": {
+                      "attributes": {
+                        "propagate_tags": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "resource_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "tags": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "map",
+                            "string"
+                          ]
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,

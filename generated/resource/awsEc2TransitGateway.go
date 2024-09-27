@@ -70,6 +70,11 @@ const awsEc2TransitGateway = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "security_group_referencing_support": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

@@ -67,6 +67,11 @@ const awsQuicksightDataSource = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "secret_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "block_types": {

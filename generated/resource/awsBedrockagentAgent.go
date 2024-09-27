@@ -49,6 +49,20 @@ const awsBedrockagentAgent = `{
         "required": true,
         "type": "string"
       },
+      "guardrail_configuration": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "guardrail_identifier": "string",
+              "guardrail_version": "string"
+            }
+          ]
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
