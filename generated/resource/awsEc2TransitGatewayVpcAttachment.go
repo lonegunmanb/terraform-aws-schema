@@ -31,6 +31,7 @@ const awsEc2TransitGatewayVpcAttachment = `{
         "type": "string"
       },
       "security_group_referencing_support": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

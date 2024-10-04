@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsLambdaCodeSigningConfig = `{
+const awsBackupLogicallyAirGappedVault = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,25 +14,24 @@ const awsLambdaCodeSigningConfig = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "config_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "last_modified": {
-        "computed": true,
+      "max_retention_days": {
         "description_kind": "plain",
+        "required": true,
+        "type": "number"
+      },
+      "min_retention_days": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "number"
+      },
+      "name": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "tags": {
@@ -46,7 +45,6 @@ const awsLambdaCodeSigningConfig = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
@@ -54,37 +52,19 @@ const awsLambdaCodeSigningConfig = `{
       }
     },
     "block_types": {
-      "allowed_publishers": {
+      "timeouts": {
         "block": {
           "attributes": {
-            "signing_profile_version_arns": {
+            "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "min_items": 1,
-        "nesting_mode": "list"
-      },
-      "policies": {
-        "block": {
-          "attributes": {
-            "untrusted_artifact_on_deployment": {
-              "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -92,8 +72,8 @@ const awsLambdaCodeSigningConfig = `{
   "version": 0
 }`
 
-func AwsLambdaCodeSigningConfigSchema() *tfjson.Schema {
+func AwsBackupLogicallyAirGappedVaultSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsLambdaCodeSigningConfig), &result)
+	_ = json.Unmarshal([]byte(awsBackupLogicallyAirGappedVault), &result)
 	return &result
 }

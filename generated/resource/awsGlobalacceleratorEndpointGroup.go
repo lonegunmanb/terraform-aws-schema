@@ -68,6 +68,11 @@ const awsGlobalacceleratorEndpointGroup = `{
       "endpoint_configuration": {
         "block": {
           "attributes": {
+            "attachment_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "client_ip_preservation_enabled": {
               "computed": true,
               "description_kind": "plain",

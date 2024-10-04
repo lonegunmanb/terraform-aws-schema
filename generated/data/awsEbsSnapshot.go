@@ -89,6 +89,11 @@ const awsEbsSnapshot = `{
           "string"
         ]
       },
+      "start_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "state": {
         "computed": true,
         "description_kind": "plain",

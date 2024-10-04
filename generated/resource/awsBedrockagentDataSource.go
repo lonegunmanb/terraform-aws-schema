@@ -203,6 +203,71 @@ const awsBedrockagentDataSource = `{
               },
               "nesting_mode": "list"
             },
+            "custom_transformation_configuration": {
+              "block": {
+                "block_types": {
+                  "intermediate_storage": {
+                    "block": {
+                      "block_types": {
+                        "s3_location": {
+                          "block": {
+                            "attributes": {
+                              "uri": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "transformation": {
+                    "block": {
+                      "attributes": {
+                        "step_to_apply": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "transformation_function": {
+                          "block": {
+                            "block_types": {
+                              "transformation_lambda_configuration": {
+                                "block": {
+                                  "attributes": {
+                                    "lambda_arn": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "parsing_configuration": {
               "block": {
                 "attributes": {

@@ -24,6 +24,12 @@ const awsS3BucketLifecycleConfiguration = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "transition_default_minimum_object_size": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {

@@ -18,64 +18,30 @@ const awsSecurityhubStandardsControlAssociations = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      }
-    },
-    "block_types": {
+      },
       "standards_control_associations": {
-        "block": {
-          "attributes": {
-            "association_status": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "related_requirements": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": [
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "association_status": "string",
+              "related_requirements": [
                 "list",
                 "string"
-              ]
-            },
-            "security_control_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "security_control_id": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "standards_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "standards_control_description": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "standards_control_title": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "updated_at": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "updated_reason": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
+              ],
+              "security_control_arn": "string",
+              "security_control_id": "string",
+              "standards_arn": "string",
+              "standards_control_description": "string",
+              "standards_control_title": "string",
+              "updated_at": "string",
+              "updated_reason": "string"
             }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
+          ]
+        ]
       }
     },
     "description_kind": "plain"

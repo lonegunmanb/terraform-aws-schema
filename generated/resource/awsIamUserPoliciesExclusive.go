@@ -6,28 +6,30 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSimpledbDomain = `{
+const awsIamUserPoliciesExclusive = `{
   "block": {
     "attributes": {
-      "id": {
-        "computed": true,
+      "policy_names": {
         "description_kind": "plain",
-        "type": "string"
+        "required": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
-      "name": {
+      "user_name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       }
     },
-    "deprecated": true,
     "description_kind": "plain"
   },
   "version": 0
 }`
 
-func AwsSimpledbDomainSchema() *tfjson.Schema {
+func AwsIamUserPoliciesExclusiveSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSimpledbDomain), &result)
+	_ = json.Unmarshal([]byte(awsIamUserPoliciesExclusive), &result)
 	return &result
 }

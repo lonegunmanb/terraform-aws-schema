@@ -6,20 +6,10 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsWorklinkWebsiteCertificateAuthorityAssociation = `{
+const awsSecurityhubStandardsControlAssociation = `{
   "block": {
     "attributes": {
-      "certificate": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "display_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "fleet_arn": {
+      "association_status": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -27,23 +17,31 @@ const awsWorklinkWebsiteCertificateAuthorityAssociation = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "website_ca_id": {
-        "computed": true,
+      "security_control_id": {
         "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "standards_arn": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "updated_reason": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       }
     },
-    "deprecated": true,
     "description_kind": "plain"
   },
   "version": 0
 }`
 
-func AwsWorklinkWebsiteCertificateAuthorityAssociationSchema() *tfjson.Schema {
+func AwsSecurityhubStandardsControlAssociationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsWorklinkWebsiteCertificateAuthorityAssociation), &result)
+	_ = json.Unmarshal([]byte(awsSecurityhubStandardsControlAssociation), &result)
 	return &result
 }

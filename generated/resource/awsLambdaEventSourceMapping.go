@@ -9,6 +9,11 @@ import (
 const awsLambdaEventSourceMapping = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "batch_size": {
         "description_kind": "plain",
         "optional": true,
@@ -118,6 +123,23 @@ const awsLambdaEventSourceMapping = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       },
       "topics": {
         "description_kind": "plain",
