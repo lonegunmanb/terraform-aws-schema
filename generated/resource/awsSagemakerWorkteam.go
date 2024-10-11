@@ -49,7 +49,7 @@ const awsSagemakerWorkteam = `{
       },
       "workforce_name": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "workteam_name": {

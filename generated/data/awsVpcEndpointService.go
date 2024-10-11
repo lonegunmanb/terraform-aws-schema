@@ -56,6 +56,14 @@ const awsVpcEndpointService = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "private_dns_names": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "service": {
         "description_kind": "plain",
         "optional": true,

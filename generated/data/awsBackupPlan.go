@@ -77,6 +77,7 @@ const awsBackupPlan = `{
               ],
               "rule_name": "string",
               "schedule": "string",
+              "schedule_expression_timezone": "string",
               "start_window": "number",
               "target_vault_name": "string"
             }

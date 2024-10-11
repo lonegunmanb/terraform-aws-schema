@@ -21,6 +21,16 @@ const awsVpcIpv6CidrBlockAssociation = `{
         "optional": true,
         "type": "string"
       },
+      "ip_source": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "ipv6_address_attribute": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "ipv6_cidr_block": {
         "computed": true,
         "description_kind": "plain",

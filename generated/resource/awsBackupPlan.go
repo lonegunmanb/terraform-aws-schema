@@ -101,6 +101,11 @@ const awsBackupPlan = `{
               "optional": true,
               "type": "string"
             },
+            "schedule_expression_timezone": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "start_window": {
               "description_kind": "plain",
               "optional": true,
@@ -187,7 +192,7 @@ const awsBackupPlan = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsBackupPlanSchema() *tfjson.Schema {

@@ -74,7 +74,12 @@ const awsRoute53ResolverRule = `{
           "attributes": {
             "ip": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
+              "type": "string"
+            },
+            "ipv6": {
+              "description_kind": "plain",
+              "optional": true,
               "type": "string"
             },
             "port": {

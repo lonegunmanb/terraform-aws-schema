@@ -91,6 +91,12 @@ const awsRoute53ResolverEndpoint = `{
               "description_kind": "plain",
               "type": "string"
             },
+            "ipv6": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "subnet_id": {
               "description_kind": "plain",
               "required": true,

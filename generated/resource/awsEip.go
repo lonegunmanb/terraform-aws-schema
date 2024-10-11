@@ -67,6 +67,12 @@ const awsEip = `{
         "optional": true,
         "type": "string"
       },
+      "ipam_pool_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "network_border_group": {
         "computed": true,
         "description_kind": "plain",

@@ -50,6 +50,11 @@ const awsEip = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "ipam_pool_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "network_interface_id": {
         "computed": true,
         "description_kind": "plain",
