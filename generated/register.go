@@ -680,6 +680,7 @@ func init() {
 	resources["aws_iam_role_policies_exclusive"] = resource.AwsIamRolePoliciesExclusiveSchema()  
 	resources["aws_iam_role_policy"] = resource.AwsIamRolePolicySchema()  
 	resources["aws_iam_role_policy_attachment"] = resource.AwsIamRolePolicyAttachmentSchema()  
+	resources["aws_iam_role_policy_attachments_exclusive"] = resource.AwsIamRolePolicyAttachmentsExclusiveSchema()  
 	resources["aws_iam_saml_provider"] = resource.AwsIamSamlProviderSchema()  
 	resources["aws_iam_security_token_service_preferences"] = resource.AwsIamSecurityTokenServicePreferencesSchema()  
 	resources["aws_iam_server_certificate"] = resource.AwsIamServerCertificateSchema()  

@@ -999,6 +999,36 @@ const awsAppflowFlow = `{
                           "type": "string"
                         }
                       },
+                      "block_types": {
+                        "pagination_config": {
+                          "block": {
+                            "attributes": {
+                              "max_page_size": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "parallelism_config": {
+                          "block": {
+                            "attributes": {
+                              "max_page_size": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
                       "description_kind": "plain"
                     },
                     "max_items": 1,

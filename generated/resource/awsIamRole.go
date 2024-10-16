@@ -42,6 +42,7 @@ const awsIamRole = `{
       },
       "managed_policy_arns": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

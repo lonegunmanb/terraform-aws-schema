@@ -173,14 +173,39 @@ const awsDynamodbTable = `{
               "type": "string"
             },
             "read_capacity": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "write_capacity": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
+            }
+          },
+          "block_types": {
+            "on_demand_throughput": {
+              "block": {
+                "attributes": {
+                  "max_read_request_units": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "max_write_request_units": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -294,6 +319,27 @@ const awsDynamodbTable = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
+      },
+      "on_demand_throughput": {
+        "block": {
+          "attributes": {
+            "max_read_request_units": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "max_write_request_units": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       },
       "point_in_time_recovery": {
         "block": {

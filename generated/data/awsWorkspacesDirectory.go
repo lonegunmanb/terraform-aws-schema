@@ -66,6 +66,21 @@ const awsWorkspacesDirectory = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "saml_properties": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "relay_state_parameter_name": "string",
+              "status": "string",
+              "user_access_url": "string"
+            }
+          ]
+        ]
+      },
       "self_service_permissions": {
         "computed": true,
         "description_kind": "plain",
@@ -92,6 +107,7 @@ const awsWorkspacesDirectory = `{
         ]
       },
       "tags": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

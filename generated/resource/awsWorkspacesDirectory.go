@@ -100,6 +100,30 @@ const awsWorkspacesDirectory = `{
       }
     },
     "block_types": {
+      "saml_properties": {
+        "block": {
+          "attributes": {
+            "relay_state_parameter_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "status": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "user_access_url": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "self_service_permissions": {
         "block": {
           "attributes": {
