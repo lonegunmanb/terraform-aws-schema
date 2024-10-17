@@ -9,6 +9,11 @@ import (
 const awsApiGatewayVpcLink = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "description": {
         "computed": true,
         "description_kind": "plain",

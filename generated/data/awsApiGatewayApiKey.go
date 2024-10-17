@@ -9,6 +9,11 @@ import (
 const awsApiGatewayApiKey = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "created_date": {
         "computed": true,
         "description_kind": "plain",
