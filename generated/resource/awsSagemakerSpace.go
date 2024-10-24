@@ -91,6 +91,29 @@ const awsSagemakerSpace = `{
             "code_editor_app_settings": {
               "block": {
                 "block_types": {
+                  "app_lifecycle_management": {
+                    "block": {
+                      "block_types": {
+                        "idle_settings": {
+                          "block": {
+                            "attributes": {
+                              "idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "default_resource_spec": {
                     "block": {
                       "attributes": {
@@ -158,6 +181,29 @@ const awsSagemakerSpace = `{
             "jupyter_lab_app_settings": {
               "block": {
                 "block_types": {
+                  "app_lifecycle_management": {
+                    "block": {
+                      "block_types": {
+                        "idle_settings": {
+                          "block": {
+                            "attributes": {
+                              "idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "code_repository": {
                     "block": {
                       "attributes": {

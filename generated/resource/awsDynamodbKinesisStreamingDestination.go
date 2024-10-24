@@ -9,6 +9,12 @@ import (
 const awsDynamodbKinesisStreamingDestination = `{
   "block": {
     "attributes": {
+      "approximate_creation_date_time_precision": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

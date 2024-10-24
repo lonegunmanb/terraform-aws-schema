@@ -73,6 +73,11 @@ const awsSagemakerDomain = `{
           "string"
         ]
       },
+      "tag_propagation": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -169,6 +174,11 @@ const awsSagemakerDomain = `{
             "jupyter_lab_app_settings": {
               "block": {
                 "attributes": {
+                  "built_in_lifecycle_config_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "lifecycle_config_arns": {
                     "description_kind": "plain",
                     "optional": true,
@@ -179,6 +189,44 @@ const awsSagemakerDomain = `{
                   }
                 },
                 "block_types": {
+                  "app_lifecycle_management": {
+                    "block": {
+                      "block_types": {
+                        "idle_settings": {
+                          "block": {
+                            "attributes": {
+                              "idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "lifecycle_management": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "max_idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "min_idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "code_repository": {
                     "block": {
                       "attributes": {
@@ -244,6 +292,31 @@ const awsSagemakerDomain = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "emr_settings": {
+                    "block": {
+                      "attributes": {
+                        "assumable_role_arns": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        },
+                        "execution_role_arns": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
                         }
                       },
                       "description_kind": "plain"
@@ -438,6 +511,12 @@ const awsSagemakerDomain = `{
       "default_user_settings": {
         "block": {
           "attributes": {
+            "auto_mount_home_efs": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "default_landing_uri": {
               "computed": true,
               "description_kind": "plain",
@@ -471,6 +550,25 @@ const awsSagemakerDomain = `{
                   "direct_deploy_settings": {
                     "block": {
                       "attributes": {
+                        "status": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "emr_serverless_settings": {
+                    "block": {
+                      "attributes": {
+                        "execution_role_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
                         "status": {
                           "description_kind": "plain",
                           "optional": true,
@@ -600,6 +698,11 @@ const awsSagemakerDomain = `{
             "code_editor_app_settings": {
               "block": {
                 "attributes": {
+                  "built_in_lifecycle_config_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "lifecycle_config_arns": {
                     "description_kind": "plain",
                     "optional": true,
@@ -610,6 +713,44 @@ const awsSagemakerDomain = `{
                   }
                 },
                 "block_types": {
+                  "app_lifecycle_management": {
+                    "block": {
+                      "block_types": {
+                        "idle_settings": {
+                          "block": {
+                            "attributes": {
+                              "idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "lifecycle_management": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "max_idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "min_idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "custom_image": {
                     "block": {
                       "attributes": {
@@ -723,6 +864,11 @@ const awsSagemakerDomain = `{
             "jupyter_lab_app_settings": {
               "block": {
                 "attributes": {
+                  "built_in_lifecycle_config_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "lifecycle_config_arns": {
                     "description_kind": "plain",
                     "optional": true,
@@ -733,6 +879,44 @@ const awsSagemakerDomain = `{
                   }
                 },
                 "block_types": {
+                  "app_lifecycle_management": {
+                    "block": {
+                      "block_types": {
+                        "idle_settings": {
+                          "block": {
+                            "attributes": {
+                              "idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "lifecycle_management": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "max_idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "min_idle_timeout_in_minutes": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "code_repository": {
                     "block": {
                       "attributes": {
@@ -798,6 +982,31 @@ const awsSagemakerDomain = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "emr_settings": {
+                    "block": {
+                      "attributes": {
+                        "assumable_role_arns": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        },
+                        "execution_role_arns": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
                         }
                       },
                       "description_kind": "plain"
@@ -1097,6 +1306,14 @@ const awsSagemakerDomain = `{
               "block": {
                 "attributes": {
                   "hidden_app_types": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "hidden_instance_types": {
                     "description_kind": "plain",
                     "optional": true,
                     "type": [

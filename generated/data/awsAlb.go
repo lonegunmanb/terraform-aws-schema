@@ -110,6 +110,11 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "enable_zonal_shift": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "enforce_security_group_inbound_rules_on_private_link_traffic": {
         "computed": true,
         "description_kind": "plain",

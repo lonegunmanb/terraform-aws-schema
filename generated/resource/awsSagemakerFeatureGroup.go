@@ -67,6 +67,11 @@ const awsSagemakerFeatureGroup = `{
       "feature_definition": {
         "block": {
           "attributes": {
+            "collection_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "feature_name": {
               "description_kind": "plain",
               "optional": true,
@@ -76,6 +81,31 @@ const awsSagemakerFeatureGroup = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            }
+          },
+          "block_types": {
+            "collection_config": {
+              "block": {
+                "block_types": {
+                  "vector_config": {
+                    "block": {
+                      "attributes": {
+                        "dimension": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -205,6 +235,31 @@ const awsSagemakerFeatureGroup = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "throughput_config": {
+        "block": {
+          "attributes": {
+            "provisioned_read_capacity_units": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "provisioned_write_capacity_units": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "throughput_mode": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

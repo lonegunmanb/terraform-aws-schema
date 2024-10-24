@@ -68,6 +68,11 @@ const awsLbListener = `{
           "map",
           "string"
         ]
+      },
+      "tcp_idle_timeout_seconds": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       }
     },
     "block_types": {

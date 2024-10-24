@@ -94,6 +94,7 @@ const awsImagebuilderImageRecipe = `{
               "type": "string"
             },
             "no_device": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"

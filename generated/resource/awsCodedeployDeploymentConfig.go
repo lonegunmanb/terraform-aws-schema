@@ -109,6 +109,46 @@ const awsCodedeployDeploymentConfig = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "zonal_config": {
+        "block": {
+          "attributes": {
+            "first_zone_monitor_duration_in_seconds": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "monitor_duration_in_seconds": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "block_types": {
+            "minimum_healthy_hosts_per_zone": {
+              "block": {
+                "attributes": {
+                  "type": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

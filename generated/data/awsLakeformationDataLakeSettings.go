@@ -88,6 +88,14 @@ const awsLakeformationDataLakeSettings = `{
         "optional": true,
         "type": "string"
       },
+      "parameters": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "read_only_admins": {
         "computed": true,
         "description_kind": "plain",
