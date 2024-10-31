@@ -149,7 +149,19 @@ const awsImagebuilderDistributionConfiguration = `{
                 "set",
                 "string"
               ],
-              "region": "string"
+              "region": "string",
+              "s3_export_configuration": [
+                "set",
+                [
+                  "object",
+                  {
+                    "disk_image_format": "string",
+                    "role_name": "string",
+                    "s3_bucket": "string",
+                    "s3_prefix": "string"
+                  }
+                ]
+              ]
             }
           ]
         ]

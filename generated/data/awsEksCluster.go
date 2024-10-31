@@ -206,6 +206,19 @@ const awsEksCluster = `{
             }
           ]
         ]
+      },
+      "zonal_shift_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "enabled": "bool"
+            }
+          ]
+        ]
       }
     },
     "description_kind": "plain"

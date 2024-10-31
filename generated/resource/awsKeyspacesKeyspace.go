@@ -44,6 +44,29 @@ const awsKeyspacesKeyspace = `{
       }
     },
     "block_types": {
+      "replication_specification": {
+        "block": {
+          "attributes": {
+            "region_list": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "replication_strategy": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

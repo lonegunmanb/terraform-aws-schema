@@ -79,6 +79,11 @@ const awsCodedeployDeploymentGroup = `{
           "map",
           "string"
         ]
+      },
+      "termination_hook_enabled": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       }
     },
     "block_types": {

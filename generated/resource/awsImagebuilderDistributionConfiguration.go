@@ -291,6 +291,35 @@ const awsImagebuilderDistributionConfiguration = `{
               },
               "max_items": 100,
               "nesting_mode": "set"
+            },
+            "s3_export_configuration": {
+              "block": {
+                "attributes": {
+                  "disk_image_format": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "role_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "s3_bucket": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "s3_prefix": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

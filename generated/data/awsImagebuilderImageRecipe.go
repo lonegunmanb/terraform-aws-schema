@@ -28,8 +28,8 @@ const awsImagebuilderImageRecipe = `{
                 [
                   "object",
                   {
-                    "delete_on_termination": "bool",
-                    "encrypted": "bool",
+                    "delete_on_termination": "string",
+                    "encrypted": "string",
                     "iops": "number",
                     "kms_key_id": "string",
                     "snapshot_id": "string",

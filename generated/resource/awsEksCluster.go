@@ -337,6 +337,20 @@ const awsEksCluster = `{
         "max_items": 1,
         "min_items": 1,
         "nesting_mode": "list"
+      },
+      "zonal_shift_config": {
+        "block": {
+          "attributes": {
+            "enabled": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
