@@ -108,6 +108,84 @@ const awsBatchJobDefinition = `{
                     ],
                     "dns_policy": "string",
                     "host_network": "bool",
+                    "image_pull_secrets": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "name": "string"
+                        }
+                      ]
+                    ],
+                    "init_containers": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "args": [
+                            "list",
+                            "string"
+                          ],
+                          "command": [
+                            "list",
+                            "string"
+                          ],
+                          "env": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "name": "string",
+                                "value": "string"
+                              }
+                            ]
+                          ],
+                          "image": "string",
+                          "image_pull_policy": "string",
+                          "name": "string",
+                          "resources": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "limits": [
+                                  "map",
+                                  "string"
+                                ],
+                                "requests": [
+                                  "map",
+                                  "string"
+                                ]
+                              }
+                            ]
+                          ],
+                          "security_context": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "privileged": "bool",
+                                "read_only_root_file_system": "bool",
+                                "run_as_group": "number",
+                                "run_as_non_root": "bool",
+                                "run_as_user": "number"
+                              }
+                            ]
+                          ],
+                          "volume_mounts": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "mount_path": "string",
+                                "name": "string",
+                                "read_only": "bool"
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
                     "metadata": [
                       "list",
                       [
@@ -120,7 +198,8 @@ const awsBatchJobDefinition = `{
                         }
                       ]
                     ],
-                    "service_account_name": "bool",
+                    "service_account_name": "string",
+                    "share_process_namespace": "bool",
                     "volumes": [
                       "list",
                       [

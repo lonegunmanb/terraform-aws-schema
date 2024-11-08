@@ -17,7 +17,6 @@ const awsIotBillingGroup = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "metadata": {
@@ -49,7 +48,6 @@ const awsIotBillingGroup = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
@@ -73,7 +71,6 @@ const awsIotBillingGroup = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
         "nesting_mode": "list"
       }
     },

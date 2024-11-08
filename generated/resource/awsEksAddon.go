@@ -97,6 +97,24 @@ const awsEksAddon = `{
       }
     },
     "block_types": {
+      "pod_identity_association": {
+        "block": {
+          "attributes": {
+            "role_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "service_account": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "timeouts": {
         "block": {
           "attributes": {

@@ -125,6 +125,11 @@ const awsBatchJobDefinition = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
+                  },
+                  "share_process_namespace": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
                   }
                 },
                 "block_types": {
@@ -267,7 +272,7 @@ const awsBatchJobDefinition = `{
                       },
                       "description_kind": "plain"
                     },
-                    "max_items": 1,
+                    "max_items": 10,
                     "min_items": 1,
                     "nesting_mode": "list"
                   },
@@ -282,6 +287,148 @@ const awsBatchJobDefinition = `{
                       },
                       "description_kind": "plain"
                     },
+                    "nesting_mode": "list"
+                  },
+                  "init_containers": {
+                    "block": {
+                      "attributes": {
+                        "args": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "list",
+                            "string"
+                          ]
+                        },
+                        "command": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "list",
+                            "string"
+                          ]
+                        },
+                        "image": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "image_pull_policy": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "name": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "env": {
+                          "block": {
+                            "attributes": {
+                              "name": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "value": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
+                        },
+                        "resources": {
+                          "block": {
+                            "attributes": {
+                              "limits": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "map",
+                                  "string"
+                                ]
+                              },
+                              "requests": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "map",
+                                  "string"
+                                ]
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "security_context": {
+                          "block": {
+                            "attributes": {
+                              "privileged": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              },
+                              "read_only_root_file_system": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              },
+                              "run_as_group": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "run_as_non_root": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              },
+                              "run_as_user": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "volume_mounts": {
+                          "block": {
+                            "attributes": {
+                              "mount_path": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "name": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "read_only": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 10,
                     "nesting_mode": "list"
                   },
                   "metadata": {

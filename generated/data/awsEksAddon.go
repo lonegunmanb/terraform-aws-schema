@@ -50,6 +50,20 @@ const awsEksAddon = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "pod_identity_association": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "role_arn": "string",
+              "service_account": "string"
+            }
+          ]
+        ]
+      },
       "service_account_role_arn": {
         "computed": true,
         "description_kind": "plain",

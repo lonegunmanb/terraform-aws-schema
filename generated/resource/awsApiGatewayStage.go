@@ -129,6 +129,11 @@ const awsApiGatewayStage = `{
       "canary_settings": {
         "block": {
           "attributes": {
+            "deployment_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
             "percent_traffic": {
               "description_kind": "plain",
               "optional": true,

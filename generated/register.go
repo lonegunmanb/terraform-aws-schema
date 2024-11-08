@@ -1980,6 +1980,7 @@ func init() {
 	dataSources["aws_signer_signing_job"] = data.AwsSignerSigningJobSchema()  
 	dataSources["aws_signer_signing_profile"] = data.AwsSignerSigningProfileSchema()  
 	dataSources["aws_sns_topic"] = data.AwsSnsTopicSchema()  
+	dataSources["aws_spot_datafeed_subscription"] = data.AwsSpotDatafeedSubscriptionSchema()  
 	dataSources["aws_sqs_queue"] = data.AwsSqsQueueSchema()  
 	dataSources["aws_sqs_queues"] = data.AwsSqsQueuesSchema()  
 	dataSources["aws_ssm_document"] = data.AwsSsmDocumentSchema()  

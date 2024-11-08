@@ -28,6 +28,7 @@ const awsIamUserLoginProfile = `{
       "password": {
         "computed": true,
         "description_kind": "plain",
+        "sensitive": true,
         "type": "string"
       },
       "password_length": {

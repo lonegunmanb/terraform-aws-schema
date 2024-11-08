@@ -70,6 +70,7 @@ const awsLbListener = `{
         ]
       },
       "tcp_idle_timeout_seconds": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
