@@ -14,6 +14,11 @@ const awsCloudwatchEventBus = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "description": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "event_source_name": {
         "description_kind": "plain",
         "optional": true,

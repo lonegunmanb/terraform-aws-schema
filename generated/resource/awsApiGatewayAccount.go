@@ -15,6 +15,7 @@ const awsApiGatewayAccount = `{
         "type": "string"
       },
       "cloudwatch_role_arn": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -29,9 +30,15 @@ const awsApiGatewayAccount = `{
       },
       "id": {
         "computed": true,
+        "deprecated": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "reset_on_delete": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "bool"
       },
       "throttle_settings": {
         "computed": true,

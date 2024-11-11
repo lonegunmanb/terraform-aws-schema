@@ -41,11 +41,13 @@ const awsApiGatewayDeployment = `{
         "type": "string"
       },
       "stage_description": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "stage_name": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -90,6 +92,7 @@ const awsApiGatewayDeployment = `{
               "type": "bool"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,
