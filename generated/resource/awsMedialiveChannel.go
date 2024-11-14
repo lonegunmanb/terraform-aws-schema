@@ -3776,6 +3776,23 @@ const awsMedialiveChannel = `{
                                 "optional": true,
                                 "type": "number"
                               },
+                              "min_qp": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "mv_over_picture_boundaries": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "mv_temporal_predictor": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
                               "par_denominator": {
                                 "description_kind": "plain",
                                 "optional": true,
@@ -3826,7 +3843,29 @@ const awsMedialiveChannel = `{
                                 "optional": true,
                                 "type": "string"
                               },
+                              "tile_height": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "tile_padding": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "tile_width": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
                               "timecode_insertion": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "treeblock_size": {
                                 "computed": true,
                                 "description_kind": "plain",
                                 "optional": true,

@@ -1403,6 +1403,7 @@ func init() {
 	resources["aws_vpc_peering_connection_options"] = resource.AwsVpcPeeringConnectionOptionsSchema()  
 	resources["aws_vpc_security_group_egress_rule"] = resource.AwsVpcSecurityGroupEgressRuleSchema()  
 	resources["aws_vpc_security_group_ingress_rule"] = resource.AwsVpcSecurityGroupIngressRuleSchema()  
+	resources["aws_vpc_security_group_vpc_association"] = resource.AwsVpcSecurityGroupVpcAssociationSchema()  
 	resources["aws_vpclattice_access_log_subscription"] = resource.AwsVpclatticeAccessLogSubscriptionSchema()  
 	resources["aws_vpclattice_auth_policy"] = resource.AwsVpclatticeAuthPolicySchema()  
 	resources["aws_vpclattice_listener"] = resource.AwsVpclatticeListenerSchema()  
