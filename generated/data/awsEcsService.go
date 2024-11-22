@@ -14,6 +14,11 @@ const awsEcsService = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "availability_zone_rebalancing": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "cluster_arn": {
         "description_kind": "plain",
         "required": true,

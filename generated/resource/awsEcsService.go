@@ -9,6 +9,11 @@ import (
 const awsEcsService = `{
   "block": {
     "attributes": {
+      "availability_zone_rebalancing": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "cluster": {
         "computed": true,
         "description_kind": "plain",
@@ -624,6 +629,29 @@ const awsEcsService = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "vpc_lattice_configurations": {
+        "block": {
+          "attributes": {
+            "port_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "role_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "target_group_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

@@ -1033,6 +1033,7 @@ func init() {
 	resources["aws_rds_custom_db_engine_version"] = resource.AwsRdsCustomDbEngineVersionSchema()  
 	resources["aws_rds_export_task"] = resource.AwsRdsExportTaskSchema()  
 	resources["aws_rds_global_cluster"] = resource.AwsRdsGlobalClusterSchema()  
+	resources["aws_rds_instance_state"] = resource.AwsRdsInstanceStateSchema()  
 	resources["aws_rds_integration"] = resource.AwsRdsIntegrationSchema()  
 	resources["aws_rds_reserved_instance"] = resource.AwsRdsReservedInstanceSchema()  
 	resources["aws_redshift_authentication_profile"] = resource.AwsRedshiftAuthenticationProfileSchema()  

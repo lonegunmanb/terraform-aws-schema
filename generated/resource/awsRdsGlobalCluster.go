@@ -24,6 +24,11 @@ const awsRdsGlobalCluster = `{
         "optional": true,
         "type": "bool"
       },
+      "endpoint": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "engine": {
         "computed": true,
         "description_kind": "plain",
