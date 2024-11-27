@@ -23,6 +23,7 @@ const awsMemorydbSnapshot = `{
             "object",
             {
               "description": "string",
+              "engine": "string",
               "engine_version": "string",
               "maintenance_window": "string",
               "name": "string",

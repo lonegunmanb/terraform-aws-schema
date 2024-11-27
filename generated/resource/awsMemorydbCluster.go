@@ -48,6 +48,12 @@ const awsMemorydbCluster = `{
         "optional": true,
         "type": "string"
       },
+      "engine": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "engine_patch_version": {
         "computed": true,
         "description_kind": "plain",
