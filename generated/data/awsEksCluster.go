@@ -46,6 +46,24 @@ const awsEksCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "compute_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "enabled": "bool",
+              "node_pools": [
+                "set",
+                "string"
+              ],
+              "node_role_arn": "string"
+            }
+          ]
+        ]
+      },
       "created_at": {
         "computed": true,
         "description_kind": "plain",
@@ -99,6 +117,15 @@ const awsEksCluster = `{
           [
             "object",
             {
+              "elastic_load_balancing": [
+                "list",
+                [
+                  "object",
+                  {
+                    "enabled": "bool"
+                  }
+                ]
+              ],
               "ip_family": "string",
               "service_ipv4_cidr": "string",
               "service_ipv6_cidr": "string"
@@ -142,6 +169,42 @@ const awsEksCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "remote_network_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "remote_node_networks": [
+                "list",
+                [
+                  "object",
+                  {
+                    "cidrs": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                ]
+              ],
+              "remote_pod_networks": [
+                "list",
+                [
+                  "object",
+                  {
+                    "cidrs": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
       "role_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -151,6 +214,27 @@ const awsEksCluster = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "storage_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "block_storage": [
+                "list",
+                [
+                  "object",
+                  {
+                    "enabled": "bool"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
       },
       "tags": {
         "computed": true,

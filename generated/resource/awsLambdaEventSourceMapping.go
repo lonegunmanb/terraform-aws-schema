@@ -246,6 +246,44 @@ const awsLambdaEventSourceMapping = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "metrics_config": {
+        "block": {
+          "attributes": {
+            "metrics": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "provisioned_poller_config": {
+        "block": {
+          "attributes": {
+            "maximum_pollers": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "minimum_pollers": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "scaling_config": {
         "block": {
           "attributes": {

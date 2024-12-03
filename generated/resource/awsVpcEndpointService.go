@@ -117,6 +117,15 @@ const awsVpcEndpointService = `{
           "string"
         ]
       },
+      "supported_regions": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

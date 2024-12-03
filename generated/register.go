@@ -1375,6 +1375,8 @@ func init() {
 	resources["aws_verifiedpermissions_schema"] = resource.AwsVerifiedpermissionsSchemaSchema()  
 	resources["aws_volume_attachment"] = resource.AwsVolumeAttachmentSchema()  
 	resources["aws_vpc"] = resource.AwsVpcSchema()  
+	resources["aws_vpc_block_public_access_exclusion"] = resource.AwsVpcBlockPublicAccessExclusionSchema()  
+	resources["aws_vpc_block_public_access_options"] = resource.AwsVpcBlockPublicAccessOptionsSchema()  
 	resources["aws_vpc_dhcp_options"] = resource.AwsVpcDhcpOptionsSchema()  
 	resources["aws_vpc_dhcp_options_association"] = resource.AwsVpcDhcpOptionsAssociationSchema()  
 	resources["aws_vpc_endpoint"] = resource.AwsVpcEndpointSchema()  
