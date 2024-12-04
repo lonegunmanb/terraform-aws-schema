@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsDynamodbTableReplica = `{
+const awsCodeconnectionsConnection = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,35 +14,33 @@ const awsDynamodbTableReplica = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "deletion_protection_enabled": {
+      "connection_status": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
+        "type": "string"
       },
-      "global_table_arn": {
+      "host_arn": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "kms_key_arn": {
+      "name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "owner_account_id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "point_in_time_recovery": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "table_class_override": {
+      "provider_type": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -58,7 +56,6 @@ const awsDynamodbTableReplica = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
@@ -70,16 +67,19 @@ const awsDynamodbTableReplica = `{
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -95,8 +95,8 @@ const awsDynamodbTableReplica = `{
   "version": 0
 }`
 
-func AwsDynamodbTableReplicaSchema() *tfjson.Schema {
+func AwsCodeconnectionsConnectionSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsDynamodbTableReplica), &result)
+	_ = json.Unmarshal([]byte(awsCodeconnectionsConnection), &result)
 	return &result
 }
