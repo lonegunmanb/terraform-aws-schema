@@ -46,8 +46,9 @@ const awsIamOpenidConnectProvider = `{
         ]
       },
       "thumbprint_list": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": [
           "list",
           "string"

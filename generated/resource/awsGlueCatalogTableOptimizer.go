@@ -45,6 +45,65 @@ const awsGlueCatalogTableOptimizer = `{
               "type": "string"
             }
           },
+          "block_types": {
+            "orphan_file_deletion_configuration": {
+              "block": {
+                "block_types": {
+                  "iceberg_configuration": {
+                    "block": {
+                      "attributes": {
+                        "location": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "orphan_file_retention_period_in_days": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "retention_configuration": {
+              "block": {
+                "block_types": {
+                  "iceberg_configuration": {
+                    "block": {
+                      "attributes": {
+                        "clean_expired_files": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "bool"
+                        },
+                        "number_of_snapshots_to_retain": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "snapshot_retention_period_in_days": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "nesting_mode": "list"

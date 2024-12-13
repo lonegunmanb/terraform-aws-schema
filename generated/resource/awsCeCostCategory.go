@@ -1382,7 +1382,7 @@ const awsCeCostCategory = `{
           "description_kind": "plain"
         },
         "min_items": 1,
-        "nesting_mode": "set"
+        "nesting_mode": "list"
       },
       "split_charge_rule": {
         "block": {

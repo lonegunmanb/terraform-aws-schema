@@ -511,6 +511,12 @@ const awsRdsCluster = `{
               "description_kind": "plain",
               "required": true,
               "type": "number"
+            },
+            "seconds_until_auto_pause": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             }
           },
           "description_kind": "plain"

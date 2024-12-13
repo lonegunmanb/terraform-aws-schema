@@ -6,36 +6,52 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsServicecatalogappregistryApplication = `{
+const awsCloudwatchLogAnomalyDetector = `{
   "block": {
     "attributes": {
-      "application_tag": {
+      "anomaly_visibility_time": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
+        "optional": true,
+        "type": "number"
       },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "description": {
+      "detector_name": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "name": {
+      "enabled": {
         "description_kind": "plain",
         "required": true,
+        "type": "bool"
+      },
+      "evaluation_frequency": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
+      },
+      "filter_pattern": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "kms_key_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "log_group_arn_list": {
+        "description_kind": "plain",
+        "required": true,
+        "type": [
+          "list",
+          "string"
+        ]
       },
       "tags": {
         "description_kind": "plain",
@@ -59,8 +75,8 @@ const awsServicecatalogappregistryApplication = `{
   "version": 0
 }`
 
-func AwsServicecatalogappregistryApplicationSchema() *tfjson.Schema {
+func AwsCloudwatchLogAnomalyDetectorSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsServicecatalogappregistryApplication), &result)
+	_ = json.Unmarshal([]byte(awsCloudwatchLogAnomalyDetector), &result)
 	return &result
 }

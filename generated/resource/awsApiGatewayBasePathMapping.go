@@ -24,6 +24,11 @@ const awsApiGatewayBasePathMapping = `{
         "required": true,
         "type": "string"
       },
+      "domain_name_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

@@ -60,6 +60,11 @@ const awsApiGatewayDomainName = `{
         "required": true,
         "type": "string"
       },
+      "domain_name_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -68,6 +73,11 @@ const awsApiGatewayDomainName = `{
       },
       "ownership_verification_certificate_arn": {
         "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "policy": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"

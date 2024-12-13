@@ -6,18 +6,16 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsServicecatalogappregistryApplication = `{
+const awsServicecatalogappregistryAttributeGroup = `{
   "block": {
     "attributes": {
-      "application_tag": {
+      "arn": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
+        "optional": true,
+        "type": "string"
       },
-      "arn": {
+      "attributes": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -28,13 +26,15 @@ const awsServicecatalogappregistryApplication = `{
         "type": "string"
       },
       "id": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "name": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "tags": {
@@ -51,8 +51,8 @@ const awsServicecatalogappregistryApplication = `{
   "version": 0
 }`
 
-func AwsServicecatalogappregistryApplicationSchema() *tfjson.Schema {
+func AwsServicecatalogappregistryAttributeGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsServicecatalogappregistryApplication), &result)
+	_ = json.Unmarshal([]byte(awsServicecatalogappregistryAttributeGroup), &result)
 	return &result
 }

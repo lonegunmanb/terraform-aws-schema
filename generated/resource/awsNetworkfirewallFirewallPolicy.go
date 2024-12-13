@@ -163,6 +163,22 @@ const awsNetworkfirewallFirewallPolicy = `{
                     "type": "string"
                   }
                 },
+                "block_types": {
+                  "flow_timeouts": {
+                    "block": {
+                      "attributes": {
+                        "tcp_idle_timeout_seconds": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,

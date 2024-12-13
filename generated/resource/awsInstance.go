@@ -64,6 +64,12 @@ const awsInstance = `{
         "optional": true,
         "type": "bool"
       },
+      "enable_primary_ipv6": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "get_password_data": {
         "description_kind": "plain",
         "optional": true,

@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsRdsGlobalCluster = `{
+const awsBedrockInferenceProfile = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,91 +14,43 @@ const awsRdsGlobalCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "database_name": {
+      "created_at": {
         "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "description": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "deletion_protection": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "endpoint": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "engine": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "engine_lifecycle_support": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "engine_version": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "engine_version_actual": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "force_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "global_cluster_identifier": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "global_cluster_members": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "db_cluster_arn": "string",
-              "is_writer": "bool"
-            }
-          ]
-        ]
-      },
-      "global_cluster_resource_id": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "source_db_cluster_identifier": {
+      "models": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "model_arn": "string"
+            }
+          ]
+        ]
+      },
+      "name": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "storage_encrypted": {
+      "status": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
+        "type": "string"
       },
       "tags": {
         "description_kind": "plain",
@@ -111,28 +63,53 @@ const awsRdsGlobalCluster = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
+      },
+      "type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "updated_at": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "block_types": {
+      "model_source": {
+        "block": {
+          "attributes": {
+            "copy_from": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -148,8 +125,8 @@ const awsRdsGlobalCluster = `{
   "version": 0
 }`
 
-func AwsRdsGlobalClusterSchema() *tfjson.Schema {
+func AwsBedrockInferenceProfileSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsRdsGlobalCluster), &result)
+	_ = json.Unmarshal([]byte(awsBedrockInferenceProfile), &result)
 	return &result
 }

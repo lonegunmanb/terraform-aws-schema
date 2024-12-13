@@ -47,6 +47,11 @@ const awsSesv2ConfigurationSet = `{
       "delivery_options": {
         "block": {
           "attributes": {
+            "max_delivery_seconds": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
             "sending_pool_name": {
               "description_kind": "plain",
               "optional": true,
@@ -121,6 +126,11 @@ const awsSesv2ConfigurationSet = `{
             "custom_redirect_domain": {
               "description_kind": "plain",
               "required": true,
+              "type": "string"
+            },
+            "https_policy": {
+              "description_kind": "plain",
+              "optional": true,
               "type": "string"
             }
           },

@@ -44,6 +44,12 @@ const awsApiGatewayDomainName = `{
         "required": true,
         "type": "string"
       },
+      "domain_name_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "endpoint_configuration": {
         "computed": true,
         "description_kind": "plain",
@@ -64,6 +70,11 @@ const awsApiGatewayDomainName = `{
         "computed": true,
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "policy": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "regional_certificate_arn": {

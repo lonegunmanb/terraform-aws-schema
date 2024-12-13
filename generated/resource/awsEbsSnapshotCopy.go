@@ -14,6 +14,11 @@ const awsEbsSnapshotCopy = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "completion_duration_minutes": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "data_encryption_key_id": {
         "computed": true,
         "description_kind": "plain",

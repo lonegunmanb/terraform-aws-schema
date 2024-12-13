@@ -27,6 +27,7 @@ const awsSesv2ConfigurationSet = `{
           [
             "object",
             {
+              "max_delivery_seconds": "number",
               "sending_pool_name": "string",
               "tls_policy": "string"
             }
@@ -99,7 +100,8 @@ const awsSesv2ConfigurationSet = `{
           [
             "object",
             {
-              "custom_redirect_domain": "string"
+              "custom_redirect_domain": "string",
+              "https_policy": "string"
             }
           ]
         ]

@@ -19,6 +19,12 @@ const awsNetworkInterface = `{
         "optional": true,
         "type": "string"
       },
+      "enable_primary_ipv6": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
