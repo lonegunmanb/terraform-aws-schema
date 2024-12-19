@@ -87,6 +87,11 @@ const awsMemorydbCluster = `{
         "optional": true,
         "type": "string"
       },
+      "multi_region_cluster_name": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "name": {
         "computed": true,
         "description_kind": "plain",

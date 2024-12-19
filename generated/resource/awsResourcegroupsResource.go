@@ -53,7 +53,7 @@ const awsResourcegroupsResource = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsResourcegroupsResourceSchema() *tfjson.Schema {

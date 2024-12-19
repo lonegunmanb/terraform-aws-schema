@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsCodeconnectionsHost = `{
+const awsNetworkmanagerDxGatewayAttachment = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,24 +14,57 @@ const awsCodeconnectionsHost = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "attachment_policy_rule_number": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "attachment_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "core_network_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "core_network_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "direct_connect_gateway_arn": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "edge_locations": {
+        "description_kind": "plain",
+        "required": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "name": {
+      "owner_account_id": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
-      "provider_endpoint": {
+      "segment_name": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
-      "provider_type": {
+      "state": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
       "tags": {
@@ -77,40 +110,6 @@ const awsCodeconnectionsHost = `{
           "description_kind": "plain"
         },
         "nesting_mode": "single"
-      },
-      "vpc_configuration": {
-        "block": {
-          "attributes": {
-            "security_group_ids": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "subnet_ids": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "tls_certificate": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "vpc_id": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -118,8 +117,8 @@ const awsCodeconnectionsHost = `{
   "version": 0
 }`
 
-func AwsCodeconnectionsHostSchema() *tfjson.Schema {
+func AwsNetworkmanagerDxGatewayAttachmentSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsCodeconnectionsHost), &result)
+	_ = json.Unmarshal([]byte(awsNetworkmanagerDxGatewayAttachment), &result)
 	return &result
 }

@@ -62,6 +62,12 @@ const awsFsxLustreFileSystem = `{
         "optional": true,
         "type": "string"
       },
+      "efa_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "export_path": {
         "computed": true,
         "description_kind": "plain",

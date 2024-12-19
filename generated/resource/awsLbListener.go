@@ -347,6 +347,12 @@ const awsLbListener = `{
       "mutual_authentication": {
         "block": {
           "attributes": {
+            "advertise_trust_store_ca_names": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "ignore_client_certificate_expiry": {
               "description_kind": "plain",
               "optional": true,

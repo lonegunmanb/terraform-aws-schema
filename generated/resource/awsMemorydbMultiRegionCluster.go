@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsCodeconnectionsHost = `{
+const awsMemorydbMultiRegionCluster = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,24 +14,53 @@ const awsCodeconnectionsHost = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "id": {
+      "description": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "engine": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "engine_version": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "multi_region_cluster_name": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "name": {
+      "multi_region_cluster_name_suffix": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "provider_endpoint": {
+      "multi_region_parameter_group_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "node_type": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "provider_type": {
+      "num_shards": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "number"
+      },
+      "status": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "tags": {
@@ -49,6 +78,17 @@ const awsCodeconnectionsHost = `{
           "map",
           "string"
         ]
+      },
+      "tls_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "update_strategy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {
@@ -77,40 +117,6 @@ const awsCodeconnectionsHost = `{
           "description_kind": "plain"
         },
         "nesting_mode": "single"
-      },
-      "vpc_configuration": {
-        "block": {
-          "attributes": {
-            "security_group_ids": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "subnet_ids": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "tls_certificate": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "vpc_id": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -118,8 +124,8 @@ const awsCodeconnectionsHost = `{
   "version": 0
 }`
 
-func AwsCodeconnectionsHostSchema() *tfjson.Schema {
+func AwsMemorydbMultiRegionClusterSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsCodeconnectionsHost), &result)
+	_ = json.Unmarshal([]byte(awsMemorydbMultiRegionCluster), &result)
 	return &result
 }

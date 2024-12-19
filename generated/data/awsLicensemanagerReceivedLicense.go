@@ -62,6 +62,7 @@ const awsLicensemanagerReceivedLicense = `{
               "allow_check_in": "bool",
               "max_count": "number",
               "name": "string",
+              "overage": "bool",
               "unit": "string",
               "value": "string"
             }

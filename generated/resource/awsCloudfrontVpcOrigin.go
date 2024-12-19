@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsCodeconnectionsHost = `{
+const awsCloudfrontVpcOrigin = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,24 +14,14 @@ const awsCodeconnectionsHost = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "id": {
+      "etag": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "name": {
+      "id": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "provider_endpoint": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "provider_type": {
-        "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
       "tags": {
@@ -78,34 +68,56 @@ const awsCodeconnectionsHost = `{
         },
         "nesting_mode": "single"
       },
-      "vpc_configuration": {
+      "vpc_origin_endpoint_config": {
         "block": {
           "attributes": {
-            "security_group_ids": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "subnet_ids": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "tls_certificate": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "vpc_id": {
+            "arn": {
               "description_kind": "plain",
               "required": true,
               "type": "string"
+            },
+            "http_port": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "https_port": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "origin_protocol_policy": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "origin_ssl_protocols": {
+              "block": {
+                "attributes": {
+                  "items": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "quantity": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -118,8 +130,8 @@ const awsCodeconnectionsHost = `{
   "version": 0
 }`
 
-func AwsCodeconnectionsHostSchema() *tfjson.Schema {
+func AwsCloudfrontVpcOriginSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsCodeconnectionsHost), &result)
+	_ = json.Unmarshal([]byte(awsCloudfrontVpcOrigin), &result)
 	return &result
 }

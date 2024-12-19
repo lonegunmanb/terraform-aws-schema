@@ -111,6 +111,12 @@ const awsVpcEndpoint = `{
         "required": true,
         "type": "string"
       },
+      "service_region": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "state": {
         "computed": true,
         "description_kind": "plain",

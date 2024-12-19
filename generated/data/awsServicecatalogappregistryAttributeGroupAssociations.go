@@ -6,33 +6,25 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsDxGateway = `{
+const awsServicecatalogappregistryAttributeGroupAssociations = `{
   "block": {
     "attributes": {
-      "amazon_side_asn": {
+      "attribute_group_ids": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "id": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "name": {
         "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "owner_account_id": {
-        "computed": true,
-        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       }
     },
@@ -41,8 +33,8 @@ const awsDxGateway = `{
   "version": 0
 }`
 
-func AwsDxGatewaySchema() *tfjson.Schema {
+func AwsServicecatalogappregistryAttributeGroupAssociationsSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsDxGateway), &result)
+	_ = json.Unmarshal([]byte(awsServicecatalogappregistryAttributeGroupAssociations), &result)
 	return &result
 }

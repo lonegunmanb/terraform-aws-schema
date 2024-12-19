@@ -14,6 +14,12 @@ const awsBedrockagentAgent = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "agent_collaboration": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "agent_id": {
         "computed": true,
         "description_kind": "plain",

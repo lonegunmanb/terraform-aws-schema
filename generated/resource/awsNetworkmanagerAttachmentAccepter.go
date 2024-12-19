@@ -39,6 +39,14 @@ const awsNetworkmanagerAttachmentAccepter = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "edge_locations": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

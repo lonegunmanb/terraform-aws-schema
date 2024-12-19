@@ -24,7 +24,7 @@ const awsElasticacheReplicationGroup = `{
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": "string"
       },
       "auth_token": {
         "description_kind": "plain",

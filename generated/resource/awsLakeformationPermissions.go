@@ -29,7 +29,7 @@ const awsLakeformationPermissions = `{
         "description_kind": "plain",
         "required": true,
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },
@@ -38,7 +38,7 @@ const awsLakeformationPermissions = `{
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },

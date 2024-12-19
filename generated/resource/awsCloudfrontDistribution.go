@@ -787,6 +787,30 @@ const awsCloudfrontDistribution = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            },
+            "vpc_origin_config": {
+              "block": {
+                "attributes": {
+                  "origin_keepalive_timeout": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "origin_read_timeout": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "vpc_origin_id": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
