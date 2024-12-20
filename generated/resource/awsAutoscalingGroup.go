@@ -218,6 +218,20 @@ const awsAutoscalingGroup = `{
       }
     },
     "block_types": {
+      "availability_zone_distribution": {
+        "block": {
+          "attributes": {
+            "capacity_distribution_strategy": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "initial_lifecycle_hook": {
         "block": {
           "attributes": {
