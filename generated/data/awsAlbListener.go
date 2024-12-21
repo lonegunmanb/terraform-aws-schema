@@ -154,6 +154,7 @@ const awsAlbListener = `{
           [
             "object",
             {
+              "advertise_trust_store_ca_names": "string",
               "ignore_client_certificate_expiry": "bool",
               "mode": "string",
               "trust_store_arn": "string"
