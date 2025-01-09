@@ -396,6 +396,21 @@ const awsCloudfrontDistribution = `{
               "max_items": 2,
               "nesting_mode": "set"
             },
+            "grpc_config": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "lambda_function_association": {
               "block": {
                 "attributes": {
@@ -630,6 +645,21 @@ const awsCloudfrontDistribution = `{
               },
               "max_items": 2,
               "nesting_mode": "set"
+            },
+            "grpc_config": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             },
             "lambda_function_association": {
               "block": {

@@ -29,6 +29,11 @@ const awsEmrStudio = `{
         "optional": true,
         "type": "string"
       },
+      "encryption_key_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "engine_security_group_id": {
         "description_kind": "plain",
         "required": true,

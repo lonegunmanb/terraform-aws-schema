@@ -19,6 +19,22 @@ const awsCodebuildFleet = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "compute_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "disk": "number",
+              "machine_type": "string",
+              "memory": "number",
+              "vcpu": "number"
+            }
+          ]
+        ]
+      },
       "compute_type": {
         "computed": true,
         "description_kind": "plain",

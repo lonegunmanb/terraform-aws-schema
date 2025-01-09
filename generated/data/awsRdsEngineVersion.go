@@ -130,12 +130,27 @@ const awsRdsEngineVersion = `{
           "string"
         ]
       },
+      "supports_certificate_rotation_without_restart": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "supports_global_databases": {
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
       },
+      "supports_integrations": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "supports_limitless_database": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "supports_local_write_forwarding": {
         "computed": true,
         "description_kind": "plain",
         "type": "bool"

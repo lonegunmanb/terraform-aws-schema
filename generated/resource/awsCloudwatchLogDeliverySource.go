@@ -6,32 +6,31 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsApiGatewayDomainNameAccessAssociation = `{
+const awsCloudwatchLogDeliverySource = `{
   "block": {
     "attributes": {
-      "access_association_source": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "access_association_source_type": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "domain_name_arn": {
+      "log_type": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "id": {
+      "name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "resource_arn": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "service": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
@@ -57,8 +56,8 @@ const awsApiGatewayDomainNameAccessAssociation = `{
   "version": 0
 }`
 
-func AwsApiGatewayDomainNameAccessAssociationSchema() *tfjson.Schema {
+func AwsCloudwatchLogDeliverySourceSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsApiGatewayDomainNameAccessAssociation), &result)
+	_ = json.Unmarshal([]byte(awsCloudwatchLogDeliverySource), &result)
 	return &result
 }

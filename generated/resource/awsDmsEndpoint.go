@@ -211,6 +211,11 @@ const awsDmsEndpoint = `{
               "optional": true,
               "type": "bool"
             },
+            "sasl_mechanism": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "sasl_password": {
               "description_kind": "plain",
               "optional": true,

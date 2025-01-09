@@ -6,26 +6,12 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsRdsIntegration = `{
+const awsVpclatticeResourceGateway = `{
   "block": {
     "attributes": {
-      "additional_encryption_context": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "data_filter": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "id": {
@@ -33,21 +19,38 @@ const awsRdsIntegration = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "integration_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "kms_key_id": {
+      "ip_address_type": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "source_arn": {
+      "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
+      },
+      "security_group_ids": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "status": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "subnet_ids": {
+        "description_kind": "plain",
+        "required": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "tags": {
         "description_kind": "plain",
@@ -65,7 +68,7 @@ const awsRdsIntegration = `{
           "string"
         ]
       },
-      "target_arn": {
+      "vpc_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -86,6 +89,12 @@ const awsRdsIntegration = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"
@@ -98,8 +107,8 @@ const awsRdsIntegration = `{
   "version": 0
 }`
 
-func AwsRdsIntegrationSchema() *tfjson.Schema {
+func AwsVpclatticeResourceGatewaySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsRdsIntegration), &result)
+	_ = json.Unmarshal([]byte(awsVpclatticeResourceGateway), &result)
 	return &result
 }

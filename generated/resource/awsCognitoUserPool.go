@@ -121,6 +121,12 @@ const awsCognitoUserPool = `{
           "string"
         ]
       },
+      "user_pool_tier": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "username_attributes": {
         "description_kind": "plain",
         "optional": true,
@@ -242,6 +248,25 @@ const awsCognitoUserPool = `{
               "type": "string"
             },
             "source_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "email_mfa_configuration": {
+        "block": {
+          "attributes": {
+            "message": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "subject": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -495,6 +520,23 @@ const awsCognitoUserPool = `{
         "max_items": 50,
         "nesting_mode": "set"
       },
+      "sign_in_policy": {
+        "block": {
+          "attributes": {
+            "allowed_first_auth_factors": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "sms_configuration": {
         "block": {
           "attributes": {
@@ -613,6 +655,25 @@ const awsCognitoUserPool = `{
             },
             "sms_message": {
               "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "web_authn_configuration": {
+        "block": {
+          "attributes": {
+            "relying_party_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "user_verification": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

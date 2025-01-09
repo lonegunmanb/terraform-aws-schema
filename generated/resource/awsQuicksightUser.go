@@ -51,6 +51,11 @@ const awsQuicksightUser = `{
         "optional": true,
         "type": "string"
       },
+      "user_invitation_url": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "user_name": {
         "description_kind": "plain",
         "optional": true,

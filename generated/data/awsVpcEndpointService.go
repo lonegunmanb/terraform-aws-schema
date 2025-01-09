@@ -64,6 +64,11 @@ const awsVpcEndpointService = `{
           "string"
         ]
       },
+      "region": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "service": {
         "description_kind": "plain",
         "optional": true,
@@ -79,6 +84,14 @@ const awsVpcEndpointService = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "service_regions": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "service_type": {
         "computed": true,

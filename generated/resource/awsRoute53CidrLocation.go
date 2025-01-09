@@ -24,6 +24,7 @@ const awsRoute53CidrLocation = `{
       },
       "id": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },

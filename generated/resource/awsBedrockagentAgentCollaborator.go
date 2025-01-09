@@ -6,26 +6,33 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsRdsIntegration = `{
+const awsBedrockagentAgentCollaborator = `{
   "block": {
     "attributes": {
-      "additional_encryption_context": {
+      "agent_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "agent_version": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "string"
       },
-      "arn": {
+      "collaboration_instruction": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "collaborator_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "data_filter": {
-        "computed": true,
+      "collaborator_name": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {
@@ -33,45 +40,33 @@ const awsRdsIntegration = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "integration_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "kms_key_id": {
+      "prepare_agent": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "bool"
       },
-      "source_arn": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
+      "relay_conversation_history": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "target_arn": {
-        "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       }
     },
     "block_types": {
+      "agent_descriptor": {
+        "block": {
+          "attributes": {
+            "alias_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
@@ -83,6 +78,12 @@ const awsRdsIntegration = `{
             },
             "delete": {
               "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -98,8 +99,8 @@ const awsRdsIntegration = `{
   "version": 0
 }`
 
-func AwsRdsIntegrationSchema() *tfjson.Schema {
+func AwsBedrockagentAgentCollaboratorSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsRdsIntegration), &result)
+	_ = json.Unmarshal([]byte(awsBedrockagentAgentCollaborator), &result)
 	return &result
 }

@@ -84,6 +84,7 @@ const awsDmsEndpoint = `{
               "message_max_bytes": "number",
               "no_hex_prefix": "bool",
               "partition_include_schema_table": "bool",
+              "sasl_mechanism": "string",
               "sasl_password": "string",
               "sasl_username": "string",
               "security_protocol": "string",

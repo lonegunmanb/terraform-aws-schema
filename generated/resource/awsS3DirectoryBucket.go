@@ -33,6 +33,7 @@ const awsS3DirectoryBucket = `{
       },
       "id": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },

@@ -6,34 +6,57 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsApiGatewayDomainNameAccessAssociation = `{
+const awsCloudwatchLogDelivery = `{
   "block": {
     "attributes": {
-      "access_association_source": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "access_association_source_type": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "domain_name_arn": {
+      "delivery_destination_arn": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
+      "delivery_source_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "field_delimiter": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "record_fields": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
+      "s3_delivery_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "enable_hive_compatible_path": "bool",
+              "suffix_path": "string"
+            }
+          ]
+        ]
       },
       "tags": {
         "description_kind": "plain",
@@ -57,8 +80,8 @@ const awsApiGatewayDomainNameAccessAssociation = `{
   "version": 0
 }`
 
-func AwsApiGatewayDomainNameAccessAssociationSchema() *tfjson.Schema {
+func AwsCloudwatchLogDeliverySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsApiGatewayDomainNameAccessAssociation), &result)
+	_ = json.Unmarshal([]byte(awsCloudwatchLogDelivery), &result)
 	return &result
 }

@@ -969,6 +969,11 @@ const awsAppflowFlow = `{
                   "salesforce": {
                     "block": {
                       "attributes": {
+                        "data_transfer_api": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
                         "enable_dynamic_field_update": {
                           "description_kind": "plain",
                           "optional": true,

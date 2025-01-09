@@ -29,6 +29,11 @@ const awsRdsCertificate = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "default_for_new_launches": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
