@@ -14,10 +14,26 @@ const awsEc2InstanceType = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "bandwidth_weightings": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "bare_metal": {
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
+      },
+      "boot_modes": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "burstable_performance_supported": {
         "computed": true,
@@ -35,6 +51,11 @@ const awsEc2InstanceType = `{
         "type": "bool"
       },
       "default_cores": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "default_network_card_index": {
         "computed": true,
         "description_kind": "plain",
         "type": "number"
@@ -94,7 +115,17 @@ const awsEc2InstanceType = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "efa_maximum_interfaces": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "efa_supported": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "ena_srd_supported": {
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
@@ -172,6 +203,7 @@ const awsEc2InstanceType = `{
             {
               "count": "number",
               "manufacturer": "string",
+              "memory_size": "number",
               "name": "string"
             }
           ]
@@ -227,12 +259,85 @@ const awsEc2InstanceType = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "media_accelerators": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "count": "number",
+              "manufacturer": "string",
+              "memory_size": "number",
+              "name": "string"
+            }
+          ]
+        ]
+      },
       "memory_size": {
         "computed": true,
         "description_kind": "plain",
         "type": "number"
       },
+      "network_cards": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "baseline_bandwidth": "number",
+              "index": "number",
+              "maximum_interfaces": "number",
+              "peak_bandwidth": "number",
+              "performance": "string"
+            }
+          ]
+        ]
+      },
       "network_performance": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "neuron_devices": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "core_count": "number",
+              "core_version": "number",
+              "count": "number",
+              "memory_size": "number",
+              "name": "string"
+            }
+          ]
+        ]
+      },
+      "nitro_enclaves_support": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "nitro_tpm_support": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "nitro_tpm_supported_versions": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "phc_support": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -242,6 +347,14 @@ const awsEc2InstanceType = `{
         "description_kind": "plain",
         "type": [
           "list",
+          "string"
+        ]
+      },
+      "supported_cpu_features": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
           "string"
         ]
       },
@@ -292,7 +405,22 @@ const awsEc2InstanceType = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "total_inference_memory": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "total_instance_storage": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "total_media_memory": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "total_neuron_device_memory": {
         "computed": true,
         "description_kind": "plain",
         "type": "number"

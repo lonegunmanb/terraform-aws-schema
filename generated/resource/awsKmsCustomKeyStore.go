@@ -11,12 +11,18 @@ const awsKmsCustomKeyStore = `{
     "attributes": {
       "cloud_hsm_cluster_id": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "custom_key_store_name": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "custom_key_store_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
@@ -27,12 +33,32 @@ const awsKmsCustomKeyStore = `{
       },
       "key_store_password": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "trust_anchor_certificate": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "string"
+      },
+      "xks_proxy_connectivity": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "xks_proxy_uri_endpoint": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "xks_proxy_uri_path": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "xks_proxy_vpc_endpoint_service_name": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       }
     },
@@ -59,6 +85,25 @@ const awsKmsCustomKeyStore = `{
           "description_kind": "plain"
         },
         "nesting_mode": "single"
+      },
+      "xks_proxy_authentication_credential": {
+        "block": {
+          "attributes": {
+            "access_key_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "raw_secret_access_key": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

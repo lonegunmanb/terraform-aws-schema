@@ -14,6 +14,11 @@ const awsGlobalacceleratorListener = `{
         "required": true,
         "type": "string"
       },
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "client_affinity": {
         "description_kind": "plain",
         "optional": true,

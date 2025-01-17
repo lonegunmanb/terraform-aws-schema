@@ -240,6 +240,7 @@ const awsEcsTaskDefinition = `{
                     "type": "bool"
                   },
                   "driver": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"

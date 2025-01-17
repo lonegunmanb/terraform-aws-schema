@@ -9,6 +9,11 @@ import (
 const awsGlobalacceleratorAccelerator = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "dns_name": {
         "computed": true,
         "description_kind": "plain",

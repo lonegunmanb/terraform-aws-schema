@@ -140,6 +140,15 @@ const awsRoute53HealthCheck = `{
           "string"
         ]
       },
+      "triggers": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "type": {
         "description_kind": "plain",
         "required": true,

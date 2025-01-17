@@ -157,6 +157,11 @@ const awsAmiFromInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "uefi_data": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "usage_operation": {
         "computed": true,
         "description_kind": "plain",

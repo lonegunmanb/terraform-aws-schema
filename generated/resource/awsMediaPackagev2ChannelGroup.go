@@ -6,48 +6,40 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsLambdaInvocation = `{
+const awsMediaPackagev2ChannelGroup = `{
   "block": {
     "attributes": {
-      "function_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "input": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "lifecycle_scope": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "qualifier": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "result": {
+      "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "terraform_key": {
+      "description": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "triggers": {
+      "egress_domain": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "tags": {
         "description_kind": "plain",
         "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
         "type": [
           "map",
           "string"
@@ -56,11 +48,11 @@ const awsLambdaInvocation = `{
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
-func AwsLambdaInvocationSchema() *tfjson.Schema {
+func AwsMediaPackagev2ChannelGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsLambdaInvocation), &result)
+	_ = json.Unmarshal([]byte(awsMediaPackagev2ChannelGroup), &result)
 	return &result
 }

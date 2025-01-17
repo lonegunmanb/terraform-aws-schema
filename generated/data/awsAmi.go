@@ -226,6 +226,11 @@ const awsAmi = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "uefi_data": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "usage_operation": {
         "computed": true,
         "description_kind": "plain",
