@@ -9,6 +9,11 @@ import (
 const awsEc2TransitGatewayDxGatewayAttachment = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "dx_gateway_id": {
         "description_kind": "plain",
         "optional": true,

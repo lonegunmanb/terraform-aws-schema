@@ -89,6 +89,70 @@ const awsBedrockagentKnowledgeBase = `{
                     "type": "string"
                   }
                 },
+                "block_types": {
+                  "embedding_model_configuration": {
+                    "block": {
+                      "block_types": {
+                        "bedrock_embedding_model_configuration": {
+                          "block": {
+                            "attributes": {
+                              "dimensions": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "embedding_data_type": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "supplemental_data_storage_configuration": {
+                    "block": {
+                      "block_types": {
+                        "storage_location": {
+                          "block": {
+                            "attributes": {
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "s3_location": {
+                                "block": {
+                                  "attributes": {
+                                    "uri": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "nesting_mode": "list"

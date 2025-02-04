@@ -25,6 +25,7 @@ const awsCloudwatchLogDelivery = `{
         "type": "string"
       },
       "field_delimiter": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

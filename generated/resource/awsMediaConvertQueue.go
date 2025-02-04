@@ -14,6 +14,12 @@ const awsMediaConvertQueue = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "concurrent_jobs": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "description": {
         "description_kind": "plain",
         "optional": true,

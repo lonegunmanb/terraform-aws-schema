@@ -593,6 +593,11 @@ const awsAutoscalingPolicy = `{
                         "metric_stat": {
                           "block": {
                             "attributes": {
+                              "period": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
                               "stat": {
                                 "description_kind": "plain",
                                 "required": true,

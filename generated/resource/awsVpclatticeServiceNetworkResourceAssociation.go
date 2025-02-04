@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsOrganizationsAccount = `{
+const awsVpclatticeServiceNetworkResourceAssociation = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,66 +14,33 @@ const awsOrganizationsAccount = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "close_on_deletion": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "create_govcloud": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "email": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "govcloud_id": {
+      "dns_entry": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "iam_user_access_to_billing": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "domain_name": "string",
+              "hosted_zone_id": "string"
+            }
+          ]
+        ]
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "joined_method": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "joined_timestamp": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "name": {
+      "resource_configuration_identifier": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "parent_id": {
-        "computed": true,
+      "service_network_identifier": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "role_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "tags": {
@@ -87,7 +54,6 @@ const awsOrganizationsAccount = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
@@ -99,11 +65,13 @@ const awsOrganizationsAccount = `{
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -119,8 +87,8 @@ const awsOrganizationsAccount = `{
   "version": 0
 }`
 
-func AwsOrganizationsAccountSchema() *tfjson.Schema {
+func AwsVpclatticeServiceNetworkResourceAssociationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsOrganizationsAccount), &result)
+	_ = json.Unmarshal([]byte(awsVpclatticeServiceNetworkResourceAssociation), &result)
 	return &result
 }

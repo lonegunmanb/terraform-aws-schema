@@ -52,6 +52,102 @@ const awsBedrockagentDataSource = `{
             }
           },
           "block_types": {
+            "confluence_configuration": {
+              "block": {
+                "block_types": {
+                  "crawler_configuration": {
+                    "block": {
+                      "block_types": {
+                        "filter_configuration": {
+                          "block": {
+                            "attributes": {
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "pattern_object_filter": {
+                                "block": {
+                                  "block_types": {
+                                    "filters": {
+                                      "block": {
+                                        "attributes": {
+                                          "exclusion_filters": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": [
+                                              "set",
+                                              "string"
+                                            ]
+                                          },
+                                          "inclusion_filters": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": [
+                                              "set",
+                                              "string"
+                                            ]
+                                          },
+                                          "object_type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "source_configuration": {
+                    "block": {
+                      "attributes": {
+                        "auth_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "credentials_secret_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "host_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "host_url": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "s3_configuration": {
               "block": {
                 "attributes": {
@@ -72,6 +168,297 @@ const awsBedrockagentDataSource = `{
                       "set",
                       "string"
                     ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "salesforce_configuration": {
+              "block": {
+                "block_types": {
+                  "crawler_configuration": {
+                    "block": {
+                      "block_types": {
+                        "filter_configuration": {
+                          "block": {
+                            "attributes": {
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "pattern_object_filter": {
+                                "block": {
+                                  "block_types": {
+                                    "filters": {
+                                      "block": {
+                                        "attributes": {
+                                          "exclusion_filters": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": [
+                                              "set",
+                                              "string"
+                                            ]
+                                          },
+                                          "inclusion_filters": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": [
+                                              "set",
+                                              "string"
+                                            ]
+                                          },
+                                          "object_type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "source_configuration": {
+                    "block": {
+                      "attributes": {
+                        "auth_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "credentials_secret_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "host_url": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "share_point_configuration": {
+              "block": {
+                "block_types": {
+                  "crawler_configuration": {
+                    "block": {
+                      "block_types": {
+                        "filter_configuration": {
+                          "block": {
+                            "attributes": {
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "pattern_object_filter": {
+                                "block": {
+                                  "block_types": {
+                                    "filters": {
+                                      "block": {
+                                        "attributes": {
+                                          "exclusion_filters": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": [
+                                              "set",
+                                              "string"
+                                            ]
+                                          },
+                                          "inclusion_filters": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": [
+                                              "set",
+                                              "string"
+                                            ]
+                                          },
+                                          "object_type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "source_configuration": {
+                    "block": {
+                      "attributes": {
+                        "auth_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "credentials_secret_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "domain": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "host_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "site_urls": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        },
+                        "tenant_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "web_configuration": {
+              "block": {
+                "block_types": {
+                  "crawler_configuration": {
+                    "block": {
+                      "attributes": {
+                        "exclusion_filters": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        },
+                        "inclusion_filters": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        },
+                        "scope": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "user_agent": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "crawler_limits": {
+                          "block": {
+                            "attributes": {
+                              "max_pages": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "rate_limit": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "source_configuration": {
+                    "block": {
+                      "block_types": {
+                        "url_configuration": {
+                          "block": {
+                            "block_types": {
+                              "seed_urls": {
+                                "block": {
+                                  "attributes": {
+                                    "url": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

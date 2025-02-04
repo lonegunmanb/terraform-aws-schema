@@ -940,6 +940,11 @@ const awsAppflowConnectorProfile = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "bool"
+                        },
+                        "use_privatelink_for_metadata_and_authorization": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "bool"
                         }
                       },
                       "description_kind": "plain"

@@ -295,6 +295,35 @@ const awsCloudwatchEventConnection = `{
         "max_items": 1,
         "min_items": 1,
         "nesting_mode": "list"
+      },
+      "invocation_connectivity_parameters": {
+        "block": {
+          "block_types": {
+            "resource_parameters": {
+              "block": {
+                "attributes": {
+                  "resource_association_arn": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
+                  "resource_configuration_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

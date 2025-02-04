@@ -80,6 +80,11 @@ const awsCloudtrail = `{
         "optional": true,
         "type": "string"
       },
+      "sns_topic_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "sns_topic_name": {
         "description_kind": "plain",
         "optional": true,

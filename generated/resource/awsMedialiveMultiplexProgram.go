@@ -105,6 +105,20 @@ const awsMedialiveMultiplexProgram = `{
           "description_kind": "plain"
         },
         "nesting_mode": "list"
+      },
+      "timeouts": {
+        "block": {
+          "attributes": {
+            "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

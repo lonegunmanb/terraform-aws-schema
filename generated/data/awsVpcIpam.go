@@ -1,4 +1,4 @@
-package resource
+package data
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsOrganizationsAccount = `{
+const awsVpcIpam = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,104 +14,96 @@ const awsOrganizationsAccount = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "close_on_deletion": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "create_govcloud": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "email": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "govcloud_id": {
+      "default_resource_discovery_association_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "iam_user_access_to_billing": {
+      "default_resource_discovery_id": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
+      },
+      "description": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "enable_private_gua": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
       },
       "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "joined_method": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "joined_timestamp": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "parent_id": {
+      "ipam_region": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "role_name": {
+      "operating_regions": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "region_name": "string"
+            }
+          ]
+        ]
+      },
+      "owner_id": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
-      "status": {
+      "private_default_scope_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "public_default_scope_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "resource_discovery_association_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "scope_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "state": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "state_message": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
       "tags": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
       },
-      "tags_all": {
+      "tier": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
+        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -119,8 +111,8 @@ const awsOrganizationsAccount = `{
   "version": 0
 }`
 
-func AwsOrganizationsAccountSchema() *tfjson.Schema {
+func AwsVpcIpamSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsOrganizationsAccount), &result)
+	_ = json.Unmarshal([]byte(awsVpcIpam), &result)
 	return &result
 }

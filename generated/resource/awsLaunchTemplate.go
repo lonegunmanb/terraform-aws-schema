@@ -896,6 +896,32 @@ const awsLaunchTemplate = `{
               "type": "string"
             }
           },
+          "block_types": {
+            "connection_tracking_specification": {
+              "block": {
+                "attributes": {
+                  "tcp_established_timeout": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "udp_stream_timeout": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "udp_timeout": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "nesting_mode": "list"

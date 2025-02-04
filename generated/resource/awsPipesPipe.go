@@ -35,6 +35,11 @@ const awsPipesPipe = `{
         "optional": true,
         "type": "string"
       },
+      "kms_key_identifier": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "name": {
         "computed": true,
         "description_kind": "plain",

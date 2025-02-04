@@ -14,6 +14,11 @@ const awsEc2TransitGatewayVpcAttachment = `{
         "optional": true,
         "type": "string"
       },
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "dns_support": {
         "description_kind": "plain",
         "optional": true,

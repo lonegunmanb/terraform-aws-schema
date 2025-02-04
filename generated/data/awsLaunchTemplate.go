@@ -462,6 +462,17 @@ const awsLaunchTemplate = `{
             {
               "associate_carrier_ip_address": "string",
               "associate_public_ip_address": "string",
+              "connection_tracking_specification": [
+                "list",
+                [
+                  "object",
+                  {
+                    "tcp_established_timeout": "number",
+                    "udp_stream_timeout": "number",
+                    "udp_timeout": "number"
+                  }
+                ]
+              ],
               "delete_on_termination": "string",
               "description": "string",
               "device_index": "number",

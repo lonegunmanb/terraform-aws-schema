@@ -88,6 +88,11 @@ const awsVpcEndpoint = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "resource_configuration_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "route_table_ids": {
         "computed": true,
         "description_kind": "plain",
@@ -108,7 +113,12 @@ const awsVpcEndpoint = `{
       },
       "service_name": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "string"
+      },
+      "service_network_arn": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "service_region": {

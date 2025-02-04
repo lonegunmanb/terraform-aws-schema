@@ -19,6 +19,34 @@ const awsEcsTaskDefinition = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "container_definitions": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "cpu": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "enable_fault_injection": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "ephemeral_storage": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "size_in_gib": "number"
+            }
+          ]
+        ]
+      },
       "execution_role_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -35,15 +63,98 @@ const awsEcsTaskDefinition = `{
         "optional": true,
         "type": "string"
       },
+      "inference_accelerator": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "device_name": "string",
+              "device_type": "string"
+            }
+          ]
+        ]
+      },
+      "ipc_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "memory": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "network_mode": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
+      "pid_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "placement_constraints": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "expression": "string",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "proxy_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "container_name": "string",
+              "properties": [
+                "map",
+                "string"
+              ],
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "requires_compatibilities": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "revision": {
         "computed": true,
         "description_kind": "plain",
         "type": "number"
+      },
+      "runtime_platform": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "cpu_architecture": "string",
+              "operating_system_family": "string"
+            }
+          ]
+        ]
       },
       "status": {
         "computed": true,
@@ -59,6 +170,82 @@ const awsEcsTaskDefinition = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "volume": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "configure_at_launch": "bool",
+              "docker_volume_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "autoprovision": "bool",
+                    "driver": "string",
+                    "driver_opts": [
+                      "map",
+                      "string"
+                    ],
+                    "labels": [
+                      "map",
+                      "string"
+                    ],
+                    "scope": "string"
+                  }
+                ]
+              ],
+              "efs_volume_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "authorization_config": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "access_point_id": "string",
+                          "iam": "string"
+                        }
+                      ]
+                    ],
+                    "file_system_id": "string",
+                    "root_directory": "string",
+                    "transit_encryption": "string",
+                    "transit_encryption_port": "number"
+                  }
+                ]
+              ],
+              "fsx_windows_file_server_volume_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "authorization_config": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "credentials_parameter": "string",
+                          "domain": "string"
+                        }
+                      ]
+                    ],
+                    "file_system_id": "string",
+                    "root_directory": "string"
+                  }
+                ]
+              ],
+              "host_path": "string",
+              "name": "string"
+            }
+          ]
+        ]
       }
     },
     "description_kind": "plain"

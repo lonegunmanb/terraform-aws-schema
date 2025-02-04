@@ -29,6 +29,12 @@ const awsEcsTaskDefinition = `{
         "optional": true,
         "type": "string"
       },
+      "enable_fault_injection": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "execution_role_arn": {
         "description_kind": "plain",
         "optional": true,

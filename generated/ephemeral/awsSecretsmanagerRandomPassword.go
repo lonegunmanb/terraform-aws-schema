@@ -1,4 +1,4 @@
-package resource
+package ephemeral
 
 import (
 	"encoding/json"
@@ -6,54 +6,54 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsPinpointEmailChannel = `{
+const awsSecretsmanagerRandomPassword = `{
   "block": {
     "attributes": {
-      "application_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "configuration_set": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "enabled": {
+      "exclude_characters": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
-      "from_address": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
+      "exclude_lowercase": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "bool"
       },
-      "identity": {
+      "exclude_numbers": {
         "description_kind": "plain",
-        "required": true,
-        "type": "string"
+        "optional": true,
+        "type": "bool"
       },
-      "messages_per_second": {
-        "computed": true,
+      "exclude_punctuation": {
         "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "exclude_uppercase": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "include_space": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "password_length": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "number"
       },
-      "orchestration_sending_role_arn": {
+      "random_password": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "sensitive": true,
         "type": "string"
       },
-      "role_arn": {
+      "require_each_included_type": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "bool"
       }
     },
     "description_kind": "plain"
@@ -61,8 +61,8 @@ const awsPinpointEmailChannel = `{
   "version": 0
 }`
 
-func AwsPinpointEmailChannelSchema() *tfjson.Schema {
+func AwsSecretsmanagerRandomPasswordSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsPinpointEmailChannel), &result)
+	_ = json.Unmarshal([]byte(awsSecretsmanagerRandomPassword), &result)
 	return &result
 }
