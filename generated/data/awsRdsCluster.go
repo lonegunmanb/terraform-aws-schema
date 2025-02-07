@@ -152,6 +152,16 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "monitoring_interval": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "monitoring_role_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "network_type": {
         "computed": true,
         "description_kind": "plain",

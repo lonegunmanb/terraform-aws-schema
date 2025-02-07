@@ -15,14 +15,15 @@ const awsS3BucketLifecycleConfiguration = `{
         "type": "string"
       },
       "expected_bucket_owner": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "id": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "transition_default_minimum_object_size": {
@@ -42,6 +43,7 @@ const awsS3BucketLifecycleConfiguration = `{
               "type": "string"
             },
             "prefix": {
+              "computed": true,
               "deprecated": true,
               "description_kind": "plain",
               "optional": true,
@@ -65,7 +67,6 @@ const awsS3BucketLifecycleConfiguration = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 1,
               "nesting_mode": "list"
             },
             "expiration": {
@@ -77,6 +78,7 @@ const awsS3BucketLifecycleConfiguration = `{
                     "type": "string"
                   },
                   "days": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
@@ -90,23 +92,25 @@ const awsS3BucketLifecycleConfiguration = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 1,
               "nesting_mode": "list"
             },
             "filter": {
               "block": {
                 "attributes": {
                   "object_size_greater_than": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
-                    "type": "string"
+                    "type": "number"
                   },
                   "object_size_less_than": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
-                    "type": "string"
+                    "type": "number"
                   },
                   "prefix": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
@@ -117,16 +121,19 @@ const awsS3BucketLifecycleConfiguration = `{
                     "block": {
                       "attributes": {
                         "object_size_greater_than": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "number"
                         },
                         "object_size_less_than": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "number"
                         },
                         "prefix": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
@@ -142,7 +149,6 @@ const awsS3BucketLifecycleConfiguration = `{
                       },
                       "description_kind": "plain"
                     },
-                    "max_items": 1,
                     "nesting_mode": "list"
                   },
                   "tag": {
@@ -161,24 +167,24 @@ const awsS3BucketLifecycleConfiguration = `{
                       },
                       "description_kind": "plain"
                     },
-                    "max_items": 1,
                     "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"
               },
-              "max_items": 1,
               "nesting_mode": "list"
             },
             "noncurrent_version_expiration": {
               "block": {
                 "attributes": {
                   "newer_noncurrent_versions": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
-                    "type": "string"
+                    "type": "number"
                   },
                   "noncurrent_days": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
@@ -186,18 +192,19 @@ const awsS3BucketLifecycleConfiguration = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 1,
               "nesting_mode": "list"
             },
             "noncurrent_version_transition": {
               "block": {
                 "attributes": {
                   "newer_noncurrent_versions": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
-                    "type": "string"
+                    "type": "number"
                   },
                   "noncurrent_days": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
@@ -221,6 +228,7 @@ const awsS3BucketLifecycleConfiguration = `{
                     "type": "string"
                   },
                   "days": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
@@ -238,18 +246,19 @@ const awsS3BucketLifecycleConfiguration = `{
           },
           "description_kind": "plain"
         },
-        "min_items": 1,
         "nesting_mode": "list"
       },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -262,7 +271,7 @@ const awsS3BucketLifecycleConfiguration = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsS3BucketLifecycleConfigurationSchema() *tfjson.Schema {

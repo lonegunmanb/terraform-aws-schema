@@ -174,6 +174,178 @@ const awsFmsPolicy = `{
             "policy_option": {
               "block": {
                 "block_types": {
+                  "network_acl_common_policy": {
+                    "block": {
+                      "block_types": {
+                        "network_acl_entry_set": {
+                          "block": {
+                            "attributes": {
+                              "force_remediate_for_first_entries": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "bool"
+                              },
+                              "force_remediate_for_last_entries": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "bool"
+                              }
+                            },
+                            "block_types": {
+                              "first_entry": {
+                                "block": {
+                                  "attributes": {
+                                    "cidr_block": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "egress": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "bool"
+                                    },
+                                    "ipv6_cidr_block": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "protocol": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "rule_action": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "icmp_type_code": {
+                                      "block": {
+                                        "attributes": {
+                                          "code": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    },
+                                    "port_range": {
+                                      "block": {
+                                        "attributes": {
+                                          "from": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          },
+                                          "to": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "set"
+                              },
+                              "last_entry": {
+                                "block": {
+                                  "attributes": {
+                                    "cidr_block": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "egress": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "bool"
+                                    },
+                                    "ipv6_cidr_block": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "protocol": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "rule_action": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "icmp_type_code": {
+                                      "block": {
+                                        "attributes": {
+                                          "code": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    },
+                                    "port_range": {
+                                      "block": {
+                                        "attributes": {
+                                          "from": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          },
+                                          "to": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "set"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "network_firewall_policy": {
                     "block": {
                       "attributes": {
