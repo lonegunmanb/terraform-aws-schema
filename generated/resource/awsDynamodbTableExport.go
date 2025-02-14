@@ -40,6 +40,12 @@ const awsDynamodbTableExport = `{
         "optional": true,
         "type": "string"
       },
+      "export_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -96,6 +102,33 @@ const awsDynamodbTableExport = `{
       }
     },
     "block_types": {
+      "incremental_export_specification": {
+        "block": {
+          "attributes": {
+            "export_from_time": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "export_to_time": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "export_view_type": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

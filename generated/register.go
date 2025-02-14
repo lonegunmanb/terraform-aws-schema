@@ -243,6 +243,7 @@ func init() {
 	resources["aws_cloudtrail_event_data_store"] = resource.AwsCloudtrailEventDataStoreSchema()  
 	resources["aws_cloudtrail_organization_delegated_admin_account"] = resource.AwsCloudtrailOrganizationDelegatedAdminAccountSchema()  
 	resources["aws_cloudwatch_composite_alarm"] = resource.AwsCloudwatchCompositeAlarmSchema()  
+	resources["aws_cloudwatch_contributor_insight_rule"] = resource.AwsCloudwatchContributorInsightRuleSchema()  
 	resources["aws_cloudwatch_dashboard"] = resource.AwsCloudwatchDashboardSchema()  
 	resources["aws_cloudwatch_event_api_destination"] = resource.AwsCloudwatchEventApiDestinationSchema()  
 	resources["aws_cloudwatch_event_archive"] = resource.AwsCloudwatchEventArchiveSchema()  

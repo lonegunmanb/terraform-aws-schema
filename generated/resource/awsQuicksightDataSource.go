@@ -403,6 +403,13 @@ const awsQuicksightDataSource = `{
             },
             "s3": {
               "block": {
+                "attributes": {
+                  "role_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
                 "block_types": {
                   "manifest_file_location": {
                     "block": {

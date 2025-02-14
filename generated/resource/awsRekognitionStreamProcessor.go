@@ -9,6 +9,11 @@ import (
 const awsRekognitionStreamProcessor = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "kms_key_id": {
         "description": "The identifier for your AWS Key Management Service key (AWS KMS key). You can supply the Amazon Resource Name (ARN) of your KMS key, the ID of your KMS key, an alias for your KMS key, or an alias ARN.",
         "description_kind": "plain",
@@ -29,6 +34,7 @@ const awsRekognitionStreamProcessor = `{
       },
       "stream_processor_arn": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },

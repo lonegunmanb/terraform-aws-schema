@@ -31,6 +31,11 @@ const awsSsmParameter = `{
         "optional": true,
         "type": "string"
       },
+      "has_value_wo": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -94,6 +99,17 @@ const awsSsmParameter = `{
         "optional": true,
         "sensitive": true,
         "type": "string"
+      },
+      "value_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string"
+      },
+      "value_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       },
       "version": {
         "computed": true,
