@@ -348,6 +348,17 @@ const awsDbInstance = `{
         "sensitive": true,
         "type": "string"
       },
+      "password_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string"
+      },
+      "password_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "performance_insights_enabled": {
         "description_kind": "plain",
         "optional": true,

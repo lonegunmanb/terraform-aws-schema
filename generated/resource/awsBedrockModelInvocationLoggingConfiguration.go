@@ -20,18 +20,27 @@ const awsBedrockModelInvocationLoggingConfiguration = `{
         "block": {
           "attributes": {
             "embedding_data_delivery_enabled": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "bool"
             },
             "image_data_delivery_enabled": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "bool"
             },
             "text_data_delivery_enabled": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
+              "type": "bool"
+            },
+            "video_data_delivery_enabled": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
               "type": "bool"
             }
           },

@@ -26,6 +26,16 @@ const awsRedshiftserverlessNamespace = `{
         "sensitive": true,
         "type": "string"
       },
+      "admin_user_password_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "admin_user_password_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "admin_username": {
         "computed": true,
         "description_kind": "plain",

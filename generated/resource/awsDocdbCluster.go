@@ -138,6 +138,16 @@ const awsDocdbCluster = `{
         "sensitive": true,
         "type": "string"
       },
+      "master_password_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "master_password_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "master_username": {
         "computed": true,
         "description_kind": "plain",

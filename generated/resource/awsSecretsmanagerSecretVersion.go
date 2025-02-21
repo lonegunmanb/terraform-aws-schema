@@ -14,6 +14,11 @@ const awsSecretsmanagerSecretVersion = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "has_secret_string_wo": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -36,6 +41,17 @@ const awsSecretsmanagerSecretVersion = `{
         "optional": true,
         "sensitive": true,
         "type": "string"
+      },
+      "secret_string_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string"
+      },
+      "secret_string_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       },
       "version_id": {
         "computed": true,

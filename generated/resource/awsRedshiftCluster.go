@@ -204,6 +204,17 @@ const awsRedshiftCluster = `{
         "optional": true,
         "type": "string"
       },
+      "master_password_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string"
+      },
+      "master_password_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "master_username": {
         "description_kind": "plain",
         "optional": true,
