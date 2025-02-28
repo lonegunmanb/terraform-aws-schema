@@ -557,6 +557,26 @@ const awsEc2Fleet = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
+            },
+            "max_total_price": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "min_target_capacity": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "single_availability_zone": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "single_instance_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
             }
           },
           "block_types": {

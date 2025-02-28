@@ -88,10 +88,22 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "cluster_scalability_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "copy_tags_to_snapshot": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
+      },
+      "database_insights_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "database_name": {
         "computed": true,
@@ -263,7 +275,8 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "optional": true,
         "sensitive": true,
-        "type": "string"
+        "type": "string",
+        "write_only": true
       },
       "master_password_wo_version": {
         "description_kind": "plain",

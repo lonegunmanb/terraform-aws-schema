@@ -50,6 +50,16 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "cluster_scalability_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "database_insights_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "database_name": {
         "computed": true,
         "description_kind": "plain",

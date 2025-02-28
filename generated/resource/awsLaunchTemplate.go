@@ -920,6 +920,36 @@ const awsLaunchTemplate = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            },
+            "ena_srd_specification": {
+              "block": {
+                "attributes": {
+                  "ena_srd_enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  }
+                },
+                "block_types": {
+                  "ena_srd_udp_specification": {
+                    "block": {
+                      "attributes": {
+                        "ena_srd_udp_enabled": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "bool"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

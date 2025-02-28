@@ -104,7 +104,8 @@ const awsSsmParameter = `{
         "description_kind": "plain",
         "optional": true,
         "sensitive": true,
-        "type": "string"
+        "type": "string",
+        "write_only": true
       },
       "value_wo_version": {
         "description_kind": "plain",

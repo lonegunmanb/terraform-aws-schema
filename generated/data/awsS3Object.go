@@ -44,6 +44,11 @@ const awsS3Object = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "checksum_crc64nvme": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "checksum_mode": {
         "description_kind": "plain",
         "optional": true,

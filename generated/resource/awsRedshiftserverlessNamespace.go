@@ -29,7 +29,8 @@ const awsRedshiftserverlessNamespace = `{
       "admin_user_password_wo": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "string",
+        "write_only": true
       },
       "admin_user_password_wo_version": {
         "description_kind": "plain",

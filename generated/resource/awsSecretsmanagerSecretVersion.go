@@ -46,7 +46,8 @@ const awsSecretsmanagerSecretVersion = `{
         "description_kind": "plain",
         "optional": true,
         "sensitive": true,
-        "type": "string"
+        "type": "string",
+        "write_only": true
       },
       "secret_string_wo_version": {
         "description_kind": "plain",

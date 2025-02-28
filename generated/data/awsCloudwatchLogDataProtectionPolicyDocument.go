@@ -37,6 +37,34 @@ const awsCloudwatchLogDataProtectionPolicyDocument = `{
       }
     },
     "block_types": {
+      "configuration": {
+        "block": {
+          "block_types": {
+            "custom_data_identifier": {
+              "block": {
+                "attributes": {
+                  "name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "regex": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 10,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "statement": {
         "block": {
           "attributes": {

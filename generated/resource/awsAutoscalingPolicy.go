@@ -535,6 +535,11 @@ const awsAutoscalingPolicy = `{
                     "optional": true,
                     "type": "string"
                   },
+                  "period": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
                   "statistic": {
                     "description_kind": "plain",
                     "optional": true,

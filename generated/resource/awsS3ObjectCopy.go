@@ -52,6 +52,11 @@ const awsS3ObjectCopy = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "checksum_crc64nvme": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "checksum_sha1": {
         "computed": true,
         "description_kind": "plain",
