@@ -44,6 +44,7 @@ const awsOpsworksPermission = `{
         "type": "string"
       }
     },
+    "deprecated": true,
     "description_kind": "plain"
   },
   "version": 0

@@ -12,7 +12,7 @@ const awsSecretsmanagerRandomPassword = `{
       "exclude_characters": {
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": "string"
       },
       "exclude_lowercase": {
         "description_kind": "plain",

@@ -9,6 +9,11 @@ import (
 const awsCloudfrontOriginAccessControl = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "description": {
         "description_kind": "plain",
         "optional": true,

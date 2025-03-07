@@ -24,6 +24,12 @@ const awsEc2ClientVpnEndpoint = `{
         "optional": true,
         "type": "string"
       },
+      "disconnect_on_session_timeout": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "dns_name": {
         "computed": true,
         "description_kind": "plain",

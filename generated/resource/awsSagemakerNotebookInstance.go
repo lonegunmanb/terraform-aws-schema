@@ -10,6 +10,7 @@ const awsSagemakerNotebookInstance = `{
   "block": {
     "attributes": {
       "accelerator_types": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

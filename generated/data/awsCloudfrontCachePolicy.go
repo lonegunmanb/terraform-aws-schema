@@ -9,6 +9,11 @@ import (
 const awsCloudfrontCachePolicy = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "comment": {
         "computed": true,
         "description_kind": "plain",

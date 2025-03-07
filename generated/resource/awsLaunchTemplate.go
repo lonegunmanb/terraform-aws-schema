@@ -298,6 +298,7 @@ const awsLaunchTemplate = `{
               "type": "string"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "list"
@@ -311,6 +312,7 @@ const awsLaunchTemplate = `{
               "type": "string"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,

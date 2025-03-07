@@ -100,6 +100,26 @@ const awsOpensearchDomain = `{
               "instance_count": "number",
               "instance_type": "string",
               "multi_az_with_standby_enabled": "bool",
+              "node_options": [
+                "list",
+                [
+                  "object",
+                  {
+                    "node_config": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "count": "number",
+                          "enabled": "bool",
+                          "type": "string"
+                        }
+                      ]
+                    ],
+                    "node_type": "string"
+                  }
+                ]
+              ],
               "warm_count": "number",
               "warm_enabled": "bool",
               "warm_type": "string",

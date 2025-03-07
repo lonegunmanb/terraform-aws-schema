@@ -9,6 +9,11 @@ import (
 const awsRoute53TrafficPolicyInstance = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "hosted_zone_id": {
         "description_kind": "plain",
         "required": true,

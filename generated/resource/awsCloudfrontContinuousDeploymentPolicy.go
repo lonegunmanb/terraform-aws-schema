@@ -9,6 +9,11 @@ import (
 const awsCloudfrontContinuousDeploymentPolicy = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "enabled": {
         "description_kind": "plain",
         "required": true,

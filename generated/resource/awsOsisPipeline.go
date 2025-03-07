@@ -163,6 +163,11 @@ const awsOsisPipeline = `{
                 "set",
                 "string"
               ]
+            },
+            "vpc_endpoint_management": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

@@ -9,6 +9,11 @@ import (
 const awsCloudfrontOriginAccessIdentity = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "caller_reference": {
         "computed": true,
         "description_kind": "plain",

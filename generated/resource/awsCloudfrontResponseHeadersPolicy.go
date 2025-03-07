@@ -9,6 +9,11 @@ import (
 const awsCloudfrontResponseHeadersPolicy = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "comment": {
         "description_kind": "plain",
         "optional": true,

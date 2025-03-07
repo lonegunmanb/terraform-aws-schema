@@ -296,6 +296,49 @@ const awsOpensearchDomain = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "node_options": {
+              "block": {
+                "attributes": {
+                  "node_type": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "node_config": {
+                    "block": {
+                      "attributes": {
+                        "count": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "enabled": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "bool"
+                        },
+                        "type": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "zone_awareness_config": {
               "block": {
                 "attributes": {

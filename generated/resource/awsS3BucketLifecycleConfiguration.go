@@ -184,9 +184,8 @@ const awsS3BucketLifecycleConfiguration = `{
                     "type": "number"
                   },
                   "noncurrent_days": {
-                    "computed": true,
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "number"
                   }
                 },
@@ -204,9 +203,8 @@ const awsS3BucketLifecycleConfiguration = `{
                     "type": "number"
                   },
                   "noncurrent_days": {
-                    "computed": true,
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "number"
                   },
                   "storage_class": {

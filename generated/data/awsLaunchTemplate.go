@@ -123,6 +123,7 @@ const awsLaunchTemplate = `{
       },
       "elastic_gpu_specifications": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": [
           "list",
@@ -136,6 +137,7 @@ const awsLaunchTemplate = `{
       },
       "elastic_inference_accelerator": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": [
           "list",
