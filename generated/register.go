@@ -1636,6 +1636,7 @@ func init() {
 	dataSources["aws_customer_gateway"] = data.AwsCustomerGatewaySchema()  
 	dataSources["aws_datapipeline_pipeline"] = data.AwsDatapipelinePipelineSchema()  
 	dataSources["aws_datapipeline_pipeline_definition"] = data.AwsDatapipelinePipelineDefinitionSchema()  
+	dataSources["aws_datazone_domain"] = data.AwsDatazoneDomainSchema()  
 	dataSources["aws_datazone_environment_blueprint"] = data.AwsDatazoneEnvironmentBlueprintSchema()  
 	dataSources["aws_db_cluster_snapshot"] = data.AwsDbClusterSnapshotSchema()  
 	dataSources["aws_db_event_categories"] = data.AwsDbEventCategoriesSchema()  
