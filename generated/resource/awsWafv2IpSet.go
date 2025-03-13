@@ -44,8 +44,15 @@ const awsWafv2IpSet = `{
         "type": "string"
       },
       "name": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "string"
+      },
+      "name_prefix": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "scope": {

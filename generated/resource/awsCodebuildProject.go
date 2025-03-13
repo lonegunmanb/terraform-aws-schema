@@ -552,6 +552,25 @@ const awsCodebuildProject = `{
             }
           },
           "block_types": {
+            "auth": {
+              "block": {
+                "attributes": {
+                  "resource": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "build_status_config": {
               "block": {
                 "attributes": {
@@ -626,6 +645,25 @@ const awsCodebuildProject = `{
             }
           },
           "block_types": {
+            "auth": {
+              "block": {
+                "attributes": {
+                  "resource": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "build_status_config": {
               "block": {
                 "attributes": {

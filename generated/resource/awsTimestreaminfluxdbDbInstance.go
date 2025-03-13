@@ -81,6 +81,13 @@ const awsTimestreaminfluxdbDbInstance = `{
         "required": true,
         "type": "string"
       },
+      "network_type": {
+        "computed": true,
+        "description": "Specifies whether the networkType of the Timestream for InfluxDB instance is \n\t\t\t\t\tIPV4, which can communicate over IPv4 protocol only, or DUAL, which can communicate \n\t\t\t\t\tover both IPv4 and IPv6 protocols.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "organization": {
         "description": "The name of the initial organization for the initial admin user in InfluxDB. An \n\t\t\t\t\tInfluxDB organization is a workspace for a group of users.",
         "description_kind": "plain",
@@ -93,6 +100,13 @@ const awsTimestreaminfluxdbDbInstance = `{
         "required": true,
         "sensitive": true,
         "type": "string"
+      },
+      "port": {
+        "computed": true,
+        "description": "The port number on which InfluxDB accepts connections.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       },
       "publicly_accessible": {
         "computed": true,
