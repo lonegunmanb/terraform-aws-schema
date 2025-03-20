@@ -74,7 +74,7 @@ const awsVpcIpams = `{
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

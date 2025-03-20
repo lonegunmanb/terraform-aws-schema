@@ -19,6 +19,11 @@ const awsEbsVolume = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "create_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "encrypted": {
         "computed": true,
         "description_kind": "plain",

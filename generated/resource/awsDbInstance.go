@@ -91,6 +91,12 @@ const awsDbInstance = `{
         "optional": true,
         "type": "bool"
       },
+      "database_insights_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "db_name": {
         "computed": true,
         "description_kind": "plain",

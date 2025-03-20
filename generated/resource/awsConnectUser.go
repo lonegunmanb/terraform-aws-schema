@@ -101,6 +101,11 @@ const awsConnectUser = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "secondary_email": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

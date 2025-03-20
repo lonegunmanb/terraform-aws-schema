@@ -141,6 +141,19 @@ const awsLb = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "ipam_pools": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "ipv4_ipam_pool_id": "string"
+            }
+          ]
+        ]
+      },
       "load_balancer_type": {
         "computed": true,
         "description_kind": "plain",

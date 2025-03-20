@@ -166,6 +166,21 @@ const awsKendraDataSource = `{
                     "nesting_mode": "list"
                   }
                 },
+                "deprecated": true,
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "template_configuration": {
+              "block": {
+                "attributes": {
+                  "template": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,
@@ -319,6 +334,7 @@ const awsKendraDataSource = `{
                     "nesting_mode": "list"
                   }
                 },
+                "deprecated": true,
                 "description_kind": "plain"
               },
               "max_items": 1,

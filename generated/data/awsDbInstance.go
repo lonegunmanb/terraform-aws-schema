@@ -39,6 +39,11 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "database_insights_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "db_cluster_identifier": {
         "computed": true,
         "description_kind": "plain",

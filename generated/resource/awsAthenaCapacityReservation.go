@@ -6,73 +6,27 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEbsVolume = `{
+const awsAthenaCapacityReservation = `{
   "block": {
     "attributes": {
+      "allocated_dpus": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "availability_zone": {
+      "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "create_time": {
+      "status": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "encrypted": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "final_snapshot": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "iops": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "kms_key_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "multi_attach_enabled": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "outpost_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "size": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "snapshot_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "tags": {
@@ -86,23 +40,15 @@ const awsEbsVolume = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
       },
-      "throughput": {
-        "computed": true,
+      "target_dpus": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "number"
-      },
-      "type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {
@@ -110,16 +56,19 @@ const awsEbsVolume = `{
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -135,8 +84,8 @@ const awsEbsVolume = `{
   "version": 0
 }`
 
-func AwsEbsVolumeSchema() *tfjson.Schema {
+func AwsAthenaCapacityReservationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEbsVolume), &result)
+	_ = json.Unmarshal([]byte(awsAthenaCapacityReservation), &result)
 	return &result
 }
