@@ -611,8 +611,9 @@ const awsCognitoUserPool = `{
         "block": {
           "attributes": {
             "case_sensitive": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "bool"
             }
           },

@@ -56,6 +56,128 @@ const awsCodepipeline = `{
           "map",
           "string"
         ]
+      },
+      "trigger_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "git_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "pull_request": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "branches": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "excludes": [
+                                  "list",
+                                  "string"
+                                ],
+                                "includes": [
+                                  "list",
+                                  "string"
+                                ]
+                              }
+                            ]
+                          ],
+                          "events": [
+                            "list",
+                            "string"
+                          ],
+                          "file_paths": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "excludes": [
+                                  "list",
+                                  "string"
+                                ],
+                                "includes": [
+                                  "list",
+                                  "string"
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "push": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "branches": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "excludes": [
+                                  "list",
+                                  "string"
+                                ],
+                                "includes": [
+                                  "list",
+                                  "string"
+                                ]
+                              }
+                            ]
+                          ],
+                          "file_paths": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "excludes": [
+                                  "list",
+                                  "string"
+                                ],
+                                "includes": [
+                                  "list",
+                                  "string"
+                                ]
+                              }
+                            ]
+                          ],
+                          "tags": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "excludes": [
+                                  "list",
+                                  "string"
+                                ],
+                                "includes": [
+                                  "list",
+                                  "string"
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "source_action_name": "string"
+                  }
+                ]
+              ],
+              "provider_type": "string"
+            }
+          ]
+        ]
       }
     },
     "block_types": {

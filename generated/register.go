@@ -63,6 +63,7 @@ func init() {
 	resources["aws_api_gateway_resource"] = resource.AwsApiGatewayResourceSchema()  
 	resources["aws_api_gateway_rest_api"] = resource.AwsApiGatewayRestApiSchema()  
 	resources["aws_api_gateway_rest_api_policy"] = resource.AwsApiGatewayRestApiPolicySchema()  
+	resources["aws_api_gateway_rest_api_put"] = resource.AwsApiGatewayRestApiPutSchema()  
 	resources["aws_api_gateway_stage"] = resource.AwsApiGatewayStageSchema()  
 	resources["aws_api_gateway_usage_plan"] = resource.AwsApiGatewayUsagePlanSchema()  
 	resources["aws_api_gateway_usage_plan_key"] = resource.AwsApiGatewayUsagePlanKeySchema()  

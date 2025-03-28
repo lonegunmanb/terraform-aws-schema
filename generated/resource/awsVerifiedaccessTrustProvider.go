@@ -73,6 +73,56 @@ const awsVerifiedaccessTrustProvider = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "native_application_oidc_options": {
+        "block": {
+          "attributes": {
+            "authorization_endpoint": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "client_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "client_secret": {
+              "description_kind": "plain",
+              "required": true,
+              "sensitive": true,
+              "type": "string"
+            },
+            "issuer": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "public_signing_key_endpoint": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "scope": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "token_endpoint": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "user_info_endpoint": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "oidc_options": {
         "block": {
           "attributes": {
@@ -108,6 +158,25 @@ const awsVerifiedaccessTrustProvider = `{
               "type": "string"
             },
             "user_info_endpoint": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "sse_specification": {
+        "block": {
+          "attributes": {
+            "customer_managed_key_enabled": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "kms_key_arn": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

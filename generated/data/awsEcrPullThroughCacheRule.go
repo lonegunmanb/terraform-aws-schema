@@ -14,6 +14,11 @@ const awsEcrPullThroughCacheRule = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "custom_role_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "ecr_repository_prefix": {
         "description_kind": "plain",
         "required": true,
@@ -31,6 +36,11 @@ const awsEcrPullThroughCacheRule = `{
         "type": "string"
       },
       "upstream_registry_url": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "upstream_repository_prefix": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

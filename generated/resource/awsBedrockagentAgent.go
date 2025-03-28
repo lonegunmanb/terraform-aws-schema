@@ -86,6 +86,24 @@ const awsBedrockagentAgent = `{
         "optional": true,
         "type": "string"
       },
+      "memory_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "enabled_memory_types": [
+                "list",
+                "string"
+              ],
+              "storage_days": "number"
+            }
+          ]
+        ]
+      },
       "prepare_agent": {
         "computed": true,
         "description_kind": "plain",

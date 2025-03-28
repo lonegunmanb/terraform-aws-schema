@@ -11,7 +11,7 @@ const awsVerifiedaccessEndpoint = `{
     "attributes": {
       "application_domain": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "attachment_type": {
@@ -31,7 +31,7 @@ const awsVerifiedaccessEndpoint = `{
       },
       "domain_certificate_arn": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "endpoint_domain": {
@@ -41,7 +41,7 @@ const awsVerifiedaccessEndpoint = `{
       },
       "endpoint_domain_prefix": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "endpoint_type": {
@@ -97,6 +97,54 @@ const awsVerifiedaccessEndpoint = `{
       }
     },
     "block_types": {
+      "cidr_options": {
+        "block": {
+          "attributes": {
+            "cidr": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "protocol": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "subnet_ids": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "block_types": {
+            "port_range": {
+              "block": {
+                "attributes": {
+                  "from_port": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "to_port": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "min_items": 1,
+              "nesting_mode": "set"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "load_balancer_options": {
         "block": {
           "attributes": {
@@ -124,6 +172,26 @@ const awsVerifiedaccessEndpoint = `{
               ]
             }
           },
+          "block_types": {
+            "port_range": {
+              "block": {
+                "attributes": {
+                  "from_port": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "to_port": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            }
+          },
           "description_kind": "plain"
         },
         "max_items": 1,
@@ -146,6 +214,73 @@ const awsVerifiedaccessEndpoint = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            }
+          },
+          "block_types": {
+            "port_range": {
+              "block": {
+                "attributes": {
+                  "from_port": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "to_port": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "rds_options": {
+        "block": {
+          "attributes": {
+            "port": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "protocol": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "rds_db_cluster_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "rds_db_instance_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "rds_db_proxy_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "rds_endpoint": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "subnet_ids": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
             }
           },
           "description_kind": "plain"

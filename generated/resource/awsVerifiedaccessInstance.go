@@ -9,6 +9,11 @@ import (
 const awsVerifiedaccessInstance = `{
   "block": {
     "attributes": {
+      "cidr_endpoints_custom_subdomain": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "creation_time": {
         "computed": true,
         "description_kind": "plain",
@@ -34,6 +39,14 @@ const awsVerifiedaccessInstance = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "name_servers": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "tags": {
         "description_kind": "plain",
