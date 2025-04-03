@@ -60,7 +60,6 @@ const awsSsmParameter = `{
         "type": "string"
       },
       "overwrite": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

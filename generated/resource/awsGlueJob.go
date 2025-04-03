@@ -192,6 +192,56 @@ const awsGlueJob = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "source_control_details": {
+        "block": {
+          "attributes": {
+            "auth_strategy": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "auth_token": {
+              "description_kind": "plain",
+              "optional": true,
+              "sensitive": true,
+              "type": "string"
+            },
+            "branch": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "folder": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "last_commit_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "owner": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "provider": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "repository": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

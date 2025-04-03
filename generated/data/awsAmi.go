@@ -117,6 +117,11 @@ const awsAmi = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "last_launched_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "most_recent": {
         "description_kind": "plain",
         "optional": true,

@@ -91,6 +91,11 @@ const awsAmiCopy = `{
         "optional": true,
         "type": "string"
       },
+      "last_launched_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "manage_ebs_snapshots": {
         "computed": true,
         "description_kind": "plain",

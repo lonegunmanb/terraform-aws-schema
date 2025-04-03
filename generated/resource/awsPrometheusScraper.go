@@ -73,6 +73,24 @@ const awsPrometheusScraper = `{
         },
         "nesting_mode": "list"
       },
+      "role_configuration": {
+        "block": {
+          "attributes": {
+            "source_role_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "target_role_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "source": {
         "block": {
           "block_types": {

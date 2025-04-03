@@ -325,6 +325,7 @@ const awsEcsService = `{
               "type": "bool"
             },
             "namespace": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -378,6 +379,7 @@ const awsEcsService = `{
               "block": {
                 "attributes": {
                   "discovery_name": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
@@ -398,6 +400,7 @@ const awsEcsService = `{
                     "block": {
                       "attributes": {
                         "dns_name": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
