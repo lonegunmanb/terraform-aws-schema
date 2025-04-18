@@ -153,6 +153,25 @@ const awsRedshiftserverlessWorkgroup = `{
         },
         "nesting_mode": "set"
       },
+      "price_performance_target": {
+        "block": {
+          "attributes": {
+            "enabled": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "bool"
+            },
+            "level": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

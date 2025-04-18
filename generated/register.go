@@ -1083,6 +1083,7 @@ func init() {
 	resources["aws_redshift_event_subscription"] = resource.AwsRedshiftEventSubscriptionSchema()  
 	resources["aws_redshift_hsm_client_certificate"] = resource.AwsRedshiftHsmClientCertificateSchema()  
 	resources["aws_redshift_hsm_configuration"] = resource.AwsRedshiftHsmConfigurationSchema()  
+	resources["aws_redshift_integration"] = resource.AwsRedshiftIntegrationSchema()  
 	resources["aws_redshift_logging"] = resource.AwsRedshiftLoggingSchema()  
 	resources["aws_redshift_parameter_group"] = resource.AwsRedshiftParameterGroupSchema()  
 	resources["aws_redshift_partner"] = resource.AwsRedshiftPartnerSchema()  

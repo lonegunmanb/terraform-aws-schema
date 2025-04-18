@@ -55,6 +55,11 @@ const awsEksCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "force_update_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

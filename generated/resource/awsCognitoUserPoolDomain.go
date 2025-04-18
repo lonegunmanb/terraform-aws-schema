@@ -45,6 +45,12 @@ const awsCognitoUserPoolDomain = `{
         "optional": true,
         "type": "string"
       },
+      "managed_login_version": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "s3_bucket": {
         "computed": true,
         "description_kind": "plain",

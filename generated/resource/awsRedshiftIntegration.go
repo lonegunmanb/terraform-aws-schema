@@ -6,30 +6,39 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsPrometheusScraper = `{
+const awsRedshiftIntegration = `{
   "block": {
     "attributes": {
-      "alias": {
+      "additional_encryption_context": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": [
+          "map",
+          "string"
+        ]
       },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "id": {
-        "computed": true,
+      "description": {
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
-      "role_arn": {
-        "computed": true,
+      "integration_name": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "scrape_configuration": {
+      "kms_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "source_arn": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -49,86 +58,14 @@ const awsPrometheusScraper = `{
           "map",
           "string"
         ]
+      },
+      "target_arn": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "destination": {
-        "block": {
-          "block_types": {
-            "amp": {
-              "block": {
-                "attributes": {
-                  "workspace_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "role_configuration": {
-        "block": {
-          "attributes": {
-            "source_role_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "target_role_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "source": {
-        "block": {
-          "block_types": {
-            "eks": {
-              "block": {
-                "attributes": {
-                  "cluster_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "security_group_ids": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  },
-                  "subnet_ids": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {
@@ -161,8 +98,8 @@ const awsPrometheusScraper = `{
   "version": 0
 }`
 
-func AwsPrometheusScraperSchema() *tfjson.Schema {
+func AwsRedshiftIntegrationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsPrometheusScraper), &result)
+	_ = json.Unmarshal([]byte(awsRedshiftIntegration), &result)
 	return &result
 }

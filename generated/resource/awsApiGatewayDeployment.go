@@ -21,6 +21,7 @@ const awsApiGatewayDeployment = `{
       },
       "execution_arn": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
@@ -32,6 +33,7 @@ const awsApiGatewayDeployment = `{
       },
       "invoke_url": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },

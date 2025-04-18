@@ -40,6 +40,11 @@ const awsAmplifyApp = `{
         "optional": true,
         "type": "string"
       },
+      "compute_role_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "custom_headers": {
         "computed": true,
         "description_kind": "plain",

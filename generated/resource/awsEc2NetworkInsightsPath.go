@@ -78,6 +78,126 @@ const awsEc2NetworkInsightsPath = `{
         ]
       }
     },
+    "block_types": {
+      "filter_at_destination": {
+        "block": {
+          "attributes": {
+            "destination_address": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "source_address": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "destination_port_range": {
+              "block": {
+                "attributes": {
+                  "from_port": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "to_port": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "source_port_range": {
+              "block": {
+                "attributes": {
+                  "from_port": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "to_port": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "filter_at_source": {
+        "block": {
+          "attributes": {
+            "destination_address": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "source_address": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "destination_port_range": {
+              "block": {
+                "attributes": {
+                  "from_port": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "to_port": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "source_port_range": {
+              "block": {
+                "attributes": {
+                  "from_port": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "to_port": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      }
+    },
     "description_kind": "plain"
   },
   "version": 0

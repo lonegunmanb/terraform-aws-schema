@@ -34,6 +34,74 @@ const awsEc2NetworkInsightsPath = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "filter_at_destination": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "destination_address": "string",
+              "destination_port_range": [
+                "list",
+                [
+                  "object",
+                  {
+                    "from_port": "number",
+                    "to_port": "number"
+                  }
+                ]
+              ],
+              "source_address": "string",
+              "source_port_range": [
+                "list",
+                [
+                  "object",
+                  {
+                    "from_port": "number",
+                    "to_port": "number"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
+      "filter_at_source": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "destination_address": "string",
+              "destination_port_range": [
+                "list",
+                [
+                  "object",
+                  {
+                    "from_port": "number",
+                    "to_port": "number"
+                  }
+                ]
+              ],
+              "source_address": "string",
+              "source_port_range": [
+                "list",
+                [
+                  "object",
+                  {
+                    "from_port": "number",
+                    "to_port": "number"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

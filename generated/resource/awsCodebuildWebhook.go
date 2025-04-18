@@ -25,6 +25,11 @@ const awsCodebuildWebhook = `{
         "optional": true,
         "type": "string"
       },
+      "manual_creation": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "payload_url": {
         "computed": true,
         "description_kind": "plain",
