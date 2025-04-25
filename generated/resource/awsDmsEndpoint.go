@@ -311,6 +311,11 @@ const awsDmsEndpoint = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "use_large_integer_value": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
             }
           },
           "description_kind": "plain"

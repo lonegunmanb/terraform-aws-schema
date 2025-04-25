@@ -67,6 +67,12 @@ const awsApigatewayv2DomainName = `{
               "description_kind": "plain",
               "type": "string"
             },
+            "ip_address_type": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "ownership_verification_certificate_arn": {
               "computed": true,
               "description_kind": "plain",

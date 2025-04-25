@@ -113,7 +113,8 @@ const awsDmsEndpoint = `{
               "message_format": "string",
               "partition_include_schema_table": "bool",
               "service_access_role_arn": "string",
-              "stream_arn": "string"
+              "stream_arn": "string",
+              "use_large_integer_value": "bool"
             }
           ]
         ]

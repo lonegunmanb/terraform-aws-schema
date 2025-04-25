@@ -60,6 +60,12 @@ const awsApigatewayv2Api = `{
         "optional": true,
         "type": "string"
       },
+      "ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,

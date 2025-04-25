@@ -134,6 +134,77 @@ const awsFisExperimentTemplate = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "experiment_report_configuration": {
+        "block": {
+          "attributes": {
+            "post_experiment_duration": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "pre_experiment_duration": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "data_sources": {
+              "block": {
+                "block_types": {
+                  "cloudwatch_dashboard": {
+                    "block": {
+                      "attributes": {
+                        "dashboard_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "outputs": {
+              "block": {
+                "block_types": {
+                  "s3_configuration": {
+                    "block": {
+                      "attributes": {
+                        "bucket_name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "prefix": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "log_configuration": {
         "block": {
           "attributes": {

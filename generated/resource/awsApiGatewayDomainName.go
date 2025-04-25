@@ -130,6 +130,12 @@ const awsApiGatewayDomainName = `{
       "endpoint_configuration": {
         "block": {
           "attributes": {
+            "ip_address_type": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "types": {
               "description_kind": "plain",
               "required": true,

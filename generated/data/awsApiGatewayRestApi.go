@@ -40,6 +40,7 @@ const awsApiGatewayRestApi = `{
           [
             "object",
             {
+              "ip_address_type": "string",
               "types": [
                 "list",
                 "string"

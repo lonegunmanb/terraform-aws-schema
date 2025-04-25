@@ -9,6 +9,11 @@ import (
 const awsGuarddutyDetector = `{
   "block": {
     "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "features": {
         "computed": true,
         "description_kind": "plain",
@@ -53,6 +58,15 @@ const awsGuarddutyDetector = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       }
     },
     "description_kind": "plain"
