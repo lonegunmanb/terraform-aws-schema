@@ -14,6 +14,15 @@ const awsGlueConnection = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "athena_properties": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "catalog_id": {
         "computed": true,
         "description_kind": "plain",

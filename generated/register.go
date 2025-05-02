@@ -496,6 +496,7 @@ func init() {
 	resources["aws_ec2_client_vpn_endpoint"] = resource.AwsEc2ClientVpnEndpointSchema()  
 	resources["aws_ec2_client_vpn_network_association"] = resource.AwsEc2ClientVpnNetworkAssociationSchema()  
 	resources["aws_ec2_client_vpn_route"] = resource.AwsEc2ClientVpnRouteSchema()  
+	resources["aws_ec2_default_credit_specification"] = resource.AwsEc2DefaultCreditSpecificationSchema()  
 	resources["aws_ec2_fleet"] = resource.AwsEc2FleetSchema()  
 	resources["aws_ec2_host"] = resource.AwsEc2HostSchema()  
 	resources["aws_ec2_image_block_public_access"] = resource.AwsEc2ImageBlockPublicAccessSchema()  

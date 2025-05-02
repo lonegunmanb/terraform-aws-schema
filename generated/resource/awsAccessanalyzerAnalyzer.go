@@ -61,6 +61,44 @@ const awsAccessanalyzerAnalyzer = `{
                     "type": "number"
                   }
                 },
+                "block_types": {
+                  "analysis_rule": {
+                    "block": {
+                      "block_types": {
+                        "exclusion": {
+                          "block": {
+                            "attributes": {
+                              "account_ids": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "list",
+                                  "string"
+                                ]
+                              },
+                              "resource_tags": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "list",
+                                  [
+                                    "map",
+                                    "string"
+                                  ]
+                                ]
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,

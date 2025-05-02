@@ -100,6 +100,26 @@ const awsWorkspacesDirectory = `{
       }
     },
     "block_types": {
+      "certificate_based_auth_properties": {
+        "block": {
+          "attributes": {
+            "certificate_authority_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "status": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "saml_properties": {
         "block": {
           "attributes": {

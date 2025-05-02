@@ -94,6 +94,22 @@ const awsImagebuilderInfrastructureConfiguration = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "placement": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "availability_zone": "string",
+              "host_id": "string",
+              "host_resource_group_arn": "string",
+              "tenancy": "string"
+            }
+          ]
+        ]
+      },
       "resource_tags": {
         "computed": true,
         "description_kind": "plain",

@@ -155,6 +155,35 @@ const awsImagebuilderInfrastructureConfiguration = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "placement": {
+        "block": {
+          "attributes": {
+            "availability_zone": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "host_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "host_resource_group_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "tenancy": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

@@ -14,6 +14,20 @@ const awsWorkspacesDirectory = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "certificate_based_auth_properties": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "certificate_authority_arn": "string",
+              "status": "string"
+            }
+          ]
+        ]
+      },
       "customer_user_name": {
         "computed": true,
         "description_kind": "plain",

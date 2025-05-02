@@ -24,6 +24,14 @@ const awsNetworkfirewallFirewall = `{
         "optional": true,
         "type": "string"
       },
+      "enabled_analysis_types": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "firewall_policy_arn": {
         "description_kind": "plain",
         "required": true,

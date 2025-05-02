@@ -25,6 +25,14 @@ const awsNetworkfirewallFirewall = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "enabled_analysis_types": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "encryption_configuration": {
         "computed": true,
         "description_kind": "plain",
