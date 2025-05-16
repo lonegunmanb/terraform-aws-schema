@@ -123,6 +123,12 @@ const awsRedshiftserverlessWorkgroup = `{
           "string"
         ]
       },
+      "track_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "workgroup_id": {
         "computed": true,
         "description_kind": "plain",

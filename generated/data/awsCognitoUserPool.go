@@ -258,6 +258,28 @@ const awsCognitoUserPool = `{
           "string"
         ]
       },
+      "user_pool_add_ons": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "advanced_security_additional_flows": [
+                "list",
+                [
+                  "object",
+                  {
+                    "custom_auth_mode": "string"
+                  }
+                ]
+              ],
+              "advanced_security_mode": "string"
+            }
+          ]
+        ]
+      },
       "user_pool_id": {
         "description_kind": "plain",
         "required": true,

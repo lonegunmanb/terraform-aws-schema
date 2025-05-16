@@ -25,6 +25,11 @@ const awsCloudwatchEventConnection = `{
         "optional": true,
         "type": "string"
       },
+      "kms_key_identifier": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,

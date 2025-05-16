@@ -14,6 +14,19 @@ const awsCloudwatchEventBus = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "dead_letter_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "arn": "string"
+            }
+          ]
+        ]
+      },
       "description": {
         "computed": true,
         "description_kind": "plain",

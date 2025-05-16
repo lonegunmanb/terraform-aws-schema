@@ -20,8 +20,9 @@ const awsWorkspacesDirectory = `{
         "type": "string"
       },
       "directory_id": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "directory_name": {
@@ -93,13 +94,53 @@ const awsWorkspacesDirectory = `{
           "string"
         ]
       },
+      "user_identity_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "workspace_directory_description": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "workspace_directory_name": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "workspace_security_group_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "workspace_type": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {
+      "active_directory_config": {
+        "block": {
+          "attributes": {
+            "domain_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "service_account_secret_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "certificate_based_auth_properties": {
         "block": {
           "attributes": {

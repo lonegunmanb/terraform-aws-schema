@@ -9,9 +9,21 @@ import (
 const awsIotDomainConfiguration = `{
   "block": {
     "attributes": {
+      "application_protocol": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "authentication_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "domain_name": {

@@ -110,6 +110,11 @@ const awsBedrockagentAgent = `{
         "optional": true,
         "type": "bool"
       },
+      "prepared_at": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "prompt_override_configuration": {
         "computed": true,
         "description_kind": "plain",

@@ -27,6 +27,35 @@ const awsNetworkfirewallFirewallPolicy = `{
           [
             "object",
             {
+              "policy_variables": [
+                "list",
+                [
+                  "object",
+                  {
+                    "rule_variables": [
+                      "set",
+                      [
+                        "object",
+                        {
+                          "ip_set": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "definition": [
+                                  "set",
+                                  "string"
+                                ]
+                              }
+                            ]
+                          ],
+                          "key": "string"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
               "stateful_default_actions": [
                 "set",
                 "string"

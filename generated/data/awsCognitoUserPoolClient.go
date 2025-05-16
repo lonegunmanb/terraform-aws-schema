@@ -136,6 +136,20 @@ const awsCognitoUserPoolClient = `{
           "string"
         ]
       },
+      "refresh_token_rotation": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "feature": "string",
+              "retry_grace_period_seconds": "number"
+            }
+          ]
+        ]
+      },
       "refresh_token_validity": {
         "computed": true,
         "description_kind": "plain",

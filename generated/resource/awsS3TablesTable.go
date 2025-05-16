@@ -24,6 +24,18 @@ const awsS3TablesTable = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "encryption_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "object",
+          {
+            "kms_key_arn": "string",
+            "sse_algorithm": "string"
+          }
+        ]
+      },
       "format": {
         "description_kind": "plain",
         "required": true,

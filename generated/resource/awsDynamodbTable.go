@@ -348,6 +348,12 @@ const awsDynamodbTable = `{
               "description_kind": "plain",
               "required": true,
               "type": "bool"
+            },
+            "recovery_period_in_days": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             }
           },
           "description_kind": "plain"

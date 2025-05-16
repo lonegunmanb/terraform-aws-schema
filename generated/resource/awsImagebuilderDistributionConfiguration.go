@@ -320,6 +320,29 @@ const awsImagebuilderDistributionConfiguration = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            },
+            "ssm_parameter_configuration": {
+              "block": {
+                "attributes": {
+                  "ami_account_id": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "data_type": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "parameter_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
             }
           },
           "description_kind": "plain"

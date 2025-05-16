@@ -54,6 +54,12 @@ const awsSnsTopic = `{
         "optional": true,
         "type": "string"
       },
+      "fifo_throughput_scope": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "fifo_topic": {
         "description_kind": "plain",
         "optional": true,

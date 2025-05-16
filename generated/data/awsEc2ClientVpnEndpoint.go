@@ -64,6 +64,19 @@ const awsEc2ClientVpnEndpoint = `{
           ]
         ]
       },
+      "client_route_enforcement_options": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "enforced": "bool"
+            }
+          ]
+        ]
+      },
       "client_vpn_endpoint_id": {
         "computed": true,
         "description_kind": "plain",

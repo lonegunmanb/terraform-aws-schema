@@ -198,6 +198,24 @@ const awsCognitoUserPoolClient = `{
         },
         "nesting_mode": "list"
       },
+      "refresh_token_rotation": {
+        "block": {
+          "attributes": {
+            "feature": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "retry_grace_period_seconds": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "token_validity_units": {
         "block": {
           "attributes": {

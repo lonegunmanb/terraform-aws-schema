@@ -31,8 +31,16 @@ const awsRumAppMonitor = `{
       },
       "domain": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
+      },
+      "domain_list": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
       },
       "id": {
         "computed": true,

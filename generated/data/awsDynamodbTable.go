@@ -127,7 +127,8 @@ const awsDynamodbTable = `{
           [
             "object",
             {
-              "enabled": "bool"
+              "enabled": "bool",
+              "recovery_period_in_days": "number"
             }
           ]
         ]

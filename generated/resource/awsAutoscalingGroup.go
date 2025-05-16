@@ -232,6 +232,48 @@ const awsAutoscalingGroup = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "capacity_reservation_specification": {
+        "block": {
+          "attributes": {
+            "capacity_reservation_preference": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "capacity_reservation_target": {
+              "block": {
+                "attributes": {
+                  "capacity_reservation_ids": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "capacity_reservation_resource_group_arns": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "initial_lifecycle_hook": {
         "block": {
           "attributes": {

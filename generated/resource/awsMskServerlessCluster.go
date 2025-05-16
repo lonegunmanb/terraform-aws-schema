@@ -14,6 +14,11 @@ const awsMskServerlessCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "bootstrap_brokers_sasl_iam": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "cluster_name": {
         "description_kind": "plain",
         "required": true,

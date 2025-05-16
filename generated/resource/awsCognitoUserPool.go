@@ -602,6 +602,23 @@ const awsCognitoUserPool = `{
               "type": "string"
             }
           },
+          "block_types": {
+            "advanced_security_additional_flows": {
+              "block": {
+                "attributes": {
+                  "custom_auth_mode": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "max_items": 1,

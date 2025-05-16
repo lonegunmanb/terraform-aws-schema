@@ -132,6 +132,11 @@ const awsDocdbCluster = `{
         "optional": true,
         "type": "string"
       },
+      "manage_master_user_password": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "master_password": {
         "description_kind": "plain",
         "optional": true,
@@ -148,6 +153,21 @@ const awsDocdbCluster = `{
         "description_kind": "plain",
         "optional": true,
         "type": "number"
+      },
+      "master_user_secret": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "kms_key_id": "string",
+              "secret_arn": "string",
+              "secret_status": "string"
+            }
+          ]
+        ]
       },
       "master_username": {
         "computed": true,

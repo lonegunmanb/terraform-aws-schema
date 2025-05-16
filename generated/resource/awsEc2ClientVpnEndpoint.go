@@ -195,6 +195,21 @@ const awsEc2ClientVpnEndpoint = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "client_route_enforcement_options": {
+        "block": {
+          "attributes": {
+            "enforced": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "connection_log_options": {
         "block": {
           "attributes": {

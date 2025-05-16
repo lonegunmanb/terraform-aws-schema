@@ -9,6 +9,20 @@ import (
 const awsWorkspacesDirectory = `{
   "block": {
     "attributes": {
+      "active_directory_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "domain_name": "string",
+              "service_account_secret_arn": "string"
+            }
+          ]
+        ]
+      },
       "alias": {
         "computed": true,
         "description_kind": "plain",
@@ -129,6 +143,11 @@ const awsWorkspacesDirectory = `{
           "string"
         ]
       },
+      "user_identity_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "workspace_access_properties": {
         "computed": true,
         "description_kind": "plain",
@@ -166,7 +185,22 @@ const awsWorkspacesDirectory = `{
           ]
         ]
       },
+      "workspace_directory_description": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "workspace_directory_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "workspace_security_group_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "workspace_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

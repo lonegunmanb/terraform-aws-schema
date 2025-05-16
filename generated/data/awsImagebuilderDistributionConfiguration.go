@@ -161,6 +161,17 @@ const awsImagebuilderDistributionConfiguration = `{
                     "s3_prefix": "string"
                   }
                 ]
+              ],
+              "ssm_parameter_configuration": [
+                "set",
+                [
+                  "object",
+                  {
+                    "ami_account_id": "string",
+                    "data_type": "string",
+                    "parameter_name": "string"
+                  }
+                ]
               ]
             }
           ]
