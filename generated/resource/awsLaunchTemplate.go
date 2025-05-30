@@ -193,6 +193,12 @@ const awsLaunchTemplate = `{
                     "optional": true,
                     "type": "number"
                   },
+                  "volume_initialization_rate": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
                   "volume_size": {
                     "computed": true,
                     "description_kind": "plain",

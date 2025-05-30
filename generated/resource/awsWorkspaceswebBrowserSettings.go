@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,53 +6,54 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVerifiedpermissionsPolicyStore = `{
+const awsWorkspaceswebBrowserSettings = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
+      "additional_encryption_context": {
         "description_kind": "plain",
-        "type": "string"
-      },
-      "created_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "last_updated_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
+        "optional": true,
         "type": [
           "map",
           "string"
         ]
       },
-      "validation_settings": {
+      "associated_portal_arns": {
         "computed": true,
         "description_kind": "plain",
         "type": [
           "list",
-          [
-            "object",
-            {
-              "mode": "string"
-            }
-          ]
+          "string"
+        ]
+      },
+      "browser_policy": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "browser_settings_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "customer_managed_key": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
         ]
       }
     },
@@ -61,8 +62,8 @@ const awsVerifiedpermissionsPolicyStore = `{
   "version": 0
 }`
 
-func AwsVerifiedpermissionsPolicyStoreSchema() *tfjson.Schema {
+func AwsWorkspaceswebBrowserSettingsSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVerifiedpermissionsPolicyStore), &result)
+	_ = json.Unmarshal([]byte(awsWorkspaceswebBrowserSettings), &result)
 	return &result
 }

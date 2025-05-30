@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVerifiedpermissionsPolicyStore = `{
+const awsNotificationscontactsEmailContact = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,45 +14,30 @@ const awsVerifiedpermissionsPolicyStore = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "created_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
+      "email_address": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "last_updated_date": {
-        "computed": true,
+      "name": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "tags": {
-        "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "map",
           "string"
         ]
       },
-      "validation_settings": {
+      "tags_all": {
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
-          [
-            "object",
-            {
-              "mode": "string"
-            }
-          ]
+          "map",
+          "string"
         ]
       }
     },
@@ -61,8 +46,8 @@ const awsVerifiedpermissionsPolicyStore = `{
   "version": 0
 }`
 
-func AwsVerifiedpermissionsPolicyStoreSchema() *tfjson.Schema {
+func AwsNotificationscontactsEmailContactSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVerifiedpermissionsPolicyStore), &result)
+	_ = json.Unmarshal([]byte(awsNotificationscontactsEmailContact), &result)
 	return &result
 }

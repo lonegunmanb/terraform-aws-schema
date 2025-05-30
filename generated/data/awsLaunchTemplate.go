@@ -34,6 +34,7 @@ const awsLaunchTemplate = `{
                     "kms_key_id": "string",
                     "snapshot_id": "string",
                     "throughput": "number",
+                    "volume_initialization_rate": "number",
                     "volume_size": "number",
                     "volume_type": "string"
                   }

@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,35 +6,47 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVerifiedpermissionsPolicyStore = `{
+const awsWorkspaceswebNetworkSettings = `{
   "block": {
     "attributes": {
-      "arn": {
+      "associated_portal_arns": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          "string"
+        ]
+      },
+      "network_settings_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "created_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
+      "security_group_ids": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
+        "type": [
+          "set",
+          "string"
+        ]
       },
-      "last_updated_date": {
-        "computed": true,
+      "subnet_ids": {
         "description_kind": "plain",
-        "type": "string"
+        "required": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
         "computed": true,
         "description_kind": "plain",
         "type": [
@@ -42,18 +54,10 @@ const awsVerifiedpermissionsPolicyStore = `{
           "string"
         ]
       },
-      "validation_settings": {
-        "computed": true,
+      "vpc_id": {
         "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "mode": "string"
-            }
-          ]
-        ]
+        "required": true,
+        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -61,8 +65,8 @@ const awsVerifiedpermissionsPolicyStore = `{
   "version": 0
 }`
 
-func AwsVerifiedpermissionsPolicyStoreSchema() *tfjson.Schema {
+func AwsWorkspaceswebNetworkSettingsSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVerifiedpermissionsPolicyStore), &result)
+	_ = json.Unmarshal([]byte(awsWorkspaceswebNetworkSettings), &result)
 	return &result
 }

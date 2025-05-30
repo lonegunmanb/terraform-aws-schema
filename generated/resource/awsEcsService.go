@@ -587,6 +587,11 @@ const awsEcsService = `{
                     "optional": true,
                     "type": "number"
                   },
+                  "volume_initialization_rate": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
                   "volume_type": {
                     "description_kind": "plain",
                     "optional": true,

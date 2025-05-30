@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVerifiedpermissionsPolicyStore = `{
+const awsNotificationsEventRule = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,46 +14,33 @@ const awsVerifiedpermissionsPolicyStore = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "created_date": {
-        "computed": true,
+      "event_pattern": {
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
-      "description": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
+      "event_type": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "last_updated_date": {
-        "computed": true,
+      "notification_configuration_arn": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "tags": {
-        "computed": true,
+      "regions": {
         "description_kind": "plain",
+        "required": true,
         "type": [
-          "map",
+          "set",
           "string"
         ]
       },
-      "validation_settings": {
-        "computed": true,
+      "source": {
         "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "mode": "string"
-            }
-          ]
-        ]
+        "required": true,
+        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -61,8 +48,8 @@ const awsVerifiedpermissionsPolicyStore = `{
   "version": 0
 }`
 
-func AwsVerifiedpermissionsPolicyStoreSchema() *tfjson.Schema {
+func AwsNotificationsEventRuleSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVerifiedpermissionsPolicyStore), &result)
+	_ = json.Unmarshal([]byte(awsNotificationsEventRule), &result)
 	return &result
 }

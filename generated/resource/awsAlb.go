@@ -249,6 +249,20 @@ const awsAlb = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "minimum_load_balancer_capacity": {
+        "block": {
+          "attributes": {
+            "capacity_units": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "subnet_mapping": {
         "block": {
           "attributes": {
