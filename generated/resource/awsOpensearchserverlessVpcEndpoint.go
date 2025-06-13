@@ -15,12 +15,14 @@ const awsOpensearchserverlessVpcEndpoint = `{
         "type": "string"
       },
       "name": {
+        "description": "Name of the interface endpoint.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "security_group_ids": {
         "computed": true,
+        "description": "One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided.",
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -29,6 +31,7 @@ const awsOpensearchserverlessVpcEndpoint = `{
         ]
       },
       "subnet_ids": {
+        "description": "One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided.",
         "description_kind": "plain",
         "required": true,
         "type": [
@@ -37,6 +40,7 @@ const awsOpensearchserverlessVpcEndpoint = `{
         ]
       },
       "vpc_id": {
+        "description": "ID of the VPC from which you'll access OpenSearch Serverless.",
         "description_kind": "plain",
         "required": true,
         "type": "string"

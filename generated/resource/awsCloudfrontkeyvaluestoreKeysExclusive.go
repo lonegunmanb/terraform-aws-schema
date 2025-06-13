@@ -15,6 +15,13 @@ const awsCloudfrontkeyvaluestoreKeysExclusive = `{
         "required": true,
         "type": "string"
       },
+      "max_batch_size": {
+        "computed": true,
+        "description": "Maximum resource key values pairs that you wills update in a single API request. AWS has a default quota of 50 keys or a 3 MB payload, whichever is reached first",
+        "description_kind": "markdown",
+        "optional": true,
+        "type": "number"
+      },
       "total_size_in_bytes": {
         "computed": true,
         "description": "Total size of the Key Value Store in bytes.",

@@ -182,6 +182,11 @@ const awsFsxLustreFileSystem = `{
           "string"
         ]
       },
+      "throughput_capacity": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "vpc_id": {
         "computed": true,
         "description_kind": "plain",
@@ -195,6 +200,25 @@ const awsFsxLustreFileSystem = `{
       }
     },
     "block_types": {
+      "data_read_cache_configuration": {
+        "block": {
+          "attributes": {
+            "size": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "sizing_mode": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "log_configuration": {
         "block": {
           "attributes": {

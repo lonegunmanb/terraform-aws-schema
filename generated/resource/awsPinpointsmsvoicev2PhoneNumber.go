@@ -101,6 +101,11 @@ const awsPinpointsmsvoicev2PhoneNumber = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
+      },
+      "two_way_channel_role": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {

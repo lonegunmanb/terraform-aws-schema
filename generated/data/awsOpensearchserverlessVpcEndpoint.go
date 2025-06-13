@@ -11,6 +11,7 @@ const awsOpensearchserverlessVpcEndpoint = `{
     "attributes": {
       "created_date": {
         "computed": true,
+        "description": "The date the endpoint was created.",
         "description_kind": "plain",
         "type": "string"
       },
@@ -22,11 +23,13 @@ const awsOpensearchserverlessVpcEndpoint = `{
       },
       "name": {
         "computed": true,
+        "description": "The name of the endpoint.",
         "description_kind": "plain",
         "type": "string"
       },
       "security_group_ids": {
         "computed": true,
+        "description": "The IDs of the security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint.",
         "description_kind": "plain",
         "type": [
           "list",
@@ -35,6 +38,7 @@ const awsOpensearchserverlessVpcEndpoint = `{
       },
       "subnet_ids": {
         "computed": true,
+        "description": "The IDs of the subnets from which you access OpenSearch Serverless.",
         "description_kind": "plain",
         "type": [
           "list",
@@ -42,12 +46,14 @@ const awsOpensearchserverlessVpcEndpoint = `{
         ]
       },
       "vpc_endpoint_id": {
+        "description": "The unique identifier of the endpoint.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "vpc_id": {
         "computed": true,
+        "description": "The ID of the VPC from which you access OpenSearch Serverless.",
         "description_kind": "plain",
         "type": "string"
       }

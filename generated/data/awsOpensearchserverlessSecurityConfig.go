@@ -11,31 +11,37 @@ const awsOpensearchserverlessSecurityConfig = `{
     "attributes": {
       "config_version": {
         "computed": true,
+        "description": "The version of the security configuration.",
         "description_kind": "plain",
         "type": "string"
       },
       "created_date": {
         "computed": true,
+        "description": "The date the configuration was created.",
         "description_kind": "plain",
         "type": "string"
       },
       "description": {
         "computed": true,
+        "description": "The description of the security configuration.",
         "description_kind": "plain",
         "type": "string"
       },
       "id": {
+        "description": "The unique identifier of the security configuration.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "last_modified_date": {
         "computed": true,
+        "description": "The date the configuration was last modified.",
         "description_kind": "plain",
         "type": "string"
       },
       "type": {
         "computed": true,
+        "description": "The type of security configuration.",
         "description_kind": "plain",
         "type": "string"
       }
@@ -46,21 +52,25 @@ const awsOpensearchserverlessSecurityConfig = `{
           "attributes": {
             "group_attribute": {
               "computed": true,
+              "description": "Group attribute for this SAML integration.",
               "description_kind": "plain",
               "type": "string"
             },
             "metadata": {
               "computed": true,
+              "description": "The XML IdP metadata file generated from your identity provider.",
               "description_kind": "plain",
               "type": "string"
             },
             "session_timeout": {
               "computed": true,
+              "description": "Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes.",
               "description_kind": "plain",
               "type": "number"
             },
             "user_attribute": {
               "computed": true,
+              "description": "User attribute for this SAML integration.",
               "description_kind": "plain",
               "type": "string"
             }

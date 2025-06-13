@@ -9,6 +9,16 @@ import (
 const awsNeptuneEngineVersion = `{
   "block": {
     "attributes": {
+      "default_character_set": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "default_only": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "engine": {
         "description_kind": "plain",
         "optional": true,
@@ -23,9 +33,19 @@ const awsNeptuneEngineVersion = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
+          "set",
           "string"
         ]
+      },
+      "has_major_target": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "has_minor_target": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       },
       "id": {
         "computed": true,
@@ -33,17 +53,46 @@ const awsNeptuneEngineVersion = `{
         "optional": true,
         "type": "string"
       },
+      "latest": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "parameter_group_family": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
+      "preferred_major_targets": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
+      "preferred_upgrade_targets": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "preferred_versions": {
         "description_kind": "plain",
         "optional": true,
         "type": [
           "list",
+          "string"
+        ]
+      },
+      "supported_character_sets": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
           "string"
         ]
       },
@@ -55,6 +104,11 @@ const awsNeptuneEngineVersion = `{
           "string"
         ]
       },
+      "supports_global_databases": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "supports_log_exports_to_cloudwatch": {
         "computed": true,
         "description_kind": "plain",
@@ -64,6 +118,22 @@ const awsNeptuneEngineVersion = `{
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
+      },
+      "valid_major_targets": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "valid_minor_targets": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "valid_upgrade_targets": {
         "computed": true,
@@ -77,6 +147,11 @@ const awsNeptuneEngineVersion = `{
         "computed": true,
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "version_actual": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "version_description": {

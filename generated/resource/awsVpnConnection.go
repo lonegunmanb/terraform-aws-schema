@@ -65,6 +65,17 @@ const awsVpnConnection = `{
         "optional": true,
         "type": "string"
       },
+      "preshared_key_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "preshared_key_storage": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "remote_ipv4_network_cidr": {
         "computed": true,
         "description_kind": "plain",

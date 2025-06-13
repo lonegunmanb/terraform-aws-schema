@@ -16,15 +16,18 @@ const awsOpensearchserverlessCollection = `{
       },
       "collection_endpoint": {
         "computed": true,
+        "description": "Collection-specific endpoint used to submit index, search, and data upload requests to an OpenSearch Serverless collection.",
         "description_kind": "plain",
         "type": "string"
       },
       "dashboard_endpoint": {
         "computed": true,
+        "description": "Collection-specific endpoint used to access OpenSearch Dashboards.",
         "description_kind": "plain",
         "type": "string"
       },
       "description": {
+        "description": "Description of the collection.",
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -36,16 +39,19 @@ const awsOpensearchserverlessCollection = `{
       },
       "kms_key_arn": {
         "computed": true,
+        "description": "The ARN of the Amazon Web Services KMS key used to encrypt the collection.",
         "description_kind": "plain",
         "type": "string"
       },
       "name": {
+        "description": "Name of the collection.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "standby_replicas": {
         "computed": true,
+        "description": "Indicates whether standby replicas should be used for a collection. One of ` + "`" + `ENABLED` + "`" + ` or ` + "`" + `DISABLED` + "`" + `. Defaults to ` + "`" + `ENABLED` + "`" + `.",
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -68,6 +74,7 @@ const awsOpensearchserverlessCollection = `{
       },
       "type": {
         "computed": true,
+        "description": "Type of collection. One of ` + "`" + `SEARCH` + "`" + `, ` + "`" + `TIMESERIES` + "`" + `, or ` + "`" + `VECTORSEARCH` + "`" + `. Defaults to ` + "`" + `TIMESERIES` + "`" + `.",
         "description_kind": "plain",
         "optional": true,
         "type": "string"

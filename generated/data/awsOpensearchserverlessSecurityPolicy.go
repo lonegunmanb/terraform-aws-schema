@@ -11,11 +11,13 @@ const awsOpensearchserverlessSecurityPolicy = `{
     "attributes": {
       "created_date": {
         "computed": true,
+        "description": "The date the security policy was created.",
         "description_kind": "plain",
         "type": "string"
       },
       "description": {
         "computed": true,
+        "description": "Description of the security policy.",
         "description_kind": "plain",
         "type": "string"
       },
@@ -27,25 +29,30 @@ const awsOpensearchserverlessSecurityPolicy = `{
       },
       "last_modified_date": {
         "computed": true,
+        "description": "The date the security policy was last modified.",
         "description_kind": "plain",
         "type": "string"
       },
       "name": {
+        "description": "Name of the policy.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "policy": {
         "computed": true,
+        "description": "The JSON policy document without any whitespaces.",
         "description_kind": "plain",
         "type": "string"
       },
       "policy_version": {
         "computed": true,
+        "description": "Version of the policy.",
         "description_kind": "plain",
         "type": "string"
       },
       "type": {
+        "description": "Type of security policy. One of ` + "`" + `encryption` + "`" + ` or ` + "`" + `network` + "`" + `.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
