@@ -7,7 +7,7 @@ import (
 	"go/format"
 	"strings"
 	"text/template"
-	
+
 	"github.com/iancoleman/strcase"
 )
 
@@ -40,7 +40,7 @@ import (
 	"testing"
 
 	tfjson "github.com/hashicorp/terraform-json"
-	"github.com/{{ .RepoOwner }}/{{ .GoModule }}/v5/generated/{{ .Package }}"
+	"github.com/{{ .RepoOwner }}/{{ .GoModule }}/v6/generated/{{ .Package }}"
 	"github.com/stretchr/testify/assert"
 )
 

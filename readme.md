@@ -11,7 +11,7 @@ Each tag version of the Terraform AWS Provider has a corresponding tag in this r
 e.g.: to use `aws`'s `5.0.0` schema, you could:
 
 ```shell
-$ go get github.com/lonegunmanb/terraform-aws-schema/v5@v5.0.0
+$ go get github.com/lonegunmanb/terraform-aws-schema/v6@v6.0.0
 ```
 
 Then you can read schemas like this:
@@ -20,7 +20,7 @@ Then you can read schemas like this:
 import (
 "testing"
 
-"github.com/lonegunmanb/terraform-aws-schema/v5/generated"
+"github.com/lonegunmanb/terraform-aws-schema/v6/generated"
 "github.com/stretchr/testify/assert"
 )
 
