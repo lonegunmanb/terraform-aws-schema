@@ -52,6 +52,12 @@ const awsGlueJob = `{
         "optional": true,
         "type": "string"
       },
+      "job_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "job_run_queuing_enabled": {
         "description_kind": "plain",
         "optional": true,

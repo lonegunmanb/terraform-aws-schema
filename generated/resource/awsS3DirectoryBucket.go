@@ -44,6 +44,22 @@ const awsS3DirectoryBucket = `{
         "optional": true,
         "type": "string"
       },
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "type": {
         "computed": true,
         "description_kind": "plain",

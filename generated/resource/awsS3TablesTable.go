@@ -134,6 +134,62 @@ const awsS3TablesTable = `{
         "type": "string"
       }
     },
+    "block_types": {
+      "metadata": {
+        "block": {
+          "block_types": {
+            "iceberg": {
+              "block": {
+                "block_types": {
+                  "schema": {
+                    "block": {
+                      "block_types": {
+                        "field": {
+                          "block": {
+                            "attributes": {
+                              "name": {
+                                "description": "The name of the field.",
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "required": {
+                                "computed": true,
+                                "description": "A Boolean value that specifies whether values are required for each row in this field. Default: false.",
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              },
+                              "type": {
+                                "description": "The field type. S3 Tables supports all Apache Iceberg primitive types.",
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description": "List of schema fields for the Iceberg table.",
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description": "Schema configuration for the Iceberg table.",
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description": "Iceberg metadata configuration.",
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      }
+    },
     "description_kind": "plain"
   },
   "version": 0

@@ -75,6 +75,7 @@ const awsNetworkfirewallFirewallPolicy = `{
                 [
                   "object",
                   {
+                    "deep_threat_inspection": "string",
                     "override": [
                       "list",
                       [

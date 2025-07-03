@@ -283,6 +283,28 @@ const awsCodebuildProject = `{
             }
           },
           "block_types": {
+            "docker_server": {
+              "block": {
+                "attributes": {
+                  "compute_type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "security_group_ids": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "environment_variable": {
               "block": {
                 "attributes": {

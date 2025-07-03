@@ -71,6 +71,12 @@ const awsFmsPolicy = `{
           "string"
         ]
       },
+      "resource_tag_logical_operator": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "resource_tags": {
         "description_kind": "plain",
         "optional": true,

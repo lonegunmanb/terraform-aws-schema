@@ -92,6 +92,11 @@ const awsAmplifyBranch = `{
         "optional": true,
         "type": "bool"
       },
+      "enable_skew_protection": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "environment_variables": {
         "description_kind": "plain",
         "optional": true,

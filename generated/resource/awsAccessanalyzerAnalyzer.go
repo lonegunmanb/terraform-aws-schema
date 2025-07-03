@@ -59,6 +59,56 @@ const awsAccessanalyzerAnalyzer = `{
       "configuration": {
         "block": {
           "block_types": {
+            "internal_access": {
+              "block": {
+                "block_types": {
+                  "analysis_rule": {
+                    "block": {
+                      "block_types": {
+                        "inclusion": {
+                          "block": {
+                            "attributes": {
+                              "account_ids": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "list",
+                                  "string"
+                                ]
+                              },
+                              "resource_arns": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "list",
+                                  "string"
+                                ]
+                              },
+                              "resource_types": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "list",
+                                  "string"
+                                ]
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "unused_access": {
               "block": {
                 "attributes": {

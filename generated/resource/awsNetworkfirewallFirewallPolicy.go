@@ -194,6 +194,12 @@ const awsNetworkfirewallFirewallPolicy = `{
             "stateful_rule_group_reference": {
               "block": {
                 "attributes": {
+                  "deep_threat_inspection": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "priority": {
                     "description_kind": "plain",
                     "optional": true,

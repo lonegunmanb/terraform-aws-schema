@@ -267,6 +267,21 @@ const awsAmplifyApp = `{
           "description_kind": "plain"
         },
         "nesting_mode": "list"
+      },
+      "job_config": {
+        "block": {
+          "attributes": {
+            "build_compute_type": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

@@ -35,6 +35,11 @@ const awsCloudwatchEventArchive = `{
         "optional": true,
         "type": "string"
       },
+      "kms_key_identifier": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,

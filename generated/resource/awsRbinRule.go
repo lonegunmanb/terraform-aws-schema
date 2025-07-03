@@ -71,6 +71,25 @@ const awsRbinRule = `{
       }
     },
     "block_types": {
+      "exclude_resource_tags": {
+        "block": {
+          "attributes": {
+            "resource_tag_key": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "resource_tag_value": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 5,
+        "nesting_mode": "set"
+      },
       "lock_configuration": {
         "block": {
           "block_types": {

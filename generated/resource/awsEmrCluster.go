@@ -97,6 +97,11 @@ const awsEmrCluster = `{
         "required": true,
         "type": "string"
       },
+      "os_release_label": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "placement_group_config": {
         "description_kind": "plain",
         "optional": true,

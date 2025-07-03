@@ -27,8 +27,9 @@ const awsCodeartifactDomainPermissionsPolicy = `{
         "type": "string"
       },
       "policy_document": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "policy_revision": {
