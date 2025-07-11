@@ -127,6 +127,11 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
                 "string"
               ]
             },
+            "dns_support": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "inside_cidr_blocks": {
               "description_kind": "plain",
               "optional": true,
@@ -134,6 +139,11 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
                 "set",
                 "string"
               ]
+            },
+            "security_group_referencing_support": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
             },
             "vpn_ecmp_support": {
               "description_kind": "plain",

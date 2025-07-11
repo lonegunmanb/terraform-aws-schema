@@ -376,6 +376,11 @@ const awsDynamodbTable = `{
               "description_kind": "plain",
               "type": "string"
             },
+            "consistency_mode": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "kms_key_arn": {
               "computed": true,
               "description_kind": "plain",

@@ -1020,6 +1020,7 @@ func init() {
 	resources["aws_pipes_pipe"] = resource.AwsPipesPipeSchema()  
 	resources["aws_placement_group"] = resource.AwsPlacementGroupSchema()  
 	resources["aws_prometheus_alert_manager_definition"] = resource.AwsPrometheusAlertManagerDefinitionSchema()  
+	resources["aws_prometheus_query_logging_configuration"] = resource.AwsPrometheusQueryLoggingConfigurationSchema()  
 	resources["aws_prometheus_rule_group_namespace"] = resource.AwsPrometheusRuleGroupNamespaceSchema()  
 	resources["aws_prometheus_scraper"] = resource.AwsPrometheusScraperSchema()  
 	resources["aws_prometheus_workspace"] = resource.AwsPrometheusWorkspaceSchema()  

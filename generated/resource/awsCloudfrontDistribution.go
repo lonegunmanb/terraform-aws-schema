@@ -17,6 +17,11 @@ const awsCloudfrontDistribution = `{
           "string"
         ]
       },
+      "anycast_ip_list_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",

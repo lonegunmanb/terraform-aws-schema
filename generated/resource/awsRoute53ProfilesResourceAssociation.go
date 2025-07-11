@@ -42,6 +42,7 @@ const awsRoute53ProfilesResourceAssociation = `{
         "type": "string"
       },
       "resource_properties": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
