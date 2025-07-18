@@ -46,6 +46,11 @@ const awsS3BucketPublicAccessBlock = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
+      },
+      "skip_destroy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       }
     },
     "description_kind": "plain"

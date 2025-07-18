@@ -175,6 +175,12 @@ const awsAcmCertificate = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "export": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

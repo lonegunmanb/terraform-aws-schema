@@ -49,7 +49,10 @@ const awsDatazoneEnvironmentBlueprintConfiguration = `{
         "optional": true,
         "type": [
           "map",
-          "string"
+          [
+            "map",
+            "string"
+          ]
         ]
       }
     },

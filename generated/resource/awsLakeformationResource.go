@@ -54,6 +54,12 @@ const awsLakeformationResource = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
+      },
+      "with_privileged_access": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       }
     },
     "description_kind": "plain"

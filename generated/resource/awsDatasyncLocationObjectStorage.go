@@ -16,7 +16,7 @@ const awsDatasyncLocationObjectStorage = `{
       },
       "agent_arns": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": [
           "set",
           "string"

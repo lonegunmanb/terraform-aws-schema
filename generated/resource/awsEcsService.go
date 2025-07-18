@@ -218,6 +218,53 @@ const awsEcsService = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "deployment_configuration": {
+        "block": {
+          "attributes": {
+            "bake_time_in_minutes": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "strategy": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "lifecycle_hook": {
+              "block": {
+                "attributes": {
+                  "hook_target_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "lifecycle_stages": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "role_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "deployment_controller": {
         "block": {
           "attributes": {
@@ -254,6 +301,37 @@ const awsEcsService = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            }
+          },
+          "block_types": {
+            "advanced_configuration": {
+              "block": {
+                "attributes": {
+                  "alternate_target_group_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "production_listener_rule": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "role_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "test_listener_rule": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -421,6 +499,47 @@ const awsEcsService = `{
                           "description_kind": "plain",
                           "required": true,
                           "type": "number"
+                        }
+                      },
+                      "block_types": {
+                        "test_traffic_rules": {
+                          "block": {
+                            "block_types": {
+                              "header": {
+                                "block": {
+                                  "attributes": {
+                                    "name": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "value": {
+                                      "block": {
+                                        "attributes": {
+                                          "exact": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 1,
+                                      "min_items": 1,
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
                         }
                       },
                       "description_kind": "plain"

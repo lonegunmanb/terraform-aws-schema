@@ -44,6 +44,11 @@ const awsBedrockInferenceProfiles = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "type": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "description_kind": "plain"

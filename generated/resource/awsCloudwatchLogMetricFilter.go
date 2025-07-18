@@ -9,6 +9,12 @@ import (
 const awsCloudwatchLogMetricFilter = `{
   "block": {
     "attributes": {
+      "apply_on_transformed_logs": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
