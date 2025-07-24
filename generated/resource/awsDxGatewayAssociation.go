@@ -67,6 +67,11 @@ const awsDxGatewayAssociation = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "transit_gateway_attachment_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "block_types": {
@@ -96,7 +101,7 @@ const awsDxGatewayAssociation = `{
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 2
 }`
 
 func AwsDxGatewayAssociationSchema() *tfjson.Schema {

@@ -161,6 +161,7 @@ const awsDmsEndpoint = `{
             "object",
             {
               "after_connect_script": "string",
+              "authentication_method": "string",
               "babelfish_database_name": "string",
               "capture_ddls": "bool",
               "database_mode": "string",
@@ -175,6 +176,7 @@ const awsDmsEndpoint = `{
               "map_long_varchar_as": "string",
               "max_file_size": "number",
               "plugin_name": "string",
+              "service_access_role_arn": "string",
               "slot_name": "string"
             }
           ]

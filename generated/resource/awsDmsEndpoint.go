@@ -369,10 +369,31 @@ const awsDmsEndpoint = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "oracle_settings": {
+        "block": {
+          "attributes": {
+            "authentication_method": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "postgres_settings": {
         "block": {
           "attributes": {
             "after_connect_script": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "authentication_method": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -443,6 +464,11 @@ const awsDmsEndpoint = `{
               "type": "number"
             },
             "plugin_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "service_access_role_arn": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

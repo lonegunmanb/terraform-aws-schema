@@ -15,6 +15,24 @@ const awsNetworkfirewallFirewall = `{
         "optional": true,
         "type": "string"
       },
+      "availability_zone_change_protection": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "availability_zone_mapping": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "availability_zone_id": "string"
+            }
+          ]
+        ]
+      },
       "delete_protection": {
         "computed": true,
         "description_kind": "plain",
@@ -106,11 +124,23 @@ const awsNetworkfirewallFirewall = `{
                         {
                           "endpoint_id": "string",
                           "status": "string",
+                          "status_message": "string",
                           "subnet_id": "string"
                         }
                       ]
                     ],
                     "availability_zone": "string"
+                  }
+                ]
+              ],
+              "transit_gateway_attachment_sync_states": [
+                "list",
+                [
+                  "object",
+                  {
+                    "attachment_id": "string",
+                    "status_message": "string",
+                    "transit_gateway_attachment_status": "string"
                   }
                 ]
               ]
@@ -163,6 +193,16 @@ const awsNetworkfirewallFirewall = `{
           "map",
           "string"
         ]
+      },
+      "transit_gateway_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "transit_gateway_owner_account_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       },
       "update_token": {
         "computed": true,

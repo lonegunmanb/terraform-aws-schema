@@ -14,6 +14,11 @@ const awsNetworkfirewallFirewall = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "availability_zone_change_protection": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "delete_protection": {
         "description_kind": "plain",
         "optional": true,
@@ -68,6 +73,15 @@ const awsNetworkfirewallFirewall = `{
                     "availability_zone": "string"
                   }
                 ]
+              ],
+              "transit_gateway_attachment_sync_states": [
+                "list",
+                [
+                  "object",
+                  {
+                    "attachment_id": "string"
+                  }
+                ]
               ]
             }
           ]
@@ -113,6 +127,16 @@ const awsNetworkfirewallFirewall = `{
           "string"
         ]
       },
+      "transit_gateway_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "transit_gateway_owner_account_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "update_token": {
         "computed": true,
         "description_kind": "plain",
@@ -120,11 +144,24 @@ const awsNetworkfirewallFirewall = `{
       },
       "vpc_id": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       }
     },
     "block_types": {
+      "availability_zone_mapping": {
+        "block": {
+          "attributes": {
+            "availability_zone_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "encryption_configuration": {
         "block": {
           "attributes": {
@@ -161,7 +198,6 @@ const awsNetworkfirewallFirewall = `{
           },
           "description_kind": "plain"
         },
-        "min_items": 1,
         "nesting_mode": "set"
       },
       "timeouts": {

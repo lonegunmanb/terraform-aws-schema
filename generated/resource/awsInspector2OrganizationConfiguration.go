@@ -32,6 +32,11 @@ const awsInspector2OrganizationConfiguration = `{
       "auto_enable": {
         "block": {
           "attributes": {
+            "code_repository": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "ec2": {
               "description_kind": "plain",
               "required": true,

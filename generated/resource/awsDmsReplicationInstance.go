@@ -37,6 +37,11 @@ const awsDmsReplicationInstance = `{
         "optional": true,
         "type": "string"
       },
+      "dns_name_servers": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "engine_version": {
         "computed": true,
         "description_kind": "plain",
@@ -151,6 +156,30 @@ const awsDmsReplicationInstance = `{
       }
     },
     "block_types": {
+      "kerberos_authentication_settings": {
+        "block": {
+          "attributes": {
+            "key_cache_secret_iam_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "key_cache_secret_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "krb5_file_contents": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
