@@ -54,6 +54,7 @@ const awsNatGateway = `{
         "type": "string"
       },
       "secondary_allocation_ids": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

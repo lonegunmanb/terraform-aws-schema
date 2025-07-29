@@ -191,6 +191,11 @@ const awsBatchComputeEnvironment = `{
                     "optional": true,
                     "type": "string"
                   },
+                  "image_kubernetes_version": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "image_type": {
                     "description_kind": "plain",
                     "optional": true,

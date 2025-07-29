@@ -32,6 +32,12 @@ const awsSsmPatchBaseline = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "available_security_updates_compliance_status": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "description": {
         "description_kind": "plain",
         "optional": true,

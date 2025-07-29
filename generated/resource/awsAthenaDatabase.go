@@ -54,6 +54,11 @@ const awsAthenaDatabase = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "workgroup": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {

@@ -6,29 +6,22 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsAppsyncApiCache = `{
+const awsConnectPhoneNumberContactFlowAssociation = `{
   "block": {
     "attributes": {
-      "api_caching_behavior": {
+      "contact_flow_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "api_id": {
+      "instance_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "at_rest_encryption_enabled": {
-        "computed": true,
+      "phone_number_id": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "region": {
@@ -37,22 +30,6 @@ const awsAppsyncApiCache = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "transit_encryption_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "ttl": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "number"
-      },
-      "type": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -60,8 +37,8 @@ const awsAppsyncApiCache = `{
   "version": 0
 }`
 
-func AwsAppsyncApiCacheSchema() *tfjson.Schema {
+func AwsConnectPhoneNumberContactFlowAssociationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsAppsyncApiCache), &result)
+	_ = json.Unmarshal([]byte(awsConnectPhoneNumberContactFlowAssociation), &result)
 	return &result
 }

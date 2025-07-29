@@ -87,6 +87,22 @@ const awsBedrockGuardrail = `{
     "block_types": {
       "content_policy_config": {
         "block": {
+          "attributes": {
+            "tier_config": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                [
+                  "object",
+                  {
+                    "tier_name": "string"
+                  }
+                ]
+              ]
+            }
+          },
           "block_types": {
             "filters_config": {
               "block": {
@@ -136,6 +152,19 @@ const awsBedrockGuardrail = `{
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "cross_region_config": {
+        "block": {
+          "attributes": {
+            "guardrail_profile_identifier": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"
@@ -225,6 +254,22 @@ const awsBedrockGuardrail = `{
       },
       "topic_policy_config": {
         "block": {
+          "attributes": {
+            "tier_config": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                [
+                  "object",
+                  {
+                    "tier_name": "string"
+                  }
+                ]
+              ]
+            }
+          },
           "block_types": {
             "topics_config": {
               "block": {

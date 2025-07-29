@@ -43,6 +43,20 @@ const awsCloudwatchEventBus = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "log_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "include_detail": "string",
+              "level": "string"
+            }
+          ]
+        ]
+      },
       "name": {
         "description_kind": "plain",
         "required": true,

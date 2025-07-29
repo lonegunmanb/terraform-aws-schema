@@ -79,6 +79,25 @@ const awsCloudwatchEventBus = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "log_config": {
+        "block": {
+          "attributes": {
+            "include_detail": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "level": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
