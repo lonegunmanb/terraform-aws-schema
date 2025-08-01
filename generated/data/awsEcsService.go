@@ -40,6 +40,34 @@ const awsEcsService = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "load_balancer": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "advanced_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "alternate_target_group_arn": "string",
+                    "production_listener_rule": "string",
+                    "role_arn": "string",
+                    "test_listener_rule": "string"
+                  }
+                ]
+              ],
+              "container_name": "string",
+              "container_port": "number",
+              "elb_name": "string",
+              "target_group_arn": "string"
+            }
+          ]
+        ]
+      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",

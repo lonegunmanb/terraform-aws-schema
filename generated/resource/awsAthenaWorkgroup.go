@@ -115,6 +115,25 @@ const awsAthenaWorkgroup = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "identity_center_configuration": {
+              "block": {
+                "attributes": {
+                  "enable_identity_center": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "identity_center_instance_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "result_configuration": {
               "block": {
                 "attributes": {

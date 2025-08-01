@@ -28,6 +28,7 @@ const awsCodebuildFleet = `{
             "object",
             {
               "disk": "number",
+              "instance_type": "string",
               "machine_type": "string",
               "memory": "number",
               "vcpu": "number"

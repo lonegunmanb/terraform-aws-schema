@@ -19,6 +19,11 @@ const awsVerifiedpermissionsPolicyStore = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "deletion_protection": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "description": {
         "computed": true,
         "description_kind": "plain",

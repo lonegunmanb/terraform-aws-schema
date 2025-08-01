@@ -110,6 +110,11 @@ const awsEbsVolume = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "volume_initialization_rate": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       }
     },
     "block_types": {

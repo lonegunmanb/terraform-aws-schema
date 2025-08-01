@@ -695,7 +695,7 @@ const awsBedrockagentFlow = `{
                                     "resource": {
                                       "block": {
                                         "attributes": {
-                                          "resource_arn": {
+                                          "prompt_arn": {
                                             "description_kind": "plain",
                                             "required": true,
                                             "type": "string"

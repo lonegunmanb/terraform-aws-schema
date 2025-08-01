@@ -86,6 +86,14 @@ const awsS3AccessPoint = `{
         "optional": true,
         "type": "string"
       },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "vpc_configuration": {
         "computed": true,
         "description_kind": "plain",

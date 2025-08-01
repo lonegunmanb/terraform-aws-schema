@@ -6,34 +6,27 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVerifiedpermissionsPolicyStore = `{
+const awsQuicksightIpRestriction = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "deletion_protection": {
+      "aws_account_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "description": {
+      "enabled": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "bool"
+      },
+      "ip_restriction_rule_map": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "policy_store_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
+        "type": [
+          "map",
+          "string"
+        ]
       },
       "region": {
         "computed": true,
@@ -42,7 +35,7 @@ const awsVerifiedpermissionsPolicyStore = `{
         "optional": true,
         "type": "string"
       },
-      "tags": {
+      "vpc_endpoint_id_restriction_rule_map": {
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -50,28 +43,13 @@ const awsVerifiedpermissionsPolicyStore = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
+      "vpc_id_restriction_rule_map": {
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "map",
           "string"
         ]
-      }
-    },
-    "block_types": {
-      "validation_settings": {
-        "block": {
-          "attributes": {
-            "mode": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -79,8 +57,8 @@ const awsVerifiedpermissionsPolicyStore = `{
   "version": 0
 }`
 
-func AwsVerifiedpermissionsPolicyStoreSchema() *tfjson.Schema {
+func AwsQuicksightIpRestrictionSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVerifiedpermissionsPolicyStore), &result)
+	_ = json.Unmarshal([]byte(awsQuicksightIpRestriction), &result)
 	return &result
 }

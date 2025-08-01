@@ -1047,6 +1047,8 @@ func init() {
 	resources["aws_quicksight_group_membership"] = resource.AwsQuicksightGroupMembershipSchema()  
 	resources["aws_quicksight_iam_policy_assignment"] = resource.AwsQuicksightIamPolicyAssignmentSchema()  
 	resources["aws_quicksight_ingestion"] = resource.AwsQuicksightIngestionSchema()  
+	resources["aws_quicksight_ip_restriction"] = resource.AwsQuicksightIpRestrictionSchema()  
+	resources["aws_quicksight_key_registration"] = resource.AwsQuicksightKeyRegistrationSchema()  
 	resources["aws_quicksight_namespace"] = resource.AwsQuicksightNamespaceSchema()  
 	resources["aws_quicksight_refresh_schedule"] = resource.AwsQuicksightRefreshScheduleSchema()  
 	resources["aws_quicksight_role_membership"] = resource.AwsQuicksightRoleMembershipSchema()  

@@ -115,7 +115,14 @@ const awsCodebuildFleet = `{
               "optional": true,
               "type": "number"
             },
+            "instance_type": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "machine_type": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
