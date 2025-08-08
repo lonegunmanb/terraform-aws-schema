@@ -182,6 +182,30 @@ const awsBedrockGuardrail = `{
                     "required": true,
                     "type": "string"
                   },
+                  "input_action": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "input_enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "output_action": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "output_enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
                   "type": {
                     "description_kind": "plain",
                     "required": true,
@@ -206,10 +230,34 @@ const awsBedrockGuardrail = `{
                     "optional": true,
                     "type": "string"
                   },
+                  "input_action": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "input_enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
                   "name": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
+                  },
+                  "output_action": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "output_enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
                   },
                   "pattern": {
                     "description_kind": "plain",

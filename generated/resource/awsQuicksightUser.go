@@ -64,6 +64,7 @@ const awsQuicksightUser = `{
         "type": "string"
       },
       "user_name": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

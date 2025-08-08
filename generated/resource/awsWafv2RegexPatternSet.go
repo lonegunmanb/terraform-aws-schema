@@ -84,7 +84,6 @@ const awsWafv2RegexPatternSet = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 10,
         "nesting_mode": "set"
       }
     },

@@ -56,6 +56,11 @@ const awsSpotInstanceRequest = `{
         "optional": true,
         "type": "bool"
       },
+      "force_destroy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "get_password_data": {
         "description_kind": "plain",
         "optional": true,

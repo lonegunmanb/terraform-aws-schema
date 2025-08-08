@@ -281,6 +281,25 @@ const awsDocdbCluster = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "serverless_v2_scaling_configuration": {
+        "block": {
+          "attributes": {
+            "max_capacity": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "min_capacity": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

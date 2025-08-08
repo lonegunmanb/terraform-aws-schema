@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,19 +6,9 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsQuicksightUser = `{
+const awsQuicksightRoleCustomPermission = `{
   "block": {
     "attributes": {
-      "active": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "aws_account_id": {
         "computed": true,
         "description_kind": "plain",
@@ -26,34 +16,14 @@ const awsQuicksightUser = `{
         "type": "string"
       },
       "custom_permissions_name": {
-        "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "email": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "identity_type": {
-        "computed": true,
-        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "namespace": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "principal_id": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "region": {
@@ -63,14 +33,9 @@ const awsQuicksightUser = `{
         "optional": true,
         "type": "string"
       },
-      "user_name": {
+      "role": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "user_role": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       }
     },
@@ -79,8 +44,8 @@ const awsQuicksightUser = `{
   "version": 0
 }`
 
-func AwsQuicksightUserSchema() *tfjson.Schema {
+func AwsQuicksightRoleCustomPermissionSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsQuicksightUser), &result)
+	_ = json.Unmarshal([]byte(awsQuicksightRoleCustomPermission), &result)
 	return &result
 }

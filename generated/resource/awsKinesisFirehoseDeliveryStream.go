@@ -1053,6 +1053,12 @@ const awsKinesisFirehoseDeliveryStream = `{
       "iceberg_configuration": {
         "block": {
           "attributes": {
+            "append_only": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "buffering_interval": {
               "description_kind": "plain",
               "optional": true,
