@@ -65,6 +65,15 @@ const awsNetworkfirewallFirewallPolicy = `{
                 [
                   "object",
                   {
+                    "flow_timeouts": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "tcp_idle_timeout_seconds": "number"
+                        }
+                      ]
+                    ],
                     "rule_order": "string",
                     "stream_exception_policy": "string"
                   }

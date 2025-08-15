@@ -381,6 +381,12 @@ const awsDynamodbTable = `{
               "optional": true,
               "type": "string"
             },
+            "deletion_protection_enabled": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "kms_key_arn": {
               "computed": true,
               "description_kind": "plain",

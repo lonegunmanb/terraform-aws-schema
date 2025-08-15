@@ -32,6 +32,7 @@ const awsVpcIpamPoolCidr = `{
         "type": "string"
       },
       "netmask_length": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"

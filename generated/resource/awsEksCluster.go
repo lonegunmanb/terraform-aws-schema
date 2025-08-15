@@ -42,6 +42,12 @@ const awsEksCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "deletion_protection": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "enabled_cluster_log_types": {
         "description_kind": "plain",
         "optional": true,
