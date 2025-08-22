@@ -171,6 +171,20 @@ const awsSpotInstanceRequest = `{
         "optional": true,
         "type": "number"
       },
+      "primary_network_interface": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "delete_on_termination": "bool",
+              "network_interface_id": "string"
+            }
+          ]
+        ]
+      },
       "primary_network_interface_id": {
         "computed": true,
         "description_kind": "plain",
@@ -632,6 +646,7 @@ const awsSpotInstanceRequest = `{
               "type": "string"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "set"

@@ -261,13 +261,15 @@ const awsBatchComputeEnvironment = `{
         "block": {
           "attributes": {
             "job_execution_timeout_minutes": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "number"
             },
             "terminate_jobs_on_update": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "bool"
             }
           },

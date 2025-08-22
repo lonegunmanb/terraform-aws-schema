@@ -52,6 +52,20 @@ const awsEcrRepository = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "image_tag_mutability_exclusion_filter": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "filter": "string",
+              "filter_type": "string"
+            }
+          ]
+        ]
+      },
       "most_recent_image_tags": {
         "computed": true,
         "description_kind": "plain",

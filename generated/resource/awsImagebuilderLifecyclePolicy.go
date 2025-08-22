@@ -131,6 +131,7 @@ const awsImagebuilderLifecyclePolicy = `{
                     "block": {
                       "attributes": {
                         "is_public": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "bool"

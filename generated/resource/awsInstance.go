@@ -639,9 +639,29 @@ const awsInstance = `{
               "type": "string"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "set"
+      },
+      "primary_network_interface": {
+        "block": {
+          "attributes": {
+            "delete_on_termination": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "bool"
+            },
+            "network_interface_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       },
       "private_dns_name_options": {
         "block": {

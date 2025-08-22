@@ -93,6 +93,25 @@ const awsEcrRepositoryCreationTemplate = `{
           "description_kind": "plain"
         },
         "nesting_mode": "list"
+      },
+      "image_tag_mutability_exclusion_filter": {
+        "block": {
+          "attributes": {
+            "filter": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "filter_type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 5,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
