@@ -6,16 +6,15 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsIotThingPrincipalAttachment = `{
+const awsWorkspaceswebNetworkSettingsAssociation = `{
   "block": {
     "attributes": {
-      "id": {
-        "computed": true,
+      "network_settings_arn": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
-      "principal": {
+      "portal_arn": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -26,17 +25,6 @@ const awsIotThingPrincipalAttachment = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "thing": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "thing_principal_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -44,8 +32,8 @@ const awsIotThingPrincipalAttachment = `{
   "version": 0
 }`
 
-func AwsIotThingPrincipalAttachmentSchema() *tfjson.Schema {
+func AwsWorkspaceswebNetworkSettingsAssociationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsIotThingPrincipalAttachment), &result)
+	_ = json.Unmarshal([]byte(awsWorkspaceswebNetworkSettingsAssociation), &result)
 	return &result
 }

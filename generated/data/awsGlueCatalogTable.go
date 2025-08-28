@@ -82,6 +82,10 @@ const awsGlueCatalogTable = `{
             {
               "comment": "string",
               "name": "string",
+              "parameters": [
+                "map",
+                "string"
+              ],
               "type": "string"
             }
           ]

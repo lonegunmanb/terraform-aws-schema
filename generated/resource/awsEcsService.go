@@ -111,6 +111,11 @@ const awsEcsService = `{
         "optional": true,
         "type": "string"
       },
+      "sigint_rollback": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -222,11 +227,13 @@ const awsEcsService = `{
         "block": {
           "attributes": {
             "bake_time_in_minutes": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "strategy": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

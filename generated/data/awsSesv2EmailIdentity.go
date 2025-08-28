@@ -74,6 +74,11 @@ const awsSesv2EmailIdentity = `{
           "string"
         ]
       },
+      "verification_status": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "verified_for_sending_status": {
         "computed": true,
         "description_kind": "plain",

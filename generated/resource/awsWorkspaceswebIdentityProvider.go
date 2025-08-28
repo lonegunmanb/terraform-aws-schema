@@ -6,24 +6,35 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsDynamodbContributorInsights = `{
+const awsWorkspaceswebIdentityProvider = `{
   "block": {
     "attributes": {
-      "id": {
+      "identity_provider_arn": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "index_name": {
+      "identity_provider_details": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "identity_provider_name": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "mode": {
-        "computed": true,
+      "identity_provider_type": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
+        "type": "string"
+      },
+      "portal_arn": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "region": {
@@ -33,30 +44,21 @@ const awsDynamodbContributorInsights = `{
         "optional": true,
         "type": "string"
       },
-      "table_name": {
+      "tags": {
         "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
       }
     },
     "description_kind": "plain"
@@ -64,8 +66,8 @@ const awsDynamodbContributorInsights = `{
   "version": 0
 }`
 
-func AwsDynamodbContributorInsightsSchema() *tfjson.Schema {
+func AwsWorkspaceswebIdentityProviderSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsDynamodbContributorInsights), &result)
+	_ = json.Unmarshal([]byte(awsWorkspaceswebIdentityProvider), &result)
 	return &result
 }

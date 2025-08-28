@@ -44,6 +44,7 @@ const awsElasticacheGlobalReplicationGroup = `{
       "engine": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "engine_version": {

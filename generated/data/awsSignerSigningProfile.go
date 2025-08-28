@@ -71,6 +71,27 @@ const awsSignerSigningProfile = `{
           ]
         ]
       },
+      "signing_material": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "certificate_arn": "string"
+            }
+          ]
+        ]
+      },
+      "signing_parameters": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "status": {
         "computed": true,
         "description_kind": "plain",

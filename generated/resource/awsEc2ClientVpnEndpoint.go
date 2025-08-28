@@ -16,7 +16,7 @@ const awsEc2ClientVpnEndpoint = `{
       },
       "client_cidr_block": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "description": {
@@ -42,6 +42,12 @@ const awsEc2ClientVpnEndpoint = `{
           "list",
           "string"
         ]
+      },
+      "endpoint_ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "id": {
         "computed": true,
@@ -106,6 +112,12 @@ const awsEc2ClientVpnEndpoint = `{
           "map",
           "string"
         ]
+      },
+      "traffic_ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "transport_protocol": {
         "description_kind": "plain",

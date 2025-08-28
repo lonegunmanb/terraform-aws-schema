@@ -636,8 +636,8 @@ const awsSpotInstanceRequest = `{
               "type": "number"
             },
             "network_card_index": {
+              "computed": true,
               "description_kind": "plain",
-              "optional": true,
               "type": "number"
             },
             "network_interface_id": {

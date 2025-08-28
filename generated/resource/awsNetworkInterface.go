@@ -213,6 +213,12 @@ const awsNetworkInterface = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
+            },
+            "network_card_index": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             }
           },
           "description_kind": "plain"

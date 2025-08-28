@@ -64,6 +64,14 @@ const awsSignerSigningProfile = `{
           ]
         ]
       },
+      "signing_parameters": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "status": {
         "computed": true,
         "description_kind": "plain",

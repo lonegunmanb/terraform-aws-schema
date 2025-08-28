@@ -32,6 +32,7 @@ const awsVpcIpams = `{
               "enable_private_gua": "bool",
               "id": "string",
               "ipam_region": "string",
+              "metered_account": "string",
               "operating_regions": [
                 "list",
                 [

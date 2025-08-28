@@ -76,6 +76,7 @@ const awsElasticacheReplicationGroup = `{
         "type": "string"
       },
       "engine": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

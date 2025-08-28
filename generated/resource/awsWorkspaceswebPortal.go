@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,111 +6,91 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsNetworkInterface = `{
+const awsWorkspaceswebPortal = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
+      "additional_encryption_context": {
         "description_kind": "plain",
-        "type": "string"
-      },
-      "association": {
-        "computed": true,
-        "description_kind": "plain",
+        "optional": true,
         "type": [
-          "list",
-          [
-            "object",
-            {
-              "allocation_id": "string",
-              "association_id": "string",
-              "carrier_ip": "string",
-              "customer_owned_ip": "string",
-              "ip_owner_id": "string",
-              "public_dns_name": "string",
-              "public_ip": "string"
-            }
-          ]
+          "map",
+          "string"
         ]
       },
-      "attachment": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "attachment_id": "string",
-              "device_index": "number",
-              "instance_id": "string",
-              "instance_owner_id": "string",
-              "network_card_index": "number"
-            }
-          ]
-        ]
-      },
-      "availability_zone": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
+      "authentication_type": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "interface_type": {
+      "browser_settings_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "browser_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "ipv6_addresses": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "mac_address": {
+      "creation_date": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "outpost_arn": {
+      "customer_managed_key": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "data_protection_settings_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "owner_id": {
+      "display_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "instance_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "ip_access_settings_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "private_dns_name": {
+      "max_concurrent_sessions": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "network_settings_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "private_ip": {
+      "portal_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "private_ips": {
+      "portal_endpoint": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
+        "type": "string"
+      },
+      "portal_status": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       },
       "region": {
         "computed": true,
@@ -119,26 +99,22 @@ const awsNetworkInterface = `{
         "optional": true,
         "type": "string"
       },
-      "requester_id": {
+      "renderer_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "security_groups": {
+      "session_logger_arn": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
+        "type": "string"
       },
-      "subnet_id": {
+      "status_reason": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
       "tags": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -146,38 +122,48 @@ const awsNetworkInterface = `{
           "string"
         ]
       },
-      "vpc_id": {
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "trust_store_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "user_access_logging_settings_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "user_settings_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       }
     },
     "block_types": {
-      "filter": {
-        "block": {
-          "attributes": {
-            "name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "values": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "timeouts": {
         "block": {
           "attributes": {
-            "read": {
+            "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -193,8 +179,8 @@ const awsNetworkInterface = `{
   "version": 0
 }`
 
-func AwsNetworkInterfaceSchema() *tfjson.Schema {
+func AwsWorkspaceswebPortalSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsNetworkInterface), &result)
+	_ = json.Unmarshal([]byte(awsWorkspaceswebPortal), &result)
 	return &result
 }

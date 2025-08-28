@@ -14,6 +14,11 @@ const awsDlmLifecyclePolicy = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "default_policy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "description": {
         "description_kind": "plain",
         "required": true,
@@ -64,6 +69,27 @@ const awsDlmLifecyclePolicy = `{
       "policy_details": {
         "block": {
           "attributes": {
+            "copy_tags": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "create_interval": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "extend_deletion": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "policy_language": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "policy_type": {
               "description_kind": "plain",
               "optional": true,
@@ -78,6 +104,11 @@ const awsDlmLifecyclePolicy = `{
                 "string"
               ]
             },
+            "resource_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "resource_types": {
               "description_kind": "plain",
               "optional": true,
@@ -85,6 +116,11 @@ const awsDlmLifecyclePolicy = `{
                 "list",
                 "string"
               ]
+            },
+            "retain_interval": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             },
             "target_tags": {
               "description_kind": "plain",
@@ -212,6 +248,36 @@ const awsDlmLifecyclePolicy = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "exclusions": {
+              "block": {
+                "attributes": {
+                  "exclude_boot_volumes": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "exclude_tags": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "map",
+                      "string"
+                    ]
+                  },
+                  "exclude_volume_types": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "parameters": {
               "block": {
                 "attributes": {
@@ -263,6 +329,50 @@ const awsDlmLifecyclePolicy = `{
                   }
                 },
                 "block_types": {
+                  "archive_rule": {
+                    "block": {
+                      "block_types": {
+                        "archive_retain_rule": {
+                          "block": {
+                            "block_types": {
+                              "retention_archive_tier": {
+                                "block": {
+                                  "attributes": {
+                                    "count": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    },
+                                    "interval": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    },
+                                    "interval_unit": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "min_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "min_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "create_rule": {
                     "block": {
                       "attributes": {
@@ -298,6 +408,54 @@ const awsDlmLifecyclePolicy = `{
                           ]
                         }
                       },
+                      "block_types": {
+                        "scripts": {
+                          "block": {
+                            "attributes": {
+                              "execute_operation_on_script_failure": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              },
+                              "execution_handler": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "execution_handler_service": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "execution_timeout": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "maximum_retry_count": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "stages": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "list",
+                                  "string"
+                                ]
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
                       "description_kind": "plain"
                     },
                     "max_items": 1,
@@ -325,7 +483,12 @@ const awsDlmLifecyclePolicy = `{
                         },
                         "target": {
                           "description_kind": "plain",
-                          "required": true,
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "target_region": {
+                          "description_kind": "plain",
+                          "optional": true,
                           "type": "string"
                         }
                       },

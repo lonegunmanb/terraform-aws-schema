@@ -30,6 +30,12 @@ const awsS3TablesTableBucket = `{
           }
         ]
       },
+      "force_destroy": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "maintenance_configuration": {
         "computed": true,
         "description_kind": "plain",

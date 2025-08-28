@@ -52,6 +52,12 @@ const awsKmsExternalKey = `{
         "sensitive": true,
         "type": "string"
       },
+      "key_spec": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "key_state": {
         "computed": true,
         "description_kind": "plain",
@@ -60,6 +66,7 @@ const awsKmsExternalKey = `{
       "key_usage": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "multi_region": {

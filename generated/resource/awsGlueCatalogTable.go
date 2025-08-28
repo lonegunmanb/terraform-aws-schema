@@ -152,6 +152,14 @@ const awsGlueCatalogTable = `{
               "required": true,
               "type": "string"
             },
+            "parameters": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "map",
+                "string"
+              ]
+            },
             "type": {
               "description_kind": "plain",
               "optional": true,

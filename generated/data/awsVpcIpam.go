@@ -44,6 +44,11 @@ const awsVpcIpam = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "metered_account": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "operating_regions": {
         "computed": true,
         "description_kind": "plain",

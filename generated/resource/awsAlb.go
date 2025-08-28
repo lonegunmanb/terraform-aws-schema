@@ -142,6 +142,12 @@ const awsAlb = `{
         "optional": true,
         "type": "string"
       },
+      "secondary_ips_auto_assigned_per_subnet": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "security_groups": {
         "computed": true,
         "description_kind": "plain",

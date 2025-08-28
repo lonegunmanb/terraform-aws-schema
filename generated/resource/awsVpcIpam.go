@@ -45,6 +45,12 @@ const awsVpcIpam = `{
         "optional": true,
         "type": "string"
       },
+      "metered_account": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "private_default_scope_id": {
         "computed": true,
         "description_kind": "plain",

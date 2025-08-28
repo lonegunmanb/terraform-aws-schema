@@ -116,6 +116,11 @@ const awsEc2ClientVpnEndpoint = `{
           "string"
         ]
       },
+      "endpoint_ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -170,6 +175,11 @@ const awsEc2ClientVpnEndpoint = `{
           "map",
           "string"
         ]
+      },
+      "traffic_ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       },
       "transport_protocol": {
         "computed": true,

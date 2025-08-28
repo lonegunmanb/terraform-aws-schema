@@ -224,6 +224,12 @@ const awsMwaaEnvironment = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "worker_replacement_strategy": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {

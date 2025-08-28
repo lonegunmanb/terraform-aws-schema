@@ -80,6 +80,42 @@ const awsInspector2Filter = `{
               },
               "nesting_mode": "set"
             },
+            "code_repository_project_name": {
+              "block": {
+                "attributes": {
+                  "comparison": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            },
+            "code_repository_provider_type": {
+              "block": {
+                "attributes": {
+                  "comparison": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            },
             "code_vulnerability_detector_name": {
               "block": {
                 "attributes": {
@@ -253,6 +289,42 @@ const awsInspector2Filter = `{
                   "value": {
                     "description_kind": "plain",
                     "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            },
+            "ecr_image_in_use_count": {
+              "block": {
+                "attributes": {
+                  "lower_inclusive": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "upper_inclusive": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            },
+            "ecr_image_last_in_use_at": {
+              "block": {
+                "attributes": {
+                  "end_inclusive": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "start_inclusive": {
+                    "description_kind": "plain",
+                    "optional": true,
                     "type": "string"
                   }
                 },

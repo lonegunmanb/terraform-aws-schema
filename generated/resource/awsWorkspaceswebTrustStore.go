@@ -6,34 +6,16 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSesv2EmailIdentity = `{
+const awsWorkspaceswebTrustStore = `{
   "block": {
     "attributes": {
-      "arn": {
+      "associated_portal_arns": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "configuration_set_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "email_identity": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "identity_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
+        "type": [
+          "list",
+          "string"
+        ]
       },
       "region": {
         "computed": true,
@@ -53,77 +35,55 @@ const awsSesv2EmailIdentity = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
       },
-      "verification_status": {
+      "trust_store_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "verified_for_sending_status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
       }
     },
     "block_types": {
-      "dkim_signing_attributes": {
+      "certificate": {
         "block": {
           "attributes": {
-            "current_signing_key_length": {
+            "body": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "issuer": {
               "computed": true,
               "description_kind": "plain",
               "type": "string"
             },
-            "domain_signing_private_key": {
-              "description_kind": "plain",
-              "optional": true,
-              "sensitive": true,
-              "type": "string"
-            },
-            "domain_signing_selector": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "last_key_generation_timestamp": {
+            "not_valid_after": {
               "computed": true,
               "description_kind": "plain",
               "type": "string"
             },
-            "next_signing_key_length": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "signing_attributes_origin": {
+            "not_valid_before": {
               "computed": true,
               "description_kind": "plain",
               "type": "string"
             },
-            "status": {
+            "subject": {
               "computed": true,
               "description_kind": "plain",
               "type": "string"
             },
-            "tokens": {
+            "thumbprint": {
               "computed": true,
               "description_kind": "plain",
-              "type": [
-                "list",
-                "string"
-              ]
+              "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"
@@ -131,8 +91,8 @@ const awsSesv2EmailIdentity = `{
   "version": 0
 }`
 
-func AwsSesv2EmailIdentitySchema() *tfjson.Schema {
+func AwsWorkspaceswebTrustStoreSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSesv2EmailIdentity), &result)
+	_ = json.Unmarshal([]byte(awsWorkspaceswebTrustStore), &result)
 	return &result
 }
