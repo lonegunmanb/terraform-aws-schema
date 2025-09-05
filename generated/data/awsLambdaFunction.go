@@ -216,6 +216,11 @@ const awsLambdaFunction = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "source_kms_key_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "tags": {
         "computed": true,
         "description_kind": "plain",

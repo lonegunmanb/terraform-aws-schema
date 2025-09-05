@@ -197,7 +197,6 @@ const awsFsxOpenzfsVolume = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 100,
         "nesting_mode": "set"
       }
     },

@@ -51,6 +51,16 @@ const awsEfsMountTarget = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "ipv6_address": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "mount_target_dns_name": {
         "computed": true,
         "description_kind": "plain",

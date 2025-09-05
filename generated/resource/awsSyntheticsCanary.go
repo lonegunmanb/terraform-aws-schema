@@ -186,6 +186,12 @@ const awsSyntheticsCanary = `{
                 "string"
               ]
             },
+            "ephemeral_storage": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
             "memory_in_mb": {
               "computed": true,
               "description_kind": "plain",

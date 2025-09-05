@@ -57,6 +57,7 @@ const awsS3BucketAcl = `{
                       "attributes": {
                         "display_name": {
                           "computed": true,
+                          "deprecated": true,
                           "description_kind": "plain",
                           "type": "string"
                         },
@@ -96,6 +97,7 @@ const awsS3BucketAcl = `{
                 "attributes": {
                   "display_name": {
                     "computed": true,
+                    "deprecated": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"

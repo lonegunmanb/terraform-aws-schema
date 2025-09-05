@@ -239,6 +239,11 @@ const awsInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "placement_group_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "placement_partition_number": {
         "computed": true,
         "description_kind": "plain",

@@ -315,6 +315,7 @@ func init() {
 	resources["aws_cognito_identity_pool_roles_attachment"] = resource.AwsCognitoIdentityPoolRolesAttachmentSchema()  
 	resources["aws_cognito_identity_provider"] = resource.AwsCognitoIdentityProviderSchema()  
 	resources["aws_cognito_log_delivery_configuration"] = resource.AwsCognitoLogDeliveryConfigurationSchema()  
+	resources["aws_cognito_managed_login_branding"] = resource.AwsCognitoManagedLoginBrandingSchema()  
 	resources["aws_cognito_managed_user_pool_client"] = resource.AwsCognitoManagedUserPoolClientSchema()  
 	resources["aws_cognito_resource_server"] = resource.AwsCognitoResourceServerSchema()  
 	resources["aws_cognito_risk_configuration"] = resource.AwsCognitoRiskConfigurationSchema()  

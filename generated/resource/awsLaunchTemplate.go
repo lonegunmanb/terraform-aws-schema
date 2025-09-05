@@ -955,6 +955,11 @@ const awsLaunchTemplate = `{
               "optional": true,
               "type": "string"
             },
+            "group_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "group_name": {
               "description_kind": "plain",
               "optional": true,

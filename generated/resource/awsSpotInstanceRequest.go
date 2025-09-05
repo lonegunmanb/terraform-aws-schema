@@ -165,6 +165,12 @@ const awsSpotInstanceRequest = `{
         "optional": true,
         "type": "string"
       },
+      "placement_group_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "placement_partition_number": {
         "computed": true,
         "description_kind": "plain",

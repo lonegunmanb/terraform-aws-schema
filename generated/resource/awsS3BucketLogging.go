@@ -59,6 +59,7 @@ const awsS3BucketLogging = `{
                 "attributes": {
                   "display_name": {
                     "computed": true,
+                    "deprecated": true,
                     "description_kind": "plain",
                     "type": "string"
                   },
