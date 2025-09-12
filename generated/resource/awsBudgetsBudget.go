@@ -20,6 +20,11 @@ const awsBudgetsBudget = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "billing_view_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "budget_type": {
         "description_kind": "plain",
         "required": true,

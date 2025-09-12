@@ -213,6 +213,27 @@ const awsDynamodbTable = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            },
+            "warm_throughput": {
+              "block": {
+                "attributes": {
+                  "read_units_per_second": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "write_units_per_second": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -478,6 +499,27 @@ const awsDynamodbTable = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "warm_throughput": {
+        "block": {
+          "attributes": {
+            "read_units_per_second": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "write_units_per_second": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             }
           },
           "description_kind": "plain"

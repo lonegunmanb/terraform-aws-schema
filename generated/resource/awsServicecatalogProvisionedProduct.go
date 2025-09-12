@@ -251,6 +251,11 @@ const awsServicecatalogProvisionedProduct = `{
               "optional": true,
               "type": "string"
             },
+            "read": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "update": {
               "description_kind": "plain",
               "optional": true,

@@ -101,11 +101,25 @@ const awsNetworkmanagerVpcAttachment = `{
         "block": {
           "attributes": {
             "appliance_mode_support": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "dns_support": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "ipv6_support": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "security_group_referencing_support": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"

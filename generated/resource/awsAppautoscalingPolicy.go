@@ -62,6 +62,415 @@ const awsAppautoscalingPolicy = `{
       }
     },
     "block_types": {
+      "predictive_scaling_policy_configuration": {
+        "block": {
+          "attributes": {
+            "max_capacity_breach_behavior": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "max_capacity_buffer": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "mode": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "scheduling_buffer_time": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "block_types": {
+            "metric_specification": {
+              "block": {
+                "attributes": {
+                  "target_value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "customized_capacity_metric_specification": {
+                    "block": {
+                      "block_types": {
+                        "metric_data_query": {
+                          "block": {
+                            "attributes": {
+                              "expression": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "id": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "label": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "return_data": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              }
+                            },
+                            "block_types": {
+                              "metric_stat": {
+                                "block": {
+                                  "attributes": {
+                                    "stat": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "unit": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "metric": {
+                                      "block": {
+                                        "attributes": {
+                                          "metric_name": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          },
+                                          "namespace": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "block_types": {
+                                          "dimension": {
+                                            "block": {
+                                              "attributes": {
+                                                "name": {
+                                                  "description_kind": "plain",
+                                                  "required": true,
+                                                  "type": "string"
+                                                },
+                                                "value": {
+                                                  "description_kind": "plain",
+                                                  "required": true,
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "description_kind": "plain"
+                                            },
+                                            "nesting_mode": "set"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 1,
+                                      "min_items": 1,
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "min_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "customized_load_metric_specification": {
+                    "block": {
+                      "block_types": {
+                        "metric_data_query": {
+                          "block": {
+                            "attributes": {
+                              "expression": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "id": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "label": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "return_data": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              }
+                            },
+                            "block_types": {
+                              "metric_stat": {
+                                "block": {
+                                  "attributes": {
+                                    "stat": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "unit": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "metric": {
+                                      "block": {
+                                        "attributes": {
+                                          "metric_name": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          },
+                                          "namespace": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "block_types": {
+                                          "dimension": {
+                                            "block": {
+                                              "attributes": {
+                                                "name": {
+                                                  "description_kind": "plain",
+                                                  "required": true,
+                                                  "type": "string"
+                                                },
+                                                "value": {
+                                                  "description_kind": "plain",
+                                                  "required": true,
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "description_kind": "plain"
+                                            },
+                                            "nesting_mode": "set"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 1,
+                                      "min_items": 1,
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "min_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "customized_scaling_metric_specification": {
+                    "block": {
+                      "block_types": {
+                        "metric_data_query": {
+                          "block": {
+                            "attributes": {
+                              "expression": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "id": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "label": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "return_data": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              }
+                            },
+                            "block_types": {
+                              "metric_stat": {
+                                "block": {
+                                  "attributes": {
+                                    "stat": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "unit": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "metric": {
+                                      "block": {
+                                        "attributes": {
+                                          "metric_name": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          },
+                                          "namespace": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "block_types": {
+                                          "dimension": {
+                                            "block": {
+                                              "attributes": {
+                                                "name": {
+                                                  "description_kind": "plain",
+                                                  "required": true,
+                                                  "type": "string"
+                                                },
+                                                "value": {
+                                                  "description_kind": "plain",
+                                                  "required": true,
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "description_kind": "plain"
+                                            },
+                                            "nesting_mode": "set"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 1,
+                                      "min_items": 1,
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "min_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "predefined_load_metric_specification": {
+                    "block": {
+                      "attributes": {
+                        "predefined_metric_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "resource_label": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "predefined_metric_pair_specification": {
+                    "block": {
+                      "attributes": {
+                        "predefined_metric_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "resource_label": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "predefined_scaling_metric_specification": {
+                    "block": {
+                      "attributes": {
+                        "predefined_metric_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "resource_label": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "step_scaling_policy_configuration": {
         "block": {
           "attributes": {

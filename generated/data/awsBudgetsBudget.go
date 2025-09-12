@@ -44,6 +44,11 @@ const awsBudgetsBudget = `{
           ]
         ]
       },
+      "billing_view_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "budget_exceeded": {
         "computed": true,
         "description_kind": "plain",

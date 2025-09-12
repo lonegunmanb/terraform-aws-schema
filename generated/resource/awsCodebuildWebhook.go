@@ -91,6 +91,29 @@ const awsCodebuildWebhook = `{
         },
         "nesting_mode": "set"
       },
+      "pull_request_build_policy": {
+        "block": {
+          "attributes": {
+            "approver_roles": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "requires_comment_approval": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "scope_configuration": {
         "block": {
           "attributes": {

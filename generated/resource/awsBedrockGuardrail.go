@@ -362,6 +362,26 @@ const awsBedrockGuardrail = `{
             "managed_word_lists_config": {
               "block": {
                 "attributes": {
+                  "input_action": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "input_enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "output_action": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "output_enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
                   "type": {
                     "description_kind": "plain",
                     "required": true,
@@ -375,6 +395,26 @@ const awsBedrockGuardrail = `{
             "words_config": {
               "block": {
                 "attributes": {
+                  "input_action": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "input_enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "output_action": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "output_enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
                   "text": {
                     "description_kind": "plain",
                     "required": true,

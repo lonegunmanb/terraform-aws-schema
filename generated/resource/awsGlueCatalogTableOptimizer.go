@@ -68,6 +68,12 @@ const awsGlueCatalogTableOptimizer = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "number"
+                        },
+                        "run_rate_in_hours": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
                         }
                       },
                       "description_kind": "plain"
@@ -91,6 +97,12 @@ const awsGlueCatalogTableOptimizer = `{
                           "type": "bool"
                         },
                         "number_of_snapshots_to_retain": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "run_rate_in_hours": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "number"

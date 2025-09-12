@@ -727,6 +727,12 @@ const awsCloudfrontDistribution = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "response_completion_timeout": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             }
           },
           "block_types": {

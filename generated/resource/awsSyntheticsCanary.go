@@ -224,6 +224,22 @@ const awsSyntheticsCanary = `{
               "type": "string"
             }
           },
+          "block_types": {
+            "retry_config": {
+              "block": {
+                "attributes": {
+                  "max_retries": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "max_items": 1,

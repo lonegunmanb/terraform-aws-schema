@@ -65,6 +65,16 @@ const awsDynamodbTable = `{
               "projection_type": "string",
               "range_key": "string",
               "read_capacity": "number",
+              "warm_throughput": [
+                "list",
+                [
+                  "object",
+                  {
+                    "read_units_per_second": "number",
+                    "write_units_per_second": "number"
+                  }
+                ]
+              ],
               "write_capacity": "number"
             }
           ]
@@ -208,6 +218,20 @@ const awsDynamodbTable = `{
             {
               "attribute_name": "string",
               "enabled": "bool"
+            }
+          ]
+        ]
+      },
+      "warm_throughput": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "read_units_per_second": "number",
+              "write_units_per_second": "number"
             }
           ]
         ]
