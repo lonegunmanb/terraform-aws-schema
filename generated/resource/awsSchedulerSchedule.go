@@ -9,6 +9,12 @@ import (
 const awsSchedulerSchedule = `{
   "block": {
     "attributes": {
+      "action_after_completion": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",

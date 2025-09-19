@@ -244,6 +244,11 @@ const awsEcsService = `{
             "lifecycle_hook": {
               "block": {
                 "attributes": {
+                  "hook_details": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "hook_target_arn": {
                     "description_kind": "plain",
                     "required": true,
