@@ -160,6 +160,45 @@ const awsOpensearchDomain = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "aiml_options": {
+        "block": {
+          "block_types": {
+            "natural_language_query_generation_options": {
+              "block": {
+                "attributes": {
+                  "desired_state": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "s3_vectors_engine": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "auto_tune_options": {
         "block": {
           "attributes": {

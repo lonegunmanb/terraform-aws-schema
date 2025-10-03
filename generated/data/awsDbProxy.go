@@ -37,6 +37,11 @@ const awsDbProxy = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "default_auth_scheme": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "endpoint": {
         "computed": true,
         "description_kind": "plain",

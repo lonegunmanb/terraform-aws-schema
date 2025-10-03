@@ -142,6 +142,28 @@ const awsDmsEndpoint = `{
           ]
         ]
       },
+      "mysql_settings": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "after_connect_script": "string",
+              "authentication_method": "string",
+              "clean_source_metadata_on_mismatch": "bool",
+              "events_poll_interval": "number",
+              "execute_timeout": "number",
+              "max_file_size": "number",
+              "parallel_load_threads": "number",
+              "server_timezone": "string",
+              "service_access_role_arn": "string",
+              "target_db_type": "string"
+            }
+          ]
+        ]
+      },
       "password": {
         "computed": true,
         "description_kind": "plain",

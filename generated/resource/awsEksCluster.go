@@ -169,6 +169,7 @@ const awsEksCluster = `{
         "block": {
           "attributes": {
             "enabled": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -252,6 +253,7 @@ const awsEksCluster = `{
               "block": {
                 "attributes": {
                   "enabled": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "bool"
@@ -357,6 +359,7 @@ const awsEksCluster = `{
               "block": {
                 "attributes": {
                   "enabled": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "bool"

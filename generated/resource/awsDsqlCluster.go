@@ -15,6 +15,7 @@ const awsDsqlCluster = `{
         "type": "string"
       },
       "deletion_protection_enabled": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -32,6 +33,12 @@ const awsDsqlCluster = `{
             }
           ]
         ]
+      },
+      "force_destroy": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       },
       "identifier": {
         "computed": true,

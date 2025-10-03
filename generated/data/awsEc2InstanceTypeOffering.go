@@ -20,6 +20,11 @@ const awsEc2InstanceTypeOffering = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "location": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "location_type": {
         "description_kind": "plain",
         "optional": true,

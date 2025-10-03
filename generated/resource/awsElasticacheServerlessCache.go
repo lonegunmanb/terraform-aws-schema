@@ -164,11 +164,13 @@ const awsElasticacheServerlessCache = `{
               "block": {
                 "attributes": {
                   "maximum": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
                   },
                   "minimum": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
@@ -187,11 +189,13 @@ const awsElasticacheServerlessCache = `{
               "block": {
                 "attributes": {
                   "maximum": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
                   },
                   "minimum": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"

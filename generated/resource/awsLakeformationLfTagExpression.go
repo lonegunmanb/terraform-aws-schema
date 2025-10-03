@@ -6,26 +6,24 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSfnActivity = `{
+const awsLakeformationLfTagExpression = `{
   "block": {
     "attributes": {
-      "arn": {
+      "catalog_id": {
         "computed": true,
+        "description": "The ID of the Data Catalog.",
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
-      "creation_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
+      "description": {
+        "description": "A description of the LF-Tag Expression.",
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "name": {
+        "description": "The name of the LF-Tag Expression.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -36,58 +34,39 @@ const awsSfnActivity = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "encryption_configuration": {
+      "expression": {
         "block": {
           "attributes": {
-            "kms_data_key_reuse_period_seconds": {
+            "tag_key": {
               "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "kms_key_id": {
-              "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             },
-            "type": {
+            "tag_values": {
               "description_kind": "plain",
-              "optional": true,
-              "type": "string"
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       }
     },
+    "description": "Manages an AWS Lake Formation Tag Expression.",
     "description_kind": "plain"
   },
   "version": 0
 }`
 
-func AwsSfnActivitySchema() *tfjson.Schema {
+func AwsLakeformationLfTagExpressionSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSfnActivity), &result)
+	_ = json.Unmarshal([]byte(awsLakeformationLfTagExpression), &result)
 	return &result
 }

@@ -9,10 +9,36 @@ import (
 const awsIamServiceSpecificCredential = `{
   "block": {
     "attributes": {
+      "create_date": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "credential_age_days": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "expiration_date": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "service_credential_alias": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "service_credential_secret": {
+        "computed": true,
+        "description_kind": "plain",
+        "sensitive": true,
         "type": "string"
       },
       "service_name": {

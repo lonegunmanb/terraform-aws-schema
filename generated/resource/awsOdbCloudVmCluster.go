@@ -46,10 +46,9 @@ const awsOdbCloudVmCluster = `{
         "type": "string"
       },
       "data_storage_size_in_tbs": {
-        "computed": true,
         "description": "The size of the data disk group, in terabytes (TBs), to allocate for the VM cluster. Changing this will create a new resource.",
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "number"
       },
       "db_node_storage_size_in_gbs": {
@@ -90,6 +89,12 @@ const awsOdbCloudVmCluster = `{
         "description": "A valid software version of Oracle Grid Infrastructure (GI). To get the list of valid values, use the ListGiVersions operation and specify the shape of the Exadata infrastructure. Example: 19.0.0.0 This member is required. Changing this will create a new resource.",
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "gi_version_computed": {
+        "computed": true,
+        "description": "A complete software version of Oracle Grid Infrastructure (GI).",
+        "description_kind": "plain",
         "type": "string"
       },
       "hostname_prefix": {

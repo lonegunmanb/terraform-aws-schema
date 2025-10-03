@@ -19,6 +19,12 @@ const awsDbProxy = `{
         "optional": true,
         "type": "bool"
       },
+      "default_auth_scheme": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "endpoint": {
         "computed": true,
         "description_kind": "plain",
@@ -136,7 +142,6 @@ const awsDbProxy = `{
           },
           "description_kind": "plain"
         },
-        "min_items": 1,
         "nesting_mode": "set"
       },
       "timeouts": {

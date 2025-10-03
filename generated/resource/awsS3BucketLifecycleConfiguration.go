@@ -185,7 +185,6 @@ const awsS3BucketLifecycleConfiguration = `{
               "block": {
                 "attributes": {
                   "newer_noncurrent_versions": {
-                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
@@ -204,7 +203,6 @@ const awsS3BucketLifecycleConfiguration = `{
               "block": {
                 "attributes": {
                   "newer_noncurrent_versions": {
-                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"

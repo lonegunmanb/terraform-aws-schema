@@ -767,6 +767,11 @@ const awsCloudfrontDistribution = `{
                     "required": true,
                     "type": "number"
                   },
+                  "ip_address_type": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "origin_keepalive_timeout": {
                     "description_kind": "plain",
                     "optional": true,
