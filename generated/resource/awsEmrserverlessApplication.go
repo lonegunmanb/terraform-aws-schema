@@ -239,6 +239,27 @@ const awsEmrserverlessApplication = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "scheduler_configuration": {
+        "block": {
+          "attributes": {
+            "max_concurrent_runs": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "queue_timeout_minutes": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

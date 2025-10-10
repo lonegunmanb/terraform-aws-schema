@@ -14,6 +14,13 @@ const awsCodebuildProject = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "auto_retry_limit": {
+        "computed": true,
+        "description": "Maximum number of additional automatic retries after a failed build. The default value is 0.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "badge_enabled": {
         "description_kind": "plain",
         "optional": true,

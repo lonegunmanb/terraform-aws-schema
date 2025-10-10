@@ -6,32 +6,10 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVpclatticeResourceGateway = `{
+const awsPrometheusResourcePolicy = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "ip_address_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "ipv4_addresses_per_eni": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "name": {
+      "policy_document": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -43,45 +21,13 @@ const awsVpclatticeResourceGateway = `{
         "optional": true,
         "type": "string"
       },
-      "security_group_ids": {
+      "revision_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
-      "subnet_ids": {
-        "description_kind": "plain",
-        "required": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "vpc_id": {
+      "workspace_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -120,8 +66,8 @@ const awsVpclatticeResourceGateway = `{
   "version": 0
 }`
 
-func AwsVpclatticeResourceGatewaySchema() *tfjson.Schema {
+func AwsPrometheusResourcePolicySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVpclatticeResourceGateway), &result)
+	_ = json.Unmarshal([]byte(awsPrometheusResourcePolicy), &result)
 	return &result
 }

@@ -178,6 +178,60 @@ const awsLambdaEventSourceMapping = `{
               "type": "string"
             }
           },
+          "block_types": {
+            "schema_registry_config": {
+              "block": {
+                "attributes": {
+                  "event_record_format": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "schema_registry_uri": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "access_config": {
+                    "block": {
+                      "attributes": {
+                        "type": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "uri": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "set"
+                  },
+                  "schema_validation_config": {
+                    "block": {
+                      "attributes": {
+                        "attribute": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "set"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "max_items": 1,
@@ -330,6 +384,60 @@ const awsLambdaEventSourceMapping = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            }
+          },
+          "block_types": {
+            "schema_registry_config": {
+              "block": {
+                "attributes": {
+                  "event_record_format": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "schema_registry_uri": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "access_config": {
+                    "block": {
+                      "attributes": {
+                        "type": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "uri": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "set"
+                  },
+                  "schema_validation_config": {
+                    "block": {
+                      "attributes": {
+                        "attribute": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "set"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
