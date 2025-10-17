@@ -32,12 +32,28 @@ const awsQuicksightAccountSubscription = `{
           "string"
         ]
       },
+      "admin_pro_group": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "authentication_method": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "author_group": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
+      "author_pro_group": {
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -98,6 +114,14 @@ const awsQuicksightAccountSubscription = `{
         "type": "string"
       },
       "reader_group": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
+      "reader_pro_group": {
         "description_kind": "plain",
         "optional": true,
         "type": [
