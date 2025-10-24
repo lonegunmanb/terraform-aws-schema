@@ -20,7 +20,10 @@ const awsOrganizationsOrganizationalUnitChildAccounts = `{
               "arn": "string",
               "email": "string",
               "id": "string",
+              "joined_method": "string",
+              "joined_timestamp": "string",
               "name": "string",
+              "state": "string",
               "status": "string"
             }
           ]

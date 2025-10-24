@@ -57,6 +57,13 @@ const awsOdbNetwork = `{
         "optional": true,
         "type": "string"
       },
+      "delete_associated_resources": {
+        "computed": true,
+        "description": "If set to true deletes associated OCI resources. Default false.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "display_name": {
         "description": "The user-friendly name for the odb network. Changing this will force terraform to create a new resource.",
         "description_kind": "plain",

@@ -6,19 +6,16 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsGuarddutyDetectorFeature = `{
+const awsBedrockagentcoreWorkloadIdentity = `{
   "block": {
     "attributes": {
-      "detector_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
+      "allowed_resource_oauth2_return_urls": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "name": {
         "description_kind": "plain",
@@ -32,30 +29,10 @@ const awsGuarddutyDetectorFeature = `{
         "optional": true,
         "type": "string"
       },
-      "status": {
+      "workload_identity_arn": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "additional_configuration": {
-        "block": {
-          "attributes": {
-            "name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "status": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"
@@ -63,8 +40,8 @@ const awsGuarddutyDetectorFeature = `{
   "version": 0
 }`
 
-func AwsGuarddutyDetectorFeatureSchema() *tfjson.Schema {
+func AwsBedrockagentcoreWorkloadIdentitySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsGuarddutyDetectorFeature), &result)
+	_ = json.Unmarshal([]byte(awsBedrockagentcoreWorkloadIdentity), &result)
 	return &result
 }

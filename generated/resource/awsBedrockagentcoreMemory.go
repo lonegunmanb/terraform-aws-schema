@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsOrganizationsAccount = `{
+const awsBedrockagentcoreMemory = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,45 +14,29 @@ const awsOrganizationsAccount = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "close_on_deletion": {
+      "description": {
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": "string"
       },
-      "create_govcloud": {
+      "encryption_key_arn": {
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": "string"
       },
-      "email": {
+      "event_expiry_duration": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "govcloud_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "iam_user_access_to_billing": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
+        "type": "number"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "memory_execution_role_arn": {
+        "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "joined_method": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "joined_timestamp": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "name": {
@@ -60,26 +44,11 @@ const awsOrganizationsAccount = `{
         "required": true,
         "type": "string"
       },
-      "parent_id": {
+      "region": {
         "computed": true,
+        "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "role_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "state": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "status": {
-        "computed": true,
-        "deprecated": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "tags": {
@@ -93,7 +62,6 @@ const awsOrganizationsAccount = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
@@ -105,16 +73,13 @@ const awsOrganizationsAccount = `{
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -130,8 +95,8 @@ const awsOrganizationsAccount = `{
   "version": 0
 }`
 
-func AwsOrganizationsAccountSchema() *tfjson.Schema {
+func AwsBedrockagentcoreMemorySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsOrganizationsAccount), &result)
+	_ = json.Unmarshal([]byte(awsBedrockagentcoreMemory), &result)
 	return &result
 }

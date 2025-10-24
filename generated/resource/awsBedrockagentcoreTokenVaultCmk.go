@@ -6,25 +6,9 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsGuarddutyDetectorFeature = `{
+const awsBedrockagentcoreTokenVaultCmk = `{
   "block": {
     "attributes": {
-      "detector_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
@@ -32,30 +16,31 @@ const awsGuarddutyDetectorFeature = `{
         "optional": true,
         "type": "string"
       },
-      "status": {
+      "token_vault_id": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       }
     },
     "block_types": {
-      "additional_configuration": {
+      "kms_configuration": {
         "block": {
           "attributes": {
-            "name": {
+            "key_type": {
               "description_kind": "plain",
               "required": true,
               "type": "string"
             },
-            "status": {
+            "kms_key_arn": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "set"
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -63,8 +48,8 @@ const awsGuarddutyDetectorFeature = `{
   "version": 0
 }`
 
-func AwsGuarddutyDetectorFeatureSchema() *tfjson.Schema {
+func AwsBedrockagentcoreTokenVaultCmkSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsGuarddutyDetectorFeature), &result)
+	_ = json.Unmarshal([]byte(awsBedrockagentcoreTokenVaultCmk), &result)
 	return &result
 }

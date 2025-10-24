@@ -42,6 +42,25 @@ const awsAppstreamDirectoryConfig = `{
       }
     },
     "block_types": {
+      "certificate_based_auth_properties": {
+        "block": {
+          "attributes": {
+            "certificate_authority_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "status": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "service_account_credentials": {
         "block": {
           "attributes": {
