@@ -287,6 +287,14 @@ const awsLbListenerRule = `{
             "host_header": {
               "block": {
                 "attributes": {
+                  "regex_values": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
                   "values": {
                     "computed": true,
                     "description_kind": "plain",
@@ -307,6 +315,14 @@ const awsLbListenerRule = `{
                     "computed": true,
                     "description_kind": "plain",
                     "type": "string"
+                  },
+                  "regex_values": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": [
+                      "set",
+                      "string"
+                    ]
                   },
                   "values": {
                     "computed": true,
@@ -340,6 +356,14 @@ const awsLbListenerRule = `{
             "path_pattern": {
               "block": {
                 "attributes": {
+                  "regex_values": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
                   "values": {
                     "computed": true,
                     "description_kind": "plain",
@@ -389,6 +413,73 @@ const awsLbListenerRule = `{
                       "set",
                       "string"
                     ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
+      "transform": {
+        "block": {
+          "attributes": {
+            "type": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "host_header_rewrite_config": {
+              "block": {
+                "block_types": {
+                  "rewrite": {
+                    "block": {
+                      "attributes": {
+                        "regex": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "type": "string"
+                        },
+                        "replace": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "url_rewrite_config": {
+              "block": {
+                "block_types": {
+                  "rewrite": {
+                    "block": {
+                      "attributes": {
+                        "regex": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "type": "string"
+                        },
+                        "replace": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

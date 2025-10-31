@@ -9,6 +9,14 @@ import (
 const awsImagebuilderImageRecipe = `{
   "block": {
     "attributes": {
+      "ami_tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "arn": {
         "description_kind": "plain",
         "required": true,

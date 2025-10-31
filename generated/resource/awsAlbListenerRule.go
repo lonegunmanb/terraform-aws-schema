@@ -324,9 +324,17 @@ const awsAlbListenerRule = `{
             "host_header": {
               "block": {
                 "attributes": {
+                  "regex_values": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
                   "values": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": [
                       "set",
                       "string"
@@ -346,9 +354,17 @@ const awsAlbListenerRule = `{
                     "required": true,
                     "type": "string"
                   },
+                  "regex_values": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
                   "values": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": [
                       "set",
                       "string"
@@ -380,9 +396,17 @@ const awsAlbListenerRule = `{
             "path_pattern": {
               "block": {
                 "attributes": {
+                  "regex_values": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
                   "values": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": [
                       "set",
                       "string"
@@ -433,6 +457,78 @@ const awsAlbListenerRule = `{
           "description_kind": "plain"
         },
         "min_items": 1,
+        "nesting_mode": "set"
+      },
+      "transform": {
+        "block": {
+          "attributes": {
+            "type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "host_header_rewrite_config": {
+              "block": {
+                "block_types": {
+                  "rewrite": {
+                    "block": {
+                      "attributes": {
+                        "regex": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "replace": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "url_rewrite_config": {
+              "block": {
+                "block_types": {
+                  "rewrite": {
+                    "block": {
+                      "attributes": {
+                        "regex": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "replace": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 2,
         "nesting_mode": "set"
       }
     },

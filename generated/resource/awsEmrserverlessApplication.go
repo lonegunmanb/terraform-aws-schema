@@ -215,6 +215,119 @@ const awsEmrserverlessApplication = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "monitoring_configuration": {
+        "block": {
+          "block_types": {
+            "cloudwatch_logging_configuration": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "bool"
+                  },
+                  "encryption_key_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "log_group_name": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "log_stream_name_prefix": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "log_types": {
+                    "block": {
+                      "attributes": {
+                        "name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "values": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "set"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "managed_persistence_monitoring_configuration": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "encryption_key_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "prometheus_monitoring_configuration": {
+              "block": {
+                "attributes": {
+                  "remote_write_url": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "s3_monitoring_configuration": {
+              "block": {
+                "attributes": {
+                  "encryption_key_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "log_uri": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "network_configuration": {
         "block": {
           "attributes": {
@@ -238,6 +351,27 @@ const awsEmrserverlessApplication = `{
           "description_kind": "plain"
         },
         "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "runtime_configuration": {
+        "block": {
+          "attributes": {
+            "classification": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "properties": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "map",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
         "nesting_mode": "list"
       },
       "scheduler_configuration": {
