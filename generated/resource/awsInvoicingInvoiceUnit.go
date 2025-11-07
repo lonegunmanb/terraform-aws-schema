@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsConnectRoutingProfile = `{
+const awsInvoicingInvoiceUnit = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,25 +14,19 @@ const awsConnectRoutingProfile = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "default_outbound_queue_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "description": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "instance_id": {
+      "invoice_receiver": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "last_modified": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "name": {
@@ -47,11 +41,6 @@ const awsConnectRoutingProfile = `{
         "optional": true,
         "type": "string"
       },
-      "routing_profile_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -63,86 +52,60 @@ const awsConnectRoutingProfile = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
+      },
+      "tax_inheritance_disabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       }
     },
     "block_types": {
-      "media_concurrencies": {
+      "rule": {
         "block": {
           "attributes": {
-            "channel": {
+            "linked_accounts": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            },
-            "concurrency": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "number"
-            }
-          },
-          "block_types": {
-            "cross_channel_behavior": {
-              "block": {
-                "attributes": {
-                  "behavior_type": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
+              "type": [
+                "set",
+                "string"
+              ]
             }
           },
           "description_kind": "plain"
         },
-        "min_items": 1,
-        "nesting_mode": "set"
+        "nesting_mode": "list"
       },
-      "queue_configs": {
+      "timeouts": {
         "block": {
           "attributes": {
-            "channel": {
+            "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             },
-            "delay": {
+            "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
-              "required": true,
-              "type": "number"
-            },
-            "priority": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "number"
-            },
-            "queue_arn": {
-              "computed": true,
-              "description_kind": "plain",
+              "optional": true,
               "type": "string"
             },
-            "queue_id": {
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "queue_name": {
-              "computed": true,
-              "description_kind": "plain",
+              "optional": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "set"
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -150,8 +113,8 @@ const awsConnectRoutingProfile = `{
   "version": 0
 }`
 
-func AwsConnectRoutingProfileSchema() *tfjson.Schema {
+func AwsInvoicingInvoiceUnitSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsConnectRoutingProfile), &result)
+	_ = json.Unmarshal([]byte(awsInvoicingInvoiceUnit), &result)
 	return &result
 }

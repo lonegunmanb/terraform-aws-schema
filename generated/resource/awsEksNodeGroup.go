@@ -188,6 +188,56 @@ const awsEksNodeGroup = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
+            },
+            "max_parallel_nodes_repaired_count": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "max_parallel_nodes_repaired_percentage": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "max_unhealthy_node_threshold_count": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "max_unhealthy_node_threshold_percentage": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "block_types": {
+            "node_repair_config_overrides": {
+              "block": {
+                "attributes": {
+                  "min_repair_wait_time_mins": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "node_monitoring_condition": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "node_unhealthy_reason": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "repair_action": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

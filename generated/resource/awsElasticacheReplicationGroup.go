@@ -331,6 +331,59 @@ const awsElasticacheReplicationGroup = `{
         "max_items": 2,
         "nesting_mode": "set"
       },
+      "node_group_configuration": {
+        "block": {
+          "attributes": {
+            "node_group_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "primary_availability_zone": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "primary_outpost_arn": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "replica_availability_zones": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
+            "replica_count": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "replica_outpost_arns": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
+            "slots": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "timeouts": {
         "block": {
           "attributes": {

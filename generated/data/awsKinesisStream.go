@@ -43,6 +43,11 @@ const awsKinesisStream = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "max_record_size_in_kib": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,

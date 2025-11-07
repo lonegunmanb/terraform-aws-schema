@@ -34,6 +34,12 @@ const awsEc2InstanceConnectEndpoint = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "network_interface_ids": {
         "computed": true,
         "description_kind": "plain",

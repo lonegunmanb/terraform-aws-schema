@@ -74,6 +74,31 @@ const awsElasticacheReplicationGroup = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "node_group_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "node_group_id": "string",
+              "primary_availability_zone": "string",
+              "primary_outpost_arn": "string",
+              "replica_availability_zones": [
+                "list",
+                "string"
+              ],
+              "replica_count": "number",
+              "replica_outpost_arns": [
+                "list",
+                "string"
+              ],
+              "slots": "string"
+            }
+          ]
+        ]
+      },
       "node_type": {
         "computed": true,
         "description_kind": "plain",

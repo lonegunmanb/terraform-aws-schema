@@ -44,7 +44,16 @@ const awsConnectRoutingProfile = `{
             "object",
             {
               "channel": "string",
-              "concurrency": "number"
+              "concurrency": "number",
+              "cross_channel_behavior": [
+                "list",
+                [
+                  "object",
+                  {
+                    "behavior_type": "string"
+                  }
+                ]
+              ]
             }
           ]
         ]

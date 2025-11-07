@@ -240,6 +240,22 @@ const awsOpensearchDomain = `{
         "optional": true,
         "type": "string"
       },
+      "identity_center_options": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "enabled_api_access": "bool",
+              "identity_center_instance_arn": "string",
+              "roles_key": "string",
+              "subject_key": "string"
+            }
+          ]
+        ]
+      },
       "ip_address_type": {
         "computed": true,
         "description_kind": "plain",
@@ -269,6 +285,37 @@ const awsOpensearchDomain = `{
             "object",
             {
               "enabled": "bool"
+            }
+          ]
+        ]
+      },
+      "off_peak_window_options": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "enabled": "bool",
+              "off_peak_window": [
+                "list",
+                [
+                  "object",
+                  {
+                    "window_start_time": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "hours": "number",
+                          "minutes": "number"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
             }
           ]
         ]
@@ -344,44 +391,6 @@ const awsOpensearchDomain = `{
             }
           ]
         ]
-      }
-    },
-    "block_types": {
-      "off_peak_window_options": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
-            },
-            "off_peak_window": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": [
-                "list",
-                [
-                  "object",
-                  {
-                    "window_start_time": [
-                      "list",
-                      [
-                        "object",
-                        {
-                          "hours": "number",
-                          "minutes": "number"
-                        }
-                      ]
-                    ]
-                  }
-                ]
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

@@ -94,6 +94,11 @@ const awsCloudfrontDistribution = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "logging_v1_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "price_class": {
         "description_kind": "plain",
         "optional": true,
@@ -452,7 +457,7 @@ const awsCloudfrontDistribution = `{
           "attributes": {
             "bucket": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             },
             "include_cookies": {

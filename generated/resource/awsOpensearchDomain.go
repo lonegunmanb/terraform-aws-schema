@@ -520,6 +520,37 @@ const awsOpensearchDomain = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "identity_center_options": {
+        "block": {
+          "attributes": {
+            "enabled_api_access": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "identity_center_instance_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "roles_key": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "subject_key": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "log_publishing_options": {
         "block": {
           "attributes": {
