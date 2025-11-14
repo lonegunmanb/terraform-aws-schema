@@ -17,6 +17,7 @@ const awsCloudwatchLogDeliveryDestination = `{
       "delivery_destination_type": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "name": {
@@ -59,7 +60,7 @@ const awsCloudwatchLogDeliveryDestination = `{
           "attributes": {
             "destination_resource_arn": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },

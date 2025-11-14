@@ -6,39 +6,24 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsBedrockagentcoreBrowser = `{
+const awsNetworkflowmonitorScope = `{
   "block": {
     "attributes": {
-      "browser_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "browser_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "execution_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "scope_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "scope_id": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "tags": {
@@ -59,34 +44,38 @@ const awsBedrockagentcoreBrowser = `{
       }
     },
     "block_types": {
-      "network_configuration": {
+      "target": {
         "block": {
           "attributes": {
-            "network_mode": {
+            "region": {
               "description_kind": "plain",
               "required": true,
               "type": "string"
             }
           },
           "block_types": {
-            "vpc_config": {
+            "target_identifier": {
               "block": {
                 "attributes": {
-                  "security_groups": {
+                  "target_type": {
                     "description_kind": "plain",
                     "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  },
-                  "subnets": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "target_id": {
+                    "block": {
+                      "attributes": {
+                        "account_id": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"
@@ -96,40 +85,7 @@ const awsBedrockagentcoreBrowser = `{
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
-      },
-      "recording": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "block_types": {
-            "s3_location": {
-              "block": {
-                "attributes": {
-                  "bucket": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "prefix": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "timeouts": {
         "block": {
@@ -145,6 +101,12 @@ const awsBedrockagentcoreBrowser = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"
@@ -157,8 +119,8 @@ const awsBedrockagentcoreBrowser = `{
   "version": 0
 }`
 
-func AwsBedrockagentcoreBrowserSchema() *tfjson.Schema {
+func AwsNetworkflowmonitorScopeSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsBedrockagentcoreBrowser), &result)
+	_ = json.Unmarshal([]byte(awsNetworkflowmonitorScope), &result)
 	return &result
 }

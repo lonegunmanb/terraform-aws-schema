@@ -132,6 +132,7 @@ const awsEmrcontainersJobTemplate = `{
                     "block": {
                       "attributes": {
                         "persistent_app_ui": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"

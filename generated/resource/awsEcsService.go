@@ -241,6 +241,27 @@ const awsEcsService = `{
             }
           },
           "block_types": {
+            "canary_configuration": {
+              "block": {
+                "attributes": {
+                  "canary_bake_time_in_minutes": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "canary_percent": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "lifecycle_hook": {
               "block": {
                 "attributes": {
@@ -271,6 +292,27 @@ const awsEcsService = `{
                 "description_kind": "plain"
               },
               "nesting_mode": "set"
+            },
+            "linear_configuration": {
+              "block": {
+                "attributes": {
+                  "step_bake_time_in_minutes": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "step_percent": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

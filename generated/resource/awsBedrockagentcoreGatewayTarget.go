@@ -704,6 +704,19 @@ const awsBedrockagentcoreGatewayTarget = `{
                     },
                     "nesting_mode": "list"
                   },
+                  "mcp_server": {
+                    "block": {
+                      "attributes": {
+                        "endpoint": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
                   "open_api_schema": {
                     "block": {
                       "block_types": {

@@ -14,6 +14,11 @@ const awsSagemakerEndpointConfiguration = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "execution_role_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -256,7 +261,7 @@ const awsSagemakerEndpointConfiguration = `{
             },
             "model_name": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             },
             "variant_name": {
@@ -405,7 +410,7 @@ const awsSagemakerEndpointConfiguration = `{
             },
             "model_name": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             },
             "variant_name": {
