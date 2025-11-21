@@ -37,6 +37,14 @@ const awsS3BucketServerSideEncryptionConfiguration = `{
       "rule": {
         "block": {
           "attributes": {
+            "blocked_encryption_types": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
             "bucket_key_enabled": {
               "description_kind": "plain",
               "optional": true,

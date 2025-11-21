@@ -10,9 +10,9 @@ const awsTimestreaminfluxdbDbCluster = `{
   "block": {
     "attributes": {
       "allocated_storage": {
-        "description": "The amount of storage to allocate for your DB storage type in GiB (gibibytes).",
+        "description": "The amount of storage to allocate for your DB storage type in GiB (gibibytes).\n\t\t\t\t\tThis field is forbidden for InfluxDB V3 clusters (when using an InfluxDB V3 db parameter group).",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "number"
       },
       "arn": {
@@ -21,9 +21,9 @@ const awsTimestreaminfluxdbDbCluster = `{
         "type": "string"
       },
       "bucket": {
-        "description": "The name of the initial InfluxDB bucket. All InfluxDB data is stored in a bucket. \n\t\t\t\t\tA bucket combines the concept of a database and a retention period (the duration of time \n\t\t\t\t\tthat each data point persists). A bucket belongs to an organization.",
+        "description": "Name of the initial InfluxDB bucket. All InfluxDB data is stored in a bucket.\n\t\t\t\t\tA bucket combines the concept of a database and a retention period (the duration of time\n\t\t\t\t\tthat each data point persists). A bucket belongs to an organization. Along with organization,\n\t\t\t\t\tusername, and password, this argument will be stored in the secret referred to by the\n\t\t\t\t\tinflux_auth_parameters_secret_arn attribute. This field is forbidden for InfluxDB V3 clusters\n\t\t\t\t\t(when using an InfluxDB V3 db parameter group).",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "db_instance_type": {
@@ -47,7 +47,7 @@ const awsTimestreaminfluxdbDbCluster = `{
       },
       "deployment_type": {
         "computed": true,
-        "description": "Specifies the type of cluster to create.",
+        "description": "Specifies the type of cluster to create. This field is forbidden for InfluxDB V3 clusters\n\t\t\t\t\t(when using an InfluxDB V3 db parameter group).",
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -55,6 +55,12 @@ const awsTimestreaminfluxdbDbCluster = `{
       "endpoint": {
         "computed": true,
         "description": "The endpoint used to connect to InfluxDB. The default InfluxDB port is 8086.",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "engine_type": {
+        "computed": true,
+        "description": "The database engine type of the DB cluster.",
         "description_kind": "plain",
         "type": "string"
       },
@@ -72,7 +78,7 @@ const awsTimestreaminfluxdbDbCluster = `{
       },
       "influx_auth_parameters_secret_arn": {
         "computed": true,
-        "description": "The Amazon Resource Name (ARN) of the AWS Secrets Manager secret containing the \n\t\t\t\t\tinitial InfluxDB authorization parameters. The secret value is a JSON formatted \n\t\t\t\t\tkey-value pair holding InfluxDB authorization values: organization, bucket, \n\t\t\t\t\tusername, and password.",
+        "description": "The Amazon Resource Name (ARN) of the AWS Secrets Manager secret containing the \n\t\t\t\t\tinitial InfluxDB authorization parameters. For InfluxDB V2 clusters, the secret value is a JSON\n\t\t\t\t\tformatted key-value pair holding InfluxDB authorization values: organization, bucket,\n\t\t\t\t\tusername, and password. For InfluxDB V3 clusters, the secret contains the InfluxDB admin token.",
         "description_kind": "plain",
         "type": "string"
       },
@@ -90,15 +96,15 @@ const awsTimestreaminfluxdbDbCluster = `{
         "type": "string"
       },
       "organization": {
-        "description": "The name of the initial organization for the initial admin user in InfluxDB. An \n\t\t\t\t\tInfluxDB organization is a workspace for a group of users.",
+        "description": "Name of the initial organization for the initial admin user in InfluxDB. An\n\t\t\t\t\tInfluxDB organization is a workspace for a group of users. Along with bucket, username,\n\t\t\t\t\tand password, this argument will be stored in the secret referred to by the\n\t\t\t\t\tinflux_auth_parameters_secret_arn attribute. This field is forbidden for InfluxDB V3 clusters\n\t\t\t\t\t(when using an InfluxDB V3 db parameter group).",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "password": {
-        "description": "The password of the initial admin user created in InfluxDB. This password will \n\t\t\t\t\tallow you to access the InfluxDB UI to perform various administrative tasks and \n\t\t\t\t\talso use the InfluxDB CLI to create an operator token. These attributes will be \n\t\t\t\t\tstored in a Secret created in AWS SecretManager in your account.",
+        "description": "Password of the initial admin user created in InfluxDB. This password will\n\t\t\t\t\tallow you to access the InfluxDB UI to perform various administrative tasks and\n\t\t\t\t\talso use the InfluxDB CLI to create an operator token. Along with bucket, username,\n\t\t\t\t\tand organization, this argument will be stored in the secret referred to by the\n\t\t\t\t\tinflux_auth_parameters_secret_arn attribute. This field is forbidden for InfluxDB V3 clusters\n\t\t\t\t\t(when using an InfluxDB V3 db parameter group) as the AWS API rejects it.",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "sensitive": true,
         "type": "string"
       },
@@ -146,9 +152,9 @@ const awsTimestreaminfluxdbDbCluster = `{
         ]
       },
       "username": {
-        "description": "The username of the initial admin user created in InfluxDB. \n\t\t\t\t\tMust start with a letter and can't end with a hyphen or contain two \n\t\t\t\t\tconsecutive hyphens. For example, my-user1. This username will allow \n\t\t\t\t\tyou to access the InfluxDB UI to perform various administrative tasks \n\t\t\t\t\tand also use the InfluxDB CLI to create an operator token. These \n\t\t\t\t\tattributes will be stored in a Secret created in Amazon Secrets \n\t\t\t\t\tManager in your account.",
+        "description": "Username of the initial admin user created in InfluxDB. Must start with a letter\n\t\t\t\t\tand can't end with a hyphen or contain two consecutive hyphens. This username will allow\n\t\t\t\t\tyou to access the InfluxDB UI to perform various administrative tasks and also use the\n\t\t\t\t\tInfluxDB CLI to create an operator token. Along with bucket, organization, and password,\n\t\t\t\t\tthis argument will be stored in the secret referred to by the influx_auth_parameters_secret_arn\n\t\t\t\t\tattribute. This field is forbidden for InfluxDB V3 clusters (when using an InfluxDB V3 db parameter group).",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "vpc_security_group_ids": {

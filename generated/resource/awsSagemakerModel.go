@@ -105,6 +105,61 @@ const awsSagemakerModel = `{
             }
           },
           "block_types": {
+            "additional_model_data_source": {
+              "block": {
+                "attributes": {
+                  "channel_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "s3_data_source": {
+                    "block": {
+                      "attributes": {
+                        "compression_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "s3_data_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "s3_uri": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "model_access_config": {
+                          "block": {
+                            "attributes": {
+                              "accept_eula": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "bool"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "min_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "image_config": {
               "block": {
                 "attributes": {
@@ -260,6 +315,61 @@ const awsSagemakerModel = `{
             }
           },
           "block_types": {
+            "additional_model_data_source": {
+              "block": {
+                "attributes": {
+                  "channel_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "s3_data_source": {
+                    "block": {
+                      "attributes": {
+                        "compression_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "s3_data_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "s3_uri": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "model_access_config": {
+                          "block": {
+                            "attributes": {
+                              "accept_eula": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "bool"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "min_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "image_config": {
               "block": {
                 "attributes": {

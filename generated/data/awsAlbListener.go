@@ -113,6 +113,30 @@ const awsAlbListener = `{
                   }
                 ]
               ],
+              "jwt_validation": [
+                "list",
+                [
+                  "object",
+                  {
+                    "additional_claim": [
+                      "set",
+                      [
+                        "object",
+                        {
+                          "format": "string",
+                          "name": "string",
+                          "values": [
+                            "set",
+                            "string"
+                          ]
+                        }
+                      ]
+                    ],
+                    "issuer": "string",
+                    "jwks_endpoint": "string"
+                  }
+                ]
+              ],
               "order": "number",
               "redirect": [
                 "list",

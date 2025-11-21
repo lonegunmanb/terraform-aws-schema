@@ -238,6 +238,52 @@ const awsLbListenerRule = `{
               },
               "nesting_mode": "list"
             },
+            "jwt_validation": {
+              "block": {
+                "attributes": {
+                  "issuer": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
+                  "jwks_endpoint": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "additional_claim": {
+                    "block": {
+                      "attributes": {
+                        "format": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "type": "string"
+                        },
+                        "name": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "type": "string"
+                        },
+                        "values": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "set"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "redirect": {
               "block": {
                 "attributes": {

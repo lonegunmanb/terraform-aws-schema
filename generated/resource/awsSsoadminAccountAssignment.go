@@ -49,7 +49,7 @@ const awsSsoadminAccountAssignment = `{
       },
       "target_type": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       }
     },

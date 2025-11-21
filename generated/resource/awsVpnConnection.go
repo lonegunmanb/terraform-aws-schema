@@ -438,6 +438,12 @@ const awsVpnConnection = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "tunnel_bandwidth": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "tunnel_inside_ip_version": {
         "computed": true,
         "description_kind": "plain",

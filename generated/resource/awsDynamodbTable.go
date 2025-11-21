@@ -240,6 +240,21 @@ const awsDynamodbTable = `{
         },
         "nesting_mode": "set"
       },
+      "global_table_witness": {
+        "block": {
+          "attributes": {
+            "region_name": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "import_table": {
         "block": {
           "attributes": {

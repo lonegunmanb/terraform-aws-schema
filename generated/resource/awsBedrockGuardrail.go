@@ -107,10 +107,46 @@ const awsBedrockGuardrail = `{
             "filters_config": {
               "block": {
                 "attributes": {
+                  "input_action": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "input_enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "input_modalities": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
                   "input_strength": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
+                  },
+                  "output_action": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "output_enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "output_modalities": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
                   },
                   "output_strength": {
                     "description_kind": "plain",

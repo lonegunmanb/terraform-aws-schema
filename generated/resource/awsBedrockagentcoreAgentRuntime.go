@@ -103,6 +103,60 @@ const awsBedrockagentcoreAgentRuntime = `{
       "agent_runtime_artifact": {
         "block": {
           "block_types": {
+            "code_configuration": {
+              "block": {
+                "attributes": {
+                  "entry_point": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "runtime": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "code": {
+                    "block": {
+                      "block_types": {
+                        "s3": {
+                          "block": {
+                            "attributes": {
+                              "bucket": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "prefix": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "version_id": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "container_configuration": {
               "block": {
                 "attributes": {

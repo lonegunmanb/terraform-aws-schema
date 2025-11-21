@@ -6,44 +6,32 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVpclatticeResourceConfiguration = `{
+const awsBillingView = `{
   "block": {
     "attributes": {
-      "allow_association_to_shareable_service_network": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "custom_domain_name": {
+      "billing_view_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "created_at": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "derived_view_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "description": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "domain_verification_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "domain_verification_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "domain_verification_status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "name": {
@@ -51,38 +39,28 @@ const awsVpclatticeResourceConfiguration = `{
         "required": true,
         "type": "string"
       },
-      "port_ranges": {
+      "owner_account_id": {
         "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "source_account_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "source_view_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "source_views": {
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "set",
+          "list",
           "string"
         ]
-      },
-      "protocol": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "region": {
-        "computed": true,
-        "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "resource_configuration_group_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "resource_gateway_identifier": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "tags": {
         "description_kind": "plain",
@@ -100,52 +78,72 @@ const awsVpclatticeResourceConfiguration = `{
           "string"
         ]
       },
-      "type": {
+      "updated_at": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": "string"
+      },
+      "view_definition_last_updated_at": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       }
     },
     "block_types": {
-      "resource_configuration_definition": {
+      "data_filter_expression": {
         "block": {
           "block_types": {
-            "arn_resource": {
+            "dimensions": {
               "block": {
                 "attributes": {
-                  "arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            },
-            "dns_resource": {
-              "block": {
-                "attributes": {
-                  "domain_name": {
+                  "key": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
                   },
-                  "ip_address_type": {
+                  "values": {
                     "description_kind": "plain",
                     "required": true,
-                    "type": "string"
+                    "type": [
+                      "list",
+                      "string"
+                    ]
                   }
                 },
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
             },
-            "ip_resource": {
+            "tags": {
               "block": {
                 "attributes": {
-                  "ip_address": {
+                  "key": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "values": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "time_range": {
+              "block": {
+                "attributes": {
+                  "begin_date_inclusive": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "end_date_inclusive": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
@@ -192,8 +190,8 @@ const awsVpclatticeResourceConfiguration = `{
   "version": 0
 }`
 
-func AwsVpclatticeResourceConfigurationSchema() *tfjson.Schema {
+func AwsBillingViewSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVpclatticeResourceConfiguration), &result)
+	_ = json.Unmarshal([]byte(awsBillingView), &result)
 	return &result
 }

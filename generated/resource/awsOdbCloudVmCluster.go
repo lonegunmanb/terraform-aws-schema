@@ -14,10 +14,18 @@ const awsOdbCloudVmCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "cloud_exadata_infrastructure_id": {
+      "cloud_exadata_infrastructure_arn": {
+        "computed": true,
         "description": "The unique identifier of the Exadata infrastructure for this VM cluster. Changing this will create a new resource.",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "string"
+      },
+      "cloud_exadata_infrastructure_id": {
+        "computed": true,
+        "description": "The unique identifier of the Exadata infrastructure for this VM cluster. Changing this will create a new resource.",
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "cluster_name": {
@@ -205,10 +213,18 @@ const awsOdbCloudVmCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "odb_network_id": {
+      "odb_network_arn": {
+        "computed": true,
         "description": "The unique identifier of the ODB network for the VM cluster. This member is required. Changing this will create a new resource.",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "string"
+      },
+      "odb_network_id": {
+        "computed": true,
+        "description": "The unique identifier of the ODB network for the VM cluster. This member is required. Changing this will create a new resource.",
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "percent_progress": {

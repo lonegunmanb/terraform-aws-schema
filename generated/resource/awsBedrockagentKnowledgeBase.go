@@ -293,6 +293,11 @@ const awsBedrockagentKnowledgeBase = `{
                   "field_mapping": {
                     "block": {
                       "attributes": {
+                        "custom_metadata_field": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
                         "metadata_field": {
                           "description_kind": "plain",
                           "required": true,

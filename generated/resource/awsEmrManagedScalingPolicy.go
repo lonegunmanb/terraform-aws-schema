@@ -26,6 +26,16 @@ const awsEmrManagedScalingPolicy = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "scaling_strategy": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "utilization_performance_index": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       }
     },
     "block_types": {
