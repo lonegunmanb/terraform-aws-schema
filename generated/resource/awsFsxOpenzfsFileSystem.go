@@ -214,6 +214,26 @@ const awsFsxOpenzfsFileSystem = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "read_cache_configuration": {
+        "block": {
+          "attributes": {
+            "size": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "sizing_mode": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "root_volume_configuration": {
         "block": {
           "attributes": {

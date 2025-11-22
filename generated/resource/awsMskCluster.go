@@ -530,6 +530,20 @@ const awsMskCluster = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "rebalancing": {
+        "block": {
+          "attributes": {
+            "status": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
