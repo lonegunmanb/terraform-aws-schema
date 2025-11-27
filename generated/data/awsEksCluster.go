@@ -64,6 +64,19 @@ const awsEksCluster = `{
           ]
         ]
       },
+      "control_plane_scaling_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "tier": "string"
+            }
+          ]
+        ]
+      },
       "created_at": {
         "computed": true,
         "description_kind": "plain",

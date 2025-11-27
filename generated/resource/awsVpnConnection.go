@@ -473,6 +473,11 @@ const awsVpnConnection = `{
           ]
         ]
       },
+      "vpn_concentrator_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "vpn_gateway_id": {
         "description_kind": "plain",
         "optional": true,

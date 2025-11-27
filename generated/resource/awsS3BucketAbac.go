@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,26 +6,15 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsLambdaInvocation = `{
+const awsS3BucketAbac = `{
   "block": {
     "attributes": {
-      "function_name": {
+      "bucket": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "input": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "qualifier": {
+      "expected_bucket_owner": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -36,16 +25,21 @@ const awsLambdaInvocation = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "result": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "tenant_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
+      }
+    },
+    "block_types": {
+      "abac_status": {
+        "block": {
+          "attributes": {
+            "status": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -53,8 +47,8 @@ const awsLambdaInvocation = `{
   "version": 0
 }`
 
-func AwsLambdaInvocationSchema() *tfjson.Schema {
+func AwsS3BucketAbacSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsLambdaInvocation), &result)
+	_ = json.Unmarshal([]byte(awsS3BucketAbac), &result)
 	return &result
 }

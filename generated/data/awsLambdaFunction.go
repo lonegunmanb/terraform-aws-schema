@@ -230,6 +230,19 @@ const awsLambdaFunction = `{
           "string"
         ]
       },
+      "tenancy_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "tenant_isolation_mode": "string"
+            }
+          ]
+        ]
+      },
       "timeout": {
         "computed": true,
         "description_kind": "plain",

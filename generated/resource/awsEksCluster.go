@@ -193,6 +193,21 @@ const awsEksCluster = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "control_plane_scaling_config": {
+        "block": {
+          "attributes": {
+            "tier": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "encryption_config": {
         "block": {
           "attributes": {

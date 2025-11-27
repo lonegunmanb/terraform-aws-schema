@@ -366,6 +366,20 @@ const awsLambdaFunction = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "tenancy_config": {
+        "block": {
+          "attributes": {
+            "tenant_isolation_mode": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

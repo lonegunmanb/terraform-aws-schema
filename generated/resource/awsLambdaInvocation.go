@@ -47,6 +47,11 @@ const awsLambdaInvocation = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "tenant_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "terraform_key": {
         "description_kind": "plain",
         "optional": true,

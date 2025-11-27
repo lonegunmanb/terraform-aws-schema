@@ -52,6 +52,14 @@ const awsDocdbSubnetGroup = `{
           "string"
         ]
       },
+      "supported_network_types": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

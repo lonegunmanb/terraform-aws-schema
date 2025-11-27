@@ -106,6 +106,11 @@ const awsVpnConnection = `{
           ]
         ]
       },
+      "vpn_concentrator_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "vpn_connection_id": {
         "computed": true,
         "description_kind": "plain",
