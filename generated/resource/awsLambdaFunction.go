@@ -102,6 +102,11 @@ const awsLambdaFunction = `{
         "optional": true,
         "type": "bool"
       },
+      "publish_to": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "qualified_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -222,6 +227,42 @@ const awsLambdaFunction = `{
       }
     },
     "block_types": {
+      "capacity_provider_config": {
+        "block": {
+          "block_types": {
+            "lambda_managed_instances_capacity_provider_config": {
+              "block": {
+                "attributes": {
+                  "capacity_provider_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "execution_environment_memory_gib_per_vcpu": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "per_execution_environment_max_concurrency": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "dead_letter_config": {
         "block": {
           "attributes": {

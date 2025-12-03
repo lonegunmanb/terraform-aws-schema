@@ -6,40 +6,38 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsResourceexplorer2View = `{
+const awsS3VectorsVectorBucket = `{
   "block": {
     "attributes": {
-      "arn": {
+      "creation_time": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "default_view": {
+      "encryption_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "kms_key_arn": "string",
+              "sse_type": "string"
+            }
+          ]
+        ]
+      },
+      "force_destroy": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
-      "id": {
-        "computed": true,
-        "deprecated": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "scope": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -59,34 +57,16 @@ const awsResourceexplorer2View = `{
           "map",
           "string"
         ]
-      }
-    },
-    "block_types": {
-      "filters": {
-        "block": {
-          "attributes": {
-            "filter_string": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
       },
-      "included_property": {
-        "block": {
-          "attributes": {
-            "name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
+      "vector_bucket_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "vector_bucket_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -94,8 +74,8 @@ const awsResourceexplorer2View = `{
   "version": 0
 }`
 
-func AwsResourceexplorer2ViewSchema() *tfjson.Schema {
+func AwsS3VectorsVectorBucketSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsResourceexplorer2View), &result)
+	_ = json.Unmarshal([]byte(awsS3VectorsVectorBucket), &result)
 	return &result
 }

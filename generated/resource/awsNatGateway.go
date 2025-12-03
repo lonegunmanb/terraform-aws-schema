@@ -19,6 +19,22 @@ const awsNatGateway = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "auto_provision_zones": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "auto_scaling_ips": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "availability_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "connectivity_type": {
         "description_kind": "plain",
         "optional": true,
@@ -53,6 +69,35 @@ const awsNatGateway = `{
         "optional": true,
         "type": "string"
       },
+      "regional_nat_gateway_address": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "allocation_id": "string",
+              "association_id": "string",
+              "availability_zone": "string",
+              "availability_zone_id": "string",
+              "network_interface_id": "string",
+              "public_ip": "string",
+              "status": "string"
+            }
+          ]
+        ]
+      },
+      "regional_nat_gateway_auto_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "route_table_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "secondary_allocation_ids": {
         "computed": true,
         "description_kind": "plain",
@@ -79,7 +124,7 @@ const awsNatGateway = `{
       },
       "subnet_id": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "tags": {
@@ -98,9 +143,42 @@ const awsNatGateway = `{
           "map",
           "string"
         ]
+      },
+      "vpc_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {
+      "availability_zone_address": {
+        "block": {
+          "attributes": {
+            "allocation_ids": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "availability_zone": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "availability_zone_id": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "timeouts": {
         "block": {
           "attributes": {

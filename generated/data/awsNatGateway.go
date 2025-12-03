@@ -19,6 +19,39 @@ const awsNatGateway = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "auto_provision_zones": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "auto_scaling_ips": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "availability_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "availability_zone_address": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "allocation_ids": [
+                "set",
+                "string"
+              ],
+              "availability_zone": "string",
+              "availability_zone_id": "string"
+            }
+          ]
+        ]
+      },
       "connectivity_type": {
         "computed": true,
         "description_kind": "plain",
@@ -50,6 +83,30 @@ const awsNatGateway = `{
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "regional_nat_gateway_address": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "allocation_id": "string",
+              "association_id": "string",
+              "availability_zone": "string",
+              "availability_zone_id": "string",
+              "network_interface_id": "string",
+              "public_ip": "string",
+              "status": "string"
+            }
+          ]
+        ]
+      },
+      "route_table_id": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "secondary_allocation_ids": {

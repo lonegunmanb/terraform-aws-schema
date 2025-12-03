@@ -22,6 +22,29 @@ const awsLambdaFunction = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "capacity_provider_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "lambda_managed_instances_capacity_provider_config": [
+                "list",
+                [
+                  "object",
+                  {
+                    "capacity_provider_arn": "string",
+                    "execution_environment_memory_gib_per_vcpu": "number",
+                    "per_execution_environment_max_concurrency": "number"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
       "code_sha256": {
         "computed": true,
         "description_kind": "plain",

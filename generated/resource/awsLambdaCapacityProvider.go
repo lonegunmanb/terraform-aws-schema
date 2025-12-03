@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsResourceexplorer2Index = `{
+const awsLambdaCapacityProvider = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,10 +14,64 @@ const awsResourceexplorer2Index = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "id": {
+      "capacity_provider_scaling_config": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "max_vcpu_count": "number",
+              "scaling_mode": "string",
+              "scaling_policies": [
+                "list",
+                [
+                  "object",
+                  {
+                    "predefined_metric_type": "string",
+                    "target_value": "number"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
+      "instance_requirements": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "allowed_instance_types": [
+                "list",
+                "string"
+              ],
+              "architectures": [
+                "list",
+                "string"
+              ],
+              "excluded_instance_types": [
+                "list",
+                "string"
+              ]
+            }
+          ]
+        ]
+      },
+      "kms_key_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "name": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "region": {
@@ -42,14 +96,22 @@ const awsResourceexplorer2Index = `{
           "map",
           "string"
         ]
-      },
-      "type": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
       }
     },
     "block_types": {
+      "permissions_config": {
+        "block": {
+          "attributes": {
+            "capacity_provider_operator_role_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
@@ -75,6 +137,30 @@ const awsResourceexplorer2Index = `{
           "description_kind": "plain"
         },
         "nesting_mode": "single"
+      },
+      "vpc_config": {
+        "block": {
+          "attributes": {
+            "security_group_ids": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "subnet_ids": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -82,8 +168,8 @@ const awsResourceexplorer2Index = `{
   "version": 0
 }`
 
-func AwsResourceexplorer2IndexSchema() *tfjson.Schema {
+func AwsLambdaCapacityProviderSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsResourceexplorer2Index), &result)
+	_ = json.Unmarshal([]byte(awsLambdaCapacityProvider), &result)
 	return &result
 }

@@ -491,6 +491,21 @@ const awsVpnConnection = `{
             "cloudwatch_log_options": {
               "block": {
                 "attributes": {
+                  "bgp_log_enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "bgp_log_group_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "bgp_log_output_format": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "log_enabled": {
                     "description_kind": "plain",
                     "optional": true,
@@ -524,6 +539,21 @@ const awsVpnConnection = `{
             "cloudwatch_log_options": {
               "block": {
                 "attributes": {
+                  "bgp_log_enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "bgp_log_group_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "bgp_log_output_format": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "log_enabled": {
                     "description_kind": "plain",
                     "optional": true,

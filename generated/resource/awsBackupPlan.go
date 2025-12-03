@@ -118,6 +118,11 @@ const awsBackupPlan = `{
               "optional": true,
               "type": "number"
             },
+            "target_logically_air_gapped_backup_vault_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "target_vault_name": {
               "description_kind": "plain",
               "required": true,
