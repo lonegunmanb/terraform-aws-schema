@@ -83,10 +83,39 @@ const awsBackupPlan = `{
                 "string"
               ],
               "rule_name": "string",
+              "scan_action": [
+                "set",
+                [
+                  "object",
+                  {
+                    "malware_scanner": "string",
+                    "scan_mode": "string"
+                  }
+                ]
+              ],
               "schedule": "string",
               "schedule_expression_timezone": "string",
               "start_window": "number",
+              "target_logically_air_gapped_backup_vault_arn": "string",
               "target_vault_name": "string"
+            }
+          ]
+        ]
+      },
+      "scan_setting": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "malware_scanner": "string",
+              "resource_types": [
+                "set",
+                "string"
+              ],
+              "scanner_role_arn": "string"
             }
           ]
         ]

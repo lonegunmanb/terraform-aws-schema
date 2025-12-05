@@ -248,6 +248,30 @@ const awsAlb = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "health_check_logs": {
+        "block": {
+          "attributes": {
+            "bucket": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "enabled": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "prefix": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "ipam_pools": {
         "block": {
           "attributes": {

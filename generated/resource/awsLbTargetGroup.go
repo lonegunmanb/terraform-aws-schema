@@ -141,6 +141,11 @@ const awsLbTargetGroup = `{
           "string"
         ]
       },
+      "target_control_port": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "target_type": {
         "description_kind": "plain",
         "optional": true,

@@ -59,6 +59,11 @@ const awsApiGatewayIntegration = `{
         "optional": true,
         "type": "string"
       },
+      "integration_target": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "passthrough_behavior": {
         "computed": true,
         "description_kind": "plain",
@@ -91,6 +96,12 @@ const awsApiGatewayIntegration = `{
       "resource_id": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "response_transfer_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "rest_api_id": {

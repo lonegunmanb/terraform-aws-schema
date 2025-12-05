@@ -35,8 +35,20 @@ const awsKmsCiphertext = `{
       },
       "plaintext": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "sensitive": true,
+        "type": "string"
+      },
+      "plaintext_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string",
+        "write_only": true
+      },
+      "plaintext_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "region": {

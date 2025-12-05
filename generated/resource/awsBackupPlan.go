@@ -194,11 +194,55 @@ const awsBackupPlan = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            },
+            "scan_action": {
+              "block": {
+                "attributes": {
+                  "malware_scanner": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "scan_mode": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
             }
           },
           "description_kind": "plain"
         },
         "min_items": 1,
+        "nesting_mode": "set"
+      },
+      "scan_setting": {
+        "block": {
+          "attributes": {
+            "malware_scanner": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "resource_types": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "scanner_role_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
         "nesting_mode": "set"
       }
     },

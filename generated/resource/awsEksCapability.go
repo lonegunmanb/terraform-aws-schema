@@ -6,50 +6,25 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsBedrockagentcoreGateway = `{
+const awsEksCapability = `{
   "block": {
     "attributes": {
-      "authorizer_type": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "capability_name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "exception_level": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "gateway_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "gateway_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "gateway_url": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "kms_key_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "name": {
+      "cluster_name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "protocol_type": {
+      "delete_propagation_policy": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -82,133 +57,109 @@ const awsBedrockagentcoreGateway = `{
           "string"
         ]
       },
-      "workload_identity_details": {
+      "type": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "version": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "workload_identity_arn": "string"
-            }
-          ]
-        ]
+        "type": "string"
       }
     },
     "block_types": {
-      "authorizer_configuration": {
+      "configuration": {
         "block": {
           "block_types": {
-            "custom_jwt_authorizer": {
+            "argo_cd": {
               "block": {
                 "attributes": {
-                  "allowed_audience": {
+                  "namespace": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
+                    "type": "string"
                   },
-                  "allowed_clients": {
+                  "server_url": {
+                    "computed": true,
                     "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  },
-                  "discovery_url": {
-                    "description_kind": "plain",
-                    "required": true,
                     "type": "string"
                   }
                 },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "interceptor_configuration": {
-        "block": {
-          "attributes": {
-            "interception_points": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "block_types": {
-            "input_configuration": {
-              "block": {
-                "attributes": {
-                  "pass_request_headers": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "bool"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            },
-            "interceptor": {
-              "block": {
                 "block_types": {
-                  "lambda": {
+                  "aws_idc": {
                     "block": {
                       "attributes": {
-                        "arn": {
+                        "idc_instance_arn": {
                           "description_kind": "plain",
                           "required": true,
+                          "type": "string"
+                        },
+                        "idc_managed_application_arn": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "type": "string"
+                        },
+                        "idc_region": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
                           "type": "string"
                         }
                       },
                       "description_kind": "plain"
                     },
                     "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "protocol_configuration": {
-        "block": {
-          "block_types": {
-            "mcp": {
-              "block": {
-                "attributes": {
-                  "instructions": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
                   },
-                  "search_type": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
+                  "network_access": {
+                    "block": {
+                      "attributes": {
+                        "vpce_ids": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   },
-                  "supported_versions": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
+                  "rbac_role_mapping": {
+                    "block": {
+                      "attributes": {
+                        "role": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "identity": {
+                          "block": {
+                            "attributes": {
+                              "id": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "set"
                   }
                 },
                 "description_kind": "plain"
@@ -252,8 +203,8 @@ const awsBedrockagentcoreGateway = `{
   "version": 0
 }`
 
-func AwsBedrockagentcoreGatewaySchema() *tfjson.Schema {
+func AwsEksCapabilitySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsBedrockagentcoreGateway), &result)
+	_ = json.Unmarshal([]byte(awsEksCapability), &result)
 	return &result
 }

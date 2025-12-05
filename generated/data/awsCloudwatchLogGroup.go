@@ -19,6 +19,11 @@ const awsCloudwatchLogGroup = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "deletion_protection_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

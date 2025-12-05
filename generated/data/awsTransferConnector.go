@@ -40,6 +40,28 @@ const awsTransferConnector = `{
           ]
         ]
       },
+      "egress_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "vpc_lattice": [
+                "list",
+                [
+                  "object",
+                  {
+                    "port_number": "number",
+                    "resource_configuration_arn": "string"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
       "id": {
         "description_kind": "plain",
         "required": true,

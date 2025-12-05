@@ -9,6 +9,11 @@ import (
 const awsRolesanywhereProfile = `{
   "block": {
     "attributes": {
+      "accept_role_session_name": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",

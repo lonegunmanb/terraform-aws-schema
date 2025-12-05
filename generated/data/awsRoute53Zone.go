@@ -24,6 +24,11 @@ const awsRoute53Zone = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "enable_accelerated_recovery": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

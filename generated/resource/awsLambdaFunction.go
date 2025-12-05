@@ -277,6 +277,25 @@ const awsLambdaFunction = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "durable_config": {
+        "block": {
+          "attributes": {
+            "execution_timeout": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "retention_period": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "environment": {
         "block": {
           "attributes": {

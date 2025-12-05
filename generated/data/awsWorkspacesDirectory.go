@@ -150,6 +150,11 @@ const awsWorkspacesDirectory = `{
           "string"
         ]
       },
+      "tenancy": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "user_identity_type": {
         "computed": true,
         "description_kind": "plain",

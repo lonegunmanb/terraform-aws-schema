@@ -134,6 +134,36 @@ const awsAthenaWorkgroup = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "managed_query_results_configuration": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  }
+                },
+                "block_types": {
+                  "encryption_configuration": {
+                    "block": {
+                      "attributes": {
+                        "kms_key": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "result_configuration": {
               "block": {
                 "attributes": {

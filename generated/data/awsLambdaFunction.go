@@ -73,6 +73,20 @@ const awsLambdaFunction = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "durable_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "execution_timeout": "number",
+              "retention_period": "number"
+            }
+          ]
+        ]
+      },
       "environment": {
         "computed": true,
         "description_kind": "plain",

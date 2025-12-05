@@ -64,6 +64,11 @@ const awsFlowLog = `{
         "optional": true,
         "type": "string"
       },
+      "regional_nat_gateway_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "subnet_id": {
         "description_kind": "plain",
         "optional": true,

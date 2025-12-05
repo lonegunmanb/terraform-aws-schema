@@ -154,6 +154,11 @@ const awsLbTargetGroup = `{
           "string"
         ]
       },
+      "target_control_port": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "target_type": {
         "computed": true,
         "description_kind": "plain",

@@ -34,6 +34,14 @@ const awsSsmAssociation = `{
         "optional": true,
         "type": "string"
       },
+      "calendar_names": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "compliance_severity": {
         "description_kind": "plain",
         "optional": true,

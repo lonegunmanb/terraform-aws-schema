@@ -49,6 +49,11 @@ const awsEc2TransitGateway = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "encryption_support": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

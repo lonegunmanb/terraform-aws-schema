@@ -120,6 +120,21 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "health_check_logs": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "bucket": "string",
+              "enabled": "bool",
+              "prefix": "string"
+            }
+          ]
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

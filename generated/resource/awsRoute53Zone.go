@@ -24,6 +24,12 @@ const awsRoute53Zone = `{
         "optional": true,
         "type": "string"
       },
+      "enable_accelerated_recovery": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "force_destroy": {
         "description_kind": "plain",
         "optional": true,
