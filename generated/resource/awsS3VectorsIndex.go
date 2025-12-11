@@ -29,6 +29,21 @@ const awsS3VectorsIndex = `{
         "required": true,
         "type": "string"
       },
+      "encryption_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "kms_key_arn": "string",
+              "sse_type": "string"
+            }
+          ]
+        ]
+      },
       "index_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -66,6 +81,24 @@ const awsS3VectorsIndex = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
+      }
+    },
+    "block_types": {
+      "metadata_configuration": {
+        "block": {
+          "attributes": {
+            "non_filterable_metadata_keys": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

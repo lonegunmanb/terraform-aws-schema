@@ -58,12 +58,12 @@ const awsBedrockModelInvocationLoggingConfiguration = `{
                 "attributes": {
                   "log_group_name": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   },
                   "role_arn": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   }
                 },
@@ -73,7 +73,7 @@ const awsBedrockModelInvocationLoggingConfiguration = `{
                       "attributes": {
                         "bucket_name": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
                         },
                         "key_prefix": {
@@ -96,7 +96,7 @@ const awsBedrockModelInvocationLoggingConfiguration = `{
                 "attributes": {
                   "bucket_name": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   },
                   "key_prefix": {

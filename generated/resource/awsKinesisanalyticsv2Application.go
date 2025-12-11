@@ -162,6 +162,25 @@ const awsKinesisanalyticsv2Application = `{
               "min_items": 1,
               "nesting_mode": "list"
             },
+            "application_encryption_configuration": {
+              "block": {
+                "attributes": {
+                  "key_id": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "key_type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "application_snapshot_configuration": {
               "block": {
                 "attributes": {

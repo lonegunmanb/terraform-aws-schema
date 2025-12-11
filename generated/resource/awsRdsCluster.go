@@ -424,6 +424,11 @@ const awsRdsCluster = `{
           "string"
         ]
       },
+      "upgrade_rollout_order": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "vpc_security_group_ids": {
         "computed": true,
         "description_kind": "plain",

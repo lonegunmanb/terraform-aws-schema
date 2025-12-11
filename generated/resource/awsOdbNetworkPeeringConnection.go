@@ -35,12 +35,14 @@ const awsOdbNetworkPeeringConnection = `{
         "computed": true,
         "description": "ARN of the odb network peering connection.",
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "odb_network_id": {
+        "computed": true,
         "description": "Required field. The unique identifier of the ODB network that initiates the peering connection. A sample ID is odbpcx-abcdefgh12345678. Changing this will force terraform to create new resource.",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "odb_peering_connection_type": {

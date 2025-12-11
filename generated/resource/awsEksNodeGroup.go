@@ -351,6 +351,11 @@ const awsEksNodeGroup = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
+            },
+            "update_strategy": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

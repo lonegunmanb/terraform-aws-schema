@@ -256,6 +256,11 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "upgrade_rollout_order": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "vpc_security_groups": {
         "computed": true,
         "description_kind": "plain",

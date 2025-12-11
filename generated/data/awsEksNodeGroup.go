@@ -184,6 +184,21 @@ const awsEksNodeGroup = `{
           ]
         ]
       },
+      "update_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "max_unavailable": "number",
+              "max_unavailable_percentage": "number",
+              "update_strategy": "string"
+            }
+          ]
+        ]
+      },
       "version": {
         "computed": true,
         "description_kind": "plain",

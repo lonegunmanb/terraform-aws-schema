@@ -481,6 +481,11 @@ const awsDbInstance = `{
         "optional": true,
         "type": "string"
       },
+      "upgrade_rollout_order": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "upgrade_storage_config": {
         "description_kind": "plain",
         "optional": true,

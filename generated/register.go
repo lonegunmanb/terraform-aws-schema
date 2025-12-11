@@ -731,6 +731,7 @@ func init() {
 	resources["aws_iam_instance_profile"] = resource.AwsIamInstanceProfileSchema()  
 	resources["aws_iam_openid_connect_provider"] = resource.AwsIamOpenidConnectProviderSchema()  
 	resources["aws_iam_organizations_features"] = resource.AwsIamOrganizationsFeaturesSchema()  
+	resources["aws_iam_outbound_web_identity_federation"] = resource.AwsIamOutboundWebIdentityFederationSchema()  
 	resources["aws_iam_policy"] = resource.AwsIamPolicySchema()  
 	resources["aws_iam_policy_attachment"] = resource.AwsIamPolicyAttachmentSchema()  
 	resources["aws_iam_role"] = resource.AwsIamRoleSchema()  

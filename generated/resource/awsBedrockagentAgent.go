@@ -99,6 +99,15 @@ const awsBedrockagentAgent = `{
                 "list",
                 "string"
               ],
+              "session_summary_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "max_recent_sessions": "number"
+                  }
+                ]
+              ],
               "storage_days": "number"
             }
           ]
