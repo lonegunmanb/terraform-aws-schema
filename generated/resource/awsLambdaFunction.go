@@ -26,6 +26,7 @@ const awsLambdaFunction = `{
       "code_sha256": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "code_signing_config_arn": {

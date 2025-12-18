@@ -57,6 +57,12 @@ const awsRoute53ResolverEndpoint = `{
         "optional": true,
         "type": "string"
       },
+      "rni_enhanced_metrics_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "security_group_ids": {
         "description_kind": "plain",
         "required": true,
@@ -81,6 +87,12 @@ const awsRoute53ResolverEndpoint = `{
           "map",
           "string"
         ]
+      },
+      "target_name_server_metrics_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       }
     },
     "block_types": {

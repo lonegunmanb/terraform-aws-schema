@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsNetworkmanagerDxGatewayAttachment = `{
+const awsCloudfrontTrustStore = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,63 +14,25 @@ const awsNetworkmanagerDxGatewayAttachment = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "attachment_policy_rule_number": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
-      "attachment_type": {
+      "etag": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "core_network_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "core_network_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "direct_connect_gateway_arn": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "edge_locations": {
-        "description_kind": "plain",
-        "required": true,
-        "type": [
-          "list",
-          "string"
-        ]
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "owner_account_id": {
-        "computed": true,
+      "name": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "routing_policy_label": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "segment_name": {
+      "number_of_ca_certificates": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "state": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
+        "type": "number"
       },
       "tags": {
         "description_kind": "plain",
@@ -90,6 +52,42 @@ const awsNetworkmanagerDxGatewayAttachment = `{
       }
     },
     "block_types": {
+      "ca_certificates_bundle_source": {
+        "block": {
+          "block_types": {
+            "ca_certificates_bundle_s3_location": {
+              "block": {
+                "attributes": {
+                  "bucket": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "key": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "region": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "version": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
@@ -122,8 +120,8 @@ const awsNetworkmanagerDxGatewayAttachment = `{
   "version": 0
 }`
 
-func AwsNetworkmanagerDxGatewayAttachmentSchema() *tfjson.Schema {
+func AwsCloudfrontTrustStoreSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsNetworkmanagerDxGatewayAttachment), &result)
+	_ = json.Unmarshal([]byte(awsCloudfrontTrustStore), &result)
 	return &result
 }

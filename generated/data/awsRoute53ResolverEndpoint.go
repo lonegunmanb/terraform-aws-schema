@@ -63,10 +63,20 @@ const awsRoute53ResolverEndpoint = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "rni_enhanced_metrics_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "status": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "target_name_server_metrics_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
       },
       "vpc_id": {
         "computed": true,

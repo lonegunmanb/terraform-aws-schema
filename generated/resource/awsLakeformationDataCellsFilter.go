@@ -70,7 +70,7 @@ const awsLakeformationDataCellsFilter = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": [
-                      "list",
+                      "set",
                       "string"
                     ]
                   }

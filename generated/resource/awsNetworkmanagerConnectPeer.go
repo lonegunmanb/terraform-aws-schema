@@ -30,7 +30,7 @@ const awsNetworkmanagerConnectPeer = `{
                     "core_network_address": "string",
                     "core_network_asn": "number",
                     "peer_address": "string",
-                    "peer_asn": "number"
+                    "peer_asn": "string"
                   }
                 ]
               ],
@@ -127,9 +127,10 @@ const awsNetworkmanagerConnectPeer = `{
         "block": {
           "attributes": {
             "peer_asn": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
-              "type": "number"
+              "type": "string"
             }
           },
           "description_kind": "plain"

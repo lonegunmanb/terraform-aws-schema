@@ -87,6 +87,261 @@ const awsBedrockagentKnowledgeBase = `{
             }
           },
           "block_types": {
+            "kendra_knowledge_base_configuration": {
+              "block": {
+                "attributes": {
+                  "kendra_index_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "sql_knowledge_base_configuration": {
+              "block": {
+                "attributes": {
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "redshift_configuration": {
+                    "block": {
+                      "block_types": {
+                        "query_engine_configuration": {
+                          "block": {
+                            "attributes": {
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "provisioned_configuration": {
+                                "block": {
+                                  "attributes": {
+                                    "cluster_identifier": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "auth_configuration": {
+                                      "block": {
+                                        "attributes": {
+                                          "database_user": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          },
+                                          "username_password_secret_arn": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "serverless_configuration": {
+                                "block": {
+                                  "attributes": {
+                                    "workgroup_arn": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "auth_configuration": {
+                                      "block": {
+                                        "attributes": {
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          },
+                                          "username_password_secret_arn": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "query_generation_configuration": {
+                          "block": {
+                            "attributes": {
+                              "execution_timeout_seconds": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "block_types": {
+                              "generation_context": {
+                                "block": {
+                                  "block_types": {
+                                    "curated_query": {
+                                      "block": {
+                                        "attributes": {
+                                          "natural_language": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          },
+                                          "sql": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    },
+                                    "table": {
+                                      "block": {
+                                        "attributes": {
+                                          "description": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          },
+                                          "inclusion": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          },
+                                          "name": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "block_types": {
+                                          "column": {
+                                            "block": {
+                                              "attributes": {
+                                                "description": {
+                                                  "description_kind": "plain",
+                                                  "optional": true,
+                                                  "type": "string"
+                                                },
+                                                "inclusion": {
+                                                  "description_kind": "plain",
+                                                  "optional": true,
+                                                  "type": "string"
+                                                },
+                                                "name": {
+                                                  "description_kind": "plain",
+                                                  "optional": true,
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "description_kind": "plain"
+                                            },
+                                            "nesting_mode": "list"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "storage_configuration": {
+                          "block": {
+                            "attributes": {
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "aws_data_catalog_configuration": {
+                                "block": {
+                                  "attributes": {
+                                    "table_names": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "redshift_configuration": {
+                                "block": {
+                                  "attributes": {
+                                    "database_name": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "vector_knowledge_base_configuration": {
               "block": {
                 "attributes": {
@@ -179,6 +434,155 @@ const awsBedrockagentKnowledgeBase = `{
             }
           },
           "block_types": {
+            "mongo_db_atlas_configuration": {
+              "block": {
+                "attributes": {
+                  "collection_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "credentials_secret_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "database_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "endpoint": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "endpoint_service_name": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "text_index_name": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "vector_index_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "field_mapping": {
+                    "block": {
+                      "attributes": {
+                        "metadata_field": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "text_field": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "vector_field": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "neptune_analytics_configuration": {
+              "block": {
+                "attributes": {
+                  "graph_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "field_mapping": {
+                    "block": {
+                      "attributes": {
+                        "metadata_field": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "text_field": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "opensearch_managed_cluster_configuration": {
+              "block": {
+                "attributes": {
+                  "domain_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "domain_endpoint": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "vector_index_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "field_mapping": {
+                    "block": {
+                      "attributes": {
+                        "metadata_field": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "text_field": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "vector_field": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "opensearch_serverless_configuration": {
               "block": {
                 "attributes": {
@@ -199,17 +603,17 @@ const awsBedrockagentKnowledgeBase = `{
                       "attributes": {
                         "metadata_field": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
                         },
                         "text_field": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
                         },
                         "vector_field": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
                         }
                       },
@@ -247,12 +651,12 @@ const awsBedrockagentKnowledgeBase = `{
                       "attributes": {
                         "metadata_field": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
                         },
                         "text_field": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
                         }
                       },
@@ -370,6 +774,29 @@ const awsBedrockagentKnowledgeBase = `{
                       "description_kind": "plain"
                     },
                     "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "s3_vectors_configuration": {
+              "block": {
+                "attributes": {
+                  "index_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "index_name": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "vector_bucket_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
                   }
                 },
                 "description_kind": "plain"

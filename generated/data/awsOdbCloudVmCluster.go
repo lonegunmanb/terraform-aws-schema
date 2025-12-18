@@ -14,6 +14,12 @@ const awsOdbCloudVmCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "cloud_exadata_infrastructure_arn": {
+        "computed": true,
+        "description": "The ARN of the Cloud Exadata Infrastructure.",
+        "description_kind": "plain",
+        "type": "string"
+      },
       "cloud_exadata_infrastructure_id": {
         "computed": true,
         "description": "The ID of the Cloud Exadata Infrastructure.",
@@ -201,6 +207,12 @@ const awsOdbCloudVmCluster = `{
       "ocid": {
         "computed": true,
         "description": "The OCID of the VM cluster.",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "odb_network_arn": {
+        "computed": true,
+        "description": "The ARN of the ODB network.",
         "description_kind": "plain",
         "type": "string"
       },

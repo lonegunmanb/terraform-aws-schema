@@ -57,6 +57,11 @@ const awsDatazoneDomain = `{
         "optional": true,
         "type": "string"
       },
+      "root_domain_unit_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "service_role": {
         "description_kind": "plain",
         "optional": true,

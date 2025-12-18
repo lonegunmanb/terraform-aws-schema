@@ -25,6 +25,12 @@ const awsVpclatticeServiceNetworkVpcAssociation = `{
         "optional": true,
         "type": "string"
       },
+      "private_dns_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
@@ -74,6 +80,29 @@ const awsVpclatticeServiceNetworkVpcAssociation = `{
       }
     },
     "block_types": {
+      "dns_options": {
+        "block": {
+          "attributes": {
+            "private_dns_preference": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "private_dns_specified_domains": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

@@ -116,6 +116,71 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
         },
         "nesting_mode": "list"
       },
+      "attachment_routing_policy_rules": {
+        "block": {
+          "attributes": {
+            "description": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "edge_locations": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "rule_number": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "block_types": {
+            "action": {
+              "block": {
+                "attributes": {
+                  "associate_routing_policies": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "min_items": 1,
+              "nesting_mode": "list"
+            },
+            "conditions": {
+              "block": {
+                "attributes": {
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "core_network_configuration": {
         "block": {
           "attributes": {
@@ -208,6 +273,107 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
         },
         "nesting_mode": "list"
       },
+      "routing_policies": {
+        "block": {
+          "attributes": {
+            "routing_policy_description": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "routing_policy_direction": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "routing_policy_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "routing_policy_number": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "block_types": {
+            "routing_policy_rules": {
+              "block": {
+                "attributes": {
+                  "rule_number": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "block_types": {
+                  "rule_definition": {
+                    "block": {
+                      "attributes": {
+                        "condition_logic": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "action": {
+                          "block": {
+                            "attributes": {
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "value": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "min_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "match_conditions": {
+                          "block": {
+                            "attributes": {
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "value": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "min_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "segment_actions": {
         "block": {
           "attributes": {
@@ -265,6 +431,33 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
             }
           },
           "block_types": {
+            "edge_location_association": {
+              "block": {
+                "attributes": {
+                  "edge_location": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "peer_edge_location": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "routing_policy_names": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "via": {
               "block": {
                 "attributes": {

@@ -231,6 +231,11 @@ const awsCodebuildProject = `{
       "cache": {
         "block": {
           "attributes": {
+            "cache_namespace": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "location": {
               "description_kind": "plain",
               "optional": true,
