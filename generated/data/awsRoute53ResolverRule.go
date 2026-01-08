@@ -75,6 +75,22 @@ const awsRoute53ResolverRule = `{
           "map",
           "string"
         ]
+      },
+      "target_ips": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "ip": "string",
+              "ipv6": "string",
+              "port": "number",
+              "protocol": "string"
+            }
+          ]
+        ]
       }
     },
     "description_kind": "plain"

@@ -19,6 +19,11 @@ const awsIamPolicy = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "delay_after_policy_creation_in_ms": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "description": {
         "description_kind": "plain",
         "optional": true,

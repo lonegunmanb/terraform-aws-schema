@@ -30,6 +30,12 @@ const awsDbProxy = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "endpoint_network_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "engine_family": {
         "description_kind": "plain",
         "required": true,
@@ -85,6 +91,12 @@ const awsDbProxy = `{
           "map",
           "string"
         ]
+      },
+      "target_connection_network_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "vpc_security_group_ids": {
         "computed": true,

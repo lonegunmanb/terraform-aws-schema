@@ -70,6 +70,49 @@ const awsTransferWebApp = `{
       }
     },
     "block_types": {
+      "endpoint_details": {
+        "block": {
+          "block_types": {
+            "vpc": {
+              "block": {
+                "attributes": {
+                  "security_group_ids": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "subnet_ids": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "vpc_endpoint_id": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
+                  "vpc_id": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "identity_provider_details": {
         "block": {
           "block_types": {

@@ -6,28 +6,18 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsAlbTargetGroupAttachment = `{
+const awsSecretsmanagerTag = `{
   "block": {
     "attributes": {
-      "availability_zone": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "port": {
+      "key": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "quic_server_id": {
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "region": {
@@ -37,12 +27,12 @@ const awsAlbTargetGroupAttachment = `{
         "optional": true,
         "type": "string"
       },
-      "target_group_arn": {
+      "secret_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "target_id": {
+      "value": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -53,8 +43,8 @@ const awsAlbTargetGroupAttachment = `{
   "version": 0
 }`
 
-func AwsAlbTargetGroupAttachmentSchema() *tfjson.Schema {
+func AwsSecretsmanagerTagSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsAlbTargetGroupAttachment), &result)
+	_ = json.Unmarshal([]byte(awsSecretsmanagerTag), &result)
 	return &result
 }

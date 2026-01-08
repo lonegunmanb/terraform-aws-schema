@@ -110,7 +110,23 @@ const awsGuarddutyFilter = `{
                     "optional": true,
                     "type": "string"
                   },
+                  "matches": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
                   "not_equals": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "not_matches": {
                     "description_kind": "plain",
                     "optional": true,
                     "type": [

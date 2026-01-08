@@ -6,15 +6,20 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsDxGateway = `{
+const awsCloudfrontConnectionFunction = `{
   "block": {
     "attributes": {
-      "amazon_side_asn": {
+      "connection_function_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "connection_function_code": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "arn": {
+      "etag": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -22,7 +27,11 @@ const awsDxGateway = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": "string"
+      },
+      "live_stage_etag": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "name": {
@@ -30,7 +39,13 @@ const awsDxGateway = `{
         "required": true,
         "type": "string"
       },
-      "owner_account_id": {
+      "publish": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "status": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -46,7 +61,6 @@ const awsDxGateway = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
@@ -54,23 +68,38 @@ const awsDxGateway = `{
       }
     },
     "block_types": {
-      "timeouts": {
+      "connection_function_config": {
         "block": {
           "attributes": {
-            "create": {
+            "comment": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             },
-            "delete": {
+            "runtime": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
+            }
+          },
+          "block_types": {
+            "key_value_store_association": {
+              "block": {
+                "attributes": {
+                  "key_value_store_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "single"
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -78,8 +107,8 @@ const awsDxGateway = `{
   "version": 0
 }`
 
-func AwsDxGatewaySchema() *tfjson.Schema {
+func AwsCloudfrontConnectionFunctionSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsDxGateway), &result)
+	_ = json.Unmarshal([]byte(awsCloudfrontConnectionFunction), &result)
 	return &result
 }

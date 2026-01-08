@@ -6,41 +6,17 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsIamVirtualMfaDevice = `{
+const awsSesv2Tenant = `{
   "block": {
     "attributes": {
-      "arn": {
+      "region": {
         "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "base_32_string_seed": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "enable_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
+        "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "path": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "qr_code_png": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "serial_number": {
+      "sending_status": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -56,18 +32,22 @@ const awsIamVirtualMfaDevice = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
       },
-      "user_name": {
+      "tenant_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "virtual_mfa_device_name": {
+      "tenant_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "tenant_name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -78,8 +58,8 @@ const awsIamVirtualMfaDevice = `{
   "version": 0
 }`
 
-func AwsIamVirtualMfaDeviceSchema() *tfjson.Schema {
+func AwsSesv2TenantSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsIamVirtualMfaDevice), &result)
+	_ = json.Unmarshal([]byte(awsSesv2Tenant), &result)
 	return &result
 }

@@ -74,6 +74,12 @@ const awsAthenaWorkgroup = `{
               "optional": true,
               "type": "number"
             },
+            "enable_minimum_encryption_configuration": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "enforce_workgroup_configuration": {
               "description_kind": "plain",
               "optional": true,
@@ -96,6 +102,20 @@ const awsAthenaWorkgroup = `{
             }
           },
           "block_types": {
+            "customer_content_encryption_configuration": {
+              "block": {
+                "attributes": {
+                  "kms_key": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "engine_version": {
               "block": {
                 "attributes": {
@@ -148,6 +168,105 @@ const awsAthenaWorkgroup = `{
                     "block": {
                       "attributes": {
                         "kms_key": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "monitoring_configuration": {
+              "block": {
+                "block_types": {
+                  "cloud_watch_logging_configuration": {
+                    "block": {
+                      "attributes": {
+                        "enabled": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "bool"
+                        },
+                        "log_group": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "log_stream_name_prefix": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "log_type": {
+                          "block": {
+                            "attributes": {
+                              "key": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "values": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": [
+                                  "set",
+                                  "string"
+                                ]
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "managed_logging_configuration": {
+                    "block": {
+                      "attributes": {
+                        "enabled": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "bool"
+                        },
+                        "kms_key": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "s3_logging_configuration": {
+                    "block": {
+                      "attributes": {
+                        "enabled": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "bool"
+                        },
+                        "kms_key": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "log_location": {
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"

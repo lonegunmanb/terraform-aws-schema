@@ -34,6 +34,11 @@ const awsEcrLifecyclePolicyDocument = `{
             "action": {
               "block": {
                 "attributes": {
+                  "target_storage_class": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "type": {
                     "description_kind": "plain",
                     "required": true,
@@ -58,6 +63,11 @@ const awsEcrLifecyclePolicyDocument = `{
                     "type": "string"
                   },
                   "count_unit": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "storage_class": {
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"

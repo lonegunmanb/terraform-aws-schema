@@ -190,6 +190,21 @@ const awsVpcEndpoint = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
+            },
+            "private_dns_preference": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "private_dns_specified_domains": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
             }
           },
           "description_kind": "plain"

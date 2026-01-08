@@ -32,13 +32,18 @@ const awsRoute53ResolverFirewallRules = `{
               "block_override_domain": "string",
               "block_override_ttl": "number",
               "block_response": "string",
+              "confidence_threshold": "string",
               "creation_time": "string",
               "creator_request_id": "string",
+              "dns_threat_protection": "string",
               "firewall_domain_list_id": "string",
+              "firewall_domain_redirection_action": "string",
               "firewall_rule_group_id": "string",
+              "firewall_threat_protection_id": "string",
               "modification_time": "string",
               "name": "string",
-              "priority": "number"
+              "priority": "number",
+              "q_type": "string"
             }
           ]
         ]

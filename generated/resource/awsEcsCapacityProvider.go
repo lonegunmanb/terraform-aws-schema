@@ -155,6 +155,12 @@ const awsEcsCapacityProvider = `{
             "instance_launch_template": {
               "block": {
                 "attributes": {
+                  "capacity_option_type": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "ec2_instance_profile_arn": {
                     "description_kind": "plain",
                     "required": true,

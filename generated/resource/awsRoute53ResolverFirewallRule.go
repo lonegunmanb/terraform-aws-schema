@@ -34,9 +34,19 @@ const awsRoute53ResolverFirewallRule = `{
         "optional": true,
         "type": "string"
       },
+      "confidence_threshold": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "dns_threat_protection": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "firewall_domain_list_id": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "firewall_domain_redirection_action": {
@@ -47,6 +57,11 @@ const awsRoute53ResolverFirewallRule = `{
       "firewall_rule_group_id": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "firewall_threat_protection_id": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "id": {

@@ -45,7 +45,12 @@ const awsVpcEndpoint = `{
             "object",
             {
               "dns_record_ip_type": "string",
-              "private_dns_only_for_inbound_resolver_endpoint": "bool"
+              "private_dns_only_for_inbound_resolver_endpoint": "bool",
+              "private_dns_preference": "string",
+              "private_dns_specified_domains": [
+                "set",
+                "string"
+              ]
             }
           ]
         ]
@@ -123,6 +128,12 @@ const awsVpcEndpoint = `{
         "optional": true,
         "type": "string"
       },
+      "service_region": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "state": {
         "computed": true,
         "description_kind": "plain",
@@ -149,6 +160,7 @@ const awsVpcEndpoint = `{
       "vpc_endpoint_type": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "vpc_id": {

@@ -47,6 +47,11 @@ const awsDbProxy = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "endpoint_network_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "engine_family": {
         "computed": true,
         "description_kind": "plain",
@@ -81,6 +86,11 @@ const awsDbProxy = `{
         "type": "bool"
       },
       "role_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "target_connection_network_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

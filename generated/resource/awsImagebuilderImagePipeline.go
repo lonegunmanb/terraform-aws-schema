@@ -173,6 +173,25 @@ const awsImagebuilderImagePipeline = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "logging_configuration": {
+        "block": {
+          "attributes": {
+            "image_log_group_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "pipeline_log_group_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "schedule": {
         "block": {
           "attributes": {

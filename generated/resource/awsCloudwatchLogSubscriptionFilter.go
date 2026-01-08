@@ -9,6 +9,12 @@ import (
 const awsCloudwatchLogSubscriptionFilter = `{
   "block": {
     "attributes": {
+      "apply_on_transformed_logs": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "destination_arn": {
         "description_kind": "plain",
         "required": true,
@@ -18,6 +24,14 @@ const awsCloudwatchLogSubscriptionFilter = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "emit_system_fields": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "filter_pattern": {
         "description_kind": "plain",

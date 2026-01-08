@@ -338,6 +338,12 @@ const awsLambdaEventSourceMapping = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
+            },
+            "poller_group_name": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

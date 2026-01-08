@@ -6,51 +6,17 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsOsisPipeline = `{
+const awsDynamodbGlobalSecondaryIndex = `{
   "block": {
     "attributes": {
-      "id": {
+      "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "ingest_endpoint_urls": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "max_units": {
+      "index_name": {
         "description_kind": "plain",
         "required": true,
-        "type": "number"
-      },
-      "min_units": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "number"
-      },
-      "pipeline_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "pipeline_configuration_body": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "pipeline_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "pipeline_role_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "region": {
@@ -60,41 +26,39 @@ const awsOsisPipeline = `{
         "optional": true,
         "type": "string"
       },
-      "tags": {
+      "table_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "warm_throughput": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
+          "object",
+          {
+            "read_units_per_second": "number",
+            "write_units_per_second": "number"
+          }
         ]
       }
     },
     "block_types": {
-      "buffer_options": {
+      "key_schema": {
         "block": {
           "attributes": {
-            "persistent_buffer_enabled": {
+            "attribute_name": {
               "description_kind": "plain",
               "required": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "encryption_at_rest_options": {
-        "block": {
-          "attributes": {
-            "kms_key_arn": {
+              "type": "string"
+            },
+            "attribute_type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "key_type": {
               "description_kind": "plain",
               "required": true,
               "type": "string"
@@ -104,28 +68,61 @@ const awsOsisPipeline = `{
         },
         "nesting_mode": "list"
       },
-      "log_publishing_options": {
+      "on_demand_throughput": {
         "block": {
           "attributes": {
-            "is_logging_enabled": {
+            "max_read_request_units": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
-              "type": "bool"
+              "type": "number"
+            },
+            "max_write_request_units": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             }
           },
-          "block_types": {
-            "cloudwatch_log_destination": {
-              "block": {
-                "attributes": {
-                  "log_group": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "projection": {
+        "block": {
+          "attributes": {
+            "non_key_attributes": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "projection_type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "provisioned_throughput": {
+        "block": {
+          "attributes": {
+            "read_capacity_units": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "write_capacity_units": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             }
           },
           "description_kind": "plain"
@@ -157,35 +154,6 @@ const awsOsisPipeline = `{
           "description_kind": "plain"
         },
         "nesting_mode": "single"
-      },
-      "vpc_options": {
-        "block": {
-          "attributes": {
-            "security_group_ids": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "subnet_ids": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "vpc_endpoint_management": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -193,8 +161,8 @@ const awsOsisPipeline = `{
   "version": 0
 }`
 
-func AwsOsisPipelineSchema() *tfjson.Schema {
+func AwsDynamodbGlobalSecondaryIndexSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsOsisPipeline), &result)
+	_ = json.Unmarshal([]byte(awsDynamodbGlobalSecondaryIndex), &result)
 	return &result
 }

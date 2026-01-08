@@ -6,15 +6,25 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsIamSamlProvider = `{
+const awsCloudfrontConnectionGroup = `{
   "block": {
     "attributes": {
-      "arn": {
+      "anycast_ip_list_id": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
-      "create_date": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "etag": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -25,17 +35,33 @@ const awsIamSamlProvider = `{
         "optional": true,
         "type": "string"
       },
+      "ipv6_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "is_default": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "last_modified_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "name": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "saml_metadata_document": {
+      "routing_endpoint": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
-      "saml_provider_uuid": {
+      "status": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -43,16 +69,10 @@ const awsIamSamlProvider = `{
       "tags": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
-      },
-      "valid_until": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -60,8 +80,8 @@ const awsIamSamlProvider = `{
   "version": 0
 }`
 
-func AwsIamSamlProviderSchema() *tfjson.Schema {
+func AwsCloudfrontConnectionGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsIamSamlProvider), &result)
+	_ = json.Unmarshal([]byte(awsCloudfrontConnectionGroup), &result)
 	return &result
 }

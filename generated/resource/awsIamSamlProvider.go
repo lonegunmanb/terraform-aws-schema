@@ -30,6 +30,11 @@ const awsIamSamlProvider = `{
         "required": true,
         "type": "string"
       },
+      "saml_provider_uuid": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

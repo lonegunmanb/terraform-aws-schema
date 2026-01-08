@@ -197,6 +197,20 @@ const awsImagebuilderImage = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "logging_configuration": {
+        "block": {
+          "attributes": {
+            "log_group_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

@@ -35,6 +35,11 @@ const awsLambdaPermission = `{
         "optional": true,
         "type": "string"
       },
+      "invoked_via_function_url": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "principal": {
         "description_kind": "plain",
         "required": true,

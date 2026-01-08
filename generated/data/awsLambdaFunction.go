@@ -222,6 +222,11 @@ const awsLambdaFunction = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "response_streaming_invoke_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "role": {
         "computed": true,
         "description_kind": "plain",
