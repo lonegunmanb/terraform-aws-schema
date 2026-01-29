@@ -237,6 +237,11 @@ const awsFsxWindowsFileSystem = `{
                 "string"
               ]
             },
+            "domain_join_service_account_secret": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "domain_name": {
               "description_kind": "plain",
               "required": true,
@@ -254,13 +259,14 @@ const awsFsxWindowsFileSystem = `{
             },
             "password": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "sensitive": true,
               "type": "string"
             },
             "username": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },

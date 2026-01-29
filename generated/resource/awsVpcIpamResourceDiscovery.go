@@ -80,6 +80,19 @@ const awsVpcIpamResourceDiscovery = `{
         "min_items": 1,
         "nesting_mode": "set"
       },
+      "organizational_unit_exclusion": {
+        "block": {
+          "attributes": {
+            "organizations_entity_path": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "timeouts": {
         "block": {
           "attributes": {

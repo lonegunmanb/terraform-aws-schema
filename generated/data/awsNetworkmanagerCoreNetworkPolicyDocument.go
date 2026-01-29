@@ -408,6 +408,14 @@ const awsNetworkmanagerCoreNetworkPolicyDocument = `{
               "optional": true,
               "type": "string"
             },
+            "routing_policy_names": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
             "segment": {
               "description_kind": "plain",
               "required": true,

@@ -101,6 +101,11 @@ const awsOrganizationsOrganization = `{
           ]
         ]
       },
+      "return_organization_only": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "roots": {
         "computed": true,
         "description_kind": "plain",

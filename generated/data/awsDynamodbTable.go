@@ -47,6 +47,16 @@ const awsDynamodbTable = `{
             "object",
             {
               "hash_key": "string",
+              "key_schema": [
+                "list",
+                [
+                  "object",
+                  {
+                    "attribute_name": "string",
+                    "key_type": "string"
+                  }
+                ]
+              ],
               "name": "string",
               "non_key_attributes": [
                 "list",

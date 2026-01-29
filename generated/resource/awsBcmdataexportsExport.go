@@ -67,6 +67,7 @@ const awsBcmdataexportsExport = `{
                     "type": "string"
                   },
                   "table_configurations": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": [

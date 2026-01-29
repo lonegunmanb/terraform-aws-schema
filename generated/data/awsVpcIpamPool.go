@@ -105,6 +105,22 @@ const awsVpcIpamPool = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "source_resource": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "resource_id": "string",
+              "resource_owner": "string",
+              "resource_region": "string",
+              "resource_type": "string"
+            }
+          ]
+        ]
+      },
       "state": {
         "computed": true,
         "description_kind": "plain",

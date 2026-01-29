@@ -114,6 +114,12 @@ const awsApiGatewayDomainName = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "routing_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "security_policy": {
         "computed": true,
         "description_kind": "plain",

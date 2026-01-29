@@ -32,6 +32,7 @@ const awsSubnet = `{
         "type": "string"
       },
       "cidr_block": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -67,7 +68,18 @@ const awsSubnet = `{
         "optional": true,
         "type": "string"
       },
+      "ipv4_ipam_pool_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "ipv4_netmask_length": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "ipv6_cidr_block": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -77,10 +89,20 @@ const awsSubnet = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "ipv6_ipam_pool_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "ipv6_native": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
+      },
+      "ipv6_netmask_length": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       },
       "map_customer_owned_ip_on_launch": {
         "description_kind": "plain",

@@ -609,7 +609,7 @@ const awsCloudfrontMultitenantDistribution = `{
       "origin_group": {
         "block": {
           "attributes": {
-            "origin_id": {
+            "id": {
               "description_kind": "plain",
               "required": true,
               "type": "string"

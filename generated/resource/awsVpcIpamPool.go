@@ -134,6 +134,35 @@ const awsVpcIpamPool = `{
       }
     },
     "block_types": {
+      "source_resource": {
+        "block": {
+          "attributes": {
+            "resource_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "resource_owner": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "resource_region": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "resource_type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

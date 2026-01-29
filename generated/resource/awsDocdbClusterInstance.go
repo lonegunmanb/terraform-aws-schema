@@ -36,6 +36,11 @@ const awsDocdbClusterInstance = `{
         "optional": true,
         "type": "string"
       },
+      "certificate_rotation_restart": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "cluster_identifier": {
         "description_kind": "plain",
         "required": true,

@@ -76,6 +76,21 @@ const awsOdbNetwork = `{
           [
             "object",
             {
+              "kms_access": [
+                "list",
+                [
+                  "object",
+                  {
+                    "domain_name": "string",
+                    "ipv4_addresses": [
+                      "list",
+                      "string"
+                    ],
+                    "kms_policy_document": "string",
+                    "status": "string"
+                  }
+                ]
+              ],
               "managed_s3_backup_access": [
                 "list",
                 [
@@ -117,6 +132,21 @@ const awsOdbNetwork = `{
                   {
                     "vpc_endpoint_id": "string",
                     "vpc_endpoint_type": "string"
+                  }
+                ]
+              ],
+              "sts_access": [
+                "list",
+                [
+                  "object",
+                  {
+                    "domain_name": "string",
+                    "ipv4_addresses": [
+                      "list",
+                      "string"
+                    ],
+                    "status": "string",
+                    "sts_policy_document": "string"
                   }
                 ]
               ],

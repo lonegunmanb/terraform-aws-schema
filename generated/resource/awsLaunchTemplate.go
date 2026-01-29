@@ -942,6 +942,20 @@ const awsLaunchTemplate = `{
         },
         "nesting_mode": "list"
       },
+      "network_performance_options": {
+        "block": {
+          "attributes": {
+            "bandwidth_weighting": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "placement": {
         "block": {
           "attributes": {

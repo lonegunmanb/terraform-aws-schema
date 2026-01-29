@@ -75,6 +75,19 @@ const awsOdbNetwork = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "kms_access": {
+        "computed": true,
+        "description": "Specifies the configuration for Amazon KMS access from the ODB network.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "kms_policy_document": {
+        "description": "Specifies the endpoint policy for Amazon KMS access from the ODB network.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "managed_services": {
         "computed": true,
         "description": "The managed services configuration for the ODB network.",
@@ -84,6 +97,21 @@ const awsOdbNetwork = `{
           [
             "object",
             {
+              "kms_access": [
+                "list",
+                [
+                  "object",
+                  {
+                    "domain_name": "string",
+                    "ipv4_addresses": [
+                      "set",
+                      "string"
+                    ],
+                    "kms_policy_document": "string",
+                    "status": "string"
+                  }
+                ]
+              ],
               "managed_s3_backup_access": [
                 "list",
                 [
@@ -125,6 +153,21 @@ const awsOdbNetwork = `{
                   {
                     "vpc_endpoint_id": "string",
                     "vpc_endpoint_type": "string"
+                  }
+                ]
+              ],
+              "sts_access": [
+                "list",
+                [
+                  "object",
+                  {
+                    "domain_name": "string",
+                    "ipv4_addresses": [
+                      "set",
+                      "string"
+                    ],
+                    "status": "string",
+                    "sts_policy_document": "string"
                   }
                 ]
               ],
@@ -231,6 +274,19 @@ const awsOdbNetwork = `{
         "computed": true,
         "description": "Additional information about the current status of the ODB network.",
         "description_kind": "plain",
+        "type": "string"
+      },
+      "sts_access": {
+        "computed": true,
+        "description": "Specifies the configuration for Amazon STS access from the ODB network.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "sts_policy_document": {
+        "description": "Specifies the endpoint policy for Amazon STS access from the ODB network.",
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "tags": {

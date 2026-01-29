@@ -37,6 +37,12 @@ const awsApigatewayv2DomainName = `{
         "optional": true,
         "type": "string"
       },
+      "routing_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

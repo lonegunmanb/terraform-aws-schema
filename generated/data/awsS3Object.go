@@ -19,6 +19,11 @@ const awsS3Object = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "body_base64": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "bucket": {
         "description_kind": "plain",
         "required": true,
@@ -87,6 +92,11 @@ const awsS3Object = `{
       "content_type": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "download_body": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "etag": {

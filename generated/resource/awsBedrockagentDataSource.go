@@ -672,12 +672,30 @@ const awsBedrockagentDataSource = `{
                   }
                 },
                 "block_types": {
+                  "bedrock_data_automation_configuration": {
+                    "block": {
+                      "attributes": {
+                        "parsing_modality": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
                   "bedrock_foundation_model_configuration": {
                     "block": {
                       "attributes": {
                         "model_arn": {
                           "description_kind": "plain",
                           "required": true,
+                          "type": "string"
+                        },
+                        "parsing_modality": {
+                          "description_kind": "plain",
+                          "optional": true,
                           "type": "string"
                         }
                       },

@@ -84,6 +84,7 @@ const awsBatchJobDefinition = `{
                             [
                               "object",
                               {
+                                "allow_privilege_escalation": "bool",
                                 "privileged": "bool",
                                 "read_only_root_file_system": "bool",
                                 "run_as_group": "number",
@@ -164,6 +165,7 @@ const awsBatchJobDefinition = `{
                             [
                               "object",
                               {
+                                "allow_privilege_escalation": "bool",
                                 "privileged": "bool",
                                 "read_only_root_file_system": "bool",
                                 "run_as_group": "number",

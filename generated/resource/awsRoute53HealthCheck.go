@@ -96,6 +96,7 @@ const awsRoute53HealthCheck = `{
         "type": "string"
       },
       "regions": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

@@ -222,6 +222,11 @@ const awsBatchJobDefinition = `{
                         "security_context": {
                           "block": {
                             "attributes": {
+                              "allow_privilege_escalation": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              },
                               "privileged": {
                                 "description_kind": "plain",
                                 "optional": true,
@@ -378,6 +383,11 @@ const awsBatchJobDefinition = `{
                         "security_context": {
                           "block": {
                             "attributes": {
+                              "allow_privilege_escalation": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              },
                               "privileged": {
                                 "description_kind": "plain",
                                 "optional": true,

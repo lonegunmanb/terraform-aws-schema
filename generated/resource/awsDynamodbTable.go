@@ -152,8 +152,10 @@ const awsDynamodbTable = `{
         "block": {
           "attributes": {
             "hash_key": {
+              "computed": true,
+              "deprecated": true,
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             },
             "name": {
@@ -175,6 +177,7 @@ const awsDynamodbTable = `{
               "type": "string"
             },
             "range_key": {
+              "deprecated": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -193,6 +196,24 @@ const awsDynamodbTable = `{
             }
           },
           "block_types": {
+            "key_schema": {
+              "block": {
+                "attributes": {
+                  "attribute_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "key_type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "on_demand_throughput": {
               "block": {
                 "attributes": {
