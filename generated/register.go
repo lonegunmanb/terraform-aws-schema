@@ -1450,6 +1450,7 @@ func init() {
 	resources["aws_ssoadmin_customer_managed_policy_attachment"] = resource.AwsSsoadminCustomerManagedPolicyAttachmentSchema()  
 	resources["aws_ssoadmin_instance_access_control_attributes"] = resource.AwsSsoadminInstanceAccessControlAttributesSchema()  
 	resources["aws_ssoadmin_managed_policy_attachment"] = resource.AwsSsoadminManagedPolicyAttachmentSchema()  
+	resources["aws_ssoadmin_managed_policy_attachments_exclusive"] = resource.AwsSsoadminManagedPolicyAttachmentsExclusiveSchema()  
 	resources["aws_ssoadmin_permission_set"] = resource.AwsSsoadminPermissionSetSchema()  
 	resources["aws_ssoadmin_permission_set_inline_policy"] = resource.AwsSsoadminPermissionSetInlinePolicySchema()  
 	resources["aws_ssoadmin_permissions_boundary_attachment"] = resource.AwsSsoadminPermissionsBoundaryAttachmentSchema()  
