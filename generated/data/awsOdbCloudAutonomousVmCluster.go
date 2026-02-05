@@ -44,6 +44,12 @@ const awsOdbCloudAutonomousVmCluster = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "cloud_exadata_infrastructure_arn": {
+        "computed": true,
+        "description": "Cloud exadata infrastructure arn associated with this cloud autonomous VM cluster.",
+        "description_kind": "plain",
+        "type": "string"
+      },
       "cloud_exadata_infrastructure_id": {
         "computed": true,
         "description": "Cloud exadata infrastructure id associated with this cloud autonomous VM cluster.",
@@ -235,6 +241,12 @@ const awsOdbCloudAutonomousVmCluster = `{
       "ocid": {
         "computed": true,
         "description": "The Oracle Cloud Identifier (OCID) of the Autonomous VM cluster.",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "odb_network_arn": {
+        "computed": true,
+        "description": "The arn of the ODB network associated with this Autonomous VM cluster.",
         "description_kind": "plain",
         "type": "string"
       },

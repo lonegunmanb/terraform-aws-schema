@@ -16,6 +16,7 @@ const awsS3BucketLifecycleConfiguration = `{
       },
       "expected_bucket_owner": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

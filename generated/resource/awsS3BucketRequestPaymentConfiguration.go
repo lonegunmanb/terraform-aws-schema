@@ -15,6 +15,7 @@ const awsS3BucketRequestPaymentConfiguration = `{
         "type": "string"
       },
       "expected_bucket_owner": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

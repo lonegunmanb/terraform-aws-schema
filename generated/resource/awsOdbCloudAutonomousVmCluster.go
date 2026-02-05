@@ -44,10 +44,18 @@ const awsOdbCloudAutonomousVmCluster = `{
         "description_kind": "plain",
         "type": "number"
       },
+      "cloud_exadata_infrastructure_arn": {
+        "computed": true,
+        "description": "The unique identifier of the Exadata infrastructure for this VM cluster. Changing this will create a new resource.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "cloud_exadata_infrastructure_id": {
+        "computed": true,
         "description": "Exadata infrastructure id. Changing this will force terraform to create new resource.",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "compute_model": {
@@ -198,10 +206,18 @@ const awsOdbCloudAutonomousVmCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "odb_network_arn": {
+        "computed": true,
+        "description": "The unique identifier of the ODB network for the VM cluster. This member is required. Changing this will create a new resource.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "odb_network_id": {
+        "computed": true,
         "description": "The unique identifier of the ODB network associated with this Autonomous VM Cluster. Changing this will force terraform to create new resource.",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "odb_node_storage_size_in_gbs": {

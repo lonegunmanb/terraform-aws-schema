@@ -1,4 +1,4 @@
-package resource
+package ephemeral
 
 import (
 	"encoding/json"
@@ -6,24 +6,24 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsS3BucketAccelerateConfiguration = `{
+const awsEcrpublicAuthorizationToken = `{
   "block": {
     "attributes": {
-      "bucket": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "expected_bucket_owner": {
-        "deprecated": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "id": {
+      "authorization_token": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "sensitive": true,
+        "type": "string"
+      },
+      "expires_at": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "password": {
+        "computed": true,
+        "description_kind": "plain",
+        "sensitive": true,
         "type": "string"
       },
       "region": {
@@ -33,9 +33,9 @@ const awsS3BucketAccelerateConfiguration = `{
         "optional": true,
         "type": "string"
       },
-      "status": {
+      "user_name": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       }
     },
@@ -44,8 +44,8 @@ const awsS3BucketAccelerateConfiguration = `{
   "version": 0
 }`
 
-func AwsS3BucketAccelerateConfigurationSchema() *tfjson.Schema {
+func AwsEcrpublicAuthorizationTokenSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsS3BucketAccelerateConfiguration), &result)
+	_ = json.Unmarshal([]byte(awsEcrpublicAuthorizationToken), &result)
 	return &result
 }

@@ -6,24 +6,17 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsS3BucketCorsConfiguration = `{
+const awsSsoadminCustomerManagedPolicyAttachmentsExclusive = `{
   "block": {
     "attributes": {
-      "bucket": {
+      "instance_arn": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "expected_bucket_owner": {
-        "deprecated": true,
+      "permission_set_arn": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "region": {
@@ -35,57 +28,44 @@ const awsS3BucketCorsConfiguration = `{
       }
     },
     "block_types": {
-      "cors_rule": {
+      "customer_managed_policy_reference": {
         "block": {
           "attributes": {
-            "allowed_headers": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "allowed_methods": {
+            "name": {
               "description_kind": "plain",
               "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
+              "type": "string"
             },
-            "allowed_origins": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "expose_headers": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "id": {
+            "path": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "max_age_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 100,
-        "min_items": 1,
-        "nesting_mode": "set"
+        "nesting_mode": "list"
+      },
+      "timeouts": {
+        "block": {
+          "attributes": {
+            "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -93,8 +73,8 @@ const awsS3BucketCorsConfiguration = `{
   "version": 0
 }`
 
-func AwsS3BucketCorsConfigurationSchema() *tfjson.Schema {
+func AwsSsoadminCustomerManagedPolicyAttachmentsExclusiveSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsS3BucketCorsConfiguration), &result)
+	_ = json.Unmarshal([]byte(awsSsoadminCustomerManagedPolicyAttachmentsExclusive), &result)
 	return &result
 }

@@ -192,6 +192,21 @@ const awsOpensearchDomain = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            },
+            "serverless_vector_acceleration": {
+              "block": {
+                "attributes": {
+                  "enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
