@@ -545,6 +545,8 @@ func init() {
 	resources["aws_ec2_managed_prefix_list_entry"] = resource.AwsEc2ManagedPrefixListEntrySchema()  
 	resources["aws_ec2_network_insights_analysis"] = resource.AwsEc2NetworkInsightsAnalysisSchema()  
 	resources["aws_ec2_network_insights_path"] = resource.AwsEc2NetworkInsightsPathSchema()  
+	resources["aws_ec2_secondary_network"] = resource.AwsEc2SecondaryNetworkSchema()  
+	resources["aws_ec2_secondary_subnet"] = resource.AwsEc2SecondarySubnetSchema()  
 	resources["aws_ec2_serial_console_access"] = resource.AwsEc2SerialConsoleAccessSchema()  
 	resources["aws_ec2_subnet_cidr_reservation"] = resource.AwsEc2SubnetCidrReservationSchema()  
 	resources["aws_ec2_tag"] = resource.AwsEc2TagSchema()  

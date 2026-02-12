@@ -79,6 +79,11 @@ const awsQuicksightDataSet = `{
           "map",
           "string"
         ]
+      },
+      "use_as": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {

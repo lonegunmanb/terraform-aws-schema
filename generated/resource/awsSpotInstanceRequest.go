@@ -761,6 +761,77 @@ const awsSpotInstanceRequest = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "secondary_network_interface": {
+        "block": {
+          "attributes": {
+            "delete_on_termination": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "device_index": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "interface_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "mac_address": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "network_card_index": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "private_ip_address_count": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "private_ip_addresses": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": [
+                "list",
+                "string"
+              ]
+            },
+            "secondary_interface_id": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "secondary_network_id": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "secondary_subnet_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "source_dest_check": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "bool"
+            },
+            "status": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "timeouts": {
         "block": {
           "attributes": {
