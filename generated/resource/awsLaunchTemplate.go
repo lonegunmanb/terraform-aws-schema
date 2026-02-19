@@ -277,6 +277,11 @@ const awsLaunchTemplate = `{
               "optional": true,
               "type": "number"
             },
+            "nested_virtualization": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "threads_per_core": {
               "description_kind": "plain",
               "optional": true,
@@ -1032,6 +1037,52 @@ const awsLaunchTemplate = `{
           "description_kind": "plain"
         },
         "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "secondary_interfaces": {
+        "block": {
+          "attributes": {
+            "delete_on_termination": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "device_index": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "interface_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "network_card_index": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "private_ip_address_count": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "private_ip_addresses": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "secondary_subnet_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
         "nesting_mode": "list"
       },
       "tag_specifications": {

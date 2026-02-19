@@ -997,6 +997,7 @@ func init() {
 	resources["aws_networkflowmonitor_monitor"] = resource.AwsNetworkflowmonitorMonitorSchema()  
 	resources["aws_networkflowmonitor_scope"] = resource.AwsNetworkflowmonitorScopeSchema()  
 	resources["aws_networkmanager_attachment_accepter"] = resource.AwsNetworkmanagerAttachmentAccepterSchema()  
+	resources["aws_networkmanager_attachment_routing_policy_label"] = resource.AwsNetworkmanagerAttachmentRoutingPolicyLabelSchema()  
 	resources["aws_networkmanager_connect_attachment"] = resource.AwsNetworkmanagerConnectAttachmentSchema()  
 	resources["aws_networkmanager_connect_peer"] = resource.AwsNetworkmanagerConnectPeerSchema()  
 	resources["aws_networkmanager_connection"] = resource.AwsNetworkmanagerConnectionSchema()  

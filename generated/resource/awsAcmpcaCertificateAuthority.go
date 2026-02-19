@@ -211,6 +211,11 @@ const awsAcmpcaCertificateAuthority = `{
                     "optional": true,
                     "type": "string"
                   },
+                  "custom_path": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "enabled": {
                     "description_kind": "plain",
                     "optional": true,

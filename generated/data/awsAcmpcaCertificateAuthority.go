@@ -71,6 +71,7 @@ const awsAcmpcaCertificateAuthority = `{
                   "object",
                   {
                     "custom_cname": "string",
+                    "custom_path": "string",
                     "enabled": "bool",
                     "expiration_in_days": "number",
                     "s3_bucket_name": "string",

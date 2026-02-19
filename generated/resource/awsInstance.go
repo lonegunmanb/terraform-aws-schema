@@ -347,6 +347,12 @@ const awsInstance = `{
               "optional": true,
               "type": "number"
             },
+            "nested_virtualization": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "threads_per_core": {
               "computed": true,
               "description_kind": "plain",

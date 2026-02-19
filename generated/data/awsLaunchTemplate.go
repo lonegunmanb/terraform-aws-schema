@@ -79,6 +79,7 @@ const awsLaunchTemplate = `{
             {
               "amd_sev_snp": "string",
               "core_count": "number",
+              "nested_virtualization": "string",
               "threads_per_core": "number"
             }
           ]
@@ -485,6 +486,19 @@ const awsLaunchTemplate = `{
           ]
         ]
       },
+      "network_performance_options": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "bandwidth_weighting": "string"
+            }
+          ]
+        ]
+      },
       "placement": {
         "computed": true,
         "description_kind": "plain",
@@ -532,6 +546,28 @@ const awsLaunchTemplate = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "secondary_interfaces": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "delete_on_termination": "bool",
+              "device_index": "number",
+              "interface_type": "string",
+              "network_card_index": "number",
+              "private_ip_address_count": "number",
+              "private_ip_addresses": [
+                "set",
+                "string"
+              ],
+              "secondary_subnet_id": "string"
+            }
+          ]
+        ]
       },
       "security_group_names": {
         "computed": true,
