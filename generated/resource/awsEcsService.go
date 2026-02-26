@@ -477,6 +477,26 @@ const awsEcsService = `{
             }
           },
           "block_types": {
+            "access_log_configuration": {
+              "block": {
+                "attributes": {
+                  "format": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "include_query_parameters": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "log_configuration": {
               "block": {
                 "attributes": {

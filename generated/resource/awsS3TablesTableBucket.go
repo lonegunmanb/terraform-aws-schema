@@ -20,6 +20,7 @@ const awsS3TablesTableBucket = `{
         "type": "string"
       },
       "encryption_configuration": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

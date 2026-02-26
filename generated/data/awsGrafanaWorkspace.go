@@ -61,6 +61,11 @@ const awsGrafanaWorkspace = `{
         "optional": true,
         "type": "string"
       },
+      "kms_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "last_updated_date": {
         "computed": true,
         "description_kind": "plain",

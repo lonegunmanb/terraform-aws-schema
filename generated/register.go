@@ -1009,6 +1009,7 @@ func init() {
 	resources["aws_networkmanager_global_network"] = resource.AwsNetworkmanagerGlobalNetworkSchema()  
 	resources["aws_networkmanager_link"] = resource.AwsNetworkmanagerLinkSchema()  
 	resources["aws_networkmanager_link_association"] = resource.AwsNetworkmanagerLinkAssociationSchema()  
+	resources["aws_networkmanager_prefix_list_association"] = resource.AwsNetworkmanagerPrefixListAssociationSchema()  
 	resources["aws_networkmanager_site"] = resource.AwsNetworkmanagerSiteSchema()  
 	resources["aws_networkmanager_site_to_site_vpn_attachment"] = resource.AwsNetworkmanagerSiteToSiteVpnAttachmentSchema()  
 	resources["aws_networkmanager_transit_gateway_connect_peer_association"] = resource.AwsNetworkmanagerTransitGatewayConnectPeerAssociationSchema()  

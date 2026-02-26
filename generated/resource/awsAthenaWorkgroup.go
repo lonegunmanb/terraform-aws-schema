@@ -283,6 +283,30 @@ const awsAthenaWorkgroup = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "query_results_s3_access_grants_configuration": {
+              "block": {
+                "attributes": {
+                  "authentication_type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "create_user_level_prefix": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
+                  },
+                  "enable_s3_access_grants": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "bool"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "result_configuration": {
               "block": {
                 "attributes": {

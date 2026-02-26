@@ -76,6 +76,12 @@ const awsMemorydbCluster = `{
         "optional": true,
         "type": "string"
       },
+      "ip_discovery": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "kms_key_arn": {
         "description_kind": "plain",
         "optional": true,
@@ -99,6 +105,12 @@ const awsMemorydbCluster = `{
         "type": "string"
       },
       "name_prefix": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "network_type": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,

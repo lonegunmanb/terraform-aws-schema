@@ -137,7 +137,8 @@ const awsDmsEndpoint = `{
               "auth_type": "string",
               "docs_to_investigate": "string",
               "extract_doc_id": "string",
-              "nesting_level": "string"
+              "nesting_level": "string",
+              "use_update_lookup": "bool"
             }
           ]
         ]

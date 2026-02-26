@@ -86,6 +86,18 @@ const awsBedrockagentcoreGatewayTarget = `{
                       "string"
                     ]
                   },
+                  "default_return_url": {
+                    "description": "The URL where the end user's browser is redirected after obtaining the authorization code. Required when grant_type is AUTHORIZATION_CODE.",
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "grant_type": {
+                    "description": "The OAuth grant type. Valid values are AUTHORIZATION_CODE and CLIENT_CREDENTIALS.",
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "provider_arn": {
                     "description_kind": "plain",
                     "required": true,
@@ -103,6 +115,41 @@ const awsBedrockagentcoreGatewayTarget = `{
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "metadata_configuration": {
+        "block": {
+          "attributes": {
+            "allowed_query_parameters": {
+              "description": "A list of URL query parameters that are allowed to be propagated from incoming gateway URL to the target.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "allowed_request_headers": {
+              "description": "A list of HTTP headers that are allowed to be propagated from incoming client requests to the target.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "allowed_response_headers": {
+              "description": "A list of HTTP headers that are allowed to be propagated from the target response back to the client.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
             }
           },
           "description_kind": "plain"
