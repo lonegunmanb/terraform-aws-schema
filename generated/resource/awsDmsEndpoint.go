@@ -447,47 +447,56 @@ const awsDmsEndpoint = `{
         "block": {
           "attributes": {
             "access_alternate_directly": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "add_supplemental_logging": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "additional_archived_log_dest_id": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "allow_selected_nested_tables": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "archived_log_dest_id": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "archived_logs_only": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "asm_password": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "sensitive": true,
               "type": "string"
             },
             "asm_server": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "asm_user": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -499,31 +508,37 @@ const awsDmsEndpoint = `{
               "type": "string"
             },
             "char_length_semantics": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "convert_timestamp_with_zone_to_utc": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "direct_path_no_log": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "direct_path_parallel_load": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "enable_homogenous_tablespace": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "extra_archived_log_dest_ids": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": [
@@ -532,107 +547,128 @@ const awsDmsEndpoint = `{
               ]
             },
             "fail_task_on_lob_truncation": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "number_datatype_scale": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "open_transaction_window": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "oracle_path_prefix": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "parallel_asm_read_threads": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "read_ahead_blocks": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "read_table_space_name": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "replace_path_prefix": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "retry_interval": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "secrets_manager_oracle_asm_access_role_arn": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "secrets_manager_oracle_asm_secret_id": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "security_db_encryption": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "sensitive": true,
               "type": "string"
             },
             "security_db_encryption_name": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "spatial_data_option_to_geo_json_function_name": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "standby_delay_time": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "trim_space_in_char": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "use_alternate_folder_for_online": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "use_bfile": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "use_direct_path_full_load": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "use_logminer_reader": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
             },
             "use_path_prefix": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

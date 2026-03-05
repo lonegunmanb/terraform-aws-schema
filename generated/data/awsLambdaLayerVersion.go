@@ -67,8 +67,15 @@ const awsLambdaLayerVersion = `{
         "type": "string"
       },
       "layer_name": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": "string"
+      },
+      "layer_version_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "license_info": {

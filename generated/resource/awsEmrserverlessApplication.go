@@ -190,6 +190,21 @@ const awsEmrserverlessApplication = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "job_level_cost_allocation_configuration": {
+        "block": {
+          "attributes": {
+            "enabled": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "maximum_capacity": {
         "block": {
           "attributes": {

@@ -6,38 +6,18 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsRamResourceShare = `{
+const awsObservabilityadminTelemetryPipeline = `{
   "block": {
     "attributes": {
-      "allow_external_principals": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "permission_arns": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
       },
       "region": {
         "computed": true,
@@ -57,7 +37,6 @@ const awsRamResourceShare = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
@@ -65,30 +44,36 @@ const awsRamResourceShare = `{
       }
     },
     "block_types": {
-      "resource_share_configuration": {
+      "configuration": {
         "block": {
           "attributes": {
-            "retain_sharing_on_account_leave_organization": {
-              "computed": true,
+            "body": {
               "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
+              "required": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -104,8 +89,8 @@ const awsRamResourceShare = `{
   "version": 0
 }`
 
-func AwsRamResourceShareSchema() *tfjson.Schema {
+func AwsObservabilityadminTelemetryPipelineSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsRamResourceShare), &result)
+	_ = json.Unmarshal([]byte(awsObservabilityadminTelemetryPipeline), &result)
 	return &result
 }

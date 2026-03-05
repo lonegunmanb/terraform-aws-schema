@@ -6,20 +6,33 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsRamResourceShare = `{
+const awsSagemakerMlflowApp = `{
   "block": {
     "attributes": {
-      "allow_external_principals": {
+      "account_default_status": {
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": "string"
       },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "id": {
+      "artifact_store_uri": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "default_domain_id_list": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "model_registration_mode": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -30,20 +43,16 @@ const awsRamResourceShare = `{
         "required": true,
         "type": "string"
       },
-      "permission_arns": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "role_arn": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "tags": {
@@ -57,38 +66,36 @@ const awsRamResourceShare = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
+      },
+      "weekly_maintenance_window_start": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "resource_share_configuration": {
-        "block": {
-          "attributes": {
-            "retain_sharing_on_account_leave_organization": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -104,8 +111,8 @@ const awsRamResourceShare = `{
   "version": 0
 }`
 
-func AwsRamResourceShareSchema() *tfjson.Schema {
+func AwsSagemakerMlflowAppSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsRamResourceShare), &result)
+	_ = json.Unmarshal([]byte(awsSagemakerMlflowApp), &result)
 	return &result
 }
