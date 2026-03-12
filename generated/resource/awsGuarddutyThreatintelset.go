@@ -68,6 +68,11 @@ const awsGuarddutyThreatintelset = `{
           "map",
           "string"
         ]
+      },
+      "threat_intel_set_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "description_kind": "plain"

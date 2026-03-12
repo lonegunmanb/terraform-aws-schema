@@ -197,6 +197,14 @@ const awsBedrockagentcoreAgentRuntime = `{
                       "string"
                     ]
                   },
+                  "allowed_scopes": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
                   "discovery_url": {
                     "description_kind": "plain",
                     "required": true,

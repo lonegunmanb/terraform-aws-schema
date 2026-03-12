@@ -35,6 +35,11 @@ const awsGuarddutyIpset = `{
         "optional": true,
         "type": "string"
       },
+      "ip_set_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "location": {
         "description_kind": "plain",
         "required": true,

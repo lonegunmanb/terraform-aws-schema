@@ -1913,6 +1913,7 @@ func init() {
 	dataSources["aws_iam_instance_profile"] = data.AwsIamInstanceProfileSchema()  
 	dataSources["aws_iam_instance_profiles"] = data.AwsIamInstanceProfilesSchema()  
 	dataSources["aws_iam_openid_connect_provider"] = data.AwsIamOpenidConnectProviderSchema()  
+	dataSources["aws_iam_outbound_web_identity_federation"] = data.AwsIamOutboundWebIdentityFederationSchema()  
 	dataSources["aws_iam_policy"] = data.AwsIamPolicySchema()  
 	dataSources["aws_iam_policy_document"] = data.AwsIamPolicyDocumentSchema()  
 	dataSources["aws_iam_principal_policy_simulation"] = data.AwsIamPrincipalPolicySimulationSchema()  
@@ -2285,6 +2286,7 @@ func init() {
     ephemeralResources["aws_secretsmanager_random_password"] = ephemeral.AwsSecretsmanagerRandomPasswordSchema()
     ephemeralResources["aws_secretsmanager_secret_version"] = ephemeral.AwsSecretsmanagerSecretVersionSchema()
     ephemeralResources["aws_ssm_parameter"] = ephemeral.AwsSsmParameterSchema()
+    ephemeralResources["aws_sts_web_identity_token"] = ephemeral.AwsStsWebIdentityTokenSchema()
 	Resources = resources
 	DataSources = dataSources
     EphemeralResources = ephemeralResources

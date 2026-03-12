@@ -83,6 +83,19 @@ const awsObservabilityadminCentralizationRuleForOrganization = `{
                           },
                           "nesting_mode": "list"
                         },
+                        "log_group_name_configuration": {
+                          "block": {
+                            "attributes": {
+                              "log_group_name_pattern": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
                         "logs_encryption_configuration": {
                           "block": {
                             "attributes": {

@@ -47,6 +47,7 @@ const awsGlueCatalogTable = `{
         "type": "string"
       },
       "parameters": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -67,6 +68,7 @@ const awsGlueCatalogTable = `{
         "type": "number"
       },
       "table_type": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -98,6 +100,196 @@ const awsGlueCatalogTable = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
+                  }
+                },
+                "block_types": {
+                  "iceberg_table_input": {
+                    "block": {
+                      "attributes": {
+                        "location": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "properties": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "map",
+                            "string"
+                          ]
+                        }
+                      },
+                      "block_types": {
+                        "partition_spec": {
+                          "block": {
+                            "attributes": {
+                              "spec_id": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "block_types": {
+                              "fields": {
+                                "block": {
+                                  "attributes": {
+                                    "field_id": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    },
+                                    "name": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "source_id": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "number"
+                                    },
+                                    "transform": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "min_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "schema": {
+                          "block": {
+                            "attributes": {
+                              "identifier_field_ids": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "list",
+                                  "number"
+                                ]
+                              },
+                              "schema_id": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "type": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "fields": {
+                                "block": {
+                                  "attributes": {
+                                    "doc": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "id": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "number"
+                                    },
+                                    "initial_default": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "required": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "bool"
+                                    },
+                                    "type": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "write_default": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "min_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "min_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "sort_order": {
+                          "block": {
+                            "attributes": {
+                              "order_id": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              }
+                            },
+                            "block_types": {
+                              "fields": {
+                                "block": {
+                                  "attributes": {
+                                    "direction": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "null_order": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "source_id": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "number"
+                                    },
+                                    "transform": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "min_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"
@@ -411,6 +603,98 @@ const awsGlueCatalogTable = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
+      "view_definition": {
+        "block": {
+          "attributes": {
+            "definer": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "is_protected": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "last_refresh_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "refresh_seconds": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "sub_object_version_ids": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "number"
+              ]
+            },
+            "sub_objects": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
+            "view_version_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "view_version_token": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "representations": {
+              "block": {
+                "attributes": {
+                  "dialect": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "dialect_version": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "validation_connection": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "view_expanded_text": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "view_original_text": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
