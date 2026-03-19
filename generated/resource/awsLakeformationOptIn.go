@@ -149,10 +149,13 @@ const awsLakeformationOptIn = `{
                     "required": true,
                     "type": "string"
                   },
-                  "value": {
+                  "values": {
                     "description_kind": "plain",
                     "required": true,
-                    "type": "string"
+                    "type": [
+                      "set",
+                      "string"
+                    ]
                   }
                 },
                 "description_kind": "plain"

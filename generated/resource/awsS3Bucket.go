@@ -39,6 +39,12 @@ const awsS3Bucket = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "bucket_namespace": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "bucket_prefix": {
         "computed": true,
         "description_kind": "plain",

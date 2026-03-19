@@ -86,6 +86,12 @@ const awsDocdbelasticCluster = `{
         "required": true,
         "type": "number"
       },
+      "shard_instance_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "subnet_ids": {
         "computed": true,
         "description_kind": "plain",

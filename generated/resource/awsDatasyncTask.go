@@ -202,6 +202,12 @@ const awsDatasyncTask = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
+            },
+            "status": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

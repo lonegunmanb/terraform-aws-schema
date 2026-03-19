@@ -41,6 +41,7 @@ const awsSavingsplansSavingsPlan = `{
       },
       "offering_id": {
         "computed": true,
+        "deprecated": true,
         "description": "The ID of the offering.",
         "description_kind": "plain",
         "type": "string"
