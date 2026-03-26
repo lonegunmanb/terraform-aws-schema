@@ -27,6 +27,7 @@ const awsNetworkfirewallFirewallPolicy = `{
           [
             "object",
             {
+              "enable_tls_session_holding": "bool",
               "policy_variables": [
                 "list",
                 [

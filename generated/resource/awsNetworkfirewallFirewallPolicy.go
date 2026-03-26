@@ -83,6 +83,12 @@ const awsNetworkfirewallFirewallPolicy = `{
       "firewall_policy": {
         "block": {
           "attributes": {
+            "enable_tls_session_holding": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "stateful_default_actions": {
               "description_kind": "plain",
               "optional": true,

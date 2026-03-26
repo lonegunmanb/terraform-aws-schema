@@ -59,6 +59,11 @@ const awsDynamodbTable = `{
         "optional": true,
         "type": "string"
       },
+      "restore_backup_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "restore_date_time": {
         "description_kind": "plain",
         "optional": true,

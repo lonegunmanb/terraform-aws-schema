@@ -61,7 +61,102 @@ const awsSecurityhubInsight = `{
               "max_items": 20,
               "nesting_mode": "set"
             },
+            "aws_account_name": {
+              "block": {
+                "attributes": {
+                  "comparison": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 20,
+              "nesting_mode": "set"
+            },
             "company_name": {
+              "block": {
+                "attributes": {
+                  "comparison": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 20,
+              "nesting_mode": "set"
+            },
+            "compliance_associated_standards_id": {
+              "block": {
+                "attributes": {
+                  "comparison": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 20,
+              "nesting_mode": "set"
+            },
+            "compliance_security_control_id": {
+              "block": {
+                "attributes": {
+                  "comparison": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 20,
+              "nesting_mode": "set"
+            },
+            "compliance_security_control_parameters_name": {
+              "block": {
+                "attributes": {
+                  "comparison": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 20,
+              "nesting_mode": "set"
+            },
+            "compliance_security_control_parameters_value": {
               "block": {
                 "attributes": {
                   "comparison": {

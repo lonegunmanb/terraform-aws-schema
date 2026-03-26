@@ -162,6 +162,83 @@ const awsBedrockagentcoreGatewayTarget = `{
             "mcp": {
               "block": {
                 "block_types": {
+                  "api_gateway": {
+                    "block": {
+                      "attributes": {
+                        "rest_api_id": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "stage": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "api_gateway_tool_configuration": {
+                          "block": {
+                            "block_types": {
+                              "tool_filter": {
+                                "block": {
+                                  "attributes": {
+                                    "filter_path": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "methods": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "set"
+                              },
+                              "tool_override": {
+                                "block": {
+                                  "attributes": {
+                                    "description": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "method": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "path": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "set"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
                   "lambda": {
                     "block": {
                       "attributes": {

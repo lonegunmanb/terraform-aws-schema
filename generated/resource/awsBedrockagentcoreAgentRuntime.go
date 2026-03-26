@@ -211,6 +211,64 @@ const awsBedrockagentcoreAgentRuntime = `{
                     "type": "string"
                   }
                 },
+                "block_types": {
+                  "custom_claim": {
+                    "block": {
+                      "attributes": {
+                        "inbound_token_claim_name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "inbound_token_claim_value_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "authorizing_claim_match_value": {
+                          "block": {
+                            "attributes": {
+                              "claim_match_operator": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "claim_match_value": {
+                                "block": {
+                                  "attributes": {
+                                    "match_value_string": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "match_value_string_list": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "set"
+                  }
+                },
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
