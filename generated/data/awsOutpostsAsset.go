@@ -35,6 +35,14 @@ const awsOutpostsAsset = `{
         "optional": true,
         "type": "string"
       },
+      "instance_families": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "rack_elevation": {
         "computed": true,
         "description_kind": "plain",

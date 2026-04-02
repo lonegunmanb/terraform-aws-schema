@@ -150,14 +150,21 @@ const awsObservabilityadminCentralizationRuleForOrganization = `{
                   "source_logs_configuration": {
                     "block": {
                       "attributes": {
+                        "data_source_selection_criteria": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
                         "encrypted_log_group_strategy": {
                           "description_kind": "plain",
                           "required": true,
                           "type": "string"
                         },
                         "log_group_selection_criteria": {
+                          "computed": true,
                           "description_kind": "plain",
-                          "required": true,
+                          "optional": true,
                           "type": "string"
                         }
                       },

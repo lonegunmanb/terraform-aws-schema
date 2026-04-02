@@ -112,6 +112,20 @@ const awsS3ControlStorageLensConfiguration = `{
                     "max_items": 1,
                     "nesting_mode": "list"
                   },
+                  "advanced_performance_metrics": {
+                    "block": {
+                      "attributes": {
+                        "enabled": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "bool"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "bucket_level": {
                     "block": {
                       "block_types": {
@@ -144,6 +158,20 @@ const awsS3ControlStorageLensConfiguration = `{
                           "nesting_mode": "list"
                         },
                         "advanced_data_protection_metrics": {
+                          "block": {
+                            "attributes": {
+                              "enabled": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "advanced_performance_metrics": {
                           "block": {
                             "attributes": {
                               "enabled": {

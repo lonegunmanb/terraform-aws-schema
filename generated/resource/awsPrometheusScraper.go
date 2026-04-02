@@ -130,6 +130,30 @@ const awsPrometheusScraper = `{
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
+            },
+            "vpc": {
+              "block": {
+                "attributes": {
+                  "security_group_ids": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "subnet_ids": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

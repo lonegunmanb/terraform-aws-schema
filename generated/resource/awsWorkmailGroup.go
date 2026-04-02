@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,44 +6,48 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEksAccessEntry = `{
+const awsWorkmailGroup = `{
   "block": {
     "attributes": {
-      "access_entry_arn": {
+      "disabled_date": {
         "computed": true,
+        "description": "Timestamp when the group was disabled from WorkMail use.",
         "description_kind": "plain",
         "type": "string"
       },
-      "cluster_name": {
+      "email": {
+        "description": "Primary email address used to register the group with WorkMail.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "created_at": {
+      "enabled_date": {
         "computed": true,
+        "description": "Timestamp when the group was enabled for WorkMail use.",
         "description_kind": "plain",
         "type": "string"
       },
-      "id": {
+      "group_id": {
         "computed": true,
+        "description": "Identifier of the group.",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "hidden_from_global_address_list": {
+        "computed": true,
+        "description": "Whether to hide the group from the global address list.",
         "description_kind": "plain",
         "optional": true,
+        "type": "bool"
+      },
+      "name": {
+        "description": "Name of the group.",
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "kubernetes_groups": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "modified_at": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "principal_arn": {
+      "organization_id": {
+        "description": "Identifier of the WorkMail organization where the group is managed.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -55,32 +59,9 @@ const awsEksAccessEntry = `{
         "optional": true,
         "type": "string"
       },
-      "tags": {
+      "state": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "deprecated": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "user_name": {
-        "computed": true,
+        "description": "Current WorkMail state of the group.",
         "description_kind": "plain",
         "type": "string"
       }
@@ -90,8 +71,8 @@ const awsEksAccessEntry = `{
   "version": 0
 }`
 
-func AwsEksAccessEntrySchema() *tfjson.Schema {
+func AwsWorkmailGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEksAccessEntry), &result)
+	_ = json.Unmarshal([]byte(awsWorkmailGroup), &result)
 	return &result
 }
