@@ -175,6 +175,14 @@ const awsMskCluster = `{
           "block_types": {
             "connectivity_info": {
               "block": {
+                "attributes": {
+                  "network_type": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
                 "block_types": {
                   "public_access": {
                     "block": {

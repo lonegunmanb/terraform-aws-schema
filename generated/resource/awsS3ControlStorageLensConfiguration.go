@@ -372,6 +372,51 @@ const awsS3ControlStorageLensConfiguration = `{
                     },
                     "max_items": 1,
                     "nesting_mode": "list"
+                  },
+                  "storage_lens_table_destination": {
+                    "block": {
+                      "attributes": {
+                        "enabled": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "bool"
+                        }
+                      },
+                      "block_types": {
+                        "encryption": {
+                          "block": {
+                            "block_types": {
+                              "sse_kms": {
+                                "block": {
+                                  "attributes": {
+                                    "key_id": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "sse_s3": {
+                                "block": {
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

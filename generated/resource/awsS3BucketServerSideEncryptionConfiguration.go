@@ -39,6 +39,7 @@ const awsS3BucketServerSideEncryptionConfiguration = `{
         "block": {
           "attributes": {
             "blocked_encryption_types": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": [
@@ -47,6 +48,7 @@ const awsS3BucketServerSideEncryptionConfiguration = `{
               ]
             },
             "bucket_key_enabled": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -57,6 +59,7 @@ const awsS3BucketServerSideEncryptionConfiguration = `{
               "block": {
                 "attributes": {
                   "kms_master_key_id": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"

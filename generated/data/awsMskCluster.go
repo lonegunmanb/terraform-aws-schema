@@ -67,6 +67,7 @@ const awsMskCluster = `{
                 [
                   "object",
                   {
+                    "network_type": "string",
                     "public_access": [
                       "list",
                       [

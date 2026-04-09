@@ -6,68 +6,56 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsOpensearchserverlessCollection = `{
+const awsS3FilesMountTarget = `{
   "block": {
     "attributes": {
-      "arn": {
+      "availability_zone_id": {
         "computed": true,
+        "description": "Availability Zone ID",
         "description_kind": "plain",
         "type": "string"
       },
-      "collection_endpoint": {
-        "computed": true,
-        "description": "Collection-specific endpoint used to submit index, search, and data upload requests to an OpenSearch Serverless collection.",
+      "file_system_id": {
+        "description": "File system ID",
         "description_kind": "plain",
+        "required": true,
         "type": "string"
-      },
-      "collection_group_name": {
-        "description": "Name of the collection group to associate with this collection.",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "dashboard_endpoint": {
-        "computed": true,
-        "description": "Collection-specific endpoint used to access OpenSearch Dashboards.",
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "description": "Description of the collection.",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "encryption_config": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "aws_owned_key": "bool",
-              "kms_key_arn": "string"
-            }
-          ]
-        ]
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "kms_key_arn": {
+      "ip_address_type": {
+        "description": "IP address type",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "ipv4_address": {
         "computed": true,
-        "description": "The ARN of the Amazon Web Services KMS key used to encrypt the collection.",
+        "description": "IPv4 address",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "ipv6_address": {
+        "computed": true,
+        "description": "IPv6 address",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "network_interface_id": {
+        "computed": true,
+        "description": "Network interface ID",
         "description_kind": "plain",
         "type": "string"
       },
-      "name": {
-        "description": "Name of the collection.",
+      "owner_id": {
+        "computed": true,
+        "description": "AWS account ID of the owner",
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
       "region": {
@@ -77,34 +65,38 @@ const awsOpensearchserverlessCollection = `{
         "optional": true,
         "type": "string"
       },
-      "standby_replicas": {
+      "security_groups": {
         "computed": true,
-        "description": "Indicates whether standby replicas should be used for a collection. One of ` + "`" + `ENABLED` + "`" + ` or ` + "`" + `DISABLED` + "`" + `. Defaults to ` + "`" + `ENABLED` + "`" + `.",
+        "description": "Security group IDs",
         "description_kind": "plain",
         "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "status": {
+        "computed": true,
+        "description": "Mount target status",
+        "description_kind": "plain",
         "type": "string"
       },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
+      "status_message": {
         "computed": true,
+        "description": "Status message",
         "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "string"
       },
-      "type": {
-        "computed": true,
-        "description": "Type of collection. One of ` + "`" + `SEARCH` + "`" + `, ` + "`" + `TIMESERIES` + "`" + `, or ` + "`" + `VECTORSEARCH` + "`" + `. Defaults to ` + "`" + `TIMESERIES` + "`" + `.",
+      "subnet_id": {
+        "description": "Subnet ID",
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
+        "type": "string"
+      },
+      "vpc_id": {
+        "computed": true,
+        "description": "VPC ID",
+        "description_kind": "plain",
         "type": "string"
       }
     },
@@ -123,6 +115,12 @@ const awsOpensearchserverlessCollection = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"
@@ -135,8 +133,8 @@ const awsOpensearchserverlessCollection = `{
   "version": 0
 }`
 
-func AwsOpensearchserverlessCollectionSchema() *tfjson.Schema {
+func AwsS3FilesMountTargetSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsOpensearchserverlessCollection), &result)
+	_ = json.Unmarshal([]byte(awsS3FilesMountTarget), &result)
 	return &result
 }

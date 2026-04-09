@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsOpensearchserverlessCollection = `{
+const awsS3FilesFileSystem = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,60 +14,46 @@ const awsOpensearchserverlessCollection = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "collection_endpoint": {
+      "bucket": {
+        "description": "S3 bucket ARN",
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "creation_time": {
         "computed": true,
-        "description": "Collection-specific endpoint used to submit index, search, and data upload requests to an OpenSearch Serverless collection.",
+        "description": "Creation time",
         "description_kind": "plain",
         "type": "string"
-      },
-      "collection_group_name": {
-        "description": "Name of the collection group to associate with this collection.",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "dashboard_endpoint": {
-        "computed": true,
-        "description": "Collection-specific endpoint used to access OpenSearch Dashboards.",
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "description": "Description of the collection.",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "encryption_config": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "aws_owned_key": "bool",
-              "kms_key_arn": "string"
-            }
-          ]
-        ]
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "kms_key_arn": {
+      "kms_key_id": {
         "computed": true,
-        "description": "The ARN of the Amazon Web Services KMS key used to encrypt the collection.",
+        "description": "KMS key ID for encryption",
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "name": {
-        "description": "Name of the collection.",
+        "computed": true,
+        "description": "File system name",
         "description_kind": "plain",
-        "required": true,
+        "type": "string"
+      },
+      "owner_id": {
+        "computed": true,
+        "description": "AWS account ID of the owner",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "prefix": {
+        "description": "S3 bucket prefix",
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "region": {
@@ -77,11 +63,22 @@ const awsOpensearchserverlessCollection = `{
         "optional": true,
         "type": "string"
       },
-      "standby_replicas": {
-        "computed": true,
-        "description": "Indicates whether standby replicas should be used for a collection. One of ` + "`" + `ENABLED` + "`" + ` or ` + "`" + `DISABLED` + "`" + `. Defaults to ` + "`" + `ENABLED` + "`" + `.",
+      "role_arn": {
+        "description": "IAM role ARN for S3 access",
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
+        "type": "string"
+      },
+      "status": {
+        "computed": true,
+        "description": "File system status",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "status_message": {
+        "computed": true,
+        "description": "Status message",
+        "description_kind": "plain",
         "type": "string"
       },
       "tags": {
@@ -99,13 +96,6 @@ const awsOpensearchserverlessCollection = `{
           "map",
           "string"
         ]
-      },
-      "type": {
-        "computed": true,
-        "description": "Type of collection. One of ` + "`" + `SEARCH` + "`" + `, ` + "`" + `TIMESERIES` + "`" + `, or ` + "`" + `VECTORSEARCH` + "`" + `. Defaults to ` + "`" + `TIMESERIES` + "`" + `.",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {
@@ -135,8 +125,8 @@ const awsOpensearchserverlessCollection = `{
   "version": 0
 }`
 
-func AwsOpensearchserverlessCollectionSchema() *tfjson.Schema {
+func AwsS3FilesFileSystemSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsOpensearchserverlessCollection), &result)
+	_ = json.Unmarshal([]byte(awsS3FilesFileSystem), &result)
 	return &result
 }

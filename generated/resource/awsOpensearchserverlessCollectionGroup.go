@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsControltowerLandingZone = `{
+const awsOpensearchserverlessCollectionGroup = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,31 +14,42 @@ const awsControltowerLandingZone = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "drift_status": {
+      "capacity_limits": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "list",
           [
             "object",
             {
-              "status": "string"
+              "max_indexing_capacity_in_ocu": "number",
+              "max_search_capacity_in_ocu": "number",
+              "min_indexing_capacity_in_ocu": "number",
+              "min_search_capacity_in_ocu": "number"
             }
           ]
         ]
       },
-      "id": {
+      "created_date": {
         "computed": true,
+        "description": "Date the collection group was created.",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "description": {
+        "description": "Description of the collection group.",
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "latest_available_version": {
+      "id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "manifest_json": {
+      "name": {
+        "description": "Name of the collection group.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -50,13 +61,11 @@ const awsControltowerLandingZone = `{
         "optional": true,
         "type": "string"
       },
-      "remediation_types": {
+      "standby_replicas": {
+        "description": "Indicates whether standby replicas should be used for collections in this group. One of ` + "`" + `ENABLED` + "`" + ` or ` + "`" + `DISABLED` + "`" + `.",
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
+        "required": true,
+        "type": "string"
       },
       "tags": {
         "description_kind": "plain",
@@ -69,41 +78,10 @@ const awsControltowerLandingZone = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
-      },
-      "version": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -111,8 +89,8 @@ const awsControltowerLandingZone = `{
   "version": 0
 }`
 
-func AwsControltowerLandingZoneSchema() *tfjson.Schema {
+func AwsOpensearchserverlessCollectionGroupSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsControltowerLandingZone), &result)
+	_ = json.Unmarshal([]byte(awsOpensearchserverlessCollectionGroup), &result)
 	return &result
 }

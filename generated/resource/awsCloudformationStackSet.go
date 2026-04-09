@@ -112,6 +112,14 @@ const awsCloudformationStackSet = `{
       "auto_deployment": {
         "block": {
           "attributes": {
+            "depends_on_stack_sets": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
             "enabled": {
               "description_kind": "plain",
               "optional": true,
