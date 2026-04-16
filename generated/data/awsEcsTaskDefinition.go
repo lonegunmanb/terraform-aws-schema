@@ -235,7 +235,19 @@ const awsEcsTaskDefinition = `{
                 ]
               ],
               "host_path": "string",
-              "name": "string"
+              "name": "string",
+              "s3files_volume_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "access_point_arn": "string",
+                    "file_system_arn": "string",
+                    "root_directory": "string",
+                    "transit_encryption_port": "number"
+                  }
+                ]
+              ]
             }
           ]
         ]

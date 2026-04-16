@@ -226,7 +226,7 @@ const awsCloudfrontMultitenantDistribution = `{
                 },
                 "description_kind": "plain"
               },
-              "nesting_mode": "list"
+              "nesting_mode": "set"
             },
             "lambda_function_association": {
               "block": {
@@ -250,7 +250,7 @@ const awsCloudfrontMultitenantDistribution = `{
                 },
                 "description_kind": "plain"
               },
-              "nesting_mode": "list"
+              "nesting_mode": "set"
             },
             "trusted_key_groups": {
               "block": {
@@ -395,7 +395,7 @@ const awsCloudfrontMultitenantDistribution = `{
                 },
                 "description_kind": "plain"
               },
-              "nesting_mode": "list"
+              "nesting_mode": "set"
             },
             "lambda_function_association": {
               "block": {
@@ -419,7 +419,7 @@ const awsCloudfrontMultitenantDistribution = `{
                 },
                 "description_kind": "plain"
               },
-              "nesting_mode": "list"
+              "nesting_mode": "set"
             },
             "trusted_key_groups": {
               "block": {
@@ -604,7 +604,7 @@ const awsCloudfrontMultitenantDistribution = `{
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "origin_group": {
         "block": {

@@ -173,6 +173,19 @@ const awsOpensearchDomain = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "deployment_strategy_options": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "deployment_strategy": "string"
+            }
+          ]
+        ]
+      },
       "domain_endpoint_v2_hosted_zone_id": {
         "computed": true,
         "description_kind": "plain",

@@ -45,6 +45,11 @@ const awsDirectoryServiceDirectory = `{
         "optional": true,
         "type": "string"
       },
+      "enable_directory_data_access": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "enable_sso": {
         "description_kind": "plain",
         "optional": true,

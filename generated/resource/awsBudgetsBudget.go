@@ -48,6 +48,14 @@ const awsBudgetsBudget = `{
         "optional": true,
         "type": "string"
       },
+      "metrics": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "name": {
         "computed": true,
         "description_kind": "plain",

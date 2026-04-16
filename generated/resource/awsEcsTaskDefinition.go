@@ -358,6 +358,35 @@ const awsEcsTaskDefinition = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            },
+            "s3files_volume_configuration": {
+              "block": {
+                "attributes": {
+                  "access_point_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "file_system_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "root_directory": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "transit_encryption_port": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

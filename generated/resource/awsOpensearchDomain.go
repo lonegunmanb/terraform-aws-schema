@@ -476,6 +476,20 @@ const awsOpensearchDomain = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "deployment_strategy_options": {
+        "block": {
+          "attributes": {
+            "deployment_strategy": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "domain_endpoint_options": {
         "block": {
           "attributes": {
