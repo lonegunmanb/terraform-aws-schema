@@ -50,6 +50,15 @@ const awsOdbNetworkPeeringConnection = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "peer_network_cidrs": {
+        "computed": true,
+        "description": "List of peered network cidrs.",
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "percent_progress": {
         "computed": true,
         "description": "Progress of the odb network peering connection.",

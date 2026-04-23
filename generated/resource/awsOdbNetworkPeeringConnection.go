@@ -57,6 +57,16 @@ const awsOdbNetworkPeeringConnection = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "peer_network_cidrs": {
+        "computed": true,
+        "description": "List of peered network cidrs.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "peer_network_id": {
         "description": "Required field. The unique identifier of the ODB peering connection. Changing this will force terraform to create new resource",
         "description_kind": "plain",

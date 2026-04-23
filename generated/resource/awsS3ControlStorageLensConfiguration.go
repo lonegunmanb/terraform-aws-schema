@@ -64,6 +64,11 @@ const awsS3ControlStorageLensConfiguration = `{
               "description_kind": "plain",
               "required": true,
               "type": "bool"
+            },
+            "prefix_delimiter": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "block_types": {
@@ -442,6 +447,125 @@ const awsS3ControlStorageLensConfiguration = `{
                       "set",
                       "string"
                     ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "expanded_prefixes_data_export": {
+              "block": {
+                "block_types": {
+                  "s3_bucket_destination": {
+                    "block": {
+                      "attributes": {
+                        "account_id": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "format": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "output_schema_version": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "prefix": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "encryption": {
+                          "block": {
+                            "block_types": {
+                              "sse_kms": {
+                                "block": {
+                                  "attributes": {
+                                    "key_id": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "sse_s3": {
+                                "block": {
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "storage_lens_table_destination": {
+                    "block": {
+                      "attributes": {
+                        "enabled": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "bool"
+                        }
+                      },
+                      "block_types": {
+                        "encryption": {
+                          "block": {
+                            "block_types": {
+                              "sse_kms": {
+                                "block": {
+                                  "attributes": {
+                                    "key_id": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "sse_s3": {
+                                "block": {
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

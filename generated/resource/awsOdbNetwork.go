@@ -45,6 +45,16 @@ const awsOdbNetwork = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "cross_region_s3_restore_sources_access": {
+        "computed": true,
+        "description": "The list of regions enabled for cross-region restore in the ODB network.",
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "custom_domain_name": {
         "description": "The name of the custom domain that the network is located. custom_domain_name and default_dns_prefix both can't be given.",
         "description_kind": "plain",
@@ -97,6 +107,20 @@ const awsOdbNetwork = `{
           [
             "object",
             {
+              "cross_region_s3_restore_sources_access": [
+                "list",
+                [
+                  "object",
+                  {
+                    "ipv4_addresses": [
+                      "set",
+                      "string"
+                    ],
+                    "region": "string",
+                    "status": "string"
+                  }
+                ]
+              ],
               "kms_access": [
                 "list",
                 [

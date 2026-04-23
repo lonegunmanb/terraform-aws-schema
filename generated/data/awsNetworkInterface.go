@@ -60,6 +60,28 @@ const awsNetworkInterface = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "ena_srd_specification": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "ena_srd_enabled": "bool",
+              "ena_srd_udp_specification": [
+                "list",
+                [
+                  "object",
+                  {
+                    "ena_srd_udp_enabled": "bool"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

@@ -1,4 +1,4 @@
-package resource
+package data
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsMqConfiguration = `{
+const awsEc2ServiceLinkVirtualInterface = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,30 +14,9 @@ const awsMqConfiguration = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "authentication_strategy": {
+      "configuration_state": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "data": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "engine_type": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "engine_version": {
-        "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
       "id": {
@@ -46,15 +25,40 @@ const awsMqConfiguration = `{
         "optional": true,
         "type": "string"
       },
-      "latest_revision": {
+      "local_address": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "outpost_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "outpost_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "outpost_lag_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "owner_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "peer_address": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "peer_bgp_asn": {
         "computed": true,
         "description_kind": "plain",
         "type": "number"
-      },
-      "name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
       },
       "region": {
         "computed": true,
@@ -63,27 +67,41 @@ const awsMqConfiguration = `{
         "optional": true,
         "type": "string"
       },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
+      },
+      "vlan": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      }
+    },
+    "block_types": {
+      "filter": {
+        "block": {
+          "attributes": {
+            "name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "values": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"
@@ -91,8 +109,8 @@ const awsMqConfiguration = `{
   "version": 0
 }`
 
-func AwsMqConfigurationSchema() *tfjson.Schema {
+func AwsEc2ServiceLinkVirtualInterfaceSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsMqConfiguration), &result)
+	_ = json.Unmarshal([]byte(awsEc2ServiceLinkVirtualInterface), &result)
 	return &result
 }

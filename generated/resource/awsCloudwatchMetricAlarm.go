@@ -39,7 +39,7 @@ const awsCloudwatchMetricAlarm = `{
       },
       "comparison_operator": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "datapoints_to_alarm": {
@@ -61,9 +61,14 @@ const awsCloudwatchMetricAlarm = `{
         "optional": true,
         "type": "string"
       },
+      "evaluation_interval": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "evaluation_periods": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "number"
       },
       "extended_statistic": {
@@ -159,6 +164,40 @@ const awsCloudwatchMetricAlarm = `{
       }
     },
     "block_types": {
+      "evaluation_criteria": {
+        "block": {
+          "block_types": {
+            "promql_criteria": {
+              "block": {
+                "attributes": {
+                  "pending_period": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "query": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "recovery_period": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "metric_query": {
         "block": {
           "attributes": {

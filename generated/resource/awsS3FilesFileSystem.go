@@ -9,6 +9,11 @@ import (
 const awsS3FilesFileSystem = `{
   "block": {
     "attributes": {
+      "accept_bucket_warning": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",

@@ -76,6 +76,20 @@ const awsOdbNetwork = `{
           [
             "object",
             {
+              "cross_region_s3_restore_sources_access": [
+                "list",
+                [
+                  "object",
+                  {
+                    "ipv4_addresses": [
+                      "list",
+                      "string"
+                    ],
+                    "region": "string",
+                    "status": "string"
+                  }
+                ]
+              ],
               "kms_access": [
                 "list",
                 [

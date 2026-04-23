@@ -29,7 +29,7 @@ const awsOdbCloudExadataInfrastructure = `{
       },
       "availability_zone": {
         "computed": true,
-        "description": "he name of the Availability Zone (AZ) where the Exadata infrastructure is located.",
+        "description": "The name of the Availability Zone (AZ) where the Exadata infrastructure is located.",
         "description_kind": "plain",
         "type": "string"
       },
@@ -268,7 +268,7 @@ const awsOdbCloudExadataInfrastructure = `{
       },
       "storage_count": {
         "computed": true,
-        "description": "he number of storage servers that are activated for the Exadata infrastructure.",
+        "description": "The number of storage servers that are activated for the Exadata infrastructure.",
         "description_kind": "plain",
         "type": "number"
       },

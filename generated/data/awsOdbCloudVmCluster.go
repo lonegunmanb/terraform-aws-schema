@@ -107,7 +107,7 @@ const awsOdbCloudVmCluster = `{
       },
       "gi_version": {
         "computed": true,
-        "description": "he software version of the Oracle Grid Infrastructure (GI) for the VM cluster.",
+        "description": "The software version of the Oracle Grid Infrastructure (GI) for the VM cluster.",
         "description_kind": "plain",
         "type": "string"
       },
@@ -264,7 +264,7 @@ const awsOdbCloudVmCluster = `{
       },
       "ssh_public_keys": {
         "computed": true,
-        "description": "he public key portion of one or more key pairs used for SSH access to the VM cluster.",
+        "description": "The public key portion of one or more key pairs used for SSH access to the VM cluster.",
         "description_kind": "plain",
         "type": [
           "list",

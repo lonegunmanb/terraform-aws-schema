@@ -86,6 +86,11 @@ const awsIdentitystoreUser = `{
         "required": true,
         "type": "string"
       },
+      "user_status": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "user_type": {
         "description_kind": "plain",
         "optional": true,

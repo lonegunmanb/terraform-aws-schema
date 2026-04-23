@@ -6,37 +6,15 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEksAddon = `{
+const awsEbsVolumeCopy = `{
   "block": {
     "attributes": {
-      "addon_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "addon_version": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "cluster_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "configuration_values": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "created_at": {
+      "availability_zone": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -44,18 +22,13 @@ const awsEksAddon = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "modified_at": {
+      "iops": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "preserve": {
-        "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": "number"
       },
       "region": {
         "computed": true,
@@ -64,19 +37,15 @@ const awsEksAddon = `{
         "optional": true,
         "type": "string"
       },
-      "resolve_conflicts_on_create": {
+      "size": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "number"
       },
-      "resolve_conflicts_on_update": {
+      "source_volume_id": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "service_account_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "tags": {
@@ -90,61 +59,42 @@ const awsEksAddon = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
+      },
+      "throughput": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "volume_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "namespace_config": {
-        "block": {
-          "attributes": {
-            "namespace": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "pod_identity_association": {
-        "block": {
-          "attributes": {
-            "role_arn": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "service_account": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -160,8 +110,8 @@ const awsEksAddon = `{
   "version": 0
 }`
 
-func AwsEksAddonSchema() *tfjson.Schema {
+func AwsEbsVolumeCopySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEksAddon), &result)
+	_ = json.Unmarshal([]byte(awsEbsVolumeCopy), &result)
 	return &result
 }

@@ -76,7 +76,7 @@ const awsOdbCloudAutonomousVmCluster = `{
       },
       "cpu_percentage": {
         "computed": true,
-        "description": "he percentage of total CPU cores currently in use in the Autonomous VM cluster.",
+        "description": "The percentage of total CPU cores currently in use in the Autonomous VM cluster.",
         "description_kind": "plain",
         "type": "number"
       },
