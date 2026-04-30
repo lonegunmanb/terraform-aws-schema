@@ -23,6 +23,7 @@ const awsEcsExpressGatewayService = `{
       },
       "current_deployment": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },

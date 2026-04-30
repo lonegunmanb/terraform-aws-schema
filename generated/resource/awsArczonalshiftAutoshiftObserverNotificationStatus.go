@@ -6,23 +6,13 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSecurityhubFindingAggregator = `{
+const awsArczonalshiftAutoshiftObserverNotificationStatus = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "linking_mode": {
-        "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
       "region": {
@@ -32,13 +22,10 @@ const awsSecurityhubFindingAggregator = `{
         "optional": true,
         "type": "string"
       },
-      "specified_regions": {
+      "status": {
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
+        "required": true,
+        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -46,8 +33,8 @@ const awsSecurityhubFindingAggregator = `{
   "version": 0
 }`
 
-func AwsSecurityhubFindingAggregatorSchema() *tfjson.Schema {
+func AwsArczonalshiftAutoshiftObserverNotificationStatusSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSecurityhubFindingAggregator), &result)
+	_ = json.Unmarshal([]byte(awsArczonalshiftAutoshiftObserverNotificationStatus), &result)
 	return &result
 }

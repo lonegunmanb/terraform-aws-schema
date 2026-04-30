@@ -16,7 +16,7 @@ const awsSecurityhubConfigurationPolicyAssociation = `{
         "type": "string"
       },
       "policy_id": {
-        "description": "The universally unique identifier (UUID) of the configuration policy.",
+        "description": "The universally unique identifier (UUID) of the configuration policy, or SELF_MANAGED_SECURITY_HUB for a self-managed configuration.",
         "description_kind": "plain",
         "required": true,
         "type": "string"

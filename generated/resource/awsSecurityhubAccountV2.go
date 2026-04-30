@@ -6,23 +6,12 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSecurityhubFindingAggregator = `{
+const awsSecurityhubAccountV2 = `{
   "block": {
     "attributes": {
       "arn": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "linking_mode": {
-        "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
       "region": {
@@ -32,11 +21,19 @@ const awsSecurityhubFindingAggregator = `{
         "optional": true,
         "type": "string"
       },
-      "specified_regions": {
+      "tags": {
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "set",
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
           "string"
         ]
       }
@@ -46,8 +43,8 @@ const awsSecurityhubFindingAggregator = `{
   "version": 0
 }`
 
-func AwsSecurityhubFindingAggregatorSchema() *tfjson.Schema {
+func AwsSecurityhubAccountV2Schema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSecurityhubFindingAggregator), &result)
+	_ = json.Unmarshal([]byte(awsSecurityhubAccountV2), &result)
 	return &result
 }
