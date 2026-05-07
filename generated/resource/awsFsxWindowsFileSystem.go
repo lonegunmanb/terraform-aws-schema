@@ -263,6 +263,18 @@ const awsFsxWindowsFileSystem = `{
               "sensitive": true,
               "type": "string"
             },
+            "password_wo": {
+              "description_kind": "plain",
+              "optional": true,
+              "sensitive": true,
+              "type": "string",
+              "write_only": true
+            },
+            "password_wo_version": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
             "username": {
               "computed": true,
               "description_kind": "plain",

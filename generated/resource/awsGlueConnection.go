@@ -93,6 +93,163 @@ const awsGlueConnection = `{
       }
     },
     "block_types": {
+      "authentication_configuration": {
+        "block": {
+          "attributes": {
+            "authentication_type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "custom_authentication_credentials": {
+              "description_kind": "plain",
+              "optional": true,
+              "sensitive": true,
+              "type": [
+                "map",
+                "string"
+              ]
+            },
+            "kms_key_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "secret_arn": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "basic_authentication_credentials": {
+              "block": {
+                "attributes": {
+                  "password": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "sensitive": true,
+                    "type": "string"
+                  },
+                  "username": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "oauth2_properties": {
+              "block": {
+                "attributes": {
+                  "oauth2_grant_type": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "token_url": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "token_url_parameters_map": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "sensitive": true,
+                    "type": [
+                      "map",
+                      "string"
+                    ]
+                  }
+                },
+                "block_types": {
+                  "authorization_code_properties": {
+                    "block": {
+                      "attributes": {
+                        "authorization_code": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "sensitive": true,
+                          "type": "string"
+                        },
+                        "redirect_uri": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "oauth2_client_application": {
+                    "block": {
+                      "attributes": {
+                        "aws_managed_client_application_reference": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "user_managed_client_application_client_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "oauth2_credentials": {
+                    "block": {
+                      "attributes": {
+                        "access_token": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "sensitive": true,
+                          "type": "string"
+                        },
+                        "jwt_token": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "sensitive": true,
+                          "type": "string"
+                        },
+                        "refresh_token": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "sensitive": true,
+                          "type": "string"
+                        },
+                        "user_managed_client_application_client_secret": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "sensitive": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "physical_connection_requirements": {
         "block": {
           "attributes": {

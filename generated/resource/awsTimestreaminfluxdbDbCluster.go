@@ -207,6 +207,27 @@ const awsTimestreaminfluxdbDbCluster = `{
         },
         "nesting_mode": "list"
       },
+      "maintenance_schedule": {
+        "block": {
+          "attributes": {
+            "preferred_maintenance_window": {
+              "description": "The preferred maintenance window in the format ddd:HH:MM-ddd:HH:MM.\n\t\t\t\t\t\t\t\tDay must be one of Mon, Tue, Wed, Thu, Fri, Sat, or Sun. Provide an empty\n\t\t\t\t\t\t\t\tstring to let the system choose a window.",
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "timezone": {
+              "description": "The IANA timezone identifier for the maintenance window. For\n\t\t\t\t\t\t\t\texample, America/New_York or UTC.",
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description": "Specifies the maintenance schedule for the DB cluster, including the preferred\n\t\t\t\t\tmaintenance window and timezone. This field is only supported for InfluxDB V3 clusters\n\t\t\t\t\t(when using an InfluxDB V3 db parameter group).",
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

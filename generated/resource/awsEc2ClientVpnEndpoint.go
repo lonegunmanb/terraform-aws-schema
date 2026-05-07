@@ -254,6 +254,42 @@ const awsEc2ClientVpnEndpoint = `{
         "max_items": 1,
         "min_items": 1,
         "nesting_mode": "list"
+      },
+      "transit_gateway_configuration": {
+        "block": {
+          "attributes": {
+            "availability_zone_ids": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "availability_zones": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "transit_gateway_attachment_id": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "transit_gateway_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

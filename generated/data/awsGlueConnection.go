@@ -23,6 +23,81 @@ const awsGlueConnection = `{
           "string"
         ]
       },
+      "authentication_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "authentication_type": "string",
+              "basic_authentication_credentials": [
+                "list",
+                [
+                  "object",
+                  {
+                    "password": "string",
+                    "username": "string"
+                  }
+                ]
+              ],
+              "custom_authentication_credentials": [
+                "map",
+                "string"
+              ],
+              "kms_key_arn": "string",
+              "oauth2_properties": [
+                "list",
+                [
+                  "object",
+                  {
+                    "authorization_code_properties": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "authorization_code": "string",
+                          "redirect_uri": "string"
+                        }
+                      ]
+                    ],
+                    "oauth2_client_application": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "aws_managed_client_application_reference": "string",
+                          "user_managed_client_application_client_id": "string"
+                        }
+                      ]
+                    ],
+                    "oauth2_credentials": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "access_token": "string",
+                          "jwt_token": "string",
+                          "refresh_token": "string",
+                          "user_managed_client_application_client_secret": "string"
+                        }
+                      ]
+                    ],
+                    "oauth2_grant_type": "string",
+                    "token_url": "string",
+                    "token_url_parameters_map": [
+                      "map",
+                      "string"
+                    ]
+                  }
+                ]
+              ],
+              "secret_arn": "string"
+            }
+          ]
+        ]
+      },
       "catalog_id": {
         "computed": true,
         "description_kind": "plain",
