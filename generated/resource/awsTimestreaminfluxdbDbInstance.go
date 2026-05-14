@@ -200,6 +200,25 @@ const awsTimestreaminfluxdbDbInstance = `{
         },
         "nesting_mode": "list"
       },
+      "maintenance_schedule": {
+        "block": {
+          "attributes": {
+            "preferred_maintenance_window": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "timezone": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description": "The maintenance schedule for the DB instance.",
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
