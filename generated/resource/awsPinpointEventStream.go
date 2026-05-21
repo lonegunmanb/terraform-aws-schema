@@ -10,11 +10,13 @@ const awsPinpointEventStream = `{
   "block": {
     "attributes": {
       "application_id": {
+        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "destination_stream_arn": {
+        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -33,11 +35,13 @@ const awsPinpointEventStream = `{
         "type": "string"
       },
       "role_arn": {
+        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"
       }
     },
+    "deprecated": true,
     "description_kind": "plain"
   },
   "version": 0

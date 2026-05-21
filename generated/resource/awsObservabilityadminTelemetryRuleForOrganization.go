@@ -6,36 +6,9 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVpclatticeResourceGateway = `{
+const awsObservabilityadminTelemetryRuleForOrganization = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "ip_address_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "ipv4_addresses_per_eni": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
@@ -43,33 +16,15 @@ const awsVpclatticeResourceGateway = `{
         "optional": true,
         "type": "string"
       },
-      "resource_config_dns_resolution": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "security_group_ids": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "status": {
+      "rule_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "subnet_ids": {
+      "rule_name": {
         "description_kind": "plain",
         "required": true,
-        "type": [
-          "set",
-          "string"
-        ]
+        "type": "string"
       },
       "tags": {
         "description_kind": "plain",
@@ -86,14 +41,27 @@ const awsVpclatticeResourceGateway = `{
           "map",
           "string"
         ]
-      },
-      "vpc_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
       }
     },
     "block_types": {
+      "rule": {
+        "block": {
+          "attributes": {
+            "resource_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "telemetry_type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
@@ -126,8 +94,8 @@ const awsVpclatticeResourceGateway = `{
   "version": 0
 }`
 
-func AwsVpclatticeResourceGatewaySchema() *tfjson.Schema {
+func AwsObservabilityadminTelemetryRuleForOrganizationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVpclatticeResourceGateway), &result)
+	_ = json.Unmarshal([]byte(awsObservabilityadminTelemetryRuleForOrganization), &result)
 	return &result
 }

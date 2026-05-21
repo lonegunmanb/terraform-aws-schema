@@ -200,6 +200,20 @@ const awsCloudfrontDistribution = `{
       }
     },
     "block_types": {
+      "cache_tag_config": {
+        "block": {
+          "attributes": {
+            "header_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "connection_function_association": {
         "block": {
           "attributes": {

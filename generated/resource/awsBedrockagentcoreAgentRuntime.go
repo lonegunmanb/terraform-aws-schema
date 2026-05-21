@@ -278,6 +278,63 @@ const awsBedrockagentcoreAgentRuntime = `{
         },
         "nesting_mode": "list"
       },
+      "filesystem_configuration": {
+        "block": {
+          "block_types": {
+            "efs_access_point": {
+              "block": {
+                "attributes": {
+                  "access_point_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "mount_path": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "s3_files_access_point": {
+              "block": {
+                "attributes": {
+                  "access_point_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "mount_path": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "session_storage": {
+              "block": {
+                "attributes": {
+                  "mount_path": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "network_configuration": {
         "block": {
           "attributes": {

@@ -30,6 +30,11 @@ const awsEc2LocalGatewayVirtualInterface = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "local_gateway_virtual_interface_group_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "local_gateway_virtual_interface_ids": {
         "computed": true,
         "description_kind": "plain",
@@ -37,6 +42,11 @@ const awsEc2LocalGatewayVirtualInterface = `{
           "set",
           "string"
         ]
+      },
+      "outpost_lag_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       },
       "peer_address": {
         "computed": true,

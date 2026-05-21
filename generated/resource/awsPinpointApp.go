@@ -82,6 +82,7 @@ const awsPinpointApp = `{
               "type": "string"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,
@@ -111,6 +112,7 @@ const awsPinpointApp = `{
               "type": "number"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,
@@ -130,6 +132,7 @@ const awsPinpointApp = `{
               "type": "string"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,

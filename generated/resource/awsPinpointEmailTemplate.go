@@ -38,6 +38,7 @@ const awsPinpointEmailTemplate = `{
         ]
       },
       "template_name": {
+        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -98,11 +99,13 @@ const awsPinpointEmailTemplate = `{
               "nesting_mode": "list"
             }
           },
+          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "list"
       }
     },
+    "deprecated": true,
     "description_kind": "plain"
   },
   "version": 0

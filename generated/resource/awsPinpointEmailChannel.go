@@ -10,21 +10,25 @@ const awsPinpointEmailChannel = `{
   "block": {
     "attributes": {
       "application_id": {
+        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "configuration_set": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "enabled": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "from_address": {
+        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -36,16 +40,19 @@ const awsPinpointEmailChannel = `{
         "type": "string"
       },
       "identity": {
+        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "messages_per_second": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "number"
       },
       "orchestration_sending_role_arn": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -58,11 +65,13 @@ const awsPinpointEmailChannel = `{
         "type": "string"
       },
       "role_arn": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       }
     },
+    "deprecated": true,
     "description_kind": "plain"
   },
   "version": 0

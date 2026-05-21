@@ -32,7 +32,19 @@ const awsOpensearchDomain = `{
             {
               "anonymous_auth_enabled": "bool",
               "enabled": "bool",
-              "internal_user_database_enabled": "bool"
+              "internal_user_database_enabled": "bool",
+              "jwt_options": [
+                "list",
+                [
+                  "object",
+                  {
+                    "enabled": "bool",
+                    "public_key": "string",
+                    "roles_key": "string",
+                    "subject_key": "string"
+                  }
+                ]
+              ]
             }
           ]
         ]
