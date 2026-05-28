@@ -76,6 +76,11 @@ const awsRoute = `{
         "optional": true,
         "type": "string"
       },
+      "odb_network_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "origin": {
         "computed": true,
         "description_kind": "plain",

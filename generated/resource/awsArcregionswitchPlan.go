@@ -111,6 +111,40 @@ const awsArcregionswitchPlan = `{
         },
         "nesting_mode": "set"
       },
+      "report_configuration": {
+        "block": {
+          "block_types": {
+            "report_output": {
+              "block": {
+                "block_types": {
+                  "s3_configuration": {
+                    "block": {
+                      "attributes": {
+                        "bucket_owner": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "bucket_path": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
@@ -1244,6 +1278,68 @@ const awsArcregionswitchPlan = `{
                                 },
                                 "nesting_mode": "list"
                               },
+                              "rds_create_cross_region_read_replica_config": {
+                                "block": {
+                                  "attributes": {
+                                    "cross_account_role": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "db_instance_arn_map": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "map",
+                                        "string"
+                                      ]
+                                    },
+                                    "external_id": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "timeout_minutes": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "rds_promote_read_replica_config": {
+                                "block": {
+                                  "attributes": {
+                                    "cross_account_role": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "db_instance_arn_map": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "map",
+                                        "string"
+                                      ]
+                                    },
+                                    "external_id": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "timeout_minutes": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
                               "region_switch_plan_config": {
                                 "block": {
                                   "attributes": {
@@ -1324,6 +1420,68 @@ const awsArcregionswitchPlan = `{
                             "description_kind": "plain"
                           },
                           "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "rds_create_cross_region_read_replica_config": {
+                    "block": {
+                      "attributes": {
+                        "cross_account_role": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "db_instance_arn_map": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "map",
+                            "string"
+                          ]
+                        },
+                        "external_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "timeout_minutes": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "rds_promote_read_replica_config": {
+                    "block": {
+                      "attributes": {
+                        "cross_account_role": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "db_instance_arn_map": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "map",
+                            "string"
+                          ]
+                        },
+                        "external_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "timeout_minutes": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
                         }
                       },
                       "description_kind": "plain"

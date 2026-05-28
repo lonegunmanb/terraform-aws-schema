@@ -6,16 +6,16 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSsmResourceDataSync = `{
+const awsS3ControlMultiRegionAccessPointRoutes = `{
   "block": {
     "attributes": {
-      "id": {
+      "account_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "name": {
+      "mrap": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -29,22 +29,12 @@ const awsSsmResourceDataSync = `{
       }
     },
     "block_types": {
-      "s3_destination": {
+      "route": {
         "block": {
           "attributes": {
-            "bucket_name": {
+            "bucket": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            },
-            "kms_key_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "prefix": {
-              "description_kind": "plain",
-              "optional": true,
               "type": "string"
             },
             "region": {
@@ -52,33 +42,15 @@ const awsSsmResourceDataSync = `{
               "required": true,
               "type": "string"
             },
-            "sync_format": {
+            "traffic_dial_percentage": {
               "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "destination_data_sharing": {
-              "block": {
-                "attributes": {
-                  "destination_data_sharing_type": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
+              "required": true,
+              "type": "number"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "min_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"
@@ -86,8 +58,8 @@ const awsSsmResourceDataSync = `{
   "version": 0
 }`
 
-func AwsSsmResourceDataSyncSchema() *tfjson.Schema {
+func AwsS3ControlMultiRegionAccessPointRoutesSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSsmResourceDataSync), &result)
+	_ = json.Unmarshal([]byte(awsS3ControlMultiRegionAccessPointRoutes), &result)
 	return &result
 }

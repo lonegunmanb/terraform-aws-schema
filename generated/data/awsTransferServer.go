@@ -50,6 +50,11 @@ const awsTransferServer = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "logging_role": {
         "computed": true,
         "description_kind": "plain",

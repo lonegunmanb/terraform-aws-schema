@@ -129,6 +129,11 @@ const awsQuicksightDataSource = `{
             "athena": {
               "block": {
                 "attributes": {
+                  "role_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "work_group": {
                     "description_kind": "plain",
                     "optional": true,

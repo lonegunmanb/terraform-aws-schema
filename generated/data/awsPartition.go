@@ -16,6 +16,7 @@ const awsPartition = `{
       },
       "id": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

@@ -341,7 +341,6 @@ const awsEksCluster = `{
                 "description_kind": "plain"
               },
               "max_items": 1,
-              "min_items": 1,
               "nesting_mode": "list"
             },
             "remote_pod_networks": {

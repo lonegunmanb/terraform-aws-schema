@@ -117,6 +117,86 @@ const awsMskReplicator = `{
         "min_items": 2,
         "nesting_mode": "list"
       },
+      "log_delivery": {
+        "block": {
+          "block_types": {
+            "replicator_log_delivery": {
+              "block": {
+                "block_types": {
+                  "cloudwatch_logs": {
+                    "block": {
+                      "attributes": {
+                        "enabled": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "bool"
+                        },
+                        "log_group": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "firehose": {
+                    "block": {
+                      "attributes": {
+                        "delivery_stream": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "enabled": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "bool"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "s3": {
+                    "block": {
+                      "attributes": {
+                        "bucket": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "enabled": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "bool"
+                        },
+                        "prefix": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "replication_info_list": {
         "block": {
           "attributes": {
@@ -151,6 +231,7 @@ const awsMskReplicator = `{
               "block": {
                 "attributes": {
                   "consumer_groups_to_exclude": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": [
@@ -201,6 +282,7 @@ const awsMskReplicator = `{
                     "type": "bool"
                   },
                   "topics_to_exclude": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": [

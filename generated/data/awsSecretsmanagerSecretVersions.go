@@ -11,6 +11,7 @@ const awsSecretsmanagerSecretVersions = `{
     "attributes": {
       "arn": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
@@ -21,6 +22,7 @@ const awsSecretsmanagerSecretVersions = `{
       },
       "name": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
@@ -31,9 +33,19 @@ const awsSecretsmanagerSecretVersions = `{
         "optional": true,
         "type": "string"
       },
+      "secret_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "secret_id": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "secret_name": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "versions": {
