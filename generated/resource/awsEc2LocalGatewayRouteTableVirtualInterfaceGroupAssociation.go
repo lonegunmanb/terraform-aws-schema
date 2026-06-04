@@ -6,43 +6,37 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsDatazoneEnvironmentBlueprintConfiguration = `{
+const awsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation = `{
   "block": {
     "attributes": {
-      "domain_id": {
+      "id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "local_gateway_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "local_gateway_route_table_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "local_gateway_route_table_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "enabled_regions": {
-        "description_kind": "plain",
-        "required": true,
-        "type": [
-          "list",
-          "string"
-        ]
-      },
-      "environment_blueprint_id": {
+      "local_gateway_virtual_interface_group_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "global_parameters": {
+      "owner_id": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "manage_access_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "provisioning_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "region": {
@@ -52,15 +46,25 @@ const awsDatazoneEnvironmentBlueprintConfiguration = `{
         "optional": true,
         "type": "string"
       },
-      "regional_parameters": {
+      "state": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "tags": {
         "description_kind": "plain",
         "optional": true,
         "type": [
           "map",
-          [
-            "map",
-            "string"
-          ]
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
         ]
       }
     },
@@ -69,8 +73,8 @@ const awsDatazoneEnvironmentBlueprintConfiguration = `{
   "version": 0
 }`
 
-func AwsDatazoneEnvironmentBlueprintConfigurationSchema() *tfjson.Schema {
+func AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsDatazoneEnvironmentBlueprintConfiguration), &result)
+	_ = json.Unmarshal([]byte(awsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation), &result)
 	return &result
 }

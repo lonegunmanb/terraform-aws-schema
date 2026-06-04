@@ -9,6 +9,16 @@ import (
 const awsEc2Host = `{
   "block": {
     "attributes": {
+      "allocation_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "allows_multiple_instance_types": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -29,6 +39,35 @@ const awsEc2Host = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "availability_zone_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "available_capacity": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "available_instance_capacity": [
+                "list",
+                [
+                  "object",
+                  {
+                    "available_capacity": "number",
+                    "instance_type": "string",
+                    "total_capacity": "number"
+                  }
+                ]
+              ],
+              "available_vcpus": "number"
+            }
+          ]
+        ]
+      },
       "cores": {
         "computed": true,
         "description_kind": "plain",
@@ -40,7 +79,17 @@ const awsEc2Host = `{
         "optional": true,
         "type": "string"
       },
+      "host_maintenance": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "host_recovery": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "host_reservation_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -61,6 +110,26 @@ const awsEc2Host = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "instances": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "instance_id": "string",
+              "instance_type": "string",
+              "owner_id": "string"
+            }
+          ]
+        ]
+      },
+      "member_of_service_linked_resource_group": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "outpost_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -78,10 +147,20 @@ const awsEc2Host = `{
         "optional": true,
         "type": "string"
       },
+      "release_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "sockets": {
         "computed": true,
         "description_kind": "plain",
         "type": "number"
+      },
+      "state": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       },
       "tags": {
         "computed": true,

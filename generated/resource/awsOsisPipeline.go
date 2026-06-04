@@ -11,6 +11,7 @@ const awsOsisPipeline = `{
     "attributes": {
       "id": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },

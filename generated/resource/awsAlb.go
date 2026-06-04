@@ -64,6 +64,12 @@ const awsAlb = `{
         "optional": true,
         "type": "bool"
       },
+      "enable_prefix_for_ipv6_source_nat": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "enable_tls_version_and_cipher_suite_headers": {
         "description_kind": "plain",
         "optional": true,

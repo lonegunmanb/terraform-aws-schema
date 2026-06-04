@@ -6,45 +6,37 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsKinesisStream = `{
+const awsEc2LocalGatewayRouteTable = `{
   "block": {
     "attributes": {
       "arn": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "encryption_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "enforce_consumer_deletion": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "kms_key_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "max_record_size_in_kib": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "name": {
+      "local_gateway_id": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "local_gateway_route_table_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "mode": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "outpost_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "owner_id": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "region": {
@@ -54,23 +46,10 @@ const awsKinesisStream = `{
         "optional": true,
         "type": "string"
       },
-      "retention_period": {
+      "state": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "shard_count": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "shard_level_metrics": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
+        "type": "string"
       },
       "tags": {
         "description_kind": "plain",
@@ -83,47 +62,24 @@ const awsKinesisStream = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
-      },
-      "warm_throughput_mib_ps": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       }
     },
     "block_types": {
-      "stream_mode_details": {
-        "block": {
-          "attributes": {
-            "stream_mode": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -136,11 +92,11 @@ const awsKinesisStream = `{
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
-func AwsKinesisStreamSchema() *tfjson.Schema {
+func AwsEc2LocalGatewayRouteTableSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsKinesisStream), &result)
+	_ = json.Unmarshal([]byte(awsEc2LocalGatewayRouteTable), &result)
 	return &result
 }

@@ -69,7 +69,45 @@ const awsBedrockagentcoreGatewayTarget = `{
               },
               "nesting_mode": "list"
             },
+            "caller_iam_credentials": {
+              "block": {
+                "attributes": {
+                  "region": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "service": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "gateway_iam_role": {
+              "block": {
+                "attributes": {
+                  "region": {
+                    "description": "AWS Region used for SigV4 signing of upstream requests. Defaults to the gateway's Region when omitted. Only meaningful when ` + "`" + `service` + "`" + ` is set.",
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "service": {
+                    "description": "The target AWS service name used for SigV4 signing of upstream requests. Required when calling SigV4-protected endpoints such as another Bedrock AgentCore Runtime (use ` + "`" + `bedrock-agentcore` + "`" + `). Omit for non-SigV4 IAM-role-based authentication.",
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "jwt_passthrough": {
               "block": {
                 "description_kind": "plain"
               },
@@ -159,6 +197,32 @@ const awsBedrockagentcoreGatewayTarget = `{
       "target_configuration": {
         "block": {
           "block_types": {
+            "http": {
+              "block": {
+                "block_types": {
+                  "agentcore_runtime": {
+                    "block": {
+                      "attributes": {
+                        "arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "qualifier": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "mcp": {
               "block": {
                 "block_types": {

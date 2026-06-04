@@ -1,4 +1,4 @@
-package resource
+package data
 
 import (
 	"encoding/json"
@@ -6,41 +6,18 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsDatazoneEnvironmentBlueprintConfiguration = `{
+const awsEc2Hosts = `{
   "block": {
     "attributes": {
-      "domain_id": {
+      "ids": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "enabled_regions": {
-        "description_kind": "plain",
-        "required": true,
         "type": [
           "list",
           "string"
         ]
       },
-      "environment_blueprint_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "global_parameters": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "manage_access_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "provisioning_role_arn": {
+      "outpost_arn": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -52,16 +29,36 @@ const awsDatazoneEnvironmentBlueprintConfiguration = `{
         "optional": true,
         "type": "string"
       },
-      "regional_parameters": {
+      "tags": {
         "description_kind": "plain",
         "optional": true,
         "type": [
           "map",
-          [
-            "map",
-            "string"
-          ]
+          "string"
         ]
+      }
+    },
+    "block_types": {
+      "filter": {
+        "block": {
+          "attributes": {
+            "name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "values": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"
@@ -69,8 +66,8 @@ const awsDatazoneEnvironmentBlueprintConfiguration = `{
   "version": 0
 }`
 
-func AwsDatazoneEnvironmentBlueprintConfigurationSchema() *tfjson.Schema {
+func AwsEc2HostsSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsDatazoneEnvironmentBlueprintConfiguration), &result)
+	_ = json.Unmarshal([]byte(awsEc2Hosts), &result)
 	return &result
 }

@@ -80,6 +80,15 @@ const awsOdbNetwork = `{
         "required": true,
         "type": "string"
       },
+      "ec2_placement_group_ids": {
+        "computed": true,
+        "description": "A list of EC2 placement group IDs associated with the ODB network.",
+        "description_kind": "plain",
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

@@ -107,6 +107,20 @@ const awsKinesisStream = `{
           "map",
           "string"
         ]
+      },
+      "warm_throughput": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "current_mib_ps": "number",
+              "target_mib_ps": "number"
+            }
+          ]
+        ]
       }
     },
     "description_kind": "plain"
