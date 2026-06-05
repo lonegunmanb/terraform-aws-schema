@@ -138,6 +138,11 @@ const awsOpensearchDomain = `{
                     "optional": true,
                     "type": "bool"
                   },
+                  "jwks_url": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "public_key": {
                     "computed": true,
                     "description_kind": "plain",

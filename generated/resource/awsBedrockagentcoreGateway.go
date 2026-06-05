@@ -278,6 +278,34 @@ const awsBedrockagentcoreGateway = `{
                     ]
                   }
                 },
+                "block_types": {
+                  "session_configuration": {
+                    "block": {
+                      "attributes": {
+                        "session_timeout_in_seconds": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "streaming_configuration": {
+                    "block": {
+                      "attributes": {
+                        "enable_response_streaming": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "bool"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "nesting_mode": "list"

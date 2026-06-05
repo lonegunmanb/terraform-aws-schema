@@ -42,6 +42,12 @@ const awsOpensearchserverlessCollectionGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "generation": {
+        "computed": true,
+        "description": "Generation of the collection group.",
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description": "ID of the collection group.",

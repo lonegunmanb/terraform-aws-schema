@@ -39,6 +39,7 @@ const awsOpensearchDomain = `{
                   "object",
                   {
                     "enabled": "bool",
+                    "jwks_url": "string",
                     "public_key": "string",
                     "roles_key": "string",
                     "subject_key": "string"
