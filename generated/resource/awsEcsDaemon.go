@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsBedrockagentcoreMemory = `{
+const awsEcsDaemon = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,34 +14,48 @@ const awsBedrockagentcoreMemory = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "encryption_key_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "event_expiry_duration": {
+      "capacity_provider_arns": {
         "description_kind": "plain",
         "required": true,
-        "type": "number"
+        "type": [
+          "set",
+          "string"
+        ]
       },
-      "id": {
+      "cluster_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "daemon_task_definition_arn": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "deployment_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "memory_execution_role_arn": {
+      "enable_ecs_managed_tags": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "bool"
+      },
+      "enable_execute_command": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       },
       "name": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "propagate_tags": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "region": {
@@ -49,6 +63,11 @@ const awsBedrockagentcoreMemory = `{
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "status": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "tags": {
@@ -69,63 +88,38 @@ const awsBedrockagentcoreMemory = `{
       }
     },
     "block_types": {
-      "indexed_key": {
+      "deployment_configuration": {
         "block": {
           "attributes": {
-            "key": {
+            "bake_time_in_minutes": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
-              "type": "string"
+              "optional": true,
+              "type": "number"
             },
-            "type": {
+            "drain_percent": {
               "description_kind": "plain",
-              "required": true,
-              "type": "string"
+              "optional": true,
+              "type": "number"
             }
           },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "stream_delivery_resources": {
-        "block": {
           "block_types": {
-            "resource": {
+            "alarms": {
               "block": {
-                "block_types": {
-                  "kinesis": {
-                    "block": {
-                      "attributes": {
-                        "data_stream_arn": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "block_types": {
-                        "content_configuration": {
-                          "block": {
-                            "attributes": {
-                              "level": {
-                                "computed": true,
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "type": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "nesting_mode": "list"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "list"
+                "attributes": {
+                  "alarm_names": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "enable": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "bool"
                   }
                 },
                 "description_kind": "plain"
@@ -151,6 +145,12 @@ const awsBedrockagentcoreMemory = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"
@@ -163,8 +163,8 @@ const awsBedrockagentcoreMemory = `{
   "version": 0
 }`
 
-func AwsBedrockagentcoreMemorySchema() *tfjson.Schema {
+func AwsEcsDaemonSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsBedrockagentcoreMemory), &result)
+	_ = json.Unmarshal([]byte(awsEcsDaemon), &result)
 	return &result
 }

@@ -16,6 +16,7 @@ const awsUxcAccountCustomizations = `{
         "type": "string"
       },
       "visible_regions": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -24,6 +25,7 @@ const awsUxcAccountCustomizations = `{
         ]
       },
       "visible_services": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

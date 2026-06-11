@@ -194,6 +194,74 @@ const awsBedrockagentcoreGatewayTarget = `{
         },
         "nesting_mode": "list"
       },
+      "private_endpoint": {
+        "block": {
+          "block_types": {
+            "managed_vpc_resource": {
+              "block": {
+                "attributes": {
+                  "endpoint_ip_address_type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "routing_domain": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "security_group_ids": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "subnet_ids": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "tags": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "map",
+                      "string"
+                    ]
+                  },
+                  "vpc_identifier": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "self_managed_lattice_resource": {
+              "block": {
+                "attributes": {
+                  "resource_configuration_identifier": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "target_configuration": {
         "block": {
           "block_types": {
@@ -898,6 +966,12 @@ const awsBedrockagentcoreGatewayTarget = `{
                         "endpoint": {
                           "description_kind": "plain",
                           "required": true,
+                          "type": "string"
+                        },
+                        "listing_mode": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
                           "type": "string"
                         }
                       },

@@ -253,6 +253,24 @@ const awsBedrockagentcoreGateway = `{
         },
         "nesting_mode": "list"
       },
+      "policy_engine_configuration": {
+        "block": {
+          "attributes": {
+            "arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "mode": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "protocol_configuration": {
         "block": {
           "block_types": {
