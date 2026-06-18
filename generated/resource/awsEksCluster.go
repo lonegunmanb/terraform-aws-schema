@@ -293,6 +293,12 @@ const awsEksCluster = `{
               "required": true,
               "type": "string"
             },
+            "etcd_instance_type": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "outpost_arns": {
               "description_kind": "plain",
               "required": true,
@@ -308,7 +314,28 @@ const awsEksCluster = `{
                 "attributes": {
                   "group_name": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "spread_level": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "etcd_placement": {
+              "block": {
+                "attributes": {
+                  "spread_level": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
                     "type": "string"
                   }
                 },

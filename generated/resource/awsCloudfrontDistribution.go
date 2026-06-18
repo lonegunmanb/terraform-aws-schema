@@ -829,6 +829,22 @@ const awsCloudfrontDistribution = `{
                     ]
                   }
                 },
+                "block_types": {
+                  "origin_mtls_config": {
+                    "block": {
+                      "attributes": {
+                        "client_certificate_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,

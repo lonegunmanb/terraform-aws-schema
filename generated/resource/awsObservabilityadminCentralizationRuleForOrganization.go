@@ -123,6 +123,27 @@ const awsObservabilityadminCentralizationRuleForOrganization = `{
                       "description_kind": "plain"
                     },
                     "nesting_mode": "list"
+                  },
+                  "destination_metrics_configuration": {
+                    "block": {
+                      "block_types": {
+                        "backup_configuration": {
+                          "block": {
+                            "attributes": {
+                              "region": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"
@@ -165,6 +186,19 @@ const awsObservabilityadminCentralizationRuleForOrganization = `{
                           "computed": true,
                           "description_kind": "plain",
                           "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "source_metrics_configuration": {
+                    "block": {
+                      "attributes": {
+                        "metrics_selection_criteria": {
+                          "description_kind": "plain",
+                          "required": true,
                           "type": "string"
                         }
                       },

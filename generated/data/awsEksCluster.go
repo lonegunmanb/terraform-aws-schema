@@ -170,7 +170,18 @@ const awsEksCluster = `{
                 [
                   "object",
                   {
-                    "group_name": "string"
+                    "group_name": "string",
+                    "spread_level": "string"
+                  }
+                ]
+              ],
+              "etcd_instance_type": "string",
+              "etcd_placement": [
+                "list",
+                [
+                  "object",
+                  {
+                    "spread_level": "string"
                   }
                 ]
               ],

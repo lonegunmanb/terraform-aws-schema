@@ -6,68 +6,49 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsOpensearchserverlessCollection = `{
+const awsSagemakerHubContentReference = `{
   "block": {
     "attributes": {
-      "arn": {
+      "hub_arn": {
         "computed": true,
+        "description": "ARN of the private SageMaker Hub that contains the content reference.",
         "description_kind": "plain",
         "type": "string"
       },
-      "collection_endpoint": {
+      "hub_content_arn": {
         "computed": true,
-        "description": "Collection-specific endpoint used to submit index, search, and data upload requests to an OpenSearch Serverless collection.",
+        "description": "ARN of the hub content reference (without version suffix). The min_version is stripped off from the end of this ARN to make it usable to list tags.",
         "description_kind": "plain",
         "type": "string"
       },
-      "collection_group_name": {
-        "description": "Name of the collection group to associate with this collection.",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "dashboard_endpoint": {
-        "computed": true,
-        "description": "Collection-specific endpoint used to access OpenSearch Dashboards.",
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "description": "Description of the collection.",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "encryption_config": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "aws_owned_key": "bool",
-              "kms_key_arn": "string"
-            }
-          ]
-        ]
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "kms_key_arn": {
-        "computed": true,
-        "description": "The ARN of the Amazon Web Services KMS key used to encrypt the collection.",
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "name": {
-        "description": "Name of the collection.",
+      "hub_content_name": {
+        "description": "Name of the hub content reference.",
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "hub_content_status": {
+        "computed": true,
+        "description": "Status of the hub content reference. Valid values include ` + "`" + `Available` + "`" + `, ` + "`" + `Importing` + "`" + `, ` + "`" + `Deleting` + "`" + `, ` + "`" + `ImportFailed` + "`" + `, ` + "`" + `DeleteFailed` + "`" + `.",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "hub_content_version": {
+        "computed": true,
+        "description": "Version of the hub content reference.",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "hub_name": {
+        "description": "Name of the private SageMaker Hub to add the content reference to.",
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "min_version": {
+        "description": "Minimum version of the hub content to reference. Use \"1.0.0\" to support all versions. Changing this value to an empty string forces replacement of the resource.",
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "region": {
@@ -77,11 +58,10 @@ const awsOpensearchserverlessCollection = `{
         "optional": true,
         "type": "string"
       },
-      "standby_replicas": {
-        "computed": true,
-        "description": "Indicates whether standby replicas should be used for a collection. One of ` + "`" + `ENABLED` + "`" + ` or ` + "`" + `DISABLED` + "`" + `. Defaults to ` + "`" + `ENABLED` + "`" + `.",
+      "sagemaker_public_hub_content_arn": {
+        "description": "ARN of the public SageMaker JumpStart hub content to reference. The ARN must not include a version suffix.",
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "tags": {
@@ -98,27 +78,6 @@ const awsOpensearchserverlessCollection = `{
         "type": [
           "map",
           "string"
-        ]
-      },
-      "type": {
-        "computed": true,
-        "description": "Type of collection. One of ` + "`" + `SEARCH` + "`" + `, ` + "`" + `TIMESERIES` + "`" + `, or ` + "`" + `VECTORSEARCH` + "`" + `. Defaults to ` + "`" + `TIMESERIES` + "`" + `.",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "vector_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "serverless_vector_acceleration": "string"
-            }
-          ]
         ]
       }
     },
@@ -137,6 +96,12 @@ const awsOpensearchserverlessCollection = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"
@@ -149,8 +114,8 @@ const awsOpensearchserverlessCollection = `{
   "version": 0
 }`
 
-func AwsOpensearchserverlessCollectionSchema() *tfjson.Schema {
+func AwsSagemakerHubContentReferenceSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsOpensearchserverlessCollection), &result)
+	_ = json.Unmarshal([]byte(awsSagemakerHubContentReference), &result)
 	return &result
 }

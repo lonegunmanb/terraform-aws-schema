@@ -203,6 +203,7 @@ const awsDmsS3Endpoint = `{
       },
       "kms_key_arn": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
