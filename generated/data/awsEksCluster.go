@@ -308,6 +308,7 @@ const awsEksCluster = `{
             "object",
             {
               "cluster_security_group_id": "string",
+              "control_plane_egress_mode": "string",
               "endpoint_private_access": "bool",
               "endpoint_public_access": "bool",
               "public_access_cidrs": [

@@ -15,8 +15,9 @@ const awsServerlessapplicationrepositoryCloudformationStack = `{
         "type": "string"
       },
       "capabilities": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": [
           "set",
           "string"

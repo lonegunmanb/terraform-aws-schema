@@ -463,6 +463,12 @@ const awsEksCluster = `{
               "description_kind": "plain",
               "type": "string"
             },
+            "control_plane_egress_mode": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "endpoint_private_access": {
               "description_kind": "plain",
               "optional": true,

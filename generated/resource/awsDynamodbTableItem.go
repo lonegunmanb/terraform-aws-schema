@@ -14,6 +14,11 @@ const awsDynamodbTableItem = `{
         "required": true,
         "type": "string"
       },
+      "hash_key_value": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -28,6 +33,11 @@ const awsDynamodbTableItem = `{
       "range_key": {
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "range_key_value": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "region": {
