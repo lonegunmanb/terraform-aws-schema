@@ -32,6 +32,11 @@ const awsApiGatewayRestApi = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "endpoint_access_mode": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "endpoint_configuration": {
         "computed": true,
         "description_kind": "plain",
@@ -87,6 +92,11 @@ const awsApiGatewayRestApi = `{
         "type": "string"
       },
       "root_resource_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "security_policy": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

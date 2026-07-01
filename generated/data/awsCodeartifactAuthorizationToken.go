@@ -12,6 +12,7 @@ const awsCodeartifactAuthorizationToken = `{
       "authorization_token": {
         "computed": true,
         "description_kind": "plain",
+        "sensitive": true,
         "type": "string"
       },
       "domain": {

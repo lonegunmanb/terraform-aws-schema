@@ -79,6 +79,11 @@ const awsMskCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "customer_action_status": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "enhanced_monitoring": {
         "description_kind": "plain",
         "optional": true,

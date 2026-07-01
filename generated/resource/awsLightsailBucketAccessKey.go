@@ -40,6 +40,7 @@ const awsLightsailBucketAccessKey = `{
       "secret_access_key": {
         "computed": true,
         "description_kind": "plain",
+        "sensitive": true,
         "type": "string"
       },
       "status": {

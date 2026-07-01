@@ -1,4 +1,4 @@
-package resource
+package data
 
 import (
 	"encoding/json"
@@ -6,65 +6,69 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsApiGatewayRestApi = `{
+const awsEc2CapacityBlockReservation = `{
   "block": {
     "attributes": {
-      "api_key_source": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "binary_media_types": {
+      "availability_zone": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          "string"
-        ]
-      },
-      "body": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
+      },
+      "availability_zone_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "available_instance_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "capacity_block_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "commitment_info": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "object",
+          {
+            "commitment_end_date": "string",
+            "committed_instance_count": "number"
+          }
+        ]
       },
       "created_date": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "description": {
+      "delivery_preference": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "disable_execute_api_endpoint": {
+      "ebs_optimized": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "bool"
       },
-      "endpoint_access_mode": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "execution_arn": {
+      "end_date": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "fail_on_warnings": {
+      "end_date_type": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
+        "type": "string"
       },
       "id": {
         "computed": true,
@@ -72,34 +76,64 @@ const awsApiGatewayRestApi = `{
         "optional": true,
         "type": "string"
       },
-      "minimum_compression_size": {
+      "instance_count": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": "number"
+      },
+      "instance_match_criteria": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
-      "name": {
+      "instance_platform": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
-      "parameters": {
+      "instance_type": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": "string"
+      },
+      "interruptible_capacity_allocation": {
+        "computed": true,
+        "description_kind": "plain",
         "type": [
-          "map",
-          "string"
+          "object",
+          {
+            "instance_count": "number",
+            "interruptible_capacity_reservation_id": "string",
+            "interruption_type": "string",
+            "status": "string",
+            "target_instance_count": "number"
+          }
         ]
       },
-      "policy": {
+      "interruption_info": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": [
+          "object",
+          {
+            "interruption_type": "string",
+            "source_capacity_reservation_id": "string"
+          }
+        ]
+      },
+      "outpost_arn": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
-      "put_rest_api_mode": {
+      "owner_id": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": "string"
+      },
+      "placement_group_arn": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "region": {
@@ -109,57 +143,47 @@ const awsApiGatewayRestApi = `{
         "optional": true,
         "type": "string"
       },
-      "root_resource_id": {
+      "reservation_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "security_policy": {
+      "start_date": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": "string"
+      },
+      "state": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "tags": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
       },
-      "tags_all": {
+      "tenancy": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "string"
       }
     },
     "block_types": {
-      "endpoint_configuration": {
+      "filter": {
         "block": {
           "attributes": {
-            "ip_address_type": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "types": {
+            "name": {
               "description_kind": "plain",
               "required": true,
-              "type": [
-                "list",
-                "string"
-              ]
+              "type": "string"
             },
-            "vpc_endpoint_ids": {
-              "computed": true,
+            "values": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": [
                 "set",
                 "string"
@@ -168,8 +192,7 @@ const awsApiGatewayRestApi = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"
@@ -177,8 +200,8 @@ const awsApiGatewayRestApi = `{
   "version": 0
 }`
 
-func AwsApiGatewayRestApiSchema() *tfjson.Schema {
+func AwsEc2CapacityBlockReservationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsApiGatewayRestApi), &result)
+	_ = json.Unmarshal([]byte(awsEc2CapacityBlockReservation), &result)
 	return &result
 }

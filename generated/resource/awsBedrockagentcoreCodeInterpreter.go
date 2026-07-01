@@ -59,6 +59,35 @@ const awsBedrockagentcoreCodeInterpreter = `{
       }
     },
     "block_types": {
+      "certificate": {
+        "block": {
+          "block_types": {
+            "location": {
+              "block": {
+                "block_types": {
+                  "secrets_manager": {
+                    "block": {
+                      "attributes": {
+                        "secret_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "network_configuration": {
         "block": {
           "attributes": {

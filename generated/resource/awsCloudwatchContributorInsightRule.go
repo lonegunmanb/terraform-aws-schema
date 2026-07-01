@@ -32,6 +32,7 @@ const awsCloudwatchContributorInsightRule = `{
         "type": "string"
       },
       "rule_state": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

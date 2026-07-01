@@ -59,6 +59,94 @@ const awsBedrockagentcoreBrowser = `{
       }
     },
     "block_types": {
+      "browser_signing": {
+        "block": {
+          "attributes": {
+            "enabled": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "certificate": {
+        "block": {
+          "block_types": {
+            "location": {
+              "block": {
+                "block_types": {
+                  "secrets_manager": {
+                    "block": {
+                      "attributes": {
+                        "secret_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "enterprise_policy": {
+        "block": {
+          "attributes": {
+            "type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "location": {
+              "block": {
+                "block_types": {
+                  "s3": {
+                    "block": {
+                      "attributes": {
+                        "bucket": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "prefix": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "version_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "network_configuration": {
         "block": {
           "attributes": {
