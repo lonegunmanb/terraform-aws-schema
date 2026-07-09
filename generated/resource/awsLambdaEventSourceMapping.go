@@ -161,6 +161,11 @@ const awsLambdaEventSourceMapping = `{
         "optional": true,
         "type": "number"
       },
+      "use_resource_timeout_for_propagation": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "uuid": {
         "computed": true,
         "description_kind": "plain",
@@ -469,6 +474,29 @@ const awsLambdaEventSourceMapping = `{
         },
         "max_items": 22,
         "nesting_mode": "set"
+      },
+      "timeouts": {
+        "block": {
+          "attributes": {
+            "create": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "delete": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

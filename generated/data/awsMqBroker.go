@@ -175,12 +175,39 @@ const awsMqBroker = `{
         "optional": true,
         "type": "string"
       },
+      "resource_share_arns": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "security_groups": {
         "computed": true,
         "description_kind": "plain",
         "type": [
           "set",
           "string"
+        ]
+      },
+      "shared_resources": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "dns_names": [
+                "list",
+                "string"
+              ],
+              "resource_arn": "string",
+              "status": "string",
+              "type": "string"
+            }
+          ]
         ]
       },
       "storage_type": {

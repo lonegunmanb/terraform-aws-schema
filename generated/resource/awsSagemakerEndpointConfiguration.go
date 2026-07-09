@@ -278,6 +278,25 @@ const awsSagemakerEndpointConfiguration = `{
             }
           },
           "block_types": {
+            "capacity_reservation_config": {
+              "block": {
+                "attributes": {
+                  "capacity_reservation_preference": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "ml_reservation_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "core_dump_config": {
               "block": {
                 "attributes": {
@@ -426,6 +445,25 @@ const awsSagemakerEndpointConfiguration = `{
             }
           },
           "block_types": {
+            "capacity_reservation_config": {
+              "block": {
+                "attributes": {
+                  "capacity_reservation_preference": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "ml_reservation_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "core_dump_config": {
               "block": {
                 "attributes": {

@@ -273,6 +273,12 @@ const awsCodebuildProject = `{
               "required": true,
               "type": "string"
             },
+            "host_kernel": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "image": {
               "description_kind": "plain",
               "required": true,

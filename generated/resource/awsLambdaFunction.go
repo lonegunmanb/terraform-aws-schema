@@ -226,6 +226,11 @@ const awsLambdaFunction = `{
         "optional": true,
         "type": "number"
       },
+      "use_resource_timeout_for_propagation": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "version": {
         "computed": true,
         "description_kind": "plain",

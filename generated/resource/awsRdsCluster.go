@@ -31,6 +31,12 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "auto_minor_version_upgrade": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "availability_zones": {
         "computed": true,
         "description_kind": "plain",

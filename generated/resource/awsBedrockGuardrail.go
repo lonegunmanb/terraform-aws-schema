@@ -121,7 +121,7 @@ const awsBedrockGuardrail = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": [
-                      "list",
+                      "set",
                       "string"
                     ]
                   },
@@ -144,7 +144,7 @@ const awsBedrockGuardrail = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": [
-                      "list",
+                      "set",
                       "string"
                     ]
                   },
