@@ -135,6 +135,37 @@ const awsBedrockagentcoreGateway = `{
                   }
                 },
                 "block_types": {
+                  "allowed_workload_configuration": {
+                    "block": {
+                      "attributes": {
+                        "workload_identities": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "list",
+                            "string"
+                          ]
+                        }
+                      },
+                      "block_types": {
+                        "hosting_environment": {
+                          "block": {
+                            "attributes": {
+                              "arn": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
                   "custom_claim": {
                     "block": {
                       "attributes": {
@@ -190,6 +221,157 @@ const awsBedrockagentcoreGateway = `{
                       "description_kind": "plain"
                     },
                     "nesting_mode": "set"
+                  },
+                  "private_endpoint": {
+                    "block": {
+                      "block_types": {
+                        "managed_vpc_resource": {
+                          "block": {
+                            "attributes": {
+                              "endpoint_ip_address_type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "routing_domain": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "security_group_ids": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "set",
+                                  "string"
+                                ]
+                              },
+                              "subnet_ids": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": [
+                                  "set",
+                                  "string"
+                                ]
+                              },
+                              "tags": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "map",
+                                  "string"
+                                ]
+                              },
+                              "vpc_identifier": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "self_managed_lattice_resource": {
+                          "block": {
+                            "attributes": {
+                              "resource_configuration_identifier": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "private_endpoint_overrides": {
+                    "block": {
+                      "attributes": {
+                        "domain": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "private_endpoint": {
+                          "block": {
+                            "block_types": {
+                              "managed_vpc_resource": {
+                                "block": {
+                                  "attributes": {
+                                    "endpoint_ip_address_type": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "routing_domain": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "security_group_ids": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "subnet_ids": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "tags": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "map",
+                                        "string"
+                                      ]
+                                    },
+                                    "vpc_identifier": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "self_managed_lattice_resource": {
+                                "block": {
+                                  "attributes": {
+                                    "resource_configuration_identifier": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

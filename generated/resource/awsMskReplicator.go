@@ -230,6 +230,12 @@ const awsMskReplicator = `{
             "consumer_group_replication": {
               "block": {
                 "attributes": {
+                  "consumer_group_offset_sync_mode": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "consumer_groups_to_exclude": {
                     "computed": true,
                     "description_kind": "plain",

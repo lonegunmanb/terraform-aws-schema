@@ -1954,6 +1954,7 @@ func init() {
 	dataSources["aws_elasticache_replication_group"] = data.AwsElasticacheReplicationGroupSchema()  
 	dataSources["aws_elasticache_reserved_cache_node_offering"] = data.AwsElasticacheReservedCacheNodeOfferingSchema()  
 	dataSources["aws_elasticache_serverless_cache"] = data.AwsElasticacheServerlessCacheSchema()  
+	dataSources["aws_elasticache_service_updates"] = data.AwsElasticacheServiceUpdatesSchema()  
 	dataSources["aws_elasticache_subnet_group"] = data.AwsElasticacheSubnetGroupSchema()  
 	dataSources["aws_elasticache_user"] = data.AwsElasticacheUserSchema()  
 	dataSources["aws_elasticsearch_domain"] = data.AwsElasticsearchDomainSchema()  

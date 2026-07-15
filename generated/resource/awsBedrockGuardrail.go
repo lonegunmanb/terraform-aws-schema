@@ -78,6 +78,11 @@ const awsBedrockGuardrail = `{
           "string"
         ]
       },
+      "updated_at": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "version": {
         "computed": true,
         "description_kind": "plain",
