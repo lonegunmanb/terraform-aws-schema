@@ -325,6 +325,30 @@ const awsAutoscalingGroup = `{
         },
         "nesting_mode": "set"
       },
+      "instance_lifecycle_policy": {
+        "block": {
+          "block_types": {
+            "retention_triggers": {
+              "block": {
+                "attributes": {
+                  "terminate_hook_abandon": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "instance_maintenance_policy": {
         "block": {
           "attributes": {

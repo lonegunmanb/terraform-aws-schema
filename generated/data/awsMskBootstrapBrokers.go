@@ -14,6 +14,11 @@ const awsMskBootstrapBrokers = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "bootstrap_brokers_ipv6": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "bootstrap_brokers_public_sasl_iam": {
         "computed": true,
         "description_kind": "plain",
@@ -34,12 +39,27 @@ const awsMskBootstrapBrokers = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "bootstrap_brokers_sasl_iam_ipv6": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "bootstrap_brokers_sasl_scram": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
+      "bootstrap_brokers_sasl_scram_ipv6": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "bootstrap_brokers_tls": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_tls_ipv6": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

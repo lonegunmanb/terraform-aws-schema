@@ -136,6 +136,27 @@ const awsFlowLog = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "tag_field_specification": {
+        "block": {
+          "attributes": {
+            "resource_type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "tag_keys": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

@@ -156,6 +156,17 @@ const awsS3TablesTable = `{
           "block_types": {
             "iceberg": {
               "block": {
+                "attributes": {
+                  "properties": {
+                    "description": "A map of configuration properties for the Iceberg table, for example ` + "`" + `write.distribution-mode` + "`" + ` and ` + "`" + `write.sort-order` + "`" + `.",
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "map",
+                      "string"
+                    ]
+                  }
+                },
                 "block_types": {
                   "schema": {
                     "block": {

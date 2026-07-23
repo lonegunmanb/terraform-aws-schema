@@ -203,6 +203,22 @@ const awsEksNodeGroup = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "warm_pool_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "max_group_prepared_capacity": "number",
+              "min_size": "number",
+              "pool_state": "string",
+              "reuse_on_scale_in": "bool"
+            }
+          ]
+        ]
       }
     },
     "description_kind": "plain"

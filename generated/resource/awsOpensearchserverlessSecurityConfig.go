@@ -40,13 +40,61 @@ const awsOpensearchserverlessSecurityConfig = `{
         "type": "string"
       },
       "type": {
-        "description": "Type of configuration. Must be ` + "`" + `saml` + "`" + `.",
+        "description": "Type of configuration. Valid values: ` + "`" + `saml` + "`" + `, ` + "`" + `iamidentitycenter` + "`" + ` or ` + "`" + `iamfederation` + "`" + `.",
         "description_kind": "plain",
         "required": true,
         "type": "string"
       }
     },
     "block_types": {
+      "iam_federation_options": {
+        "block": {
+          "attributes": {
+            "group_attribute": {
+              "description": "Group attribute.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "user_attribute": {
+              "description": "User attribute.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "iam_identity_center_options": {
+        "block": {
+          "attributes": {
+            "group_attribute": {
+              "computed": true,
+              "description": "Group attribute.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "instance_arn": {
+              "description": "Instance ARN.",
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "user_attribute": {
+              "computed": true,
+              "description": "User attribute.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "saml_options": {
         "block": {
           "attributes": {

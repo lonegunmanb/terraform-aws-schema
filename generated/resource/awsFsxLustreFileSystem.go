@@ -211,6 +211,7 @@ const awsFsxLustreFileSystem = `{
         "block": {
           "attributes": {
             "size": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"

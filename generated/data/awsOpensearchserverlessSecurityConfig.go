@@ -54,6 +54,52 @@ const awsOpensearchserverlessSecurityConfig = `{
       }
     },
     "block_types": {
+      "iam_federation_options": {
+        "block": {
+          "attributes": {
+            "group_attribute": {
+              "computed": true,
+              "description": "Group attribute.",
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "user_attribute": {
+              "computed": true,
+              "description": "User attribute.",
+              "description_kind": "plain",
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "iam_identity_center_options": {
+        "block": {
+          "attributes": {
+            "group_attribute": {
+              "computed": true,
+              "description": "Group attribute.",
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "instance_arn": {
+              "computed": true,
+              "description": "Instance ARN.",
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "user_attribute": {
+              "computed": true,
+              "description": "User attribute.",
+              "description_kind": "plain",
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "saml_options": {
         "block": {
           "attributes": {

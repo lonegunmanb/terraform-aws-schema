@@ -100,6 +100,110 @@ const awsBedrockagentKnowledgeBase = `{
               },
               "nesting_mode": "list"
             },
+            "managed_knowledge_base_configuration": {
+              "block": {
+                "attributes": {
+                  "embedding_model_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "embedding_model_type": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "embedding_model_configuration": {
+                    "block": {
+                      "block_types": {
+                        "bedrock_embedding_model_configuration": {
+                          "block": {
+                            "attributes": {
+                              "dimensions": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "embedding_data_type": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "audio": {
+                                "block": {
+                                  "block_types": {
+                                    "segmentation_configuration": {
+                                      "block": {
+                                        "attributes": {
+                                          "fixed_length_duration": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "video": {
+                                "block": {
+                                  "block_types": {
+                                    "segmentation_configuration": {
+                                      "block": {
+                                        "attributes": {
+                                          "fixed_length_duration": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "server_side_encryption_configuration": {
+                    "block": {
+                      "attributes": {
+                        "kms_key_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "sql_knowledge_base_configuration": {
               "block": {
                 "attributes": {
@@ -367,6 +471,50 @@ const awsBedrockagentKnowledgeBase = `{
                                 "description_kind": "plain",
                                 "optional": true,
                                 "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "audio": {
+                                "block": {
+                                  "block_types": {
+                                    "segmentation_configuration": {
+                                      "block": {
+                                        "attributes": {
+                                          "fixed_length_duration": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "video": {
+                                "block": {
+                                  "block_types": {
+                                    "segmentation_configuration": {
+                                      "block": {
+                                        "attributes": {
+                                          "fixed_length_duration": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
                               }
                             },
                             "description_kind": "plain"

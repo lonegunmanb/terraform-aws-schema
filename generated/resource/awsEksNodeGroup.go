@@ -362,6 +362,39 @@ const awsEksNodeGroup = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "warm_pool_config": {
+        "block": {
+          "attributes": {
+            "max_group_prepared_capacity": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "min_size": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "pool_state": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "reuse_on_scale_in": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

@@ -155,6 +155,86 @@ const awsBedrockagentDataSource = `{
               },
               "nesting_mode": "list"
             },
+            "managed_knowledge_base_connector_configuration": {
+              "block": {
+                "attributes": {
+                  "connector_parameters": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "deletion_protection_configuration": {
+                    "block": {
+                      "attributes": {
+                        "deletion_protection_status": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "deletion_protection_threshold": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "media_extraction_configuration": {
+                    "block": {
+                      "block_types": {
+                        "audio_extraction_configuration": {
+                          "block": {
+                            "attributes": {
+                              "audio_extraction_status": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "image_extraction_configuration": {
+                          "block": {
+                            "attributes": {
+                              "image_extraction_status": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "video_extraction_configuration": {
+                          "block": {
+                            "attributes": {
+                              "video_extraction_status": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "s3_configuration": {
               "block": {
                 "attributes": {
@@ -501,6 +581,12 @@ const awsBedrockagentDataSource = `{
             },
             "delete": {
               "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
