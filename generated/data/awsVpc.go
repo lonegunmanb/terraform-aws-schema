@@ -75,13 +75,34 @@ const awsVpc = `{
       },
       "ipv6_association_id": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
       "ipv6_cidr_block": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "ipv6_cidr_block_associations": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "association_id": "string",
+              "ip_source": "string",
+              "ipv6_address_attribute": "string",
+              "ipv6_cidr_block": "string",
+              "ipv6_pool": "string",
+              "network_border_group": "string",
+              "state": "string"
+            }
+          ]
+        ]
       },
       "main_route_table_id": {
         "computed": true,

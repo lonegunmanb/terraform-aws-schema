@@ -21,6 +21,7 @@ const awsRekognitionProject = `{
         "type": "string"
       },
       "feature": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

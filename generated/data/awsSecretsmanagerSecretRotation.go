@@ -9,6 +9,25 @@ import (
 const awsSecretsmanagerSecretRotation = `{
   "block": {
     "attributes": {
+      "external_secret_rotation_metadata": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "key": "string",
+              "value": "string"
+            }
+          ]
+        ]
+      },
+      "external_secret_rotation_role_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",

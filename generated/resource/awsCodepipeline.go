@@ -251,6 +251,14 @@ const awsCodepipeline = `{
                     "required": true,
                     "type": "string"
                   },
+                  "commands": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
                   "configuration": {
                     "description_kind": "plain",
                     "optional": true,
@@ -278,6 +286,14 @@ const awsCodepipeline = `{
                     "type": "string"
                   },
                   "output_artifacts": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "output_variables": {
                     "description_kind": "plain",
                     "optional": true,
                     "type": [
@@ -321,6 +337,29 @@ const awsCodepipeline = `{
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
+                  }
+                },
+                "block_types": {
+                  "output_artifacts_for_compute_action": {
+                    "block": {
+                      "attributes": {
+                        "files": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "list",
+                            "string"
+                          ]
+                        },
+                        "name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

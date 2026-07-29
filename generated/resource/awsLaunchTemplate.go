@@ -796,6 +796,11 @@ const awsLaunchTemplate = `{
               "optional": true,
               "type": "number"
             },
+            "ena_queue_count": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
             "interface_type": {
               "description_kind": "plain",
               "optional": true,

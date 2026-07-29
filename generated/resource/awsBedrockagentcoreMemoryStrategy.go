@@ -15,6 +15,7 @@ const awsBedrockagentcoreMemoryStrategy = `{
         "type": "string"
       },
       "memory_execution_role_arn": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -34,9 +35,20 @@ const awsBedrockagentcoreMemoryStrategy = `{
         "required": true,
         "type": "string"
       },
-      "namespaces": {
+      "namespace_templates": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "namespaces": {
+        "computed": true,
+        "deprecated": true,
+        "description_kind": "plain",
+        "optional": true,
         "type": [
           "set",
           "string"
@@ -101,6 +113,48 @@ const awsBedrockagentcoreMemoryStrategy = `{
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
+            },
+            "reflection": {
+              "block": {
+                "attributes": {
+                  "append_to_prompt": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "model_id": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "namespace_templates": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "reflection_configuration": {
+        "block": {
+          "attributes": {
+            "namespace_templates": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
             }
           },
           "description_kind": "plain"

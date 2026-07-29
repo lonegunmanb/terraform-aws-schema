@@ -6,18 +6,17 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSecretsmanagerSecretRotation = `{
+const awsOsisPipelineEndpoint = `{
   "block": {
     "attributes": {
-      "external_secret_rotation_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": "string"
+      },
+      "pipeline_arn": {
+        "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
       "region": {
@@ -27,79 +26,70 @@ const awsSecretsmanagerSecretRotation = `{
         "optional": true,
         "type": "string"
       },
-      "rotate_immediately": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "rotation_enabled": {
+      "status": {
         "computed": true,
         "description_kind": "plain",
-        "type": "bool"
-      },
-      "rotation_lambda_arn": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "secret_id": {
+      "vpc_id": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": "string"
       }
     },
     "block_types": {
-      "external_secret_rotation_metadata": {
+      "timeouts": {
         "block": {
           "attributes": {
-            "key": {
+            "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             },
-            "value": {
+            "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
+        "nesting_mode": "single"
       },
-      "rotation_rules": {
+      "vpc_options": {
         "block": {
           "attributes": {
-            "automatically_after_days": {
+            "security_group_ids": {
               "description_kind": "plain",
               "optional": true,
-              "type": "number"
+              "type": [
+                "set",
+                "string"
+              ]
             },
-            "duration": {
+            "subnet_ids": {
               "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "schedule_expression": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "min_items": 1,
         "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
-func AwsSecretsmanagerSecretRotationSchema() *tfjson.Schema {
+func AwsOsisPipelineEndpointSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSecretsmanagerSecretRotation), &result)
+	_ = json.Unmarshal([]byte(awsOsisPipelineEndpoint), &result)
 	return &result
 }

@@ -67,6 +67,11 @@ const awsSecretsmanagerSecret = `{
           "map",
           "string"
         ]
+      },
+      "type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "description_kind": "plain"

@@ -452,6 +452,7 @@ const awsLaunchTemplate = `{
               "delete_on_termination": "string",
               "description": "string",
               "device_index": "number",
+              "ena_queue_count": "number",
               "interface_type": "string",
               "ipv4_address_count": "number",
               "ipv4_addresses": [
