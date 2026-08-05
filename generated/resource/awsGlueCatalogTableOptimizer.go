@@ -53,6 +53,38 @@ const awsGlueCatalogTableOptimizer = `{
             }
           },
           "block_types": {
+            "compaction_configuration": {
+              "block": {
+                "block_types": {
+                  "iceberg_configuration": {
+                    "block": {
+                      "attributes": {
+                        "delete_file_threshold": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "min_input_files": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "strategy": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "orphan_file_deletion_configuration": {
               "block": {
                 "block_types": {

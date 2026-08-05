@@ -80,6 +80,11 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "deletion_protection": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "enabled_cloudwatch_logs_exports": {
         "computed": true,
         "description_kind": "plain",

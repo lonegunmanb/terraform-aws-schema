@@ -6,12 +6,12 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsPrometheusScraper = `{
+const awsPrometheusAnomalyDetector = `{
   "block": {
     "attributes": {
       "alias": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "arn": {
@@ -19,26 +19,36 @@ const awsPrometheusScraper = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "created_at": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "evaluation_interval_in_seconds": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "labels": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "role_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "scrape_configuration": {
-        "description_kind": "plain",
-        "required": true,
         "type": "string"
       },
       "tags": {
@@ -56,117 +66,97 @@ const awsPrometheusScraper = `{
           "map",
           "string"
         ]
+      },
+      "workspace_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "destination": {
+      "configuration": {
         "block": {
           "block_types": {
-            "amp": {
+            "random_cut_forest": {
               "block": {
                 "attributes": {
-                  "workspace_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            },
-            "cloudwatch": {
-              "block": {
-                "attributes": {
-                  "dataset_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "role_configuration": {
-        "block": {
-          "attributes": {
-            "source_role_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "target_role_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "source": {
-        "block": {
-          "block_types": {
-            "eks": {
-              "block": {
-                "attributes": {
-                  "cluster_arn": {
+                  "query": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
                   },
-                  "security_group_ids": {
+                  "sample_size": {
                     "computed": true,
                     "description_kind": "plain",
                     "optional": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
+                    "type": "number"
                   },
-                  "subnet_ids": {
+                  "shingle_size": {
+                    "computed": true,
                     "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "block_types": {
+                  "ignore_near_expected_from_above": {
+                    "block": {
+                      "attributes": {
+                        "amount": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "ratio": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "ignore_near_expected_from_below": {
+                    "block": {
+                      "attributes": {
+                        "amount": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "ratio": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "missing_data_action": {
+        "block": {
+          "attributes": {
+            "mark_as_anomaly": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
             },
-            "vpc": {
-              "block": {
-                "attributes": {
-                  "security_group_ids": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  },
-                  "subnet_ids": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
+            "skip": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
             }
           },
           "description_kind": "plain"
@@ -205,8 +195,8 @@ const awsPrometheusScraper = `{
   "version": 0
 }`
 
-func AwsPrometheusScraperSchema() *tfjson.Schema {
+func AwsPrometheusAnomalyDetectorSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsPrometheusScraper), &result)
+	_ = json.Unmarshal([]byte(awsPrometheusAnomalyDetector), &result)
 	return &result
 }

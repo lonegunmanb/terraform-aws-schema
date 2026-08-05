@@ -677,16 +677,19 @@ const awsGlueCatalogTable = `{
                     "type": "string"
                   },
                   "validation_connection": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
                   },
                   "view_expanded_text": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
                   },
                   "view_original_text": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"

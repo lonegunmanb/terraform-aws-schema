@@ -173,6 +173,26 @@ const awsEcsCapacityProvider = `{
                   }
                 },
                 "block_types": {
+                  "capacity_reservations": {
+                    "block": {
+                      "attributes": {
+                        "reservation_group_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "reservation_preference": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
                   "instance_requirements": {
                     "block": {
                       "attributes": {
@@ -449,6 +469,20 @@ const awsEcsCapacityProvider = `{
                           "max_items": 1,
                           "min_items": 1,
                           "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "local_storage_configuration": {
+                    "block": {
+                      "attributes": {
+                        "use_local_storage": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "bool"
                         }
                       },
                       "description_kind": "plain"
