@@ -127,6 +127,89 @@ const awsEksCluster = `{
           ]
         ]
       },
+      "kube_api_server_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "event_ttl": "string",
+              "service_node_port_range": [
+                "list",
+                [
+                  "object",
+                  {
+                    "max_port": "number",
+                    "min_port": "number"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
+      "kube_controller_manager_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "horizontal_pod_autoscaler_controller_config": [
+                "list",
+                [
+                  "object",
+                  {
+                    "horizontal_pod_autoscaler_sync_period": "string"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
+      "kube_scheduler_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "node_resources_fit": [
+                "list",
+                [
+                  "object",
+                  {
+                    "scoring_strategy": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "resource": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "name": "string",
+                                "weight": "number"
+                              }
+                            ]
+                          ],
+                          "type": "string"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
       "kubernetes_network_config": {
         "computed": true,
         "description_kind": "plain",

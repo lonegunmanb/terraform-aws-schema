@@ -24,6 +24,436 @@ const awsEksClusterVersions = `{
             {
               "cluster_type": "string",
               "cluster_version": "string",
+              "control_plane_component_config": [
+                "list",
+                [
+                  "object",
+                  {
+                    "kube_api_server_config": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "event_ttl": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "constraints": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "max": "string",
+                                      "min": "string"
+                                    }
+                                  ]
+                                ],
+                                "default_value": "string"
+                              }
+                            ]
+                          ],
+                          "service_node_port_range": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "constraints": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "max_port": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "max": "number",
+                                            "min": "number"
+                                          }
+                                        ]
+                                      ],
+                                      "min_port": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "max": "number",
+                                            "min": "number"
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "default_value": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "max_port": "number",
+                                      "min_port": "number"
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "kube_controller_manager_config": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "horizontal_pod_autoscaler_controller_config": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "horizontal_pod_autoscaler_sync_period": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "constraints": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "max": "string",
+                                            "min": "string"
+                                          }
+                                        ]
+                                      ],
+                                      "default_value": "string"
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "kube_scheduler_config": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "node_resources_fit": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "scoring_strategy": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "constraints": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "resources": [
+                                              "list",
+                                              [
+                                                "object",
+                                                {
+                                                  "name": [
+                                                    "list",
+                                                    [
+                                                      "object",
+                                                      {
+                                                        "allowed_values": [
+                                                          "list",
+                                                          "string"
+                                                        ]
+                                                      }
+                                                    ]
+                                                  ],
+                                                  "weight": [
+                                                    "list",
+                                                    [
+                                                      "object",
+                                                      {
+                                                        "max": "number",
+                                                        "min": "number"
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ],
+                                            "scoring_strategy": [
+                                              "list",
+                                              [
+                                                "object",
+                                                {
+                                                  "allowed_values": [
+                                                    "list",
+                                                    "string"
+                                                  ]
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "default_value": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "resources": [
+                                              "list",
+                                              [
+                                                "object",
+                                                {
+                                                  "name": "string",
+                                                  "weight": "number"
+                                                }
+                                              ]
+                                            ],
+                                            "type": "string"
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "control_plane_scaling_tiers": [
+                "list",
+                [
+                  "object",
+                  {
+                    "api_request_concurrency": "number",
+                    "cluster_database_size_gb": "number",
+                    "control_plane_component_config_overrides": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "kube_api_server_config": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "event_ttl": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "constraints": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "max": "string",
+                                            "min": "string"
+                                          }
+                                        ]
+                                      ],
+                                      "default_value": "string"
+                                    }
+                                  ]
+                                ],
+                                "service_node_port_range": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "constraints": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "max_port": [
+                                              "list",
+                                              [
+                                                "object",
+                                                {
+                                                  "max": "number",
+                                                  "min": "number"
+                                                }
+                                              ]
+                                            ],
+                                            "min_port": [
+                                              "list",
+                                              [
+                                                "object",
+                                                {
+                                                  "max": "number",
+                                                  "min": "number"
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "default_value": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "max_port": "number",
+                                            "min_port": "number"
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "kube_controller_manager_config": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "horizontal_pod_autoscaler_controller_config": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "horizontal_pod_autoscaler_sync_period": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "constraints": [
+                                              "list",
+                                              [
+                                                "object",
+                                                {
+                                                  "max": "string",
+                                                  "min": "string"
+                                                }
+                                              ]
+                                            ],
+                                            "default_value": "string"
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "kube_scheduler_config": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "node_resources_fit": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "scoring_strategy": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "constraints": [
+                                              "list",
+                                              [
+                                                "object",
+                                                {
+                                                  "resources": [
+                                                    "list",
+                                                    [
+                                                      "object",
+                                                      {
+                                                        "name": [
+                                                          "list",
+                                                          [
+                                                            "object",
+                                                            {
+                                                              "allowed_values": [
+                                                                "list",
+                                                                "string"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        ],
+                                                        "weight": [
+                                                          "list",
+                                                          [
+                                                            "object",
+                                                            {
+                                                              "max": "number",
+                                                              "min": "number"
+                                                            }
+                                                          ]
+                                                        ]
+                                                      }
+                                                    ]
+                                                  ],
+                                                  "scoring_strategy": [
+                                                    "list",
+                                                    [
+                                                      "object",
+                                                      {
+                                                        "allowed_values": [
+                                                          "list",
+                                                          "string"
+                                                        ]
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ],
+                                            "default_value": [
+                                              "list",
+                                              [
+                                                "object",
+                                                {
+                                                  "resources": [
+                                                    "list",
+                                                    [
+                                                      "object",
+                                                      {
+                                                        "name": "string",
+                                                        "weight": "number"
+                                                      }
+                                                    ]
+                                                  ],
+                                                  "type": "string"
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "pod_scheduling_rate_per_second": "number",
+                    "tier_name": "string"
+                  }
+                ]
+              ],
               "default_platform_version": "string",
               "default_version": "bool",
               "end_of_extended_support_date": "string",

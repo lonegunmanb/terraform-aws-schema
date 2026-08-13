@@ -1079,6 +1079,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -1509,6 +1528,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -1841,6 +1879,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -2180,6 +2237,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -2513,6 +2589,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -2838,6 +2933,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -3226,6 +3340,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -3706,6 +3839,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -4136,6 +4288,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -4468,6 +4639,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -4807,6 +4997,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -5140,6 +5349,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -5465,6 +5693,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -5860,6 +6107,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -6290,6 +6556,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -6622,6 +6907,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -6961,6 +7265,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -7294,6 +7617,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -7619,6 +7961,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -7965,6 +8326,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -8297,6 +8677,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -8636,6 +9035,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -8969,6 +9387,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -9294,6 +9731,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -9682,6 +10138,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -10168,6 +10643,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -10598,6 +11092,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -10930,6 +11443,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -11269,6 +11801,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -11602,6 +12153,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -11927,6 +12497,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -12315,6 +12904,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -12795,6 +13403,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -13225,6 +13852,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -13557,6 +14203,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -13896,6 +14561,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -14229,6 +14913,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -14554,6 +15257,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -14949,6 +15671,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -15379,6 +16120,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -15711,6 +16471,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -16050,6 +16829,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -16383,6 +17181,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -16708,6 +17525,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -17054,6 +17890,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -17386,6 +18241,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -17725,6 +18599,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -18058,6 +18951,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -18383,6 +19295,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -18784,6 +19715,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -19214,6 +20164,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -19546,6 +20515,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -19885,6 +20873,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -20218,6 +21225,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -20543,6 +21569,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -20931,6 +21976,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -21411,6 +22475,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -21841,6 +22924,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -22173,6 +23275,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -22512,6 +23633,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -22845,6 +23985,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -23170,6 +24329,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -23565,6 +24743,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -23995,6 +25192,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -24327,6 +25543,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -24666,6 +25901,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -24999,6 +26253,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -25324,6 +26597,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -25670,6 +26962,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -26002,6 +27313,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -26341,6 +27671,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -26674,6 +28023,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -26999,6 +28367,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -27345,6 +28732,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -27677,6 +29083,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -28016,6 +29441,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -28349,6 +29793,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -28674,6 +30137,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -29062,6 +30544,25 @@ const awsWafv2WebAcl = `{
                           },
                           "max_items": 1,
                           "nesting_mode": "list"
+                        },
+                        "pre_parse_text_transformation": {
+                          "block": {
+                            "attributes": {
+                              "priority": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              },
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 10,
+                          "nesting_mode": "set"
                         },
                         "text_transformation": {
                           "block": {
@@ -30349,6 +31850,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -30779,6 +32299,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -31111,6 +32650,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -31450,6 +33008,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -31783,6 +33360,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -32108,6 +33704,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -32496,6 +34111,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -32976,6 +34610,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -33406,6 +35059,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -33738,6 +35410,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -34077,6 +35768,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -34410,6 +36120,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -34735,6 +36464,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -35130,6 +36878,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -35560,6 +37327,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -35892,6 +37678,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -36231,6 +38036,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -36564,6 +38388,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -36889,6 +38732,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -37235,6 +39097,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -37567,6 +39448,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -37906,6 +39806,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -38239,6 +40158,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -38564,6 +40502,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -38952,6 +40909,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -39438,6 +41414,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -39868,6 +41863,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -40200,6 +42214,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -40539,6 +42572,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -40872,6 +42924,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -41197,6 +43268,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -41585,6 +43675,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -42065,6 +44174,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -42495,6 +44623,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -42827,6 +44974,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -43166,6 +45332,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -43499,6 +45684,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -43824,6 +46028,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -44219,6 +46442,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -44649,6 +46891,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -44981,6 +47242,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -45320,6 +47600,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -45653,6 +47952,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -45978,6 +48296,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -46324,6 +48661,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -46656,6 +49012,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -46995,6 +49370,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -47328,6 +49722,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -47653,6 +50066,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -48054,6 +50486,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -48484,6 +50935,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -48816,6 +51286,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -49155,6 +51644,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -49488,6 +51996,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -49813,6 +52340,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -50201,6 +52747,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -50681,6 +53246,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -51111,6 +53695,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -51443,6 +54046,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -51782,6 +54404,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -52115,6 +54756,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -52440,6 +55100,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -52835,6 +55514,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -53265,6 +55963,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -53597,6 +56314,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -53936,6 +56672,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -54269,6 +57024,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -54594,6 +57368,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -54940,6 +57733,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -55272,6 +58084,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -55611,6 +58442,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -55944,6 +58794,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -56269,6 +59138,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -56615,6 +59503,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -56947,6 +59854,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -57286,6 +60212,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -57619,6 +60564,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -57944,6 +60908,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -58351,6 +61334,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -58781,6 +61783,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -59113,6 +62134,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -59452,6 +62492,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -59785,6 +62844,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -60110,6 +63188,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -60498,6 +63595,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -60978,6 +64094,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -61408,6 +64543,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -61740,6 +64894,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -62079,6 +65252,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -62412,6 +65604,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -62737,6 +65948,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -63132,6 +66362,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -63562,6 +66811,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -63894,6 +67162,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -64233,6 +67520,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -64566,6 +67872,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -64891,6 +68216,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -65237,6 +68581,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -65569,6 +68932,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -65908,6 +69290,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -66241,6 +69642,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -66566,6 +69986,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -66954,6 +70393,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -67440,6 +70898,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -67870,6 +71347,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -68202,6 +71698,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -68541,6 +72056,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -68874,6 +72408,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -69199,6 +72752,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -69587,6 +73159,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -70067,6 +73658,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -70497,6 +74107,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -70829,6 +74458,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -71168,6 +74816,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -71501,6 +75168,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -71826,6 +75512,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -72221,6 +75926,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -72651,6 +76375,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -72983,6 +76726,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -73322,6 +77084,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -73655,6 +77436,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -73980,6 +77780,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -74326,6 +78145,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -74658,6 +78496,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -74997,6 +78854,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -75330,6 +79206,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -75655,6 +79550,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -76056,6 +79970,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -76486,6 +80419,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -76818,6 +80770,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -77157,6 +81128,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -77490,6 +81480,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -77815,6 +81824,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -78203,6 +82231,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -78683,6 +82730,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -79113,6 +83179,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -79445,6 +83530,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -79784,6 +83888,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -80117,6 +84240,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -80442,6 +84584,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -80837,6 +84998,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -81267,6 +85447,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -81599,6 +85798,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -81938,6 +86156,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -82271,6 +86508,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -82596,6 +86852,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -82942,6 +87217,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -83274,6 +87568,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -83613,6 +87926,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -83946,6 +88278,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -84271,6 +88622,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -84617,6 +88987,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -84949,6 +89338,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -85288,6 +89696,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -85621,6 +90048,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -85946,6 +90392,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -86353,6 +90818,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -86783,6 +91267,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -87115,6 +91618,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -87454,6 +91976,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -87787,6 +92328,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -88112,6 +92672,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -88500,6 +93079,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -88980,6 +93578,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -89410,6 +94027,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -89742,6 +94378,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -90081,6 +94736,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -90414,6 +95088,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -90739,6 +95432,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -91134,6 +95846,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -91564,6 +96295,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -91896,6 +96646,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -92235,6 +97004,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -92568,6 +97356,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -92893,6 +97700,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -93239,6 +98065,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -93571,6 +98416,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -93910,6 +98774,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -94243,6 +99126,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -94568,6 +99470,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -94956,6 +99877,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -95442,6 +100382,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -95872,6 +100831,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -96204,6 +101182,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -96543,6 +101540,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -96876,6 +101892,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -97201,6 +102236,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -97589,6 +102643,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -98069,6 +103142,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -98499,6 +103591,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -98831,6 +103942,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -99170,6 +104300,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -99503,6 +104652,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -99828,6 +104996,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -100223,6 +105410,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -100653,6 +105859,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -100985,6 +106210,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -101324,6 +106568,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -101657,6 +106920,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -101982,6 +107264,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -102328,6 +107629,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -102660,6 +107980,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -102999,6 +108338,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -103332,6 +108690,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -103657,6 +109034,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -104058,6 +109454,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -104488,6 +109903,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -104820,6 +110254,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -105159,6 +110612,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -105492,6 +110964,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -105817,6 +111308,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -106205,6 +111715,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -106685,6 +112214,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -107115,6 +112663,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -107447,6 +113014,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -107786,6 +113372,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -108119,6 +113724,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -108444,6 +114068,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -108839,6 +114482,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -109269,6 +114931,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -109601,6 +115282,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -109940,6 +115640,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -110273,6 +115992,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -110598,6 +116336,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -110944,6 +116701,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -111276,6 +117052,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -111615,6 +117410,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -111948,6 +117762,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -112273,6 +118106,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -112619,6 +118471,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -112951,6 +118822,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -113290,6 +119180,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -113623,6 +119532,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -113948,6 +119876,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -114631,6 +120578,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -115061,6 +121027,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -115393,6 +121378,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -115732,6 +121736,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -116065,6 +122088,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -116390,6 +122432,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -116778,6 +122839,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -117258,6 +123338,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -117688,6 +123787,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -118020,6 +124138,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -118359,6 +124496,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -118692,6 +124848,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -119017,6 +125192,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -119412,6 +125606,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -119842,6 +126055,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -120174,6 +126406,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -120513,6 +126764,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -120846,6 +127116,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -121171,6 +127460,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -121517,6 +127825,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -121849,6 +128176,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -122188,6 +128534,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -122521,6 +128886,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -122846,6 +129230,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -123234,6 +129637,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -123720,6 +130142,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -124150,6 +130591,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -124482,6 +130942,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -124821,6 +131300,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -125154,6 +131652,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -125479,6 +131996,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -125867,6 +132403,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -126347,6 +132902,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -126777,6 +133351,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -127109,6 +133702,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -127448,6 +134060,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -127781,6 +134412,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -128106,6 +134756,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -128501,6 +135170,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -128931,6 +135619,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -129263,6 +135970,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -129602,6 +136328,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -129935,6 +136680,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -130260,6 +137024,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -130606,6 +137389,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -130938,6 +137740,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -131277,6 +138098,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -131610,6 +138450,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -131935,6 +138794,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -132336,6 +139214,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -132766,6 +139663,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -133098,6 +140014,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -133437,6 +140372,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -133770,6 +140724,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -134095,6 +141068,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -134483,6 +141475,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -134963,6 +141974,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -135393,6 +142423,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -135725,6 +142774,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -136064,6 +143132,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -136397,6 +143484,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -136722,6 +143828,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -137117,6 +144242,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -137547,6 +144691,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -137879,6 +145042,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -138218,6 +145400,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -138551,6 +145752,25 @@ const awsWafv2WebAcl = `{
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
                                                             },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
+                                                            },
                                                             "text_transformation": {
                                                               "block": {
                                                                 "attributes": {
@@ -138876,6 +146096,25 @@ const awsWafv2WebAcl = `{
                                                               },
                                                               "max_items": 1,
                                                               "nesting_mode": "list"
+                                                            },
+                                                            "pre_parse_text_transformation": {
+                                                              "block": {
+                                                                "attributes": {
+                                                                  "priority": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "number"
+                                                                  },
+                                                                  "type": {
+                                                                    "description_kind": "plain",
+                                                                    "required": true,
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "description_kind": "plain"
+                                                              },
+                                                              "max_items": 10,
+                                                              "nesting_mode": "set"
                                                             },
                                                             "text_transformation": {
                                                               "block": {
@@ -139222,6 +146461,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -139554,6 +146812,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -139893,6 +147170,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -140226,6 +147522,25 @@ const awsWafv2WebAcl = `{
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
                                                 },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
+                                                },
                                                 "text_transformation": {
                                                   "block": {
                                                     "attributes": {
@@ -140551,6 +147866,25 @@ const awsWafv2WebAcl = `{
                                                   },
                                                   "max_items": 1,
                                                   "nesting_mode": "list"
+                                                },
+                                                "pre_parse_text_transformation": {
+                                                  "block": {
+                                                    "attributes": {
+                                                      "priority": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "number"
+                                                      },
+                                                      "type": {
+                                                        "description_kind": "plain",
+                                                        "required": true,
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "description_kind": "plain"
+                                                  },
+                                                  "max_items": 10,
+                                                  "nesting_mode": "set"
                                                 },
                                                 "text_transformation": {
                                                   "block": {
@@ -140897,6 +148231,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -141229,6 +148582,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -141568,6 +148940,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -141901,6 +149292,25 @@ const awsWafv2WebAcl = `{
                                       "max_items": 1,
                                       "nesting_mode": "list"
                                     },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
+                                    },
                                     "text_transformation": {
                                       "block": {
                                         "attributes": {
@@ -142226,6 +149636,25 @@ const awsWafv2WebAcl = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
+                                    },
+                                    "pre_parse_text_transformation": {
+                                      "block": {
+                                        "attributes": {
+                                          "priority": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "number"
+                                          },
+                                          "type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 10,
+                                      "nesting_mode": "set"
                                     },
                                     "text_transformation": {
                                       "block": {
@@ -142572,6 +150001,25 @@ const awsWafv2WebAcl = `{
                           "max_items": 1,
                           "nesting_mode": "list"
                         },
+                        "pre_parse_text_transformation": {
+                          "block": {
+                            "attributes": {
+                              "priority": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              },
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 10,
+                          "nesting_mode": "set"
+                        },
                         "text_transformation": {
                           "block": {
                             "attributes": {
@@ -142904,6 +150352,25 @@ const awsWafv2WebAcl = `{
                           },
                           "max_items": 1,
                           "nesting_mode": "list"
+                        },
+                        "pre_parse_text_transformation": {
+                          "block": {
+                            "attributes": {
+                              "priority": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              },
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 10,
+                          "nesting_mode": "set"
                         },
                         "text_transformation": {
                           "block": {
@@ -143481,6 +150948,25 @@ const awsWafv2WebAcl = `{
                           "max_items": 1,
                           "nesting_mode": "list"
                         },
+                        "pre_parse_text_transformation": {
+                          "block": {
+                            "attributes": {
+                              "priority": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              },
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 10,
+                          "nesting_mode": "set"
+                        },
                         "text_transformation": {
                           "block": {
                             "attributes": {
@@ -143814,6 +151300,25 @@ const awsWafv2WebAcl = `{
                           "max_items": 1,
                           "nesting_mode": "list"
                         },
+                        "pre_parse_text_transformation": {
+                          "block": {
+                            "attributes": {
+                              "priority": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              },
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 10,
+                          "nesting_mode": "set"
+                        },
                         "text_transformation": {
                           "block": {
                             "attributes": {
@@ -144139,6 +151644,25 @@ const awsWafv2WebAcl = `{
                           },
                           "max_items": 1,
                           "nesting_mode": "list"
+                        },
+                        "pre_parse_text_transformation": {
+                          "block": {
+                            "attributes": {
+                              "priority": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              },
+                              "type": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 10,
+                          "nesting_mode": "set"
                         },
                         "text_transformation": {
                           "block": {

@@ -286,6 +286,14 @@ const awsDlmLifecyclePolicy = `{
                     "optional": true,
                     "type": "bool"
                   },
+                  "exclude_data_volume_tags": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "map",
+                      "string"
+                    ]
+                  },
                   "no_reboot": {
                     "description_kind": "plain",
                     "optional": true,

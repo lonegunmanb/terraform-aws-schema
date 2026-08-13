@@ -6,31 +6,15 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEc2ClientVpnRoute = `{
+const awsNeptunegraphPrivateGraphEndpoint = `{
   "block": {
     "attributes": {
-      "client_vpn_endpoint_id": {
+      "graph_identifier": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "destination_cidr_block": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "origin": {
+      "private_graph_endpoint_identifier": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -42,20 +26,31 @@ const awsEc2ClientVpnRoute = `{
         "optional": true,
         "type": "string"
       },
-      "target_vpc_subnet_id": {
+      "subnet_ids": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": [
+          "set",
+          "string"
+        ]
       },
-      "transit_gateway_attachment_id": {
+      "vpc_endpoint_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "type": {
-        "computed": true,
+      "vpc_id": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
+      },
+      "vpc_security_group_ids": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
       }
     },
     "block_types": {
@@ -63,11 +58,13 @@ const awsEc2ClientVpnRoute = `{
         "block": {
           "attributes": {
             "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -83,8 +80,8 @@ const awsEc2ClientVpnRoute = `{
   "version": 0
 }`
 
-func AwsEc2ClientVpnRouteSchema() *tfjson.Schema {
+func AwsNeptunegraphPrivateGraphEndpointSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEc2ClientVpnRoute), &result)
+	_ = json.Unmarshal([]byte(awsNeptunegraphPrivateGraphEndpoint), &result)
 	return &result
 }

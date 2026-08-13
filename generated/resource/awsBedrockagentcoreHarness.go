@@ -155,6 +155,63 @@ const awsBedrockagentcoreHarness = `{
         "optional": true,
         "type": "number"
       },
+      "memory_actual": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "agentcore_memory_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "actor_id": "string",
+                    "arn": "string",
+                    "messages_count": "number",
+                    "retrieval_config": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "map_block_key": "string",
+                          "relevance_score": "number",
+                          "strategy_id": "string",
+                          "top_k": "number"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "disabled": [
+                "list",
+                [
+                  "object",
+                  {}
+                ]
+              ],
+              "managed_memory_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "arn": "string",
+                    "encryption_key_arn": "string",
+                    "event_expiry_duration": "number",
+                    "strategies": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
@@ -584,6 +641,45 @@ const awsBedrockagentcoreHarness = `{
                       "description_kind": "plain"
                     },
                     "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "disabled": {
+              "block": {
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "managed_memory_configuration": {
+              "block": {
+                "attributes": {
+                  "arn": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
+                  "encryption_key_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "event_expiry_duration": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "strategies": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
                   }
                 },
                 "description_kind": "plain"

@@ -317,6 +317,91 @@ const awsArcregionswitchPlan = `{
                     },
                     "nesting_mode": "list"
                   },
+                  "aurora_provisioned_scaling_config": {
+                    "block": {
+                      "attributes": {
+                        "cross_account_role": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "external_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "global_cluster_identifier": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "instance_arns": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "map",
+                            "string"
+                          ]
+                        },
+                        "region_database_cluster_arns": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "map",
+                            "string"
+                          ]
+                        },
+                        "timeout_minutes": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "aurora_serverless_scaling_config": {
+                    "block": {
+                      "attributes": {
+                        "cross_account_role": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "external_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "global_cluster_identifier": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "region_database_cluster_arns": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "map",
+                            "string"
+                          ]
+                        },
+                        "target_percent": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "timeout_minutes": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
                   "custom_action_lambda_config": {
                     "block": {
                       "attributes": {
@@ -757,6 +842,123 @@ const awsArcregionswitchPlan = `{
                     },
                     "nesting_mode": "list"
                   },
+                  "lambda_event_source_mapping_config": {
+                    "block": {
+                      "attributes": {
+                        "action": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "timeout_minutes": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "block_types": {
+                        "region_event_source_mapping": {
+                          "block": {
+                            "attributes": {
+                              "arn": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "cross_account_role": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "external_id": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "region": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "set"
+                        },
+                        "ungraceful": {
+                          "block": {
+                            "attributes": {
+                              "behavior": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "neptune_global_database_config": {
+                    "block": {
+                      "attributes": {
+                        "behavior": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "cross_account_role": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "external_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "global_cluster_identifier": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "region_database_cluster_arns": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "map",
+                            "string"
+                          ]
+                        },
+                        "timeout_minutes": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "block_types": {
+                        "ungraceful": {
+                          "block": {
+                            "attributes": {
+                              "ungraceful": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
                   "parallel_config": {
                     "block": {
                       "block_types": {
@@ -832,6 +1034,91 @@ const awsArcregionswitchPlan = `{
                                         "description_kind": "plain"
                                       },
                                       "nesting_mode": "set"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "aurora_provisioned_scaling_config": {
+                                "block": {
+                                  "attributes": {
+                                    "cross_account_role": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "external_id": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "global_cluster_identifier": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "instance_arns": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "map",
+                                        "string"
+                                      ]
+                                    },
+                                    "region_database_cluster_arns": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "map",
+                                        "string"
+                                      ]
+                                    },
+                                    "timeout_minutes": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "aurora_serverless_scaling_config": {
+                                "block": {
+                                  "attributes": {
+                                    "cross_account_role": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "external_id": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "global_cluster_identifier": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "region_database_cluster_arns": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "map",
+                                        "string"
+                                      ]
+                                    },
+                                    "target_percent": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    },
+                                    "timeout_minutes": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
                                     }
                                   },
                                   "description_kind": "plain"
@@ -1252,6 +1539,123 @@ const awsArcregionswitchPlan = `{
                                       "description_kind": "plain",
                                       "required": true,
                                       "type": "string"
+                                    },
+                                    "timeout_minutes": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "ungraceful": {
+                                      "block": {
+                                        "attributes": {
+                                          "ungraceful": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "lambda_event_source_mapping_config": {
+                                "block": {
+                                  "attributes": {
+                                    "action": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "timeout_minutes": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "region_event_source_mapping": {
+                                      "block": {
+                                        "attributes": {
+                                          "arn": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          },
+                                          "cross_account_role": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          },
+                                          "external_id": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          },
+                                          "region": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "set"
+                                    },
+                                    "ungraceful": {
+                                      "block": {
+                                        "attributes": {
+                                          "behavior": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "neptune_global_database_config": {
+                                "block": {
+                                  "attributes": {
+                                    "behavior": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "cross_account_role": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "external_id": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "global_cluster_identifier": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "region_database_cluster_arns": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "map",
+                                        "string"
+                                      ]
                                     },
                                     "timeout_minutes": {
                                       "description_kind": "plain",

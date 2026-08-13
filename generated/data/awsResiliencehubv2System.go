@@ -1,4 +1,4 @@
-package resource
+package data
 
 import (
 	"encoding/json"
@@ -6,31 +6,35 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEc2ClientVpnRoute = `{
+const awsResiliencehubv2System = `{
   "block": {
     "attributes": {
-      "client_vpn_endpoint_id": {
+      "arn": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "destination_cidr_block": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "origin": {
+      "kms_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "organization_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "ou_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -42,40 +46,23 @@ const awsEc2ClientVpnRoute = `{
         "optional": true,
         "type": "string"
       },
-      "target_vpc_subnet_id": {
+      "sharing_enabled": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
+        "type": "bool"
       },
-      "transit_gateway_attachment_id": {
+      "system_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "type": {
+      "tags": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
+        "type": [
+          "map",
+          "string"
+        ]
       }
     },
     "description_kind": "plain"
@@ -83,8 +70,8 @@ const awsEc2ClientVpnRoute = `{
   "version": 0
 }`
 
-func AwsEc2ClientVpnRouteSchema() *tfjson.Schema {
+func AwsResiliencehubv2SystemSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEc2ClientVpnRoute), &result)
+	_ = json.Unmarshal([]byte(awsResiliencehubv2System), &result)
 	return &result
 }

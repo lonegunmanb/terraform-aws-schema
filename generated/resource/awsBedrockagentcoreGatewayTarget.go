@@ -973,6 +973,53 @@ const awsBedrockagentcoreGatewayTarget = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
+                        },
+                        "resource_priority": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "block_types": {
+                        "mcp_tool_schema": {
+                          "block": {
+                            "block_types": {
+                              "inline_payload": {
+                                "block": {
+                                  "attributes": {
+                                    "payload": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "s3": {
+                                "block": {
+                                  "attributes": {
+                                    "bucket_owner_account_id": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "uri": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
                         }
                       },
                       "description_kind": "plain"

@@ -6,15 +6,20 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsPrometheusScraper = `{
+const awsMailmanagerIngressPoint = `{
   "block": {
     "attributes": {
-      "alias": {
+      "a_record": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "created_timestamp": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -24,6 +29,16 @@ const awsPrometheusScraper = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "last_updated_timestamp": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
@@ -31,14 +46,14 @@ const awsPrometheusScraper = `{
         "optional": true,
         "type": "string"
       },
-      "role_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "scrape_configuration": {
+      "rule_set_id": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "status": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "tags": {
@@ -56,133 +71,106 @@ const awsPrometheusScraper = `{
           "map",
           "string"
         ]
+      },
+      "tls_policy": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "traffic_policy_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "type": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "destination": {
-        "block": {
-          "block_types": {
-            "amp": {
-              "block": {
-                "attributes": {
-                  "workspace_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            },
-            "cloudwatch": {
-              "block": {
-                "attributes": {
-                  "dataset_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "exporter": {
-        "block": {
-          "block_types": {
-            "opensearch": {
-              "block": {
-                "attributes": {
-                  "domain_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "role_configuration": {
+      "ingress_point_configuration": {
         "block": {
           "attributes": {
-            "source_role_arn": {
+            "secret_arn": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
-            "target_role_arn": {
+            "smtp_password_wo": {
               "description_kind": "plain",
               "optional": true,
-              "type": "string"
+              "sensitive": true,
+              "type": "string",
+              "write_only": true
+            },
+            "smtp_password_wo_version": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "block_types": {
+            "tls_auth_configuration": {
+              "block": {
+                "block_types": {
+                  "trust_store": {
+                    "block": {
+                      "attributes": {
+                        "ca_content": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "crl_content": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "kms_key_arn": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
         },
         "nesting_mode": "list"
       },
-      "source": {
+      "network_configuration": {
         "block": {
           "block_types": {
-            "eks": {
+            "private_network_configuration": {
               "block": {
                 "attributes": {
-                  "cluster_arn": {
+                  "vpc_endpoint_id": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
-                  },
-                  "security_group_ids": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  },
-                  "subnet_ids": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
                   }
                 },
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
             },
-            "vpc": {
+            "public_network_configuration": {
               "block": {
                 "attributes": {
-                  "security_group_ids": {
+                  "ip_type": {
                     "description_kind": "plain",
                     "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  },
-                  "subnet_ids": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
+                    "type": "string"
                   }
                 },
                 "description_kind": "plain"
@@ -226,8 +214,8 @@ const awsPrometheusScraper = `{
   "version": 0
 }`
 
-func AwsPrometheusScraperSchema() *tfjson.Schema {
+func AwsMailmanagerIngressPointSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsPrometheusScraper), &result)
+	_ = json.Unmarshal([]byte(awsMailmanagerIngressPoint), &result)
 	return &result
 }
