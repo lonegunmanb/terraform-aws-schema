@@ -1230,6 +1230,7 @@ func init() {
 	resources["aws_rekognition_project"] = resource.AwsRekognitionProjectSchema()  
 	resources["aws_rekognition_stream_processor"] = resource.AwsRekognitionStreamProcessorSchema()  
 	resources["aws_resiliencehub_resiliency_policy"] = resource.AwsResiliencehubResiliencyPolicySchema()  
+	resources["aws_resiliencehubv2_input_source"] = resource.AwsResiliencehubv2InputSourceSchema()  
 	resources["aws_resiliencehubv2_policy"] = resource.AwsResiliencehubv2PolicySchema()  
 	resources["aws_resiliencehubv2_service"] = resource.AwsResiliencehubv2ServiceSchema()  
 	resources["aws_resiliencehubv2_system"] = resource.AwsResiliencehubv2SystemSchema()  
