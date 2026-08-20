@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsVpclatticeService = `{
+const awsMailmanagerRelay = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,47 +14,20 @@ const awsVpclatticeService = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "auth_type": {
+      "created_timestamp": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
-      },
-      "certificate_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "custom_domain_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "dns_entry": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "domain_name": "string",
-              "hosted_zone_id": "string"
-            }
-          ]
-        ]
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "idle_timeout_seconds": {
+      "last_modified_timestamp": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "number"
+        "type": "string"
       },
       "name": {
         "description_kind": "plain",
@@ -68,10 +41,15 @@ const awsVpclatticeService = `{
         "optional": true,
         "type": "string"
       },
-      "status": {
-        "computed": true,
+      "server_name": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
+      },
+      "server_port": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "number"
       },
       "tags": {
         "description_kind": "plain",
@@ -84,7 +62,6 @@ const awsVpclatticeService = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
@@ -92,28 +69,26 @@ const awsVpclatticeService = `{
       }
     },
     "block_types": {
-      "timeouts": {
+      "authentication": {
         "block": {
           "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
+            "secret_arn": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             }
           },
+          "block_types": {
+            "no_authentication": {
+              "block": {
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
-        "nesting_mode": "single"
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -121,8 +96,8 @@ const awsVpclatticeService = `{
   "version": 0
 }`
 
-func AwsVpclatticeServiceSchema() *tfjson.Schema {
+func AwsMailmanagerRelaySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsVpclatticeService), &result)
+	_ = json.Unmarshal([]byte(awsMailmanagerRelay), &result)
 	return &result
 }

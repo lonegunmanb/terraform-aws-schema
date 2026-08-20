@@ -73,6 +73,19 @@ const awsResiliencehubv2Service = `{
       }
     },
     "block_types": {
+      "associated_system": {
+        "block": {
+          "attributes": {
+            "system_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "permission_model": {
         "block": {
           "attributes": {

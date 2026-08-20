@@ -104,6 +104,12 @@ const awsObservabilityadminCentralizationRuleForOrganization = `{
                                 "optional": true,
                                 "type": "string"
                               },
+                              "encryption_scope": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
                               "encryption_strategy": {
                                 "description_kind": "plain",
                                 "required": true,

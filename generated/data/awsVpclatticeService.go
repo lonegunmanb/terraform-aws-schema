@@ -49,6 +49,11 @@ const awsVpclatticeService = `{
         "optional": true,
         "type": "string"
       },
+      "idle_timeout_seconds": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "name": {
         "computed": true,
         "description_kind": "plain",

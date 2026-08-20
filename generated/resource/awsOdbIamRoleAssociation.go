@@ -6,67 +6,17 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsPinpointsmsvoicev2PhoneNumber = `{
+const awsOdbIamRoleAssociation = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "deletion_protection_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "force_disassociate": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "iso_country_code": {
+      "aws_integration": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "message_type": {
+      "iam_role_arn": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "monthly_leasing_price": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "number_capabilities": {
-        "description_kind": "plain",
-        "required": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "number_type": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "opt_out_list_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "phone_number": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "region": {
@@ -76,61 +26,20 @@ const awsPinpointsmsvoicev2PhoneNumber = `{
         "optional": true,
         "type": "string"
       },
-      "registration_id": {
+      "resource_arn": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
-      },
-      "self_managed_opt_outs_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "status": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
+      "status_reason": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "two_way_channel_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
-      },
-      "two_way_channel_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "two_way_channel_role": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "wait_for_active": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       }
     },
     "block_types": {
@@ -166,8 +75,8 @@ const awsPinpointsmsvoicev2PhoneNumber = `{
   "version": 0
 }`
 
-func AwsPinpointsmsvoicev2PhoneNumberSchema() *tfjson.Schema {
+func AwsOdbIamRoleAssociationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsPinpointsmsvoicev2PhoneNumber), &result)
+	_ = json.Unmarshal([]byte(awsOdbIamRoleAssociation), &result)
 	return &result
 }

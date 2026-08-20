@@ -23,10 +23,9 @@ const awsBedrockagentcoreHarness = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "environment": {
+      "environment_actual": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "list",
           [
@@ -549,6 +548,155 @@ const awsBedrockagentcoreHarness = `{
                                   "description_kind": "plain"
                                 },
                                 "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "environment": {
+        "block": {
+          "block_types": {
+            "agentcore_runtime_environment": {
+              "block": {
+                "attributes": {
+                  "agent_runtime_arn": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
+                  "agent_runtime_id": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
+                  "agent_runtime_name": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
+                  "lifecycle_configuration": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "idle_runtime_session_timeout": "number",
+                          "max_lifetime": "number"
+                        }
+                      ]
+                    ]
+                  }
+                },
+                "block_types": {
+                  "filesystem_configuration": {
+                    "block": {
+                      "block_types": {
+                        "efs_access_point": {
+                          "block": {
+                            "attributes": {
+                              "access_point_arn": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "mount_path": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "s3_files_access_point": {
+                          "block": {
+                            "attributes": {
+                              "access_point_arn": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "mount_path": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "session_storage": {
+                          "block": {
+                            "attributes": {
+                              "mount_path": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "network_configuration": {
+                    "block": {
+                      "attributes": {
+                        "network_mode": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "network_mode_config": {
+                          "block": {
+                            "attributes": {
+                              "require_service_s3_endpoint": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "type": "bool"
+                              },
+                              "security_groups": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": [
+                                  "set",
+                                  "string"
+                                ]
+                              },
+                              "subnets": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": [
+                                  "set",
+                                  "string"
+                                ]
                               }
                             },
                             "description_kind": "plain"

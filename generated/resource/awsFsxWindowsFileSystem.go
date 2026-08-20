@@ -86,6 +86,12 @@ const awsFsxWindowsFileSystem = `{
           "string"
         ]
       },
+      "network_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "owner_id": {
         "computed": true,
         "description_kind": "plain",

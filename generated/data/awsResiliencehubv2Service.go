@@ -14,6 +14,19 @@ const awsResiliencehubv2Service = `{
         "required": true,
         "type": "string"
       },
+      "associated_system": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "system_arn": "string"
+            }
+          ]
+        ]
+      },
       "description": {
         "computed": true,
         "description_kind": "plain",

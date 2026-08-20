@@ -452,6 +452,11 @@ const awsLbListenerRule = `{
             "source_ip": {
               "block": {
                 "attributes": {
+                  "ip_address_type": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
                   "values": {
                     "computed": true,
                     "description_kind": "plain",
