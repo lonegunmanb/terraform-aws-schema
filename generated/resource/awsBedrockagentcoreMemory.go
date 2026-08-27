@@ -85,7 +85,7 @@ const awsBedrockagentcoreMemory = `{
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "stream_delivery_resources": {
         "block": {

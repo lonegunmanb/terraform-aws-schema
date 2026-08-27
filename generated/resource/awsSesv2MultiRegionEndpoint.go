@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsResiliencehubv2Service = `{
+const awsSesv2MultiRegionEndpoint = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,30 +14,14 @@ const awsResiliencehubv2Service = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "dependency_discovery": {
+      "endpoint_id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "kms_key_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "name": {
+      "endpoint_name": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "policy_arn": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "region": {
@@ -47,12 +31,17 @@ const awsResiliencehubv2Service = `{
         "optional": true,
         "type": "string"
       },
-      "regions": {
+      "routes": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": [
-          "set",
-          "string"
+          "list",
+          [
+            "object",
+            {
+              "region": "string"
+            }
+          ]
         ]
       },
       "tags": {
@@ -73,48 +62,15 @@ const awsResiliencehubv2Service = `{
       }
     },
     "block_types": {
-      "associated_system": {
+      "details": {
         "block": {
-          "attributes": {
-            "system_arn": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "user_journey_ids": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
-      "permission_model": {
-        "block": {
-          "attributes": {
-            "invoker_role_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
           "block_types": {
-            "cross_account_role": {
+            "routes_details": {
               "block": {
                 "attributes": {
-                  "cross_account_role_arn": {
+                  "region": {
                     "description_kind": "plain",
                     "required": true,
-                    "type": "string"
-                  },
-                  "external_id": {
-                    "description_kind": "plain",
-                    "optional": true,
                     "type": "string"
                   }
                 },
@@ -126,6 +82,26 @@ const awsResiliencehubv2Service = `{
           "description_kind": "plain"
         },
         "nesting_mode": "list"
+      },
+      "timeouts": {
+        "block": {
+          "attributes": {
+            "create": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "delete": {
+              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -133,8 +109,8 @@ const awsResiliencehubv2Service = `{
   "version": 0
 }`
 
-func AwsResiliencehubv2ServiceSchema() *tfjson.Schema {
+func AwsSesv2MultiRegionEndpointSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsResiliencehubv2Service), &result)
+	_ = json.Unmarshal([]byte(awsSesv2MultiRegionEndpoint), &result)
 	return &result
 }

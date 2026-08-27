@@ -276,6 +276,46 @@ const awsWorkspacesDirectory = `{
               "type": "string"
             }
           },
+          "block_types": {
+            "access_endpoint_config": {
+              "block": {
+                "attributes": {
+                  "internet_fallback_protocols": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  }
+                },
+                "block_types": {
+                  "access_endpoints": {
+                    "block": {
+                      "attributes": {
+                        "access_endpoint_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "vpc_endpoint_id": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "min_items": 1,
+                    "nesting_mode": "set"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "max_items": 1,

@@ -37,6 +37,18 @@ const awsElasticacheReplicationGroup = `{
         "optional": true,
         "type": "string"
       },
+      "auth_token_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string",
+        "write_only": true
+      },
+      "auth_token_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "auto_minor_version_upgrade": {
         "computed": true,
         "description_kind": "plain",

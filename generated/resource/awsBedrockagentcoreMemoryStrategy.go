@@ -10,6 +10,7 @@ const awsBedrockagentcoreMemoryStrategy = `{
   "block": {
     "attributes": {
       "description": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -134,6 +135,253 @@ const awsBedrockagentcoreMemoryStrategy = `{
                       "set",
                       "string"
                     ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "self_managed_configuration": {
+              "block": {
+                "attributes": {
+                  "historical_context_window_size": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "trigger_conditions_actual": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "message_based_trigger": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "message_count": "number"
+                              }
+                            ]
+                          ],
+                          "time_based_trigger": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "idle_session_timeout": "number"
+                              }
+                            ]
+                          ],
+                          "token_based_trigger": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "token_count": "number"
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                },
+                "block_types": {
+                  "invocation_configuration": {
+                    "block": {
+                      "attributes": {
+                        "payload_delivery_bucket_name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "topic_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "trigger_conditions": {
+                    "block": {
+                      "block_types": {
+                        "message_based_trigger": {
+                          "block": {
+                            "attributes": {
+                              "message_count": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "time_based_trigger": {
+                          "block": {
+                            "attributes": {
+                              "idle_session_timeout": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "token_based_trigger": {
+                          "block": {
+                            "attributes": {
+                              "token_count": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "number"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "memory_record_schema": {
+        "block": {
+          "block_types": {
+            "metadata_schema": {
+              "block": {
+                "attributes": {
+                  "extraction_type": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "key": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "type": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "extraction_config": {
+                    "block": {
+                      "block_types": {
+                        "llm_extraction_config": {
+                          "block": {
+                            "attributes": {
+                              "definition": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "llm_extraction_instruction": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "validation": {
+                                "block": {
+                                  "block_types": {
+                                    "number_validation": {
+                                      "block": {
+                                        "attributes": {
+                                          "max_value": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          },
+                                          "min_value": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    },
+                                    "string_list_validation": {
+                                      "block": {
+                                        "attributes": {
+                                          "allowed_values": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": [
+                                              "list",
+                                              "string"
+                                            ]
+                                          },
+                                          "max_items": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "number"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    },
+                                    "string_validation": {
+                                      "block": {
+                                        "attributes": {
+                                          "allowed_values": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": [
+                                              "list",
+                                              "string"
+                                            ]
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

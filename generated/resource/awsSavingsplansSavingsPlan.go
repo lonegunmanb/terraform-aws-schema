@@ -62,6 +62,7 @@ const awsSavingsplansSavingsPlan = `{
         ]
       },
       "purchase_time": {
+        "computed": true,
         "description": "The time at which to purchase the Savings Plan, in UTC format (YYYY-MM-DDTHH:MM:SSZ).",
         "description_kind": "plain",
         "optional": true,
@@ -142,6 +143,7 @@ const awsSavingsplansSavingsPlan = `{
         "type": "number"
       },
       "upfront_payment_amount": {
+        "computed": true,
         "description": "The up-front payment amount.",
         "description_kind": "plain",
         "optional": true,

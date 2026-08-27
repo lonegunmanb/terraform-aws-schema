@@ -22,7 +22,11 @@ const awsResiliencehubv2Service = `{
           [
             "object",
             {
-              "system_arn": "string"
+              "system_arn": "string",
+              "user_journey_ids": [
+                "set",
+                "string"
+              ]
             }
           ]
         ]

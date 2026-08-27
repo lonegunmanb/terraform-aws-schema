@@ -26,6 +26,16 @@ const awsObservabilityadminCentralizationRuleForOrganization = `{
         "required": true,
         "type": "string"
       },
+      "tag_propagation_failure_reason": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "tag_propagation_status": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -116,6 +126,24 @@ const awsObservabilityadminCentralizationRuleForOrganization = `{
                                 "type": "string"
                               },
                               "kms_key_arn": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "tag_propagation_configuration": {
+                          "block": {
+                            "attributes": {
+                              "destination_role_arn": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "tag_conflict_resolution_strategy": {
                                 "description_kind": "plain",
                                 "optional": true,
                                 "type": "string"
