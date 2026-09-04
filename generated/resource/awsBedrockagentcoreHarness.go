@@ -463,7 +463,7 @@ const awsBedrockagentcoreHarness = `{
                             "attributes": {
                               "resource_configuration_identifier": {
                                 "description_kind": "plain",
-                                "required": true,
+                                "optional": true,
                                 "type": "string"
                               }
                             },
@@ -541,7 +541,7 @@ const awsBedrockagentcoreHarness = `{
                                   "attributes": {
                                     "resource_configuration_identifier": {
                                       "description_kind": "plain",
-                                      "required": true,
+                                      "optional": true,
                                       "type": "string"
                                     }
                                   },

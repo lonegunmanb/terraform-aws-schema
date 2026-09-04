@@ -354,7 +354,7 @@ const awsBedrockagentcoreAgentRuntime = `{
                             "attributes": {
                               "resource_configuration_identifier": {
                                 "description_kind": "plain",
-                                "required": true,
+                                "optional": true,
                                 "type": "string"
                               }
                             },
@@ -432,7 +432,7 @@ const awsBedrockagentcoreAgentRuntime = `{
                                   "attributes": {
                                     "resource_configuration_identifier": {
                                       "description_kind": "plain",
-                                      "required": true,
+                                      "optional": true,
                                       "type": "string"
                                     }
                                   },

@@ -166,6 +166,15 @@ const awsEksCluster = `{
                     "horizontal_pod_autoscaler_sync_period": "string"
                   }
                 ]
+              ],
+              "pod_gc_controller_config": [
+                "list",
+                [
+                  "object",
+                  {
+                    "terminated_pod_gc_threshold": "number"
+                  }
+                ]
               ]
             }
           ]

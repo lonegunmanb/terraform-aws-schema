@@ -25,6 +25,18 @@ const awsDxHostedTransitVirtualInterfaceAccepter = `{
         "optional": true,
         "type": "string"
       },
+      "prefix_pool_allocated_count_ipv4": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "prefix_pool_allocated_count_ipv6": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "region": {
         "computed": true,
         "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",

@@ -297,6 +297,21 @@ const awsEksCluster = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
+            },
+            "pod_gc_controller_config": {
+              "block": {
+                "attributes": {
+                  "terminated_pod_gc_threshold": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

@@ -76,11 +76,47 @@ const awsDxConnection = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "prefix_pool_size_ipv4": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "prefix_pool_size_ipv6": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "prefix_pool_unallocated_count_ipv4": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "prefix_pool_unallocated_count_ipv6": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "provider_name": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "rate_limiter_status": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "in_use": "number",
+              "max_allowed": "number",
+              "remaining": "number",
+              "total_bandwidth": "string"
+            }
+          ]
+        ]
       },
       "region": {
         "computed": true,

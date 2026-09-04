@@ -6,21 +6,10 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsDxPublicVirtualInterface = `{
+const awsMailmanagerArchive = `{
   "block": {
     "attributes": {
-      "address_family": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "amazon_address": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "amazon_side_asn": {
+      "archive_state": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -30,48 +19,29 @@ const awsDxPublicVirtualInterface = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "aws_device": {
+      "created_timestamp": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "bgp_asn": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "number"
-      },
-      "bgp_auth_key": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "connection_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "customer_address": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "kms_key_arn": {
+        "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "last_updated_timestamp": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "name": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "rate_limit": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "region": {
@@ -81,12 +51,17 @@ const awsDxPublicVirtualInterface = `{
         "optional": true,
         "type": "string"
       },
-      "route_filter_prefixes": {
+      "retention_actual": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
         "type": [
-          "set",
-          "string"
+          "list",
+          [
+            "object",
+            {
+              "retention_period": "string"
+            }
+          ]
         ]
       },
       "tags": {
@@ -100,36 +75,25 @@ const awsDxPublicVirtualInterface = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
-      },
-      "vlan": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "number"
       }
     },
     "block_types": {
-      "timeouts": {
+      "retention": {
         "block": {
           "attributes": {
-            "create": {
+            "retention_period": {
               "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "single"
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -137,8 +101,8 @@ const awsDxPublicVirtualInterface = `{
   "version": 0
 }`
 
-func AwsDxPublicVirtualInterfaceSchema() *tfjson.Schema {
+func AwsMailmanagerArchiveSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsDxPublicVirtualInterface), &result)
+	_ = json.Unmarshal([]byte(awsMailmanagerArchive), &result)
 	return &result
 }

@@ -133,6 +133,33 @@ const awsEksClusterVersions = `{
                                 ]
                               }
                             ]
+                          ],
+                          "pod_gc_controller_config": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "terminated_pod_gc_threshold": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "constraints": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "max": "number",
+                                            "min": "number"
+                                          }
+                                        ]
+                                      ],
+                                      "default_value": "number"
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
                           ]
                         }
                       ]
@@ -344,6 +371,33 @@ const awsEksClusterVersions = `{
                                               ]
                                             ],
                                             "default_value": "string"
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "pod_gc_controller_config": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "terminated_pod_gc_threshold": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "constraints": [
+                                              "list",
+                                              [
+                                                "object",
+                                                {
+                                                  "max": "number",
+                                                  "min": "number"
+                                                }
+                                              ]
+                                            ],
+                                            "default_value": "number"
                                           }
                                         ]
                                       ]
