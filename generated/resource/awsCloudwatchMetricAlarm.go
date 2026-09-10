@@ -279,6 +279,25 @@ const awsCloudwatchMetricAlarm = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
+      },
+      "warm_up_configuration": {
+        "block": {
+          "attributes": {
+            "only_start_evaluating_after_warm_up_period_ends": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
+            "warm_up_period_duration_in_minutes": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

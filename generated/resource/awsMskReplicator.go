@@ -81,7 +81,81 @@ const awsMskReplicator = `{
                 "description_kind": "plain"
               },
               "max_items": 1,
-              "min_items": 1,
+              "nesting_mode": "list"
+            },
+            "apache_kafka_cluster": {
+              "block": {
+                "attributes": {
+                  "apache_kafka_cluster_id": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "bootstrap_broker_string": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "client_authentication": {
+              "block": {
+                "block_types": {
+                  "mtls": {
+                    "block": {
+                      "attributes": {
+                        "secret_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "sasl_scram": {
+                    "block": {
+                      "attributes": {
+                        "mechanism": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "secret_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "encryption_in_transit": {
+              "block": {
+                "attributes": {
+                  "root_ca_certificate": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
               "nesting_mode": "list"
             },
             "vpc_config": {
@@ -107,7 +181,6 @@ const awsMskReplicator = `{
                 "description_kind": "plain"
               },
               "max_items": 1,
-              "min_items": 1,
               "nesting_mode": "list"
             }
           },
@@ -207,7 +280,12 @@ const awsMskReplicator = `{
             },
             "source_kafka_cluster_arn": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
+              "type": "string"
+            },
+            "source_kafka_cluster_id": {
+              "description_kind": "plain",
+              "optional": true,
               "type": "string"
             },
             "target_compression_type": {
@@ -222,7 +300,12 @@ const awsMskReplicator = `{
             },
             "target_kafka_cluster_arn": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
+              "type": "string"
+            },
+            "target_kafka_cluster_id": {
+              "description_kind": "plain",
+              "optional": true,
               "type": "string"
             }
           },

@@ -214,6 +214,14 @@ const awsRdsClusterInstance = `{
           "string"
         ]
       },
+      "warning_event_categories": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "writer": {
         "computed": true,
         "description_kind": "plain",

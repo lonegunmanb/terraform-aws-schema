@@ -443,6 +443,14 @@ const awsRdsCluster = `{
           "set",
           "string"
         ]
+      },
+      "warning_event_categories": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
       }
     },
     "block_types": {

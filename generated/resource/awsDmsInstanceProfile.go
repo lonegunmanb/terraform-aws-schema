@@ -6,33 +6,18 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsAppconfigHostedConfigurationVersion = `{
+const awsDmsInstanceProfile = `{
   "block": {
     "attributes": {
-      "application_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "configuration_profile_id": {
+      "availability_zone": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "content": {
-        "description_kind": "plain",
-        "required": true,
-        "sensitive": true,
-        "type": "string"
-      },
-      "content_type": {
-        "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "description": {
@@ -40,11 +25,29 @@ const awsAppconfigHostedConfigurationVersion = `{
         "optional": true,
         "type": "string"
       },
-      "id": {
+      "kms_key_arn": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "name": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "network_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "publicly_accessible": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       },
       "region": {
         "computed": true,
@@ -53,15 +56,36 @@ const awsAppconfigHostedConfigurationVersion = `{
         "optional": true,
         "type": "string"
       },
-      "version_label": {
+      "subnet_group_identifier": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "version_number": {
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "type": "number"
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "vpc_security_group_ids": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
       }
     },
     "description_kind": "plain"
@@ -69,8 +93,8 @@ const awsAppconfigHostedConfigurationVersion = `{
   "version": 0
 }`
 
-func AwsAppconfigHostedConfigurationVersionSchema() *tfjson.Schema {
+func AwsDmsInstanceProfileSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsAppconfigHostedConfigurationVersion), &result)
+	_ = json.Unmarshal([]byte(awsDmsInstanceProfile), &result)
 	return &result
 }

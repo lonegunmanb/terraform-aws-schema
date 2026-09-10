@@ -168,6 +168,28 @@ const awsWorkspacesDirectory = `{
           [
             "object",
             {
+              "access_endpoint_config": [
+                "list",
+                [
+                  "object",
+                  {
+                    "access_endpoints": [
+                      "set",
+                      [
+                        "object",
+                        {
+                          "access_endpoint_type": "string",
+                          "vpc_endpoint_id": "string"
+                        }
+                      ]
+                    ],
+                    "internet_fallback_protocols": [
+                      "list",
+                      "string"
+                    ]
+                  }
+                ]
+              ],
               "device_type_android": "string",
               "device_type_chromeos": "string",
               "device_type_ios": "string",

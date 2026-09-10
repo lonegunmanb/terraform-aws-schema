@@ -150,6 +150,7 @@ const awsBedrockagentcoreHarness = `{
         "type": "number"
       },
       "max_tokens": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
@@ -845,6 +846,17 @@ const awsBedrockagentcoreHarness = `{
             "bedrock_model_config": {
               "block": {
                 "attributes": {
+                  "additional_params": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "api_format": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "max_tokens": {
                     "description_kind": "plain",
                     "optional": true,
@@ -873,6 +885,11 @@ const awsBedrockagentcoreHarness = `{
             "gemini_model_config": {
               "block": {
                 "attributes": {
+                  "additional_params": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "api_key_arn": {
                     "description_kind": "plain",
                     "required": true,
@@ -908,9 +925,63 @@ const awsBedrockagentcoreHarness = `{
               },
               "nesting_mode": "list"
             },
+            "litellm_model_config": {
+              "block": {
+                "attributes": {
+                  "additional_params": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "api_base": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "api_key_arn": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "max_tokens": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "model_id": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "temperature": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "top_p": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "openai_model_config": {
               "block": {
                 "attributes": {
+                  "additional_params": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "api_format": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "api_key_arn": {
                     "description_kind": "plain",
                     "required": true,
@@ -951,8 +1022,77 @@ const awsBedrockagentcoreHarness = `{
           "attributes": {
             "path": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
+            }
+          },
+          "block_types": {
+            "aws_skills": {
+              "block": {
+                "attributes": {
+                  "paths": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "git": {
+              "block": {
+                "attributes": {
+                  "path": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "url": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "auth": {
+                    "block": {
+                      "attributes": {
+                        "credential_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "username": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "s3": {
+              "block": {
+                "attributes": {
+                  "uri": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -964,7 +1104,7 @@ const awsBedrockagentcoreHarness = `{
           "attributes": {
             "text": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "sensitive": true,
               "type": "string"
             }

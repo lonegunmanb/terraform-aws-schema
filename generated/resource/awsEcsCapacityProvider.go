@@ -138,6 +138,21 @@ const awsEcsCapacityProvider = `{
             }
           },
           "block_types": {
+            "auto_repair_configuration": {
+              "block": {
+                "attributes": {
+                  "actions_status": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "infrastructure_optimization": {
               "block": {
                 "attributes": {
