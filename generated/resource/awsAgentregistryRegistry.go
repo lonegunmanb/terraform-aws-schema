@@ -70,6 +70,24 @@ const awsAgentregistryRegistry = `{
         },
         "nesting_mode": "list"
       },
+      "auto_detection_configuration": {
+        "block": {
+          "attributes": {
+            "enabled": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "bool"
+            },
+            "scope": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "discovery_configuration": {
         "block": {
           "attributes": {
@@ -172,6 +190,157 @@ const awsAgentregistryRegistry = `{
                             "description_kind": "plain"
                           },
                           "nesting_mode": "set"
+                        },
+                        "private_endpoint": {
+                          "block": {
+                            "block_types": {
+                              "managed_vpc_resource": {
+                                "block": {
+                                  "attributes": {
+                                    "endpoint_ip_address_type": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "routing_domain": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "security_group_ids": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "subnet_ids": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "set",
+                                        "string"
+                                      ]
+                                    },
+                                    "tags": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": [
+                                        "map",
+                                        "string"
+                                      ]
+                                    },
+                                    "vpc_identifier": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
+                              "self_managed_lattice_resource": {
+                                "block": {
+                                  "attributes": {
+                                    "resource_configuration_identifier": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "private_endpoint_override": {
+                          "block": {
+                            "attributes": {
+                              "domain": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "block_types": {
+                              "private_endpoint": {
+                                "block": {
+                                  "block_types": {
+                                    "managed_vpc_resource": {
+                                      "block": {
+                                        "attributes": {
+                                          "endpoint_ip_address_type": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          },
+                                          "routing_domain": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          },
+                                          "security_group_ids": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": [
+                                              "set",
+                                              "string"
+                                            ]
+                                          },
+                                          "subnet_ids": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": [
+                                              "set",
+                                              "string"
+                                            ]
+                                          },
+                                          "tags": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": [
+                                              "map",
+                                              "string"
+                                            ]
+                                          },
+                                          "vpc_identifier": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    },
+                                    "self_managed_lattice_resource": {
+                                      "block": {
+                                        "attributes": {
+                                          "resource_configuration_identifier": {
+                                            "description_kind": "plain",
+                                            "optional": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
                         }
                       },
                       "description_kind": "plain"
@@ -182,6 +351,19 @@ const awsAgentregistryRegistry = `{
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
+      "encryption_configuration": {
+        "block": {
+          "attributes": {
+            "kms_key_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
             }
           },
           "description_kind": "plain"

@@ -97,7 +97,96 @@ const awsAgentregistryRegistry = `{
                               }
                             ]
                           ],
-                          "discovery_url": "string"
+                          "discovery_url": "string",
+                          "private_endpoint": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "managed_vpc_resource": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "endpoint_ip_address_type": "string",
+                                      "routing_domain": "string",
+                                      "security_group_ids": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "subnet_ids": [
+                                        "set",
+                                        "string"
+                                      ],
+                                      "tags": [
+                                        "map",
+                                        "string"
+                                      ],
+                                      "vpc_identifier": "string"
+                                    }
+                                  ]
+                                ],
+                                "self_managed_lattice_resource": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "resource_configuration_identifier": "string"
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "private_endpoint_override": [
+                            "list",
+                            [
+                              "object",
+                              {
+                                "domain": "string",
+                                "private_endpoint": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "managed_vpc_resource": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "endpoint_ip_address_type": "string",
+                                            "routing_domain": "string",
+                                            "security_group_ids": [
+                                              "set",
+                                              "string"
+                                            ],
+                                            "subnet_ids": [
+                                              "set",
+                                              "string"
+                                            ],
+                                            "tags": [
+                                              "map",
+                                              "string"
+                                            ],
+                                            "vpc_identifier": "string"
+                                          }
+                                        ]
+                                      ],
+                                      "self_managed_lattice_resource": [
+                                        "list",
+                                        [
+                                          "object",
+                                          {
+                                            "resource_configuration_identifier": "string"
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
                         }
                       ]
                     ]
@@ -105,6 +194,19 @@ const awsAgentregistryRegistry = `{
                 ]
               ],
               "authorizer_type": "string"
+            }
+          ]
+        ]
+      },
+      "encryption_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "kms_key_arn": "string"
             }
           ]
         ]

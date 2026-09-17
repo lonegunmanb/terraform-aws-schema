@@ -366,6 +366,7 @@ const awsGlueCatalogTable = `{
         "block": {
           "attributes": {
             "additional_locations": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": [
@@ -374,6 +375,7 @@ const awsGlueCatalogTable = `{
               ]
             },
             "bucket_columns": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": [
@@ -407,6 +409,7 @@ const awsGlueCatalogTable = `{
               "type": "string"
             },
             "parameters": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": [
@@ -435,6 +438,7 @@ const awsGlueCatalogTable = `{
                     "type": "string"
                   },
                   "parameters": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": [
@@ -506,6 +510,7 @@ const awsGlueCatalogTable = `{
                     "type": "string"
                   },
                   "parameters": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": [
@@ -636,6 +641,7 @@ const awsGlueCatalogTable = `{
               "type": "number"
             },
             "sub_object_version_ids": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": [
@@ -644,6 +650,7 @@ const awsGlueCatalogTable = `{
               ]
             },
             "sub_objects": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": [

@@ -37,8 +37,13 @@ const awsDxHostedPrivateVirtualInterface = `{
       },
       "bgp_asn": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "number"
+      },
+      "bgp_asn_long": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "bgp_auth_key": {
         "computed": true,

@@ -174,6 +174,7 @@ const awsBedrockagentDataSource = `{
                           "type": "string"
                         },
                         "deletion_protection_threshold": {
+                          "computed": true,
                           "description_kind": "plain",
                           "optional": true,
                           "type": "number"
