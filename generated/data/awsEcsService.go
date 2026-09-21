@@ -103,7 +103,18 @@ const awsEcsService = `{
                       "list",
                       "string"
                     ],
-                    "role_arn": "string"
+                    "role_arn": "string",
+                    "target_type": "string",
+                    "timeout_configuration": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "action": "string",
+                          "timeout_in_minutes": "string"
+                        }
+                      ]
+                    ]
                   }
                 ]
               ],

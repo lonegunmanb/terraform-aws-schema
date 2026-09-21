@@ -272,7 +272,7 @@ const awsEcsService = `{
                   },
                   "hook_target_arn": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": "string"
                   },
                   "lifecycle_stages": {
@@ -285,8 +285,36 @@ const awsEcsService = `{
                   },
                   "role_arn": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": "string"
+                  },
+                  "target_type": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "timeout_configuration": {
+                    "block": {
+                      "attributes": {
+                        "action": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "timeout_in_minutes": {
+                          "computed": true,
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

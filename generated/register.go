@@ -1004,6 +1004,7 @@ func init() {
 	resources["aws_memorydb_user"] = resource.AwsMemorydbUserSchema()  
 	resources["aws_mq_broker"] = resource.AwsMqBrokerSchema()  
 	resources["aws_mq_configuration"] = resource.AwsMqConfigurationSchema()  
+	resources["aws_msk_channel"] = resource.AwsMskChannelSchema()  
 	resources["aws_msk_cluster"] = resource.AwsMskClusterSchema()  
 	resources["aws_msk_cluster_policy"] = resource.AwsMskClusterPolicySchema()  
 	resources["aws_msk_configuration"] = resource.AwsMskConfigurationSchema()  

@@ -28,6 +28,12 @@ const awsBedrockagentcoreApiKeyCredentialProvider = `{
           ]
         ]
       },
+      "api_key_secret_source": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "api_key_wo": {
         "description_kind": "plain",
         "optional": true,
@@ -72,6 +78,26 @@ const awsBedrockagentcoreApiKeyCredentialProvider = `{
           "map",
           "string"
         ]
+      }
+    },
+    "block_types": {
+      "api_key_secret_config": {
+        "block": {
+          "attributes": {
+            "json_key": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "secret_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
