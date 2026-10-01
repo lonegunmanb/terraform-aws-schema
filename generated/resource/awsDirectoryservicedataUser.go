@@ -6,20 +6,37 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsBedrockagentcoreWorkloadIdentity = `{
+const awsDirectoryservicedataUser = `{
   "block": {
     "attributes": {
-      "allowed_resource_oauth2_return_urls": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "name": {
+      "directory_id": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "distinguished_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "email_address": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "given_name": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "realm": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "region": {
@@ -29,23 +46,22 @@ const awsBedrockagentcoreWorkloadIdentity = `{
         "optional": true,
         "type": "string"
       },
-      "tags": {
+      "sam_account_name": {
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "required": true,
+        "type": "string"
       },
-      "tags_all": {
+      "sid": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "string"
       },
-      "workload_identity_arn": {
+      "surname": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "user_principal_name": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -56,8 +72,8 @@ const awsBedrockagentcoreWorkloadIdentity = `{
   "version": 0
 }`
 
-func AwsBedrockagentcoreWorkloadIdentitySchema() *tfjson.Schema {
+func AwsDirectoryservicedataUserSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsBedrockagentcoreWorkloadIdentity), &result)
+	_ = json.Unmarshal([]byte(awsDirectoryservicedataUser), &result)
 	return &result
 }

@@ -20,6 +20,7 @@ const awsConfigAggregateAuthorization = `{
         "type": "string"
       },
       "authorized_aws_region": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -31,6 +32,7 @@ const awsConfigAggregateAuthorization = `{
         "type": "string"
       },
       "region": {
+        "computed": true,
         "deprecated": true,
         "description_kind": "plain",
         "optional": true,

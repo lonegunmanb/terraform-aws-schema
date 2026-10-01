@@ -120,6 +120,7 @@ const awsBedrockagentcoreHarness = `{
         ]
       },
       "environment_variables": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "sensitive": true,

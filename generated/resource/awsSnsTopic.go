@@ -121,6 +121,12 @@ const awsSnsTopic = `{
         "optional": true,
         "type": "number"
       },
+      "maximum_message_size": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "name": {
         "computed": true,
         "description_kind": "plain",
