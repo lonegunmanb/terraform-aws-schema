@@ -225,6 +225,33 @@ const awsNetworkInterface = `{
         },
         "nesting_mode": "set"
       },
+      "connection_tracking_specification": {
+        "block": {
+          "attributes": {
+            "tcp_established_timeout": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "udp_stream_timeout": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "udp_timeout": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "ena_srd_specification": {
         "block": {
           "attributes": {
