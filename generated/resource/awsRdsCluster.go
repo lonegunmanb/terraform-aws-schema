@@ -369,6 +369,12 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "string"
       },
+      "publicly_accessible": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "reader_endpoint": {
         "computed": true,
         "description_kind": "plain",

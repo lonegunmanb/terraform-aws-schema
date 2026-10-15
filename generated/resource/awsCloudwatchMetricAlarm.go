@@ -198,6 +198,30 @@ const awsCloudwatchMetricAlarm = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "evaluation_window": {
+        "block": {
+          "block_types": {
+            "wall_clock_window": {
+              "block": {
+                "attributes": {
+                  "timezone": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "metric_query": {
         "block": {
           "attributes": {

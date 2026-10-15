@@ -230,6 +230,62 @@ const awsBedrockagentDataSource = `{
                       "description_kind": "plain"
                     },
                     "nesting_mode": "list"
+                  },
+                  "sync_schedule": {
+                    "block": {
+                      "block_types": {
+                        "daily": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "monthly": {
+                          "block": {
+                            "block_types": {
+                              "day_of_month": {
+                                "block": {
+                                  "attributes": {
+                                    "day_number": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "last_day_of_month": {
+                                      "block": {
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        },
+                        "weekly": {
+                          "block": {
+                            "attributes": {
+                              "day_of_week": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"
@@ -673,6 +729,49 @@ const awsBedrockagentDataSource = `{
                           "description_kind": "plain",
                           "required": true,
                           "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "context_enrichment_configuration": {
+              "block": {
+                "attributes": {
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "bedrock_foundation_model_configuration": {
+                    "block": {
+                      "attributes": {
+                        "model_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "enrichment_strategy_configuration": {
+                          "block": {
+                            "attributes": {
+                              "method": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
                         }
                       },
                       "description_kind": "plain"

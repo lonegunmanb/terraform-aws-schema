@@ -9,6 +9,11 @@ import (
 const awsObservabilityadminTelemetryEvaluation = `{
   "block": {
     "attributes": {
+      "all_regions": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "failure_reason": {
         "computed": true,
         "description_kind": "plain",
@@ -26,6 +31,14 @@ const awsObservabilityadminTelemetryEvaluation = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "regions": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "status": {
         "computed": true,

@@ -53,7 +53,27 @@ const awsQuicksightCustomPermissions = `{
       "capabilities": {
         "block": {
           "attributes": {
+            "action": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "add_or_run_anomaly_detection_for_analyses": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "analysis": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "automate": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "chat_agent": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -83,12 +103,22 @@ const awsQuicksightCustomPermissions = `{
               "optional": true,
               "type": "string"
             },
+            "create_chat_agents": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "create_shared_folders": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "create_spice_dataset": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "dashboard": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -123,7 +153,22 @@ const awsQuicksightCustomPermissions = `{
               "optional": true,
               "type": "string"
             },
+            "flow": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "include_content_in_scheduled_reports_email": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "knowledge_base": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "perform_flow_ui_task": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -133,7 +178,17 @@ const awsQuicksightCustomPermissions = `{
               "optional": true,
               "type": "string"
             },
+            "publish_without_approval": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "rename_shared_folders": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "research": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -158,7 +213,22 @@ const awsQuicksightCustomPermissions = `{
               "optional": true,
               "type": "string"
             },
+            "space": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "subscribe_dashboard_email_reports": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "use_agent_web_search": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "use_bedrock_models": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

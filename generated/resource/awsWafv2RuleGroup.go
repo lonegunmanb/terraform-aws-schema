@@ -106,6 +106,73 @@ const awsWafv2RuleGroup = `{
         },
         "nesting_mode": "set"
       },
+      "monetization_config": {
+        "block": {
+          "attributes": {
+            "currency_mode": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "crypto_config": {
+              "block": {
+                "block_types": {
+                  "payment_network": {
+                    "block": {
+                      "attributes": {
+                        "chain": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "wallet_address": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "prices": {
+                          "block": {
+                            "attributes": {
+                              "amount": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "currency": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "min_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 2,
+                    "min_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "rule": {
         "block": {
           "attributes": {
@@ -313,6 +380,20 @@ const awsWafv2RuleGroup = `{
                           },
                           "max_items": 1,
                           "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "monetize": {
+                    "block": {
+                      "attributes": {
+                        "price_multiplier": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
                         }
                       },
                       "description_kind": "plain"

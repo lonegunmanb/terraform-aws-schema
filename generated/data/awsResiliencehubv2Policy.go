@@ -92,6 +92,11 @@ const awsResiliencehubv2Policy = `{
         "optional": true,
         "type": "string"
       },
+      "sharing_enabled": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "tags": {
         "computed": true,
         "description_kind": "plain",

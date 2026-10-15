@@ -24,6 +24,48 @@ const awsCloudwatchOtelEnrichment = `{
       }
     },
     "block_types": {
+      "exclude_filter": {
+        "block": {
+          "attributes": {
+            "metric_names": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "namespace": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
+      "include_filter": {
+        "block": {
+          "attributes": {
+            "metric_names": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "namespace": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "timeouts": {
         "block": {
           "attributes": {
