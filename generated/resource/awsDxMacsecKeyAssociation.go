@@ -14,11 +14,35 @@ const awsDxMacsecKeyAssociation = `{
         "optional": true,
         "type": "string"
       },
+      "cak_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string",
+        "write_only": true
+      },
+      "cak_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "ckn": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "ckn_wo": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string",
+        "write_only": true
+      },
+      "ckn_wo_version": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       },
       "connection_id": {
         "description_kind": "plain",

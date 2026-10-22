@@ -156,6 +156,12 @@ const awsNeptuneCluster = `{
         "optional": true,
         "type": "string"
       },
+      "network_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "port": {
         "description_kind": "plain",
         "optional": true,

@@ -1744,6 +1744,52 @@ const awsArcregionswitchPlan = `{
                                 },
                                 "nesting_mode": "list"
                               },
+                              "rds_switchover_read_replica_config": {
+                                "block": {
+                                  "attributes": {
+                                    "cross_account_role": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "db_instance_arn_map": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": [
+                                        "map",
+                                        "string"
+                                      ]
+                                    },
+                                    "external_id": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "timeout_minutes": {
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "number"
+                                    }
+                                  },
+                                  "block_types": {
+                                    "ungraceful": {
+                                      "block": {
+                                        "attributes": {
+                                          "ungraceful": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "nesting_mode": "list"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "nesting_mode": "list"
+                              },
                               "region_switch_plan_config": {
                                 "block": {
                                   "attributes": {
@@ -1886,6 +1932,52 @@ const awsArcregionswitchPlan = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "rds_switchover_read_replica_config": {
+                    "block": {
+                      "attributes": {
+                        "cross_account_role": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "db_instance_arn_map": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "map",
+                            "string"
+                          ]
+                        },
+                        "external_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "timeout_minutes": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "block_types": {
+                        "ungraceful": {
+                          "block": {
+                            "attributes": {
+                              "ungraceful": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
                         }
                       },
                       "description_kind": "plain"
