@@ -177,6 +177,11 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "multi_tenant": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
       "network_type": {
         "computed": true,
         "description_kind": "plain",

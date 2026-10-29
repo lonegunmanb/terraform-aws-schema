@@ -82,6 +82,7 @@ const awsLambdaFunction = `{
             "object",
             {
               "execution_timeout": "number",
+              "kms_key_arn": "string",
               "retention_period": "number"
             }
           ]

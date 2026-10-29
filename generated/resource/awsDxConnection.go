@@ -163,6 +163,21 @@ const awsDxConnection = `{
         "type": "number"
       }
     },
+    "block_types": {
+      "timeouts": {
+        "block": {
+          "attributes": {
+            "update": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "single"
+      }
+    },
     "description_kind": "plain"
   },
   "version": 1

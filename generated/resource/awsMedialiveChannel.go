@@ -3328,6 +3328,20 @@ const awsMedialiveChannel = `{
               "min_items": 1,
               "nesting_mode": "list"
             },
+            "thumbnail_configuration": {
+              "block": {
+                "attributes": {
+                  "state": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "timecode_config": {
               "block": {
                 "attributes": {

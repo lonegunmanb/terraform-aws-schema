@@ -21,6 +21,12 @@ const awsEcsExpressGatewayService = `{
         "optional": true,
         "type": "string"
       },
+      "cpu_architecture": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "current_deployment": {
         "computed": true,
         "deprecated": true,

@@ -98,6 +98,11 @@ const awsBackupPlan = `{
                 "string"
               ]
             },
+            "rule_id": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
             "rule_name": {
               "description_kind": "plain",
               "required": true,

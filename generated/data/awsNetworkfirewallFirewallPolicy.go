@@ -57,6 +57,25 @@ const awsNetworkfirewallFirewallPolicy = `{
                   }
                 ]
               ],
+              "route53_resolved_ip_validation": [
+                "list",
+                [
+                  "object",
+                  {
+                    "action": "string",
+                    "bypass_destination_validation_ip_ranges": [
+                      "set",
+                      "string"
+                    ],
+                    "dns_expiry_exception_policy": "string",
+                    "dns_firewall_rule_group_id": "string",
+                    "source_ip_ranges": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                ]
+              ],
               "stateful_default_actions": [
                 "set",
                 "string"

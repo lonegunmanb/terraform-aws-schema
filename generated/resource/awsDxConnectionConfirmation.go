@@ -28,6 +28,21 @@ const awsDxConnectionConfirmation = `{
         "type": "string"
       }
     },
+    "block_types": {
+      "timeouts": {
+        "block": {
+          "attributes": {
+            "create": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "single"
+      }
+    },
     "description_kind": "plain"
   },
   "version": 0

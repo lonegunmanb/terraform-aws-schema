@@ -79,6 +79,12 @@ const awsSagemakerHubContentReference = `{
           "map",
           "string"
         ]
+      },
+      "versioned_hub_content_arn": {
+        "computed": true,
+        "description": "ARN of the hub content reference, including the version suffix.",
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "block_types": {

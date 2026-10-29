@@ -162,6 +162,46 @@ const awsNetworkfirewallFirewallPolicy = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "route53_resolved_ip_validation": {
+              "block": {
+                "attributes": {
+                  "action": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "bypass_destination_validation_ip_ranges": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "dns_expiry_exception_policy": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "dns_firewall_rule_group_id": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "source_ip_ranges": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "stateful_engine_options": {
               "block": {
                 "attributes": {

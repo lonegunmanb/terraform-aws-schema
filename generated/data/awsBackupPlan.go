@@ -82,6 +82,7 @@ const awsBackupPlan = `{
                 "map",
                 "string"
               ],
+              "rule_id": "string",
               "rule_name": "string",
               "scan_action": [
                 "set",

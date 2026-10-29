@@ -94,6 +94,11 @@ const awsBcmdataexportsExport = `{
                           "required": true,
                           "type": "string"
                         },
+                        "s3_bucket_owner": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
                         "s3_prefix": {
                           "description_kind": "plain",
                           "required": true,

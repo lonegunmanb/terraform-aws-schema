@@ -135,6 +135,20 @@ const awsSagemakerModel = `{
                         }
                       },
                       "block_types": {
+                        "hub_access_config": {
+                          "block": {
+                            "attributes": {
+                              "hub_content_arn": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
                         "model_access_config": {
                           "block": {
                             "attributes": {
@@ -213,6 +227,20 @@ const awsSagemakerModel = `{
                         }
                       },
                       "block_types": {
+                        "hub_access_config": {
+                          "block": {
+                            "attributes": {
+                              "hub_content_arn": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
                         "model_access_config": {
                           "block": {
                             "attributes": {
@@ -345,6 +373,20 @@ const awsSagemakerModel = `{
                         }
                       },
                       "block_types": {
+                        "hub_access_config": {
+                          "block": {
+                            "attributes": {
+                              "hub_content_arn": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
                         "model_access_config": {
                           "block": {
                             "attributes": {
@@ -423,6 +465,20 @@ const awsSagemakerModel = `{
                         }
                       },
                       "block_types": {
+                        "hub_access_config": {
+                          "block": {
+                            "attributes": {
+                              "hub_content_arn": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
                         "model_access_config": {
                           "block": {
                             "attributes": {

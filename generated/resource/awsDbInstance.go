@@ -324,6 +324,12 @@ const awsDbInstance = `{
         "optional": true,
         "type": "bool"
       },
+      "multi_tenant": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "nchar_character_set_name": {
         "computed": true,
         "description_kind": "plain",

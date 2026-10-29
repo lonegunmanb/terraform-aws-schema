@@ -296,6 +296,12 @@ const awsLambdaFunction = `{
               "required": true,
               "type": "number"
             },
+            "kms_key_arn": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "retention_period": {
               "description_kind": "plain",
               "optional": true,

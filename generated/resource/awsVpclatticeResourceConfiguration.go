@@ -124,6 +124,22 @@ const awsVpclatticeResourceConfiguration = `{
               },
               "nesting_mode": "list"
             },
+            "cidr_resource": {
+              "block": {
+                "attributes": {
+                  "cidr_ranges": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "dns_resource": {
               "block": {
                 "attributes": {
