@@ -14,6 +14,16 @@ const awsLambdacoreNetworkConnector = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "latest_version": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "latest_version_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,

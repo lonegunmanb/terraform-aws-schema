@@ -71,6 +71,11 @@ const awsBatchComputeEnvironment = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "unmanaged_vcpus": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "update_policy": {
         "computed": true,
         "description_kind": "plain",
