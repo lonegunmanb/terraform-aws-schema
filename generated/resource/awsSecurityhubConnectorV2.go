@@ -77,6 +77,50 @@ const awsSecurityhubConnectorV2 = `{
       "connector_provider": {
         "block": {
           "block_types": {
+            "azure": {
+              "block": {
+                "attributes": {
+                  "aws_config_connector_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "azure_regions": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "block_types": {
+                  "scope_configuration": {
+                    "block": {
+                      "attributes": {
+                        "scope_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "scope_values": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": [
+                            "set",
+                            "string"
+                          ]
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "jira_cloud": {
               "block": {
                 "attributes": {

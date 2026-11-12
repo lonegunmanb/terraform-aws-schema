@@ -38,6 +38,11 @@ const awsElasticacheServerlessCache = `{
           }
         ]
       },
+      "connection_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "create_time": {
         "computed": true,
         "description_kind": "plain",
