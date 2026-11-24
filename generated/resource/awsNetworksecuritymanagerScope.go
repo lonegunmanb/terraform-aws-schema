@@ -37,6 +37,11 @@ const awsNetworksecuritymanagerScope = `{
         "optional": true,
         "type": "string"
       },
+      "specialized_scope_type": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

@@ -57,6 +57,20 @@ const awsRoute = `{
         "optional": true,
         "type": "string"
       },
+      "igw_firewall": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "firewall_arn": "string",
+              "status": "string"
+            }
+          ]
+        ]
+      },
       "instance_id": {
         "computed": true,
         "description_kind": "plain",

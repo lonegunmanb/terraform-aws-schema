@@ -148,11 +148,30 @@ const awsNetworkfirewallFirewall = `{
           ]
         ]
       },
+      "firewall_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "igw_firewall_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "enforcement_mode": "string"
+            }
+          ]
+        ]
       },
       "name": {
         "computed": true,

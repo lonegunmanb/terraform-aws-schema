@@ -68,6 +68,27 @@ const awsS3BucketObjectLockConfiguration = `{
                     "type": "number"
                   }
                 },
+                "block_types": {
+                  "default_event_hold": {
+                    "block": {
+                      "attributes": {
+                        "days": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "years": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,

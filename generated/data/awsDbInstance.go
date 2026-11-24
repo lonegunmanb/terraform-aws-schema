@@ -227,6 +227,11 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "replicate_source_db_cluster": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "resource_id": {
         "computed": true,
         "description_kind": "plain",

@@ -101,6 +101,11 @@ const awsDefaultSubnet = `{
         "optional": true,
         "type": "bool"
       },
+      "network_firewall_connectivity_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "outpost_arn": {
         "computed": true,
         "description_kind": "plain",

@@ -9,6 +9,19 @@ import (
 const awsLambdaFunction = `{
   "block": {
     "attributes": {
+      "accelerator_config": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "accelerator_memory_size": "number"
+            }
+          ]
+        ]
+      },
       "architectures": {
         "computed": true,
         "description_kind": "plain",

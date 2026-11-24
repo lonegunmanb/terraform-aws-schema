@@ -80,6 +80,42 @@ const awsNetworksecuritymanagerPolicy = `{
             }
           },
           "block_types": {
+            "igw_firewall_config": {
+              "block": {
+                "attributes": {
+                  "default_subnet_connectivity": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "subnet_connectivity_override": {
+                    "block": {
+                      "attributes": {
+                        "connectivity_type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "scope_arn": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "list",
+                            "string"
+                          ]
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
             "waf_config": {
               "block": {
                 "attributes": {

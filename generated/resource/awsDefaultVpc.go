@@ -113,6 +113,21 @@ const awsDefaultVpc = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "network_firewall_association": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "firewall_arn": "string",
+              "firewall_mode": "string",
+              "firewall_onboarding_status": "string"
+            }
+          ]
+        ]
+      },
       "owner_id": {
         "computed": true,
         "description_kind": "plain",

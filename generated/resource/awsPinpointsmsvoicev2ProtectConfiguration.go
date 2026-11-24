@@ -43,6 +43,11 @@ const awsPinpointsmsvoicev2ProtectConfiguration = `{
           "string"
         ]
       },
+      "mms_default_status": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "rcs_country_rules": {
         "description_kind": "plain",
         "optional": true,
@@ -50,6 +55,11 @@ const awsPinpointsmsvoicev2ProtectConfiguration = `{
           "map",
           "string"
         ]
+      },
+      "rcs_default_status": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "region": {
         "computed": true,
@@ -65,6 +75,11 @@ const awsPinpointsmsvoicev2ProtectConfiguration = `{
           "map",
           "string"
         ]
+      },
+      "sms_default_status": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "tags": {
         "description_kind": "plain",
@@ -89,6 +104,11 @@ const awsPinpointsmsvoicev2ProtectConfiguration = `{
           "map",
           "string"
         ]
+      },
+      "voice_default_status": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "description_kind": "plain"

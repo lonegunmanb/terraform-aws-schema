@@ -38,6 +38,62 @@ const awsFsxS3AccessPointAttachment = `{
       }
     },
     "block_types": {
+      "ontap_configuration": {
+        "block": {
+          "attributes": {
+            "volume_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "file_system_identity": {
+              "block": {
+                "attributes": {
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "unix_user": {
+                    "block": {
+                      "attributes": {
+                        "name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "windows_user": {
+                    "block": {
+                      "attributes": {
+                        "name": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "openzfs_configuration": {
         "block": {
           "attributes": {

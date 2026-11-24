@@ -238,6 +238,20 @@ const awsLambdaFunction = `{
       }
     },
     "block_types": {
+      "accelerator_config": {
+        "block": {
+          "attributes": {
+            "accelerator_memory_size": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "capacity_provider_config": {
         "block": {
           "block_types": {

@@ -133,6 +133,24 @@ const awsS3Object = `{
           "string"
         ]
       },
+      "object_lock_event_hold": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "object_lock_event_hold_duration_days": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "object_lock_event_hold_duration_years": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "object_lock_legal_hold_status": {
         "description_kind": "plain",
         "optional": true,
@@ -144,6 +162,7 @@ const awsS3Object = `{
         "type": "string"
       },
       "object_lock_retain_until_date": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

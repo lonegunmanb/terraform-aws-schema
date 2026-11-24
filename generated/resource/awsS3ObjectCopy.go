@@ -203,6 +203,24 @@ const awsS3ObjectCopy = `{
         "optional": true,
         "type": "string"
       },
+      "object_lock_event_hold": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "object_lock_event_hold_duration_days": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "object_lock_event_hold_duration_years": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "object_lock_legal_hold_status": {
         "computed": true,
         "description_kind": "plain",
